@@ -149,67 +149,11 @@ def _inject_search_progress_stytles(theme: str):
             transform: scale(1.2);  /* 放大1.2倍 */
         }}
     }}
-    
-    /* Detail Section - 详细信息区域 */
-    .search-detail-section {{
-        border-top: 1px solid {modal_border};  /* 使用现有的边框颜色 */
-        margin-top: 8px;
-        padding: 12px 20px;
-        background: rgba(0,0,0,0.08);  /* 半透明背景 */
-        max-height: 120px;  /* 适中的高度 */
-        overflow-y: auto;   /* 超出滚动 */
-    }}
-    
-    .search-detail-content {{
-        font-size: 13px;
-        line-height: 1.6;
-        color: {text_color};  /* 使用现有的文字颜色 */
-    }}
-    
-    .search-detail-content > div {{
-        margin-bottom: 8px;
-        padding: 4px 8px;
-        border-radius: 4px;
-        background: rgba(255,255,255,0.02);
-        transition: background 0.2s ease;
-    }}
-    
-    .search-detail-content > div:hover {{
-        background: rgba(255,255,255,0.05);
-    }}
-    
-    .search-detail-content .detail-emoji {{
-        margin-right: 6px;
-    }}
-    
-    .search-detail-content .detail-highlight {{
-        color: {dot_active};  /* 使用激活颜色 */
-        font-weight: 600;
-    }}
-    
-    /* 滚动条样式 */
-    .search-detail-section::-webkit-scrollbar {{
-        width: 6px;
-    }}
-    
-    .search-detail-section::-webkit-scrollbar-track {{
-        background: rgba(255,255,255,0.05);
-        border-radius: 3px;
-    }}
-    
-    .search-detail-section::-webkit-scrollbar-thumb {{
-        background: rgba(255,255,255,0.2);
-        border-radius: 3px;
-    }}
-    
-    .search-detail-section::-webkit-scrollbar-thumb:hover {{
-        background: rgba(255,255,255,0.3);
-    }}
     </style>
     """, unsafe_allow_html=True)
 
-def _render_search_progress_overlay(steps: list, active_idx: int, detail_info: str = "")->str:
-    """Generate HTML code for search progress pop-up window with detail area"""
+def _render_search_progress_overlay(steps: list, active_idx: int)->str:
+    """Generate HTML code for search progress pop-up window"""
     items = []
 
     for i, txt in enumerate(steps):
@@ -227,25 +171,13 @@ def _render_search_progress_overlay(steps: list, active_idx: int, detail_info: s
             f'</div>'
         )
 
-    # Add detail section if detail_info is provided
-    detail_section = ""
-    if detail_info:
-        detail_section = f'''
-        <div class="search-detail-section">
-            <div class="search-detail-content">
-                {detail_info}
-            </div>
-        </div>
-        '''
-
     return (
         '<div class="search-overlay">'          
         '  <div class="search-modal">'          
         '    <div class="search-modal-header">' 
         '      <div class="search-modal-title">🔍 Searching for Talents</div>'
         '    </div>'
-        f'    <div class="search-steps">{"".join(items)}</div>'
-        f'    {detail_section}'
+        f'    <div class="search-steps">{"".join(items)}</div>'  
         '  </div>'
         '</div>'
     )
@@ -1199,13 +1131,7 @@ def render_targeted_search_page():
                 params_html += (
                     f"<p><strong>👥 Candidates:</strong> {query_spec['top_n']}</p>"
                 )
-                        
-            # Display research field
-            if query_spec.get("research_field"):
-                params_html += (
-                    f"<p><strong>🎯 Research Field:</strong> {query_spec['research_field']}</p>"
-                )
-                
+
             kw_bg = "#536833"
             kw_border = "#334155"
             kw_color = "#dbeafe"
@@ -1496,16 +1422,15 @@ def render_targeted_search_page():
             result_holder = {"results": None, "error": None}  # store search results
             
             # ========== progress callback function ==========
-            def on_progress(event: str, pct: float, detail=None):
+            def on_progress(event: str, pct: float):
                 """
                 background thread calls this function to report progress
                 parameters：
                 - event: event name, like "searching", "analyzing"
                 - pct: progress percentage 0.0-1.0
-                - detail: Optional detailed progress information
                 """
                 try:
-                    progress_q.put((event or "", float(pct or 0.0), detail))
+                    progress_q.put((event or "", float(pct or 0.0)))
                 except Exception:
                     pass  # silent failure, do not interrupt search
             
@@ -1623,26 +1548,18 @@ def render_targeted_search_page():
             
             # first display progress popup
             overlay.markdown(
-                _render_search_progress_overlay(search_steps, current_step, ""),
+                _render_search_progress_overlay(search_steps, current_step),
                 unsafe_allow_html=True
             )
             
             # loop: continuously update UI until search is completed
             # condition: worker is alive or queue has data
             paused_for_decision = False  # Track if we're paused waiting for user decision
-            current_detail_html = ""  # Store current detail HTML
             
             while worker.is_alive() or not progress_q.empty():
                 try:
                     # get progress update from queue (wait up to 0.1 seconds)
-                    progress_data = progress_q.get(timeout=0.1)
-                    
-                    # Handle both old format (event, pct) and new format (event, pct, detail)
-                    if len(progress_data) == 2:
-                        event, pct = progress_data
-                        detail = None
-                    else:
-                        event, pct, detail = progress_data
+                    event, pct = progress_q.get(timeout=0.1)
                     
                     # ========== Check for pause event ==========
                     if event == "paused":
@@ -1656,37 +1573,11 @@ def render_targeted_search_page():
                     # find corresponding step index
                     step_idx = event_to_step.get(base_event, current_step)
                     
-                    # ========== Build detail HTML if available ==========
-                    if detail:
-                        detail_items = []
-                        
-                        # Build detailed status message - simplified and focused
-                        
-                        # 1. Most important: How many candidates found
-                        if hasattr(detail, 'found_candidates') and detail.found_candidates is not None and hasattr(detail, 'target_candidates') and detail.target_candidates:
-                            detail_items.append(f"<div style='font-size:15px;font-weight:600'><span class='detail-emoji'>✅</span>Found <span style='color:#10b981;font-size:16px'>{detail.found_candidates}/{detail.target_candidates}</span> matching candidates</div>")
-                        
-                        # 2. Key progress indicators (prioritize specific over general)
-                        if hasattr(detail, 'current_candidate') and detail.current_candidate:
-                            # If analyzing someone specific, show who (skip general action)
-                            detail_items.append(f"<div><span class='detail-emoji'>🔍</span>Analyzing: <span style='font-style:italic'>{detail.current_candidate}</span></div>")
-                        else:
-                            # Show general action when not analyzing a specific person
-                            if hasattr(detail, 'current_action') and detail.current_action:
-                                action_text = detail.current_action
-                                if "batch" in action_text.lower():
-                                    action_text = action_text.split("(batch")[0].strip()
-                                detail_items.append(f"<div><span class='detail-emoji'>🔄</span>{action_text}</div>")
-                        
-                        # Update current detail HTML
-                        if detail_items:
-                            current_detail_html = "".join(detail_items)
-                    
-                    # ========== Update overlay if step changes or detail changes ==========
-                    if step_idx != current_step or (detail and current_detail_html):
+                    # if step changes, update popup
+                    if step_idx != current_step:
                         current_step = step_idx
                         overlay.markdown(
-                            _render_search_progress_overlay(search_steps, current_step, current_detail_html),
+                            _render_search_progress_overlay(search_steps, current_step),
                             unsafe_allow_html=True
                         )
                     

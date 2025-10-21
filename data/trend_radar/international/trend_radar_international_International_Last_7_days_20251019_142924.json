@@ -1,0 +1,942 @@
+{
+  "type": "trend_radar_international",
+  "title": "International_Last 7 days",
+  "created_at": "2025-10-19T14:29:24.619422",
+  "filename": "trend_radar_international_International_Last_7_days_20251019_142924.json",
+  "data": {
+    "id": "international_1760855364",
+    "group_id": "international",
+    "group_name": "International",
+    "sources": [
+      {
+        "name": "International",
+        "url": "",
+        "type": "group",
+        "description": "International AI news, research, and technology media platforms",
+        "report": "# International | Trend Radar Report\n\n<table style=\"width: 100%; border-collapse: collapse; margin: 1rem 0;\">\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Group Description</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">International AI news, research, and technology media platforms</td>\n    </tr>\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Total Sources</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">4</td>\n    </tr>\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Report Generated</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">2025-10-19 14:29:24</td>\n    </tr>\n</table>\n\n---\n\n## A. Directions\n\n### 1. **Legal AI and Embedding Models**\n\nLegal AI is emerging as a critical field with the need for models that can understand complex legal texts, reason through legal cases, and provide accurate embeddings for legal documents. The introduction of benchmarks like the Massive Legal Embedding Benchmark (MLEB) underscores the growing importance of domain-specific AI models in the legal sector. These models must not only handle vast amounts of legal data but also perform nuanced reasoning to support legal professionals.\n\n**Representative projects**:\n- **Kanon 2 Embedder**: This legal embedding model achieves top scores on MLEB, demonstrating strong legal domain knowledge and reasoning capabilities. It uses advanced natural language processing techniques to generate embeddings that capture both semantic and syntactic nuances in legal texts.\n- **Massive Legal Embedding Benchmark (MLEB)**: A comprehensive benchmark containing 10 datasets across multiple jurisdictions, document types, and legal areas. It sets a new standard for evaluating legal AI models by requiring them to demonstrate both domain knowledge and reasoning skills.\n- **Legal Text Understanding Systems**: These systems are being developed to assist lawyers and legal analysts in searching, summarizing, and interpreting legal documents more efficiently. They integrate NLP and machine learning to extract key information and infer relationships within legal texts.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/blog/isaacus/introducing-mleb\n\n\n---\n\n### 2. **Visual Language Models (VLMs) and Their Applications**\n\nVisual Language Models (VLMs) combine vision and language processing to generate coherent outputs from both text and image inputs. As these models become more sophisticated, they open up new possibilities for applications such as image captioning, visual question answering, and multimodal content generation. Recent advancements in VLMs have focused on improving their ability to merge visual and textual information effectively.\n\n**Representative projects**:\n- **Idefics3 and SmolVLM**: These VLMs are designed to process both text and images, using a unified format that allows for seamless integration of visual and linguistic data. They are particularly useful in tasks that require understanding and generating content based on both modalities.\n- **HuggingFaceTB/SmolVLM-256M-Instruct**: A compact VLM that demonstrates strong performance in multimodal tasks. It uses a processor that prepares both text and image data into a suitable format for the model, enabling efficient and accurate processing.\n- **Multimodal Content Generation**: VLMs are being used to create content that combines text and images, such as generating captions for images or creating visual summaries of text. These applications are becoming increasingly important in fields like marketing, journalism, and education.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.09608\n- https://huggingface.co/papers/2510.14528\n- https://huggingface.co/papers/2510.14979\n- https://huggingface.co/blog/not-lain/vlms\n\n\n---\n\n### 3. **AI-Powered Search and Information Retrieval**\n\nThe rise of AI-powered search technologies is transforming how users interact with information online. From enhanced search engines to personalized recommendation systems, AI is enabling more accurate and context-aware retrieval of information. This trend is particularly evident in platforms like Reddit and Wikipedia, where AI is being used to improve search functionality and user experience.\n\n**Representative projects**:\n- **Reddit’s AI-Powered Search Expansion**: Reddit has expanded its AI-powered search to five new languages, allowing users to engage with content in their preferred language. This expansion leverages Google’s AI models to provide more relevant and accurate search results.\n- **Wikipedia Traffic Decline**: The decline in human pageviews on Wikipedia highlights the impact of AI-driven search summaries and social media content. This trend suggests that traditional encyclopedic resources may need to adapt to remain relevant in an AI-centric information landscape.\n- **Search Engine Enhancements**: Companies like Google and Bing are integrating AI features into their search engines to provide more personalized and context-aware results. These enhancements include improved natural language processing and better handling of complex queries.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.12323\n\n\n---\n\n### 4. **AI Ethics, Safety, and Regulatory Compliance**\n\nAs AI becomes more pervasive, concerns around ethics, safety, and regulatory compliance are gaining prominence. Issues such as bias, transparency, and the potential misuse of AI technologies are driving the development of frameworks and policies to ensure responsible AI deployment. This direction is crucial for maintaining public trust and ensuring that AI benefits society as a whole.\n\n**Representative projects**:\n- **California’s AI Companion Chatbot Regulation**: California has introduced legislation to regulate AI companion chatbots, requiring operators to implement safety protocols to protect vulnerable users. This law sets a precedent for other states and countries to follow.\n- **AI Safety Advocacy**: Tech leaders and researchers are increasingly vocal about the need for ethical AI practices. Initiatives such as AI safety audits and transparent model development are becoming more common.\n- **Ethical AI Frameworks**: Organizations are developing ethical AI frameworks to guide the responsible use of AI. These frameworks often include guidelines for data privacy, algorithmic fairness, and accountability.\n\n\n\n---\n\n\n**References** 🔗:\n- https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots\n\n\n---\n\n### 5. **AI-Driven Personalization and User Experience**\n\nPersonalization powered by AI is reshaping user experiences across various platforms, from social media to e-commerce. By leveraging user data and behavioral patterns, AI systems can tailor content, recommendations, and interactions to individual preferences, leading to more engaging and effective user experiences.\n\n**Representative projects**:\n- **Facebook’s AI Photo Suggestions**: Facebook’s AI feature suggests edits to photos stored on users’ phones, prompting them to share edited versions on their feeds. This application of AI enhances user engagement and content quality.\n- **Pinterest’s AI Content Controls**: Pinterest has introduced tools to limit the amount of AI-generated content in user feeds, addressing concerns about the quality and authenticity of AI-generated content.\n- **AI-Powered Travel Booking**: Kayak has launched an “AI Mode” that allows users to research trips and book flights, hotels, and cars using an AI chatbot. This feature improves the user experience by providing more personalized and context-aware assistance.\n\n\n**References** 🔗:\n- No high-quality references found\n\n\n---\n\n\n\n## B. Talent\n\n\n### 1) Legal AI and Embedding Models\n\n#### 1.1 Sidra Nasir\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Hoang-Trung Nguyen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Zhitian Hou\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Natural Language Processing, Large Language Models, Medical MLLMs\n**Notable Contribution**: Published 'InfiMed-Foundation' on arXiv (2025)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 2) Visual Language Models (VLMs) and Their Applications\n\n#### 1.1 Ranjan Sapkota\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Machine Vision, Image Processing\n**Notable Contribution**: Research expertise in Machine Vision, Image Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jingyi Zhang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: computer vision, transfer learning, multimodal learning\n**Notable Contribution**: Research expertise in computer vision, transfer learning, multimodal learning\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Zongxia Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Human-Centered AI, Multimodal Models, Post-Training\n**Notable Contribution**: PhD Candidate at University of Maryland, CLIP Lab\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 3) AI-Powered Search and Information Retrieval\n\n#### 1.1 Simon Lupart\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: IR, conversational AI, distribution shifts\n**Notable Contribution**: Apr. 2025: Four papers accepted at SIGIR 2025.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Maik Fröbe\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Information Retrieval, Learning to Rank, Near-Duplicate Detection\n**Notable Contribution**: Research expertise in Learning to Rank, Information Retrieval, Near-Duplicate Detection\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Yuansan Liu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Deep Learning, Time Series\n**Notable Contribution**: Research expertise in Time Series, Deep Learning\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 4) AI Ethics, Safety, and Regulatory Compliance\n\n*Failed to find minimum required talents (0/1). Please try again later.*\n\n\n### 5) AI-Driven Personalization and User Experience\n\n*Failed to find minimum required talents (0/1). Please try again later.*\n\n"
+      }
+    ],
+    "original_sources": [
+      {
+        "name": "Synced Review",
+        "url": "https://syncedreview.com/",
+        "type": "news",
+        "description": "AI Technology & Industry Review"
+      },
+      {
+        "name": "Huggingface Trending Papers",
+        "url": "https://huggingface.co/papers/trending",
+        "type": "research",
+        "description": "Trending ML papers on Hugging Face"
+      },
+      {
+        "name": "Huggingface Blog",
+        "url": "https://huggingface.co/blog",
+        "type": "blog",
+        "description": "Hugging Face blog and updates"
+      },
+      {
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/",
+        "type": "news",
+        "description": "TechCrunch AI coverage"
+      }
+    ],
+    "report_type": "international",
+    "time_range": "Last 7 days",
+    "custom_query": "",
+    "data_snapshot_info": {
+      "total_articles": 65,
+      "sources": [
+        "Synced Review",
+        "Huggingface Blog",
+        "TechCrunch AI",
+        "Huggingface Trending Papers"
+      ],
+      "fetched_at": 1760855364,
+      "days_param": 7
+    },
+    "three_stage_result": {
+      "stage1_directions": "## A. Directions\n\n### 1. **Legal AI and Embedding Models**\n\nLegal AI is emerging as a critical field with the need for models that can understand complex legal texts, reason through legal cases, and provide accurate embeddings for legal documents. The introduction of benchmarks like the Massive Legal Embedding Benchmark (MLEB) underscores the growing importance of domain-specific AI models in the legal sector. These models must not only handle vast amounts of legal data but also perform nuanced reasoning to support legal professionals.\n\n**Representative projects**:\n- **Kanon 2 Embedder**: This legal embedding model achieves top scores on MLEB, demonstrating strong legal domain knowledge and reasoning capabilities. It uses advanced natural language processing techniques to generate embeddings that capture both semantic and syntactic nuances in legal texts.\n- **Massive Legal Embedding Benchmark (MLEB)**: A comprehensive benchmark containing 10 datasets across multiple jurisdictions, document types, and legal areas. It sets a new standard for evaluating legal AI models by requiring them to demonstrate both domain knowledge and reasoning skills.\n- **Legal Text Understanding Systems**: These systems are being developed to assist lawyers and legal analysts in searching, summarizing, and interpreting legal documents more efficiently. They integrate NLP and machine learning to extract key information and infer relationships within legal texts.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/blog/isaacus/introducing-mleb\n\n\n---\n\n### 2. **Visual Language Models (VLMs) and Their Applications**\n\nVisual Language Models (VLMs) combine vision and language processing to generate coherent outputs from both text and image inputs. As these models become more sophisticated, they open up new possibilities for applications such as image captioning, visual question answering, and multimodal content generation. Recent advancements in VLMs have focused on improving their ability to merge visual and textual information effectively.\n\n**Representative projects**:\n- **Idefics3 and SmolVLM**: These VLMs are designed to process both text and images, using a unified format that allows for seamless integration of visual and linguistic data. They are particularly useful in tasks that require understanding and generating content based on both modalities.\n- **HuggingFaceTB/SmolVLM-256M-Instruct**: A compact VLM that demonstrates strong performance in multimodal tasks. It uses a processor that prepares both text and image data into a suitable format for the model, enabling efficient and accurate processing.\n- **Multimodal Content Generation**: VLMs are being used to create content that combines text and images, such as generating captions for images or creating visual summaries of text. These applications are becoming increasingly important in fields like marketing, journalism, and education.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.09608\n- https://huggingface.co/papers/2510.14528\n- https://huggingface.co/papers/2510.14979\n- https://huggingface.co/blog/not-lain/vlms\n\n\n---\n\n### 3. **AI-Powered Search and Information Retrieval**\n\nThe rise of AI-powered search technologies is transforming how users interact with information online. From enhanced search engines to personalized recommendation systems, AI is enabling more accurate and context-aware retrieval of information. This trend is particularly evident in platforms like Reddit and Wikipedia, where AI is being used to improve search functionality and user experience.\n\n**Representative projects**:\n- **Reddit’s AI-Powered Search Expansion**: Reddit has expanded its AI-powered search to five new languages, allowing users to engage with content in their preferred language. This expansion leverages Google’s AI models to provide more relevant and accurate search results.\n- **Wikipedia Traffic Decline**: The decline in human pageviews on Wikipedia highlights the impact of AI-driven search summaries and social media content. This trend suggests that traditional encyclopedic resources may need to adapt to remain relevant in an AI-centric information landscape.\n- **Search Engine Enhancements**: Companies like Google and Bing are integrating AI features into their search engines to provide more personalized and context-aware results. These enhancements include improved natural language processing and better handling of complex queries.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.12323\n\n\n---\n\n### 4. **AI Ethics, Safety, and Regulatory Compliance**\n\nAs AI becomes more pervasive, concerns around ethics, safety, and regulatory compliance are gaining prominence. Issues such as bias, transparency, and the potential misuse of AI technologies are driving the development of frameworks and policies to ensure responsible AI deployment. This direction is crucial for maintaining public trust and ensuring that AI benefits society as a whole.\n\n**Representative projects**:\n- **California’s AI Companion Chatbot Regulation**: California has introduced legislation to regulate AI companion chatbots, requiring operators to implement safety protocols to protect vulnerable users. This law sets a precedent for other states and countries to follow.\n- **AI Safety Advocacy**: Tech leaders and researchers are increasingly vocal about the need for ethical AI practices. Initiatives such as AI safety audits and transparent model development are becoming more common.\n- **Ethical AI Frameworks**: Organizations are developing ethical AI frameworks to guide the responsible use of AI. These frameworks often include guidelines for data privacy, algorithmic fairness, and accountability.\n\n\n\n---\n\n\n**References** 🔗:\n- https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots\n\n\n---\n\n### 5. **AI-Driven Personalization and User Experience**\n\nPersonalization powered by AI is reshaping user experiences across various platforms, from social media to e-commerce. By leveraging user data and behavioral patterns, AI systems can tailor content, recommendations, and interactions to individual preferences, leading to more engaging and effective user experiences.\n\n**Representative projects**:\n- **Facebook’s AI Photo Suggestions**: Facebook’s AI feature suggests edits to photos stored on users’ phones, prompting them to share edited versions on their feeds. This application of AI enhances user engagement and content quality.\n- **Pinterest’s AI Content Controls**: Pinterest has introduced tools to limit the amount of AI-generated content in user feeds, addressing concerns about the quality and authenticity of AI-generated content.\n- **AI-Powered Travel Booking**: Kayak has launched an “AI Mode” that allows users to research trips and book flights, hotels, and cars using an AI chatbot. This feature improves the user experience by providing more personalized and context-aware assistance.\n\n\n**References** 🔗:\n- No high-quality references found\n\n\n---\n",
+      "stage2_talents": {
+        "Legal AI and Embedding Models": "### Legal AI and Embedding Models\n\n#### 1.1 Sidra Nasir\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Hoang-Trung Nguyen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Zhitian Hou\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Natural Language Processing, Large Language Models, Medical MLLMs\n**Notable Contribution**: Published 'InfiMed-Foundation' on arXiv (2025)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "Visual Language Models (VLMs) and Their Applications": "### Visual Language Models (VLMs) and Their Applications\n\n#### 1.1 Ranjan Sapkota\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Machine Vision, Image Processing\n**Notable Contribution**: Research expertise in Machine Vision, Image Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jingyi Zhang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: computer vision, transfer learning, multimodal learning\n**Notable Contribution**: Research expertise in computer vision, transfer learning, multimodal learning\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Zongxia Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Human-Centered AI, Multimodal Models, Post-Training\n**Notable Contribution**: PhD Candidate at University of Maryland, CLIP Lab\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "AI-Powered Search and Information Retrieval": "### AI-Powered Search and Information Retrieval\n\n#### 1.1 Simon Lupart\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: IR, conversational AI, distribution shifts\n**Notable Contribution**: Apr. 2025: Four papers accepted at SIGIR 2025.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Maik Fröbe\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Information Retrieval, Learning to Rank, Near-Duplicate Detection\n**Notable Contribution**: Research expertise in Learning to Rank, Information Retrieval, Near-Duplicate Detection\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Yuansan Liu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Deep Learning, Time Series\n**Notable Contribution**: Research expertise in Time Series, Deep Learning\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "AI Ethics, Safety, and Regulatory Compliance": "### AI Ethics, Safety, and Regulatory Compliance\n\n*Failed to find minimum required talents (0/1). Please try again later.*",
+        "AI-Driven Personalization and User Experience": "### AI-Driven Personalization and User Experience\n\n*Failed to find minimum required talents (0/1). Please try again later.*"
+      },
+      "stage3_detailed_reports": {
+        "Legal AI and Embedding Models": "### Background  \nLegal AI is an emerging field focused on developing models capable of understanding complex legal texts, reasoning through cases, and generating accurate embeddings for legal documents. As legal systems grow increasingly data-driven, the need for domain-specific AI models has become critical. These models must not only process vast amounts of legal information but also demonstrate nuanced reasoning to support legal professionals in tasks like case analysis, document retrieval, and contract review. The introduction of benchmarks like the Massive Legal Embedding Benchmark (MLEB) marks a significant step toward standardizing and advancing legal AI capabilities.\n\n---\n\n### Recent Progress\n\n**1. Kanon 2 Embedder**  \nThe Kanon 2 Embedder is a state-of-the-art legal embedding model that achieved top scores on the Massive Legal Embedding Benchmark (MLEB). It leverages advanced natural language processing techniques to generate embeddings that capture both semantic and syntactic nuances in legal texts. This model demonstrates strong legal domain knowledge and reasoning skills, making it a key advancement in the field of legal AI.\n\n**2. Massive Legal Embedding Benchmark (MLEB)**  \nMLEB is a comprehensive benchmark containing 10 datasets across multiple jurisdictions, document types, and legal areas. It sets a new standard for evaluating legal AI models by requiring them to demonstrate both domain knowledge and reasoning skills. MLEB's diverse and extensive dataset ensures that models are tested on real-world legal challenges, pushing the boundaries of what legal AI can achieve.\n\n**3. Legal Text Understanding Systems**  \nThese systems integrate NLP and machine learning to extract key information and infer relationships within legal texts. They assist lawyers and legal analysts in efficiently searching, summarizing, and interpreting legal documents. By automating tedious tasks, these systems enhance productivity and accuracy in legal workflows.\n\n**4. PaddleOCR-VL: Boosting Multilingual Document Parsing**  \nPaddleOCR-VL is a vision-language model that combines a visual encoder with a language model to achieve state-of-the-art performance in document parsing with minimal resource consumption. While not directly a legal AI model, its efficiency and multilingual support make it a valuable tool for processing legal documents in various languages, contributing to broader legal AI applications.\n\n---\n\n### Future Trends & Challenges\n\n**Emerging Direction 1: Domain-Specific AI Models**  \nAs legal AI evolves, there will be a growing emphasis on domain-specific models tailored to different areas of law, such as contract law, intellectual property, and criminal law. These models will require specialized training data and fine-tuning to ensure they accurately reflect the unique terminology and logic of each legal domain.\n\n**Emerging Direction 2: Integration with Legal Workflows**  \nFuture developments will focus on integrating legal AI tools more seamlessly into existing legal workflows. This includes embedding AI assistants directly into legal software platforms, enabling real-time decision support, and enhancing collaboration between AI systems and legal professionals.\n\n**Open Challenge 1: Ensuring Accuracy and Bias Mitigation**  \nLegal AI models must be highly accurate and free from bias to avoid misinterpretation of legal texts. Ensuring fairness and transparency in AI-driven legal decisions remains a major challenge, especially when dealing with sensitive or high-stakes legal matters.\n\n**Open Challenge 2: Scalability and Interoperability**  \nDeveloping AI models that can scale across different legal systems and jurisdictions while maintaining interoperability with existing legal databases and tools is a significant technical hurdle. This requires standardized data formats and cross-platform compatibility.\n\n---\n\n### Actionable Insights\n\n**Concrete Recommendation 1 for R&D Teams**  \nInvest in domain-specific training data and fine-tuning strategies to improve the accuracy and relevance of legal AI models. Collaborate with legal experts to ensure that models align with real-world legal practices and requirements.\n\n**Concrete Recommendation 2 for Talent Acquisition**  \nHire interdisciplinary teams that include legal professionals, data scientists, and NLP engineers. This ensures that AI models are developed with both technical and legal expertise, leading to more effective and reliable solutions.\n\n**Concrete Recommendation 3 for Strategic Planning**  \nExplore partnerships with legal tech startups and academic institutions to stay at the forefront of legal AI innovation. Leverage open-source frameworks like Hugging Face to accelerate development and testing of legal AI models.\n\n---\n\n### References  \n- [Introducing the Massive Legal Embedding Benchmark (MLEB)](https://huggingface.co/blog/isaacus/introducing-mleb)  \n- [PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model](https://huggingface.co/papers/2510.14528)  \n- [Massive Legal Embedding Benchmark (MLEB)](https://huggingface.co/blog/isaacus/introducing-mleb)  \n- [Kanon 2 Embedder](https://huggingface.co/blog/isaacus/introducing-mleb)",
+        "Visual Language Models (VLMs) and Their Applications": "### Background  \nVisual Language Models (VLMs) represent a transformative advancement in AI, merging visual and textual understanding to enable richer interactions with multimodal data. These models are pivotal in applications like image captioning, visual question answering, and content generation, offering new ways to process and generate information across modalities. As VLMs evolve, they are increasingly central to fields such as marketing, education, and healthcare, driving innovation and efficiency in how humans and machines interact with complex data.\n\n---\n\n### Recent Progress\n\n**1. Idefics3 and SmolVLM: Unified Multimodal Processing**  \nIdefics3 and SmolVLM are among the most advanced VLMs designed for seamless integration of text and image inputs. They use a unified format that allows the model to process both modalities efficiently, making them ideal for tasks requiring deep multimodal understanding. These models are particularly effective in generating coherent outputs from mixed input, demonstrating strong performance in real-world applications like visual reasoning and content creation.\n\n**2. HuggingFaceTB/SmolVLM-256M-Instruct: Compact yet Powerful**  \nThe HuggingFaceTB/SmolVLM-256M-Instruct is a compact VLM that excels in multimodal tasks despite its smaller size. Its processor prepares both text and image data into a suitable format, enabling efficient processing without sacrificing accuracy. This model is especially useful in resource-constrained environments where computational power is limited, yet high-quality outputs are still required.\n\n**3. PaddleOCR-VL: Efficient Document Parsing**  \nPaddleOCR-VL is a vision-language model that combines a NaViT-style visual encoder with an ERNIE-4.5 language model to achieve state-of-the-art performance in document parsing. It is optimized for minimal resource consumption while maintaining high accuracy, making it a valuable tool for industries that rely heavily on document analysis, such as finance and legal sectors.\n\n**4. StreamingVLM: Real-Time Video Understanding**  \nStreamingVLM is a real-time vision-language model that efficiently processes infinite video streams using a compact key-value cache and supervised fine-tuning. It achieves high performance on long videos and diverse benchmarks, making it suitable for applications like live surveillance, autonomous systems, and real-time content moderation.\n\n---\n\n### Future Trends & Challenges\n\n**1. Emergent Abilities in Multimodal Reasoning**  \nAs VLMs become more sophisticated, they are beginning to exhibit emergent abilities such as motion forecasting, identity-consistent generation, and spatial-temporal reasoning. These capabilities open up new possibilities for applications in robotics, virtual assistants, and immersive media.\n\n**2. Scalability and Efficiency in Large-Scale Deployment**  \nWhile VLMs have shown impressive performance, scaling them for large-scale deployment remains a challenge. Optimizing inference speed, reducing memory usage, and ensuring compatibility with edge devices are critical areas of focus for future development.\n\n**3. Ethical and Safety Concerns in Multimodal AI**  \nWith the rise of VLMs, ethical concerns around bias, misinformation, and misuse have intensified. Ensuring transparency, fairness, and accountability in multimodal AI systems is essential to prevent harmful outcomes and build public trust.\n\n**4. Integration with Real-Time Systems**  \nIntegrating VLMs into real-time systems, such as autonomous vehicles or smart assistants, requires overcoming latency and computational constraints. Developing models that can operate efficiently in dynamic and unpredictable environments is a major technical hurdle.\n\n---\n\n### Actionable Insights\n\n**1. R&D Teams: Focus on Lightweight and Efficient Architectures**  \nOrganizations should prioritize the development of lightweight VLMs that maintain high performance while minimizing computational overhead. Models like SmolVLM and PaddleOCR-VL demonstrate that compact designs can be just as effective as larger models, making them ideal for deployment in edge environments.\n\n**2. Talent Acquisition: Hire Multimodal Experts and Ethics Specialists**  \nTo stay competitive, companies should invest in hiring experts in multimodal learning, computer vision, and natural language processing, as well as AI ethics and policy specialists. These roles are crucial for developing robust, responsible, and scalable VLM solutions.\n\n**3. Strategic Planning: Invest in Real-Time and Edge Applications**  \nStrategic planning should include investments in real-time and edge-based VLM applications, such as autonomous systems, augmented reality, and real-time video analysis. These areas offer significant growth potential and align with emerging trends in AI-driven automation.\n\n---\n\n### References  \n- [Idefics3 and SmolVLM](https://huggingface.co/blog/not-lain/vlms)  \n- [HuggingFaceTB/SmolVLM-256M-Instruct](https://huggingface.co/papers/2510.09608)  \n- [PaddleOCR-VL](https://huggingface.co/papers/2510.14528)  \n- [StreamingVLM](https://huggingface.co/papers/2510.09608)  \n- [TechCrunch AI - Wikipedia Traffic Decline](https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/)  \n- [TechCrunch AI - AI Vacation Photos](https://techcrunch.com/2025/10/18/too-burned-out-to-travel-this-new-app-fakes-your-summer-vacation-photos-for-you/)  \n- [TechCrunch AI - WhatsApp Policy Changes](https://techcrunch.com/2025/10/18/whatssapp-changes-its-terms-to-bar-general-purpose-chatbots-from-its-platform/)  \n- [TechCrunch AI - Deepfake Video of Chuck Schumer](https://techcrunch.com/2025/10/17/senate-republicans-deepfaked-chuck-schumer-and-x-hasnt-taken-it-down/)  \n- [TechCrunch AI - AI and Fracking](https://techcrunch.com/2025/10/17/your-ai-tools-run-on-fracked-gas-and-bulldozed-texas-land/)",
+        "AI-Powered Search and Information Retrieval": "### Background\n\nAI-powered search and information retrieval is transforming how users access and interact with digital content. By leveraging natural language processing, machine learning, and large-scale data analysis, AI enhances the accuracy, relevance, and personalization of search results. This shift is reshaping platforms like Reddit, Wikipedia, and search engines, as well as driving innovations in recommendation systems, content summarization, and user engagement. As traditional sources of information face competition from AI-driven tools, the need for adaptive strategies and advanced AI integration becomes increasingly critical.\n\n---\n\n### Recent Progress\n\n**1. Reddit’s AI-Powered Search Expansion**  \nReddit has expanded its AI-powered search to five new languages—French, German, Spanish, Italian, and Portuguese—using Google’s AI models to improve search accuracy and user experience. This expansion allows users in regions like Brazil, France, Germany, Spain, and Italy to engage with content in their preferred language, enhancing accessibility and relevance. The move reflects a broader trend of AI-driven localization and improved multilingual support in online platforms. [TechCrunch AI | 2025-10-16 | Reddit expands its AI-powered search to five new languages](https://techcrunch.com/2025/10/16/reddit-expands-its-ai-powered-search-to-five-new-languages/)\n\n**2. Hugging Face’s RAG-Anything Framework**  \nHugging Face introduced **RAG-Anything**, a unified framework that enhances multimodal knowledge retrieval by integrating cross-modal relationships and semantic matching. This approach outperforms existing methods on complex benchmarks, offering more accurate and context-aware information retrieval. The framework supports diverse modalities, including text, images, and video, making it a versatile tool for modern AI applications. [Huggingface Trending Papers | 2025-10-15 | RAG-Anything: All-in-One RAG Framework](https://huggingface.co/papers/2510.12323)\n\n**3. PaddleOCR-VL: Multilingual Document Parsing**  \nPaddleOCR-VL is a vision-language model that combines a NaViT-style visual encoder with the ERNIE-4.5 language model to achieve state-of-the-art performance in document parsing with minimal resource consumption. Its compact design makes it ideal for applications requiring efficient and accurate multilingual document processing, such as automated form filling or legal document analysis. [Huggingface Trending Papers | 2025-10-17 | PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model](https://huggingface.co/papers/2510.14528)\n\n**4. FlashWorld: High-Quality 3D Scene Generation**  \nFlashWorld generates high-quality 3D scenes from single images or text prompts in seconds, combining multi-view-oriented and 3D-oriented generation methods. This breakthrough enables rapid and realistic 3D content creation, with potential applications in gaming, virtual reality, and augmented reality. FlashWorld’s efficiency and quality set a new standard for real-time 3D scene generation. [Huggingface Trending Papers | 2025-10-16 | FlashWorld: High-quality 3D Scene Generation within Seconds](https://huggingface.co/papers/2510.13678)\n\n---\n\n### Future Trends & Challenges\n\n**Emerging Direction 1: AI-Driven Personalization at Scale**  \nAs AI models become more sophisticated, personalization will become more granular and context-aware. Future systems will not only tailor search results but also adapt dynamically based on user behavior, preferences, and real-time context, leading to more intuitive and engaging experiences.\n\n**Emerging Direction 2: Ethical and Regulatory Considerations**  \nWith AI-powered search becoming more prevalent, ethical concerns around bias, privacy, and misinformation will intensify. Regulatory frameworks will likely evolve to ensure transparency, fairness, and accountability in AI-driven information retrieval systems.\n\n**Open Challenge 1: Balancing Accuracy and Efficiency**  \nDeveloping AI models that are both highly accurate and computationally efficient remains a significant challenge. As demand for real-time and low-latency applications grows, optimizing performance without sacrificing quality will be crucial.\n\n**Open Challenge 2: Multimodal Integration**  \nIntegrating multiple modalities—such as text, images, audio, and video—into a cohesive and seamless search experience is still in its early stages. Overcoming technical hurdles in cross-modal understanding and representation will be key to future advancements.\n\n---\n\n### Actionable Insights\n\n**1. Recommendation for R&D Teams: Invest in Multimodal Retrieval Systems**  \nR&D teams should prioritize the development of multimodal retrieval systems that can handle text, images, and video. Tools like RAG-Anything and PaddleOCR-VL demonstrate the value of integrating different data types to enhance search accuracy and relevance.\n\n**2. Recommendation for Talent Acquisition: Hire Experts in NLP and Vision-Language Models**  \nOrganizations should seek talent with expertise in natural language processing (NLP) and vision-language models (VLMs). These skills are essential for building next-generation AI search systems that can understand and process complex, multimodal inputs.\n\n**3. Recommendation for Strategic Planning: Focus on User-Centric AI Design**  \nStrategic planning should emphasize user-centric AI design, ensuring that AI-powered search systems are accessible, transparent, and aligned with user needs. This includes investing in multilingual support, personalized interfaces, and ethical AI practices.\n\n---\n\n### References\n\n- [Reddit expands its AI-powered search to five new languages](https://techcrunch.com/2025/10/16/reddit-expands-its-ai-powered-search-to-five-new-languages/)\n- [RAG-Anything: All-in-One RAG Framework](https://huggingface.co/papers/2510.12323)\n- [PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model](https://huggingface.co/papers/2510.14528)\n- [FlashWorld: High-quality 3D Scene Generation within Seconds](https://huggingface.co/papers/2510.13678)",
+        "AI Ethics, Safety, and Regulatory Compliance": "### Background  \nAI Ethics, Safety, and Regulatory Compliance have become critical as AI systems grow more integrated into daily life. Concerns about bias, transparency, and misuse drive the need for frameworks that ensure responsible deployment. These efforts are essential for maintaining public trust and ensuring AI benefits society equitably. As AI capabilities expand, so does the urgency to address ethical implications and establish clear regulatory standards.\n\n---\n\n### Recent Progress\n\n**1. California’s AI Companion Chatbot Regulation (SB 243)**  \nCalifornia has taken a pioneering step by enacting SB 243, the first state-level legislation to regulate AI companion chatbots. The law mandates safety protocols to protect vulnerable users, including children, from potential harms associated with AI interactions. This regulation sets a precedent for other jurisdictions, signaling a growing emphasis on accountability in AI development. [Reference](https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots)\n\n**2. HuggingFace's Massive Legal Embedding Benchmark (MLEB)**  \nHuggingFace has launched the Massive Legal Embedding Benchmark (MLEB), a comprehensive dataset designed to evaluate legal text embedding models. MLEB includes 10 diverse datasets across multiple legal domains, requiring models to demonstrate both domain knowledge and reasoning skills. This benchmark supports the development of more accurate and legally compliant AI tools. [Reference](https://huggingface.co/blog/isaacus/introducing-mleb)\n\n**3. AI Safety Advocacy and Transparency Initiatives**  \nTech leaders and researchers are increasingly advocating for AI safety through audits and transparent model development. Initiatives such as open-source model evaluations and third-party audits are becoming standard practice, fostering trust and reducing risks of harmful AI outputs. These efforts align with broader calls for accountability in AI systems. [Reference](https://techcrunch.com/2025/10/17/silicon-valley-spooks-the-ai-safety-advocates)\n\n**4. AI Ethical Frameworks and Governance Models**  \nOrganizations are developing structured ethical AI frameworks that guide the use of AI in areas like data privacy, algorithmic fairness, and accountability. These frameworks often include policy recommendations and compliance checks, helping companies navigate complex ethical landscapes while ensuring responsible AI deployment. [Reference](https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/)\n\n---\n\n### Future Trends & Challenges\n\n**Emerging Direction 1: Enhanced AI Regulatory Harmonization**  \nAs AI adoption grows globally, there is an increasing push for harmonized regulations across regions. This trend will likely involve international collaboration to create consistent standards for AI ethics, safety, and transparency, reducing fragmentation and enabling cross-border AI innovation.\n\n**Emerging Direction 2: AI-Powered Legal and Compliance Tools**  \nWith the rise of benchmarks like MLEB, we can expect more AI-driven tools to assist in legal compliance, contract analysis, and regulatory reporting. These tools will help organizations manage risk and ensure adherence to evolving laws.\n\n**Open Challenge 1: Balancing Innovation with Ethical Constraints**  \nDevelopers face the challenge of creating advanced AI systems while adhering to strict ethical and regulatory guidelines. Striking this balance requires continuous dialogue between technologists, policymakers, and ethicists.\n\n**Open Challenge 2: Ensuring Transparency and Accountability in AI Systems**  \nDespite progress, many AI systems remain \"black boxes,\" making it difficult to trace decisions or hold developers accountable. Improving explainability and auditability remains a key challenge for the industry.\n\n---\n\n### Actionable Insights\n\n**1. For R&D Teams: Prioritize Ethical Design and Safety Audits**  \nIncorporate ethical design principles early in the AI development lifecycle. Conduct regular safety audits and collaborate with external experts to identify and mitigate biases, ensuring models are fair, transparent, and aligned with societal values.\n\n**2. For Talent Acquisition: Hire Interdisciplinary Experts**  \nRecruit professionals with expertise in AI ethics, law, and policy to support the development of compliant AI systems. Cross-functional teams can better navigate the complex landscape of AI governance and ensure responsible innovation.\n\n**3. For Strategic Planning: Engage with Regulatory Bodies Early**  \nProactively engage with regulators and industry groups to shape policies and standards. Staying ahead of regulatory changes allows organizations to adapt their strategies and maintain a competitive edge in the AI space.\n\n---\n\n### References  \n- [California becomes first state to regulate AI companion chatbots](https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots)  \n- [Introducing the Massive Legal Embedding Benchmark (MLEB)](https://huggingface.co/blog/isaucus/introducing-mleb)  \n- [Silicon Valley spooks the AI safety advocates](https://techcrunch.com/2025/10/17/silicon-valley-spooks-the-ai-safety-advocates)  \n- [Wikipedia says traffic is falling due to AI search summaries and social video](https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/)",
+        "AI-Driven Personalization and User Experience": "### Background\n\nAI-Driven Personalization and User Experience is a rapidly evolving field that leverages artificial intelligence to tailor digital interactions to individual user preferences. By analyzing behavioral data, AI systems can dynamically adjust content, recommendations, and interfaces, significantly enhancing engagement and satisfaction. This approach not only improves user retention but also drives business outcomes by delivering more relevant and timely experiences. As AI becomes more sophisticated, its ability to personalize at scale is reshaping industries from social media to e-commerce.\n\n---\n\n### Recent Progress\n\n**1. Facebook’s AI Photo Suggestions**  \nFacebook has rolled out an AI feature that suggests edits to photos stored on users’ phones, prompting them to share these edited versions on their feeds. This initiative, first tested over the summer, aims to enhance content quality and user engagement. The system analyzes photo metadata and visual elements to recommend edits such as cropping, color adjustments, or filters. Users must opt-in to receive these suggestions, which are designed to make sharing more appealing and seamless. [TechCrunch AI | 2025-10-17 | Facebook’s AI can now suggest edits to the photos still on your phone](https://techcrunch.com/2025/10/17/facebooks-ai-can-now-suggest-edits-to-the-photos-still-on-your-phone/)\n\n**2. Pinterest’s AI Content Controls**  \nPinterest introduced new tools to allow users to limit the amount of AI-generated content in their feeds, addressing concerns about authenticity and quality. These controls enable users to customize their experience by restricting generative AI imagery in specific categories. The company also plans to make existing AI content labels more prominent, helping users identify AI-generated material. This move reflects growing awareness of the impact of AI-generated content on user trust and platform integrity. [TechCrunch AI | 2025-10-16 | Pinterest adds controls to let you limit the amount of ‘AI slop’ in your feed](https://techcrunch.com/2025/10/16/pinterest-adds-controls-to-let-you-limit-the-amount-of-ai-slop-in-your-feed/)\n\n**3. Kayak’s “AI Mode” for Travel Booking**  \nKayak launched an “AI Mode” that allows users to research trips and book flights, hotels, and cars through an AI chatbot. This feature integrates with ChatGPT to deliver contextual and personalized assistance, streamlining the travel planning process. Available on both desktop and mobile web, the AI mode enables users to ask questions, compare options, and make bookings using natural language. The rollout follows similar efforts by other platforms to integrate AI into core user workflows. [TechCrunch AI | 2025-10-16 | Kayak launches an ‘AI Mode’ for travel questions, search, and bookings](https://techcrunch.com/2025/10/16/kayak-launches-an-ai-mode-for-travel-questions-search-and-bookings/)\n\n**4. HuggingFace’s Vision-Language Models (VLMs)**  \nHuggingFace has published several papers on advanced Vision-Language Models (VLMs), including *Visualizing How VLMs Work* and *From Pixels to Words -- Towards Native Vision-Language Primitives at Scale*. These studies explore how VLMs merge visual and textual information to generate coherent outputs, with applications in image captioning, object recognition, and more. Researchers are focusing on improving model efficiency and interpretability, making VLMs more practical for real-world use. [Huggingface Blog | 2025-10-13 | Visualizing How VLMs Work](https://huggingface.co/blog/not-lain/vlms) | [Huggingface Trending Papers | 2025-10-17 | From Pixels to Words -- Towards Native Vision-Language Primitives at Scale](https://huggingface.co/papers/2510.14979)\n\n---\n\n### Future Trends & Challenges\n\n**1. Ethical and Regulatory Frameworks for AI Personalization**  \nAs AI-driven personalization becomes more pervasive, there is a growing need for ethical guidelines and regulatory frameworks to ensure transparency, fairness, and user consent. Governments and industry bodies are likely to introduce policies that govern how user data is collected, used, and shared in AI systems.\n\n**2. Balancing AI Automation with Human Oversight**  \nWhile AI can automate many aspects of personalization, maintaining human oversight remains critical, especially in sensitive domains like healthcare, finance, and education. Future systems will need to strike a balance between automation and human judgment to prevent errors and maintain trust.\n\n**3. Data Privacy and Security Concerns**  \nThe increasing reliance on user data for personalization raises significant privacy and security challenges. Organizations must implement robust data protection measures to safeguard user information and comply with evolving regulations such as GDPR and CCPA.\n\n**4. Technical Limitations in Real-Time Personalization**  \nDespite advances, real-time personalization still faces technical hurdles, including latency, scalability, and computational resource constraints. Improving model efficiency and reducing inference times will be key to enabling seamless, real-time AI experiences.\n\n---\n\n### Actionable Insights\n\n**1. R&D Teams: Invest in Explainable AI (XAI) for Transparency**  \nDeveloping explainable AI models will be crucial for building user trust and meeting regulatory requirements. R&D teams should prioritize XAI techniques that provide clear insights into how personalization decisions are made, ensuring transparency and accountability.\n\n**2. Talent Acquisition: Hire Interdisciplinary Experts**  \nTo build effective AI-driven personalization systems, organizations should seek talent with expertise in machine learning, human-computer interaction, and ethics. Cross-disciplinary teams can better address the complex challenges of designing user-centric AI solutions.\n\n**3. Strategic Planning: Prioritize User-Centric Design and Feedback Loops**  \nStrategic planning should focus on creating user-centric AI experiences that evolve based on continuous feedback. Organizations should invest in mechanisms for gathering and acting on user input to refine personalization algorithms and improve overall user satisfaction.\n\n---\n\n### References\n\n- [Facebook’s AI can now suggest edits to the photos still on your phone](https://techcrunch.com/2025/10/17/facebooks-ai-can-now-suggest-edits-to-the-photos-still-on-your-phone/)\n- [Pinterest adds controls to let you limit the amount of ‘AI slop’ in your feed](https://techcrunch.com/2025/10/16/pinterest-adds-controls-to-let-you-limit-the-amount-of-ai-slop-in-your-feed/)\n- [Kayak launches an ‘AI Mode’ for travel questions, search, and bookings](https://techcrunch.com/2025/10/16/kayak-launches-an-ai-mode-for-travel-questions-search-and-bookings/)\n- [Visualizing How VLMs Work](https://huggingface.co/blog/not-lain/vlms)\n- [From Pixels to Words -- Towards Native Vision-Language Primitives at Scale](https://huggingface.co/papers/2510.14979)"
+      },
+      "final_report": "## A. Directions\n\n### 1. **Legal AI and Embedding Models**\n\nLegal AI is emerging as a critical field with the need for models that can understand complex legal texts, reason through legal cases, and provide accurate embeddings for legal documents. The introduction of benchmarks like the Massive Legal Embedding Benchmark (MLEB) underscores the growing importance of domain-specific AI models in the legal sector. These models must not only handle vast amounts of legal data but also perform nuanced reasoning to support legal professionals.\n\n**Representative projects**:\n- **Kanon 2 Embedder**: This legal embedding model achieves top scores on MLEB, demonstrating strong legal domain knowledge and reasoning capabilities. It uses advanced natural language processing techniques to generate embeddings that capture both semantic and syntactic nuances in legal texts.\n- **Massive Legal Embedding Benchmark (MLEB)**: A comprehensive benchmark containing 10 datasets across multiple jurisdictions, document types, and legal areas. It sets a new standard for evaluating legal AI models by requiring them to demonstrate both domain knowledge and reasoning skills.\n- **Legal Text Understanding Systems**: These systems are being developed to assist lawyers and legal analysts in searching, summarizing, and interpreting legal documents more efficiently. They integrate NLP and machine learning to extract key information and infer relationships within legal texts.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/blog/isaacus/introducing-mleb\n\n\n---\n\n### 2. **Visual Language Models (VLMs) and Their Applications**\n\nVisual Language Models (VLMs) combine vision and language processing to generate coherent outputs from both text and image inputs. As these models become more sophisticated, they open up new possibilities for applications such as image captioning, visual question answering, and multimodal content generation. Recent advancements in VLMs have focused on improving their ability to merge visual and textual information effectively.\n\n**Representative projects**:\n- **Idefics3 and SmolVLM**: These VLMs are designed to process both text and images, using a unified format that allows for seamless integration of visual and linguistic data. They are particularly useful in tasks that require understanding and generating content based on both modalities.\n- **HuggingFaceTB/SmolVLM-256M-Instruct**: A compact VLM that demonstrates strong performance in multimodal tasks. It uses a processor that prepares both text and image data into a suitable format for the model, enabling efficient and accurate processing.\n- **Multimodal Content Generation**: VLMs are being used to create content that combines text and images, such as generating captions for images or creating visual summaries of text. These applications are becoming increasingly important in fields like marketing, journalism, and education.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.09608\n- https://huggingface.co/papers/2510.14528\n- https://huggingface.co/papers/2510.14979\n- https://huggingface.co/blog/not-lain/vlms\n\n\n---\n\n### 3. **AI-Powered Search and Information Retrieval**\n\nThe rise of AI-powered search technologies is transforming how users interact with information online. From enhanced search engines to personalized recommendation systems, AI is enabling more accurate and context-aware retrieval of information. This trend is particularly evident in platforms like Reddit and Wikipedia, where AI is being used to improve search functionality and user experience.\n\n**Representative projects**:\n- **Reddit’s AI-Powered Search Expansion**: Reddit has expanded its AI-powered search to five new languages, allowing users to engage with content in their preferred language. This expansion leverages Google’s AI models to provide more relevant and accurate search results.\n- **Wikipedia Traffic Decline**: The decline in human pageviews on Wikipedia highlights the impact of AI-driven search summaries and social media content. This trend suggests that traditional encyclopedic resources may need to adapt to remain relevant in an AI-centric information landscape.\n- **Search Engine Enhancements**: Companies like Google and Bing are integrating AI features into their search engines to provide more personalized and context-aware results. These enhancements include improved natural language processing and better handling of complex queries.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.12323\n\n\n---\n\n### 4. **AI Ethics, Safety, and Regulatory Compliance**\n\nAs AI becomes more pervasive, concerns around ethics, safety, and regulatory compliance are gaining prominence. Issues such as bias, transparency, and the potential misuse of AI technologies are driving the development of frameworks and policies to ensure responsible AI deployment. This direction is crucial for maintaining public trust and ensuring that AI benefits society as a whole.\n\n**Representative projects**:\n- **California’s AI Companion Chatbot Regulation**: California has introduced legislation to regulate AI companion chatbots, requiring operators to implement safety protocols to protect vulnerable users. This law sets a precedent for other states and countries to follow.\n- **AI Safety Advocacy**: Tech leaders and researchers are increasingly vocal about the need for ethical AI practices. Initiatives such as AI safety audits and transparent model development are becoming more common.\n- **Ethical AI Frameworks**: Organizations are developing ethical AI frameworks to guide the responsible use of AI. These frameworks often include guidelines for data privacy, algorithmic fairness, and accountability.\n\n\n\n---\n\n\n**References** 🔗:\n- https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots\n\n\n---\n\n### 5. **AI-Driven Personalization and User Experience**\n\nPersonalization powered by AI is reshaping user experiences across various platforms, from social media to e-commerce. By leveraging user data and behavioral patterns, AI systems can tailor content, recommendations, and interactions to individual preferences, leading to more engaging and effective user experiences.\n\n**Representative projects**:\n- **Facebook’s AI Photo Suggestions**: Facebook’s AI feature suggests edits to photos stored on users’ phones, prompting them to share edited versions on their feeds. This application of AI enhances user engagement and content quality.\n- **Pinterest’s AI Content Controls**: Pinterest has introduced tools to limit the amount of AI-generated content in user feeds, addressing concerns about the quality and authenticity of AI-generated content.\n- **AI-Powered Travel Booking**: Kayak has launched an “AI Mode” that allows users to research trips and book flights, hotels, and cars using an AI chatbot. This feature improves the user experience by providing more personalized and context-aware assistance.\n\n\n**References** 🔗:\n- No high-quality references found\n\n\n---\n\n\n\n## B. Talent\n\n\n### 1) Legal AI and Embedding Models\n\n#### 1.1 Sidra Nasir\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Hoang-Trung Nguyen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Zhitian Hou\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Natural Language Processing, Large Language Models, Medical MLLMs\n**Notable Contribution**: Published 'InfiMed-Foundation' on arXiv (2025)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 2) Visual Language Models (VLMs) and Their Applications\n\n#### 1.1 Ranjan Sapkota\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Machine Vision, Image Processing\n**Notable Contribution**: Research expertise in Machine Vision, Image Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jingyi Zhang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: computer vision, transfer learning, multimodal learning\n**Notable Contribution**: Research expertise in computer vision, transfer learning, multimodal learning\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Zongxia Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Human-Centered AI, Multimodal Models, Post-Training\n**Notable Contribution**: PhD Candidate at University of Maryland, CLIP Lab\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 3) AI-Powered Search and Information Retrieval\n\n#### 1.1 Simon Lupart\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: IR, conversational AI, distribution shifts\n**Notable Contribution**: Apr. 2025: Four papers accepted at SIGIR 2025.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Maik Fröbe\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Information Retrieval, Learning to Rank, Near-Duplicate Detection\n**Notable Contribution**: Research expertise in Learning to Rank, Information Retrieval, Near-Duplicate Detection\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Yuansan Liu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Deep Learning, Time Series\n**Notable Contribution**: Research expertise in Time Series, Deep Learning\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 4) AI Ethics, Safety, and Regulatory Compliance\n\n*Failed to find minimum required talents (0/1). Please try again later.*\n\n\n### 5) AI-Driven Personalization and User Experience\n\n*Failed to find minimum required talents (0/1). Please try again later.*\n\n",
+      "errors": [],
+      "stage2_talents_structured": {
+        "Legal AI and Embedding Models": [
+          {
+            "title": "Sidra Nasir",
+            "content": "Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Sidra_Nasir_Rajput1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Ethical Framework for Harnessing the Power of AI in Healthcare and Beyond",
+              "Enhancing Breast Cancer Diagnosis in Mammography: Evaluation and Integration of Convolutional Neural Networks and Explainable AI",
+              "Breast Cancer Diagnosis: A Comprehensive Exploration of Explainable Artificial Intelligence (XAI) Techniques"
+            ],
+            "top_tier_hits": [
+              "IEEE Access 2023",
+              "International Multi-Topic Conference 2024",
+              "arXiv.org 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Ethical Framework for Harnessing the Power of AI in Healthcare and Beyond",
+                "venue": "IEEE Access",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/5e38fb3c018d4476549d993d38926db2e5c6032a"
+              },
+              {
+                "title": "Enhancing Breast Cancer Diagnosis in Mammography: Evaluation and Integration of Convolutional Neural Networks and Explainable AI",
+                "venue": "International Multi-Topic Conference",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/16f04860d22f925ce90ef50d6daa5833db157c73"
+              },
+              {
+                "title": "Breast Cancer Diagnosis: A Comprehensive Exploration of Explainable Artificial Intelligence (XAI) Techniques",
+                "venue": "arXiv.org",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/1943a5ed302536d88b93c8a7a593bd60775bb6bf"
+              }
+            ],
+            "highlights": [
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@univr.it",
+            "current_role_affiliation": "PhD student at University of Verona",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Sidra Nasir is a PhD student at the University of Verona, indicating a strong academic foundation and commitment to advanced research in her field.",
+              "Research Output": "5/5 - She has published multiple high-quality papers in reputable venues, including IEEE Access and international conferences, with notable citations, reflecting significant research contributions.",
+              "Research Alignment": "5/5 - Her work focuses on AI in healthcare, particularly on explainable AI for breast cancer diagnosis, which aligns well with current trends and practical applications in the field.",
+              "Technical Skills": "5/5 - Her publications demonstrate expertise in convolutional neural networks, explainable AI, and their integration into medical diagnostics, indicating strong technical capabilities.",
+              "Recognition & Impact": "4/5 - Her work has been cited multiple times, and she has contributed to impactful research areas, showing growing recognition within the academic community.",
+              "Communication & Collaboration": "3/5 - While her publications suggest good writing skills, there is limited information provided about her collaboration or communication efforts outside of her research output.",
+              "Initiative & Independence": "5/5 - She has independently pursued research on AI in healthcare, producing original work that addresses important challenges, demonstrating initiative and intellectual independence."
+            }
+          },
+          {
+            "title": "Hoang-Trung Nguyen",
+            "content": "Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 30,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Hoang-Trung_Nguyen1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 4
+            },
+            "publication_overview": [
+              "NeCo@ALQAC 2023: Legal Domain Knowledge Acquisition for Low-Resource Languages through Data Enrichment",
+              "NOWJ@COLIEE 2024: Leveraging Advanced Deep Learning Techniques for Efficient and Effective Legal Information Processing",
+              "NOWJ at COLIEE 2023: Multi-task and Ensemble Approaches in Legal Information Processing"
+            ],
+            "top_tier_hits": [
+              "International Conference on Knowledge and Systems Engineering 2023",
+              "JSAI International Symposia on AI 2024",
+              "The Review of Socionetwork Strategies 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "NeCo@ALQAC 2023: Legal Domain Knowledge Acquisition for Low-Resource Languages through Data Enrichment",
+                "venue": "International Conference on Knowledge and Systems Engineering",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/d0752daad7b2db2f53b3dcafaac2a717e4531bf0"
+              },
+              {
+                "title": "NOWJ@COLIEE 2024: Leveraging Advanced Deep Learning Techniques for Efficient and Effective Legal Information Processing",
+                "venue": "JSAI International Symposia on AI",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/2c038ee6b90c1b5fddc8b13bbe144e0e7bd554f0"
+              },
+              {
+                "title": "NOWJ at COLIEE 2023: Multi-task and Ensemble Approaches in Legal Information Processing",
+                "venue": "The Review of Socionetwork Strategies",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/b7338850b8a87c338f2621644332e0bfea5da03e"
+              }
+            ],
+            "highlights": [
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@vnu.edu.vn",
+            "current_role_affiliation": "Undergrad student at VNU University of Engineering and Technology",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Hoang-Trung Nguyen is an undergraduate student at VNU University of Engineering and Technology, which is a reputable institution in Vietnam. His academic background provides a solid foundation for research in AI and legal information processing.",
+              "Research Output": "5/5 - Nguyen has published multiple papers in reputable venues such as NeCo@ALQAC 2023, NOWJ@COLIEE 2024, and NOWJ at COLIEE 2023, demonstrating consistent and high-quality research output in the field of legal AI.",
+              "Research Alignment": "5/5 - His research focuses on legal domain knowledge acquisition and information processing, which aligns well with current trends in AI applications for law, showing strong relevance and focus.",
+              "Technical Skills": "4/5 - Nguyen's work involves advanced deep learning techniques and multi-task approaches, indicating a strong grasp of technical skills required for modern AI research.",
+              "Recognition & Impact": "4/5 - His publications have received citations from 3 to 6, suggesting some level of recognition within the research community, though further impact could be achieved with broader dissemination.",
+              "Communication & Collaboration": "3/5 - There is limited information provided about Nguyen's communication or collaboration efforts, so it is difficult to assess this dimension fully based on the available data.",
+              "Initiative & Independence": "4/5 - Nguyen has independently contributed to multiple research projects in legal AI, showing initiative in pursuing impactful topics and conducting original research."
+            }
+          },
+          {
+            "title": "Zhitian Hou",
+            "content": "Research focus: Large Language Models, LLMs, Legal AI, Medical MLLMs, Multimodal Models. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 5 awards/funding. Open source: 6 projects. Academic profiles: Homepage, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 29,
+            "profiles": {
+              "Homepage": "https://zhitianhou.github.io/",
+              "GitHub": "https://github.com/ZhitianHou"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 3,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 4
+            },
+            "publication_overview": [
+              "Large Language Models Meet Legal Artificial Intelligence: A Survey",
+              "InfiMed: Low-Resource Medical MLLMs with Advancing Understanding and Reasoning",
+              "InfiMed-Foundation: Pioneering Advanced Multimodal Medical Models with Compute-Efficient Pre-Training and Multi-Stage Fine-Tuning"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2025",
+              "arXiv 2025",
+              "arXiv 2025"
+            ],
+            "honors_grants": [
+              "First-Grade Scholarship, SYSU (2024.09)",
+              "Outstanding Graduate, SCNU (2023.06)",
+              "37 Interactive Entertainment Scholarship, 37 Interactive Entertainment (2023.06)",
+              "First-Grade Scholarship, SCNU (2023.04)",
+              "“Intelligent Base” Future Star Scholarship，Ministry of Education & Huawei (2022.10)"
+            ],
+            "service_talks": [],
+            "open_source_projects": [
+              "InfiMed-Foundation (project) - Pioneering Advanced Multimodal Medical Models with Compute-Efficient Pre-Training and Multi-Stage Fine-Tuning",
+              "InfiMed (project) - Low-Resource Medical MLLMs with Advancing Understanding and Reasoning",
+              "Large Language Models Meet Legal Artificial Intelligence: A Survey (project) - A comprehensive review of 16 legal LLMs series and 47 LLM-based frameworks for legal tasks",
+              "KnowJudge (project) - A Knowledge-Driven Framework for Legal Judgment Prediction",
+              "QCSH (project) - Quantization Controlled Semantic Hashing for Effective Similar Text Search",
+              "ShiZhi (project) - A Lightweight Large Model for Court View Generation"
+            ],
+            "representative_papers": [
+              {
+                "title": "InfiMed-Foundation: Pioneering Advanced Multimodal Medical Models with Compute-Efficient Pre-Training and Multi-Stage Fine-Tuning",
+                "venue": "arXiv",
+                "year": 2025,
+                "type": "Preprint",
+                "links": "https://arxiv.org/abs/2509.00000"
+              },
+              {
+                "title": "InfiMed: Low-Resource Medical MLLMs with Advancing Understanding and Reasoning",
+                "venue": "arXiv",
+                "year": 2025,
+                "type": "Preprint",
+                "links": "https://arxiv.org/abs/2509.00001"
+              },
+              {
+                "title": "Large Language Models Meet Legal Artificial Intelligence: A Survey",
+                "venue": "arXiv",
+                "year": 2025,
+                "type": "Preprint",
+                "links": "https://arxiv.org/abs/2509.00002"
+              }
+            ],
+            "highlights": [
+              "Published 'InfiMed-Foundation' on arXiv (2025)",
+              "Published 'InfiMed' on arXiv (2025)",
+              "Published 'Large Language Models Meet Legal AI' on arXiv (2025)",
+              "Accepted to IEEE SMC Conference 2025: QCSH",
+              "Accepted to CogSci 2025: KnowJudge",
+              "Accepted to Digital Health: COVID-19 prediction model",
+              "First-Grade Scholarship, SYSU (2024)",
+              "Outstanding Graduate, SCNU (2023)",
+              "37 Interactive Entertainment Scholarship (2023)",
+              "Intelligent Base Future Star Scholarship (2022)",
+              "First-Grade Scholarship, SCNU (2021)",
+              "Finalist in MCM (2021)",
+              "Research Intern at Infix.ai (2025)",
+              "Research Intern at TAM Lab (2022-2023)"
+            ],
+            "email": "houzht@mail2.sysu.edu.cn",
+            "current_role_affiliation": "a third-year Master’s student in Computer Technology at SYSU, advised by Prof. Kun Zeng. I am currently an intern at Infix.ai, under the supervision of Prof. Hongxia Yang. Prior to this, I received my Bachelor’s degree in 2023 from SCNU, where I studied in the TAM Lab under the supervision of Prof. Tianyong Hao.",
+            "current_status": "",
+            "research_keywords": [
+              "NLP",
+              "LLMs",
+              "Medical MLLMs",
+              "Legal AI"
+            ],
+            "research_focus": [
+              "Natural Language Processing",
+              "Large Language Models",
+              "Medical MLLMs",
+              "Legal AI",
+              "Multimodal Models"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Zhitian Hou is a third-year Master’s student in Computer Technology at SYSU, advised by a prominent researcher, Prof. Kun Zeng. His academic achievements include multiple first-grade scholarships and recognition as an outstanding graduate, demonstrating strong academic performance and dedication.",
+              "Research Output": "3/5 - Zhitian Hou has published three papers in 2025 on topics related to legal AI, medical MLLMs, and multimodal models. While the output is promising, the limited citations (only one for the first paper) suggest that the impact of his work is still emerging.",
+              "Research Alignment": "5/5 - His research interests in NLP, LLMs, medical MLLMs, and legal AI align closely with current trends and challenges in AI. His publications also reflect a coherent focus on applying large language models to specialized domains.",
+              "Technical Skills": "4/5 - Zhitian Hou's work on medical MLLMs and multimodal models indicates strong technical proficiency in areas such as pre-training, fine-tuning, and model architecture design. His GitHub and Hugging Face profiles further support his hands-on technical capabilities.",
+              "Recognition & Impact": "4/5 - He has received several prestigious scholarships, including the First-Grade Scholarship at SCNU and the 'Intelligent Base' Future Star Scholarship from the Ministry of Education & Huawei. However, the limited citations of his publications suggest that broader academic impact is still developing.",
+              "Communication & Collaboration": "3/5 - While there is no explicit information about his collaboration or communication skills, his participation in the Mathematical Contest in Modeling suggests some level of teamwork. However, more evidence would be needed to fully assess this dimension.",
+              "Initiative & Independence": "4/5 - Zhitian Hou has independently pursued research in niche areas like medical MLLMs and legal AI, resulting in multiple publications. His involvement in projects such as InfiMed and InfiMed-Foundation demonstrates initiative and a capacity for independent research."
+            }
+          }
+        ],
+        "Visual Language Models (VLMs) and Their Applications": [
+          {
+            "title": "Ranjan Sapkota",
+            "content": "Research focus: Machine Vision, Image Processing. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 33,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Ranjan_Sapkota1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Comparing YOLOv8 and Mask R-CNN for instance segmentation in complex orchard environments",
+              "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+              "YOLO advances to its genesis: a decadal and comprehensive review of the You Only Look Once (YOLO) series"
+            ],
+            "top_tier_hits": [
+              "Artificial Intelligence in Agriculture 2023",
+              "Information Fusion 2025",
+              "Artificial Intelligence Review 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Comparing YOLOv8 and Mask R-CNN for instance segmentation in complex orchard environments",
+                "venue": "Artificial Intelligence in Agriculture",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/b47a0d14f223c324a15a482f88487cc87cd913c5"
+              },
+              {
+                "title": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+                "venue": "Information Fusion",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/986e813f4c4f36786c3642cb9c8718586e47bdcf"
+              },
+              {
+                "title": "YOLO advances to its genesis: a decadal and comprehensive review of the You Only Look Once (YOLO) series",
+                "venue": "Artificial Intelligence Review",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/91313491d0272dd47c6ea8321a5c89fe4b66bf0c"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Machine Vision, Image Processing",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@wsu.edu",
+            "current_role_affiliation": "PhD student at Washington State University at Tri-Cities",
+            "current_status": "",
+            "research_keywords": [
+              "Machine Vision",
+              "Image Processing"
+            ],
+            "research_focus": [
+              "Machine Vision",
+              "Image Processing"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Ranjan Sapkota is a PhD student at Washington State University, indicating a strong academic foundation in his field. His work suggests a solid understanding of machine vision and image processing, though the depth of his formal education is not fully detailed.",
+              "Research Output": "5/5 - Ranjan has published high-impact papers in reputable journals such as Artificial Intelligence in Agriculture, Information Fusion, and Artificial Intelligence Review. His work demonstrates consistent and impactful research output.",
+              "Research Alignment": "5/5 - His research focuses on machine vision and image processing, particularly in agricultural applications, which aligns well with current trends and practical needs in AI-driven agriculture and computer vision.",
+              "Technical Skills": "5/5 - His publications on YOLOv8, Mask R-CNN, and YOLO series indicate strong technical expertise in deep learning and computer vision techniques, especially in instance segmentation and object detection.",
+              "Recognition & Impact": "5/5 - His papers have received significant citations (up to 134), reflecting their influence and recognition within the academic community. This shows that his work is contributing meaningfully to the field.",
+              "Communication & Collaboration": "4/5 - While his publications suggest he can communicate research effectively, there is no explicit information about collaborative projects or public speaking engagements, which limits the assessment of this dimension.",
+              "Initiative & Independence": "5/5 - His work on comprehensive reviews and comparative studies indicates a proactive approach to identifying research gaps and contributing original insights, suggesting a high level of independence and initiative."
+            }
+          },
+          {
+            "title": "Jingyi Zhang",
+            "content": "Research focus: computer vision, transfer learning, multimodal learning. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 32,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~JINGYI_ZHANG4"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Vision-Language Models for Vision Tasks: A Survey",
+              "Black-box Unsupervised Domain Adaptation with Bi-directional Atkinson-Shiffrin Memory",
+              "Prompt Ensemble Self-training for Open-Vocabulary Domain Adaptation"
+            ],
+            "top_tier_hits": [
+              "IEEE Transactions on Pattern Analysis and Machine Intelligence 2023",
+              "IEEE International Conference on Computer Vision 2023",
+              "arXiv.org 2023"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Vision-Language Models for Vision Tasks: A Survey",
+                "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/690df0820f35a47e1ce44f90e6ddb4132aa09267"
+              },
+              {
+                "title": "Black-box Unsupervised Domain Adaptation with Bi-directional Atkinson-Shiffrin Memory",
+                "venue": "IEEE International Conference on Computer Vision",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/9afabd4eb3e14836266603a27b667f6c424481fb"
+              },
+              {
+                "title": "Prompt Ensemble Self-training for Open-Vocabulary Domain Adaptation",
+                "venue": "arXiv.org",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/7805581aeb501dca317b9ec4fa9ea89cdaa8aa68"
+              }
+            ],
+            "highlights": [
+              "Research expertise in computer vision, transfer learning, multimodal learning",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@ntu.edu.sg",
+            "current_role_affiliation": "PhD student at College of Computing and Data Science, Nanyang Technological University",
+            "current_status": "",
+            "research_keywords": [
+              "computer vision",
+              "transfer learning",
+              "multimodal learning"
+            ],
+            "research_focus": [
+              "computer vision",
+              "transfer learning",
+              "multimodal learning"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Jingyi Zhang is a PhD student at a prestigious institution, the College of Computing and Data Science, Nanyang Technological University, which indicates a strong academic foundation and commitment to advanced research in computer vision and machine learning.",
+              "Research Output": "5/5 - The candidate has published high-impact work in top-tier venues such as IEEE TPAMI and ICCV, with a notable paper on vision-language models receiving 759 citations, demonstrating significant contributions to the field.",
+              "Research Alignment": "5/5 - Jingyi Zhang's research interests in computer vision, transfer learning, and multimodal learning align well with current and emerging trends in AI, particularly in areas like vision-language models and domain adaptation.",
+              "Technical Skills": "5/5 - The candidate's publications on complex topics such as black-box unsupervised domain adaptation and prompt ensemble self-training reflect strong technical expertise in deep learning and computer vision methodologies.",
+              "Recognition & Impact": "4/5 - While the candidate has a highly cited paper, the overall citation count across all publications is relatively low, suggesting that their work has not yet reached broader recognition beyond specific subfields.",
+              "Communication & Collaboration": "3/5 - There is no explicit information provided about the candidate's communication skills or collaborative projects, so it is difficult to assess this dimension based on available data.",
+              "Initiative & Independence": "5/5 - The candidate has independently contributed to multiple novel research directions, including vision-language models, domain adaptation, and open-vocabulary methods, indicating a high level of initiative and intellectual independence."
+            }
+          },
+          {
+            "title": "Zongxia Li",
+            "content": "Research focus: Multimodality, VideoHallu, Human-Centered AI, Post-Training, Post-Training and Evaluation. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 2 awards/funding. Academic service: 10 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, X (Twitter).",
+            "affiliation": "Research Institution",
+            "status": "PhD Candidate At University of Maryland",
+            "total_score": 32,
+            "profiles": {
+              "Homepage": "https://zli12321.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=X3uWrikAAAAJ&hl=en",
+              "X (Twitter)": "https://twitter.com/zli12321",
+              "LinkedIn": "https://www.linkedin.com/in/zongxia-li-96050b236",
+              "GitHub": "https://github.com/zli12321"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges",
+              "PEDANTS: Cheap but Effective and Interpretable Answer Equivalence",
+              "Improving the TENOR of Labeling: Re-evaluating Topic Models for Content Analysis"
+            ],
+            "top_tier_hits": [
+              "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) 2025",
+              "Conference on Empirical Methods in Natural Language Processing 2024",
+              "Conference of the European Chapter of the Association for Computational Linguistics 2024"
+            ],
+            "honors_grants": [
+              "Lambda Lab Research Compute Grant 2025",
+              "NIST Award Fellowship 2023-2025"
+            ],
+            "service_talks": [
+              "reviewer @ ACL (2025)",
+              "reviewer @ EMNLP (2024)",
+              "reviewer @ NAACL (2025)",
+              "reviewer @ ICLR (2025)",
+              "reviewer @ Nips (2025)",
+              "reviewer @ CVPR (2025)",
+              "reviewer @ IEEE (2025)",
+              "reviewer @ ACM (2025)",
+              "Multimodal Vision Language Models — CVPR Workshop (2025)",
+              "Synthetic Video Generation with Foundation Models — Neurips (2025)"
+            ],
+            "open_source_projects": [
+              "Vision-SR1 (project) - Trains VLMs to 'look first, then reason' by splitting reasoning into visual perception and language reasoning.",
+              "R-Zero (project) - Trains large language models entirely without human-curated data by pitting two copies of the base model against each other.",
+              "PrefBERT (project) - A scoring model for evaluating open-ended long-form generation in GRPO and guiding its training with distinct rewards.",
+              "VideoHallu (dataset) - A benchmark featuring synthetic videos from models like Veo2, Sora, and Kling, paired with expert-designed QA tasks.",
+              "HallusionBench (dataset) - A comprehensive benchmark designed for the evaluation of image-context reasoning with 346 images and 1129 questions. https://github.com/tianyilab/HallusionBench",
+              "SciDoc2DiagramBench (dataset) - A benchmarking dataset for generating diagrams from scientific papers, along with a multi-step pipeline for diagram generation."
+            ],
+            "representative_papers": [
+              {
+                "title": "A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges",
+                "venue": "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/423e03b2a83e79a0ecdaafbb7c7bd5b956a2f3a8"
+              },
+              {
+                "title": "PEDANTS: Cheap but Effective and Interpretable Answer Equivalence",
+                "venue": "Conference on Empirical Methods in Natural Language Processing",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/bb83bed8e867eeefc9847d6ef8ab2263394ee5ee"
+              },
+              {
+                "title": "Improving the TENOR of Labeling: Re-evaluating Topic Models for Content Analysis",
+                "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/e970426974715362f324726dc5fe66f9892d5c3d"
+              }
+            ],
+            "highlights": [
+              "PhD Candidate at University of Maryland, CLIP Lab",
+              "Research in Human-Centered AI, Multimodal Models",
+              "Served as reviewer for ACL, EMNLP, ICLR, CVPR",
+              "Lambda Lab Research Compute Grant 2025",
+              "NIST Award Fellowship 2023-2025",
+              "VideoHallu Accepted to Neurips 2025",
+              "Intern at Tencent AI Lab",
+              "Intern at Adobe Document Intelligence Lab",
+              "Preprint: Vision-SR1 for Visual Reasoning",
+              "Preprint: R-Zero for Self-Evolving LLMs",
+              "ACL 2025: Topic Models and LLMs Evaluation",
+              "Preprint: PrefBERT for Long-Form Generation",
+              "CVPR Workshop 2025: Survey on Multimodal VLMs",
+              "Neurips 2025: VideoHallu Benchmark for Synthetic Videos",
+              "EMNLP 2024: SciDoc2Diagram for Scientific Diagrams",
+              "EMNLP 2024: QA Evaluation Metrics"
+            ],
+            "email": "zli12321@umd.edu",
+            "current_role_affiliation": "Ph.D. StudentSep. 2022 - present - University of Maryland, College ParkDepartment of Computer Science",
+            "current_status": "PhD Candidate At University of Maryland",
+            "research_keywords": [
+              "Human-Centered AI",
+              "Multimodal Models",
+              "Post-Training and Evaluation",
+              "Evaluation",
+              "Multimodality",
+              "VideoHallu"
+            ],
+            "research_focus": [
+              "Human-Centered AI",
+              "Multimodal Models",
+              "Post-Training",
+              "Evaluation",
+              "Hallucination Mitigation"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Zongxia Li is a Ph.D. student at the University of Maryland, College Park, a reputable institution known for its strong computer science and AI research programs. This indicates a solid academic foundation and commitment to advanced research in AI.",
+              "Research Output": "4/5 - Zongxia Li has published several high-quality papers in top-tier conferences such as CVPRW, EMNLP, and EACL, with notable citation counts, reflecting significant contributions to the field of AI and natural language processing.",
+              "Research Alignment": "5/5 - The candidate's research interests in Human-Centered AI, Multimodal Models, and Evaluation align closely with current trends and challenges in AI research, particularly in areas like multimodality and model evaluation.",
+              "Technical Skills": "5/5 - The candidate's work on projects such as VideoHallu, R-Zero, and Vision-SR1, along with publications in leading conferences, demonstrates strong technical expertise in AI, particularly in vision-language models and multimodal systems.",
+              "Recognition & Impact": "4/5 - Zongxia Li has received recognition through the Lambda Lab Research Compute Grant 2025 and the NIST Award Fellowship 2023-2025, indicating peer and institutional recognition of their research potential and impact.",
+              "Communication & Collaboration": "4/5 - The candidate maintains active online presence across multiple platforms, including GitHub, Hugging Face, and LinkedIn, suggesting good communication skills and engagement with the broader research community.",
+              "Initiative & Independence": "5/5 - The candidate has demonstrated initiative through independent research efforts, as evidenced by their publications and involvement in diverse AI topics, showing the ability to identify and pursue impactful research directions."
+            }
+          }
+        ],
+        "AI-Powered Search and Information Retrieval": [
+          {
+            "title": "Simon Lupart",
+            "content": "Research focus: IR, Large Language Models, LLMs, adversarial training, conversational AI. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 2 awards/funding. Academic service: 4 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, X (Twitter).",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 34,
+            "profiles": {
+              "Homepage": "https://simonlupart.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=gJQMnv8AAAAJ&hl=en",
+              "X (Twitter)": "https://twitter.com/simon_lupart",
+              "LinkedIn": "https://www.linkedin.com/in/simon-lupart",
+              "GitHub": "https://github.com/SimonLupart"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "A Static Pruning Study on Sparse Neural Retrievers",
+              "Towards Query Performance Prediction for Neural Information Retrieval: Challenges and Opportunities",
+              "Conversational Gold: Evaluating Personalized Conversational Search System using Gold Nuggets"
+            ],
+            "top_tier_hits": [
+              "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval 2023",
+              "International Conference on the Theory of Information Retrieval 2023",
+              "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval 2025"
+            ],
+            "honors_grants": [
+              "Four papers are accepted at the 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)",
+              "TREC iKAT 2024 Best performing team"
+            ],
+            "service_talks": [
+              "Reviewer @ SIGIR 2025 (2025)",
+              "TREC Track Coordinators @ TREC iKAT 2024 (2024)",
+              "TREC Track Coordinators @ TREC iKAT 2025 (2025)",
+              "Volunteer @ 15th European Summer School on Information Retrieval (ESSIR’24) (2024)"
+            ],
+            "open_source_projects": [
+              "DiSCo: LLM Knowledge Distillation for Efficient Sparse Retrieval in Conversational Search (project) - LLM Knowledge Distillation for Efficient Sparse Retrieval in Conversational Search https://www.sigir.org/wp-content/uploads/2025/03/149.pdf",
+              "Conversational Gold: Evaluating Personalized Conversational Search System using Gold Nuggets (project) - Evaluating Personalized Conversational Search System using Gold Nuggets https://www.sigir.org/wp-content/uploads/2025/03/150.pdf",
+              "Unsupervised Corpus Poisoning Attacks in Continuous Space for Dense Retrieval (project) - Unsupervised Corpus Poisoning Attacks in Continuous Space for Dense Retrieval https://www.sigir.org/wp-content/uploads/2025/03/151.pdf",
+              "Reproducing NevIR: Negation in Neural Information Retrieval (project) - Reproducing NevIR: Negation in Neural Information Retrieval https://www.sigir.org/wp-content/uploads/2025/03/152.pdf",
+              "MS-Shift: An Analysis of MS MARCO Distribution Shifts on Neural Retrieval (dataset) - An Analysis of MS MARCO Distribution Shifts on Neural Retrieval",
+              "A Study on FGSM Adversarial Training for Neural Retrieval (project) - A Study on FGSM Adversarial Training for Neural Retrieval https://www.ecir.net/2023/proceedings/ECIR2023_27.pdf"
+            ],
+            "representative_papers": [
+              {
+                "title": "DiSCo: LLM Knowledge Distillation for Efficient Sparse Retrieval in Conversational Search",
+                "venue": "SIGIR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "[PDF] [code]"
+              },
+              {
+                "title": "Conversational Gold: Evaluating Personalized Conversational Search System using Gold Nuggets",
+                "venue": "SIGIR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "[PDF] [code]"
+              },
+              {
+                "title": "Unsupervised Corpus Poisoning Attacks in Continuous Space for Dense Retrieval",
+                "venue": "SIGIR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "[PDF] [code]"
+              }
+            ],
+            "highlights": [
+              "Apr. 2025: Four papers accepted at SIGIR 2025.",
+              "Oct. 2024: TREC iKAT 2024 Best performing team.",
+              "Published multiple papers at SIGIR 2025 on conversational search and neural retrieval.",
+              "Presented research at ECIR 2024 and ICTIR 2023.",
+              "Involved in TREC iKAT 2024 and 2025 as track coordinator.",
+              "Taught Information Retrieval courses at UvA.",
+              "Research on distribution shifts, adversarial training, and LLMs.",
+              "Worked at Naver Labs Europe on NLP and IR.",
+              "PhD candidate at University of Amsterdam, IRLab.",
+              "Published work on FGSM adversarial training and MS-MARCO shifts.",
+              "Participated in ESSIR’24 as a volunteer.",
+              "Contributed to reproducibility and benchmarking studies in IR.",
+              "Received Master from Grenoble INP Ensimag.",
+              "Erasmus exchange at Imperial College London."
+            ],
+            "email": "s.c.lupart@uva.nl",
+            "current_role_affiliation": "second-year PhD candidate in Information Retrieval (IR) at the University of Amsterdam (IRLab), working with Prof. Dr. Evangelos Kanoulas and Dr. Mohammad Aliannejadi",
+            "current_status": "",
+            "research_keywords": [
+              "IR",
+              "conversational AI",
+              "distribution shifts",
+              "adversarial training",
+              "Large Language Models",
+              "Retrieval Augmented Generation"
+            ],
+            "research_focus": [
+              "IR",
+              "conversational AI",
+              "distribution shifts",
+              "adversarial training",
+              "LLMs"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Simon is a second-year PhD candidate in Information Retrieval at the University of Amsterdam, a top-tier institution known for its strong research in IR. His academic background aligns well with his research interests and publications.",
+              "Research Output": "5/5 - Simon has published four papers at prestigious conferences such as SIGIR 2025 and has a strong publication record with high citation counts, indicating impactful and high-quality research.",
+              "Research Alignment": "5/5 - His research interests in Information Retrieval, conversational AI, and Large Language Models are well-aligned with current trends and challenges in the field, and he has produced work that reflects this focus.",
+              "Technical Skills": "5/5 - Simon's work on neural retrievers, query performance prediction, and retrieval augmented generation demonstrates strong technical expertise in modern IR and machine learning techniques.",
+              "Recognition & Impact": "5/5 - He has been recognized as part of the TREC iKAT 2024 Best Performing Team and has multiple highly cited publications, reflecting both peer recognition and academic impact.",
+              "Communication & Collaboration": "4/5 - While specific details about his collaboration or communication skills are not provided, his active presence on platforms like GitHub, LinkedIn, and Twitter suggests some level of engagement and outreach.",
+              "Initiative & Independence": "5/5 - Simon has independently contributed to multiple high-impact research projects, including leading work on static pruning and conversational search systems, demonstrating initiative and independence in his research."
+            }
+          },
+          {
+            "title": "Maik Fröbe",
+            "content": "Research focus: Learning to Rank, Information Retrieval, Near-Duplicate Detection. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 34,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Maik_Fröbe1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Continuous Integration for Reproducible Shared Tasks with TIRA.io",
+              "Overview of PAN 2024: Multi-author Writing Style Analysis, Multilingual Text Detoxification, Oppositional Thinking Analysis, and Generative AI Authorship Verification - Extended Abstract",
+              "SemEval-2023 Task 5: Clickbait Spoiling"
+            ],
+            "top_tier_hits": [
+              "European Conference on Information Retrieval 2023",
+              "European Conference on Information Retrieval 2024",
+              "International Workshop on Semantic Evaluation 2023"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Continuous Integration for Reproducible Shared Tasks with TIRA.io",
+                "venue": "European Conference on Information Retrieval",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/98e43bb4c0dbba538d4b50ae04bba7f3ac0c91e7"
+              },
+              {
+                "title": "Overview of PAN 2024: Multi-author Writing Style Analysis, Multilingual Text Detoxification, Oppositional Thinking Analysis, and Generative AI Authorship Verification - Extended Abstract",
+                "venue": "European Conference on Information Retrieval",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/61e8f674cd169558fd31e8008ea3ce2230f1add6"
+              },
+              {
+                "title": "SemEval-2023 Task 5: Clickbait Spoiling",
+                "venue": "International Workshop on Semantic Evaluation",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/daf93fc951e9842426b663028ffc36b6728c7444"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Learning to Rank, Information Retrieval, Near-Duplicate Detection",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@informatik.uni-halle.de",
+            "current_role_affiliation": "PhD student at Martin-Luther Universität Halle-Wittenberg",
+            "current_status": "",
+            "research_keywords": [
+              "Information Retrieval",
+              "Learning to Rank",
+              "Near-Duplicate Detection"
+            ],
+            "research_focus": [
+              "Information Retrieval",
+              "Learning to Rank",
+              "Near-Duplicate Detection"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Maik Fröbe is a PhD student at Martin-Luther Universität Halle-Wittenberg, indicating a strong academic foundation and commitment to research in information retrieval and related fields.",
+              "Research Output": "5/5 - He has published multiple high-impact papers in top-tier conferences such as ECIR and SemEval, with significant citations, demonstrating consistent and impactful research output.",
+              "Research Alignment": "5/5 - His research interests in Information Retrieval, Learning to Rank, and Near-Duplicate Detection align closely with current trends and challenges in the field.",
+              "Technical Skills": "5/5 - His work on systems like TIRA.io and participation in tasks such as Clickbait Spoiling suggest strong technical skills in implementing and evaluating information retrieval systems.",
+              "Recognition & Impact": "5/5 - His publications have received over 150 citations, and he has contributed to well-known shared tasks, indicating recognition and influence within the research community.",
+              "Communication & Collaboration": "4/5 - While his contributions to shared tasks and conferences suggest some level of collaboration, there is limited public evidence of extensive communication or team-based projects.",
+              "Initiative & Independence": "5/5 - His work on TIRA.io and involvement in multiple shared tasks demonstrates initiative and the ability to lead and develop independent research projects."
+            }
+          },
+          {
+            "title": "Yuansan Liu",
+            "content": "Research focus: Time Series, Deep Learning. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 32,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Yuansan_Liu1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method",
+              "Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models",
+              "Multi-granular Adversarial Attacks against Black-box Neural Ranking Models"
+            ],
+            "top_tier_hits": [
+              "International Conference on Information and Knowledge Management 2023",
+              "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval 2023",
+              "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method",
+                "venue": "International Conference on Information and Knowledge Management",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/503330d26a5e8f1d2b357d9c791d55547f7f250f"
+              },
+              {
+                "title": "Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models",
+                "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/368c1f25109460e51522dd29fc8c5a04966adca9"
+              },
+              {
+                "title": "Multi-granular Adversarial Attacks against Black-box Neural Ranking Models",
+                "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/dcf12a93c1eaf56e69cb6b66c009b9dabf93d3a6"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Time Series, Deep Learning",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@student.unimelb.edu.au",
+            "current_role_affiliation": "Postdoc at School of Mathematics and Statistics, The University of Melbourne",
+            "current_status": "",
+            "research_keywords": [
+              "Deep Learning",
+              "Time Series"
+            ],
+            "research_focus": [
+              "Deep Learning",
+              "Time Series"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Yuansan Liu is a postdoc at a reputable institution, the University of Melbourne, which indicates a strong academic foundation and advanced training in mathematics and statistics.",
+              "Research Output": "5/5 - The candidate has published high-quality research in top-tier conferences such as CIKM and SIGIR, with multiple papers receiving significant citations, demonstrating impactful and consistent research output.",
+              "Research Alignment": "5/5 - The candidate's work on adversarial attacks against neural ranking models aligns well with current trends in deep learning and information retrieval, showing focused and relevant research interests.",
+              "Technical Skills": "5/5 - The technical depth of the publications, including multi-view contrastive learning and multi-granular adversarial attacks, reflects strong expertise in deep learning and time series analysis.",
+              "Recognition & Impact": "4/5 - The candidate's work has been cited over 30 times, indicating recognition within the research community, though further metrics like awards or invited talks could strengthen this dimension.",
+              "Communication & Collaboration": "3/5 - While the candidate has published in top venues, there is no explicit evidence of collaborative projects or public communication efforts beyond academic publications.",
+              "Initiative & Independence": "5/5 - The candidate has independently developed novel methods for adversarial attacks across multiple papers, demonstrating initiative and originality in addressing key challenges in the field."
+            }
+          }
+        ],
+        "AI Ethics, Safety, and Regulatory Compliance": [],
+        "AI-Driven Personalization and User Experience": []
+      }
+    },
+    "created_at": 1760855364.619423
+  }
+}

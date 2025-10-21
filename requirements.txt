@@ -30,6 +30,3 @@ searxng
 supervisor
 redis
 psutil>=5.9.0
-# Azure AI Agents (用于论文搜索)
-azure-ai-projects>=1.0.0
-azure-identity>=1.15.0

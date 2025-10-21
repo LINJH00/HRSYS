@@ -15,8 +15,6 @@ from typing import Dict, List
 # Output directory (Windows compatible)
 SAVE_DIR = os.path.join(os.getcwd(), "results")
 
-AZURE_AI_PROJECT_ENDPOINT = os.getenv("AZURE_AI_PROJECT_ENDPOINT", "https://msrasc-swe.services.ai.azure.com/api/projects/MSRASC-swe-project")
-AZURE_AI_PROJECT_AGENT_NAME = os.getenv("AZURE_AI_PROJECT_AGENT_NAME", "asst_0IHudbv33OCRUw0Qqfx6vkyP")
 # ============================ SEARXNG CONFIG ============================
 SEARXNG_BASE_URL = os.getenv("SEARXNG_BASE_URL", "http://localhost:8888")
 SEARXNG_PAGES = 1         # Pages per query
@@ -108,7 +106,8 @@ DOCKER_NETWORK = "searx-net"
 DOCKER_CONFIG_PATH = os.path.join(os.getcwd(), "backend", "searxng").replace("\\", "/")
 
 # Batch search parameters
-SEARCH_BATCH_CHUNK = 2
+SEARCH_BATCH_CHUNK = 8
+SEARCH_BATCH_CHUNK_TREND = 12
 
 # ============================ LLM TOKEN LIMITS ============================
 
@@ -193,49 +192,15 @@ DEFAULT_CONFERENCES: Dict[str, List[str]] = {
     "CHI": ["CHI"],
 }
 
-# 动态计算年份：今年、去年、前年（优先今年和去年的论文）
+# 动态计算年份：今年、去年、明年（优先今年和去年的论文）
 from datetime import datetime
 _current_year = datetime.now().year
-DEFAULT_YEARS = [_current_year, _current_year - 1, _current_year - 2]  # [2025, 2024, 2023]
+DEFAULT_YEARS = [_current_year, _current_year - 1, _current_year + 1]  # [2025, 2024, 2026]
 
 # 固定的核心会议（始终包含）
 CORE_CONFERENCES = ["ICLR", "ICML", "NeurIPS"]
 
-# CS顶级会议分类字典（用于根据研究方向选择会议）
-CS_TOP_CONFERENCES = {
-    "Artificial Intelligence": ["AAAI", "IJCAI"],
-    "Computer Vision": ["CVPR", "ECCV", "ICCV"],
-    "Machine Learning": ["ICLR", "ICML", "NeurIPS", "KDD"],
-    "Natural Language Processing": ["ACL", "EMNLP", "NAACL"],
-    "The Web & Information Retrieval": ["SIGIR", "WWW"],
-    
-    "Computer Architecture": ["ASPLOS", "ISCA", "MICRO", "HPCA"],
-    "Computer Networks": ["SIGCOMM", "NSDI"],
-    "Computer Security": ["CCS", "IEEE S&P", "USENIX Security", "NDSS"],
-    "Databases": ["SIGMOD", "VLDB", "ICDE", "PODS"],
-    "Design Automation": ["DAC", "ICCAD"],
-    "Embedded & Real-Time Systems": ["EMSOFT", "RTAS", "RTSS"],
-    "High-Performance Computing": ["HPDC", "ICS", "SC"],
-    "Mobile Computing": ["MobiCom", "MobiSys", "SenSys"],
-    "Measurement & Performance Analysis": ["IMC", "SIGMETRICS"],
-    "Operating Systems": ["OSDI", "SOSP", "EuroSys", "FAST", "USENIX ATC"],
-    "Programming Languages": ["PLDI", "POPL", "ICFP", "OOPSLA"],
-    "Software Engineering": ["FSE", "ICSE", "ASE", "ISSTA"],
-    
-    "Algorithms & Complexity": ["FOCS", "SODA", "STOC"],
-    "Cryptography": ["CRYPTO", "EuroCrypt"],
-    "Logic & Verification": ["CAV", "LICS"],
-    
-    "Computational Biology & Bioinformatics": ["ISMB", "RECOMB"],
-    "Computer Graphics": ["SIGGRAPH", "SIGGRAPH Asia", "Eurographics"],
-    "Computer Science Education": ["SIGCSE"],
-    "Economics & Computation": ["EC", "WINE"],
-    "Human-Computer Interaction": ["CHI", "UbiComp/IMWUT", "UIST"],
-    "Robotics": ["ICRA", "IROS", "RSS"],
-    "Visualization": ["VIS", "VR"]
-}
-
-# 顶级会议池（用于随机选择）- 保留向后兼容
+# 顶级会议池（用于随机选择）- 排除核心会议
 TOP_TIER_CONFERENCES = [
     "ACL", "EMNLP", "NAACL",  # NLP
     "CVPR", "ICCV", "ECCV",    # CV

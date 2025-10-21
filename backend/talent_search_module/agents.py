@@ -35,7 +35,6 @@ try:
     )
     import docker_utils
     import search
-    from search import score_and_rank_papers_parallel  # Import new scoring function
     import utils
     from backend import config
     from backend import llm
@@ -62,9 +61,6 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
         llm_instance = llm.get_llm("parse", temperature=0.3, api_key=api_key)
 
         conf_list = ", ".join(config.DEFAULT_CONFERENCES.keys())
-        # 获取所有研究方向的列表
-        research_fields = list(config.CS_TOP_CONFERENCES.keys())
-        fields_list = ", ".join(research_fields)
         prompt = (
             "You are a professional talent recruitment analysis assistant responsible for parsing recruitment queries and extracting structured information.\n\n"
             "=== PARSING TASK INSTRUCTIONS ===\n"
@@ -87,23 +83,12 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
             "     Negation patterns include: 'not X', 'no X', 'without X', 'avoid X', 'exclude X', 'except X', 'rather than X'.\n"
             "   - Do NOT split a phrase into smaller parts. If no keyword exactly matches known terms, return the original phrase exactly as written by the user.\n"
             "   - Do NOT add high-level general fields like 'machine learning', 'deep learning', 'AI', 'artificial intelligence', or 'data science' unless these terms are explicitly written by the user.\n"
-            "   - Do NOT normalize, paraphrase, or interpret the user's intent. Only extract exactly what they wrote.\n\n"
-            "5. **research_field** (string): Primary research field/direction that best matches the query.\n"
-            f"   Available fields: {fields_list}\n"
-            "   Recognition rules:\n"
-            "   - Analyze the keywords and overall context to identify the PRIMARY research field\n"
-            "   - If keywords mention 'robot', 'robotics', 'manipulation', 'navigation' → 'Robotics'\n"
-            "   - If keywords mention 'NLP', 'language model', 'translation', 'sentiment' → 'Natural Language Processing'\n"
-            "   - If keywords mention 'vision', 'image', 'object detection', 'segmentation' → 'Computer Vision'\n"
-            "   - If keywords mention 'deep learning', 'neural network', 'training' → 'Machine Learning'\n"
-            "   - If keywords mention 'database', 'SQL', 'query optimization' → 'Databases'\n"
-            "   - If keywords mention 'security', 'encryption', 'vulnerability' → 'Computer Security'\n"
-            "   - Default to 'Machine Learning' if unclear\n\n"
-            "6. **must_be_current_student** (bool): Whether candidates must be current students. Look for:\n"
+            "   - Do NOT normalize, paraphrase, or interpret the user's intent. Only extract exactly what they wrote.\n"
+            "5. **must_be_current_student** (bool): Whether candidates must be current students. Look for:\n"
             "   - Explicit requirements: current student, currently enrolled, active student\n"
             "   - Degree phases: PhD student, Master's student, graduate student\n"
             "   - Default: true (unless explicitly stated otherwise)\n\n"
-            "7. **degree_levels** (string[]): Acceptable degree levels.\n"
+            "6. **degree_levels** (string[]): Acceptable degree levels.\n"
             "   CRITICAL EXTRACTION RULES (MUST FOLLOW EXACTLY):\n"
             "   - ONLY extract the EXACT degree terms that appear verbatim in the user's query text.\n"
             "   - Recognized degree patterns: \"PhD\", \"PhD student\", \"Doctoral\", \"Master\", \"MSc\", \"MS\",\n"
@@ -117,11 +102,11 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
             "   - If the query includes ANY degree term explicitly, DO NOT add default values.\n"
             "   - If the query does NOT mention any degree information at all, use this default:\n"
             "     [\"PhD\", \"MSc\", \"Master\", \"Graduate\"].\n"
-            "   - When in doubt, extract FEWER degrees rather than adding unmentioned ones.\n\n"
-            "8. **author_priority** (string[]): Author position preferences.\n"
+            "   - When in doubt, extract FEWER degrees rather than adding unmentioned ones.\n"
+            "7. **author_priority** (string[]): Author position preferences.\n"
             "   Recognition: first author, last author, corresponding author\n"
             "   Default: ['first', 'last']\n\n"
-            "9. **extra_constraints** (string[]): Other constraints.\n"
+            "8. **extra_constraints** (string[]): Other constraints.\n"
             "   Recognition: geographic requirements (e.g., 'Asia', 'North America')\n"
             "   institutional requirements (e.g., 'top universities', 'Ivy League')\n"
             "   language requirements, experience requirements, etc.\n\n"
@@ -137,26 +122,18 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
 
         query_spec = llm.safe_structured(llm_instance, prompt, schemas.QuerySpec)
 
-        # 如果venues为空，根据research_field选择对应的会议
+        # 如果venues为空，设置默认值：3个核心会议 + 随机 2个 / 3个 顶会
         if query_spec.venues == []:
+            import random
             # 核心会议（固定）
+            need_n = query_spec.top_n
             core_venues = config.CORE_CONFERENCES.copy()
-            
-            # 根据research_field选择对应方向的会议
-            research_field = query_spec.research_field or "Machine Learning"
-            field_venues = config.CS_TOP_CONFERENCES.get(research_field, [])
-            
-            # 如果该方向没有会议，回退到默认
-            if not field_venues:
-                field_venues = config.TOP_TIER_CONFERENCES.copy()
-                print(f"[Parse Query] No conferences found for field '{research_field}', using default pool")
-            
-            # 合并核心会议和方向会议
-            query_spec.venues = core_venues + field_venues
-            
-            print(f"[Parse Query] No venues specified, using conferences for field '{research_field}':")
+            # 从顶级会议池随机选 2个 / 3个 顶会
+            random_venues = config.TOP_TIER_CONFERENCES.copy()            # 合并
+            query_spec.venues = core_venues + random_venues
+            print(f"[Parse Query] No venues specified, using default:")
             print(f"  Core: {core_venues}")
-            print(f"  Field ({research_field}): {field_venues}")
+            print(f"  Random: {random_venues}")
             print(f"  Final: {query_spec.venues}")
 
         return query_spec
@@ -165,15 +142,15 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
         print(f"LLM解析失败，使用模拟数据: {e}")
 
         # 回退到模拟数据
+        import random
+        # 动态年份
         fallback_years = config.DEFAULT_YEARS.copy()
         core_venues = config.CORE_CONFERENCES.copy()
-        fallback_field = "Machine Learning"
-        field_venues = config.CS_TOP_CONFERENCES.get(fallback_field, [])
-        fallback_venues = core_venues + field_venues
+        random_venues = config.TOP_TIER_CONFERENCES.copy()
+        fallback_venues = core_venues + random_venues
         
         print(f"[Fallback] Using default configuration:")
         print(f"  Years: {fallback_years}")
-        print(f"  Field: {fallback_field}")
         print(f"  Venues: {fallback_venues}")
         
         return schemas.QuerySpec(
@@ -181,11 +158,30 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
             years=fallback_years,
             venues=fallback_venues,
             keywords=["social simulation", "multi-agent systems"],
-            research_field=fallback_field,
             must_be_current_student=True,
             degree_levels=["PhD", "Master"],
             author_priority=["first"],
         )
+
+
+def _batch_search_until_candidates(
+    queries: List[str], target_n: int, chunk_size: int = None
+) -> List[Dict[str, Any]]:
+    """Run search in chunks until at least target_n candidates are collected."""
+    chunk_size = chunk_size or getattr(config, "SEARCH_BATCH_CHUNK", 5)
+    results: List[Dict[str, Any]] = []
+    for i in range(0, len(queries), chunk_size):
+        batch = queries[i : i + chunk_size]
+        for q in batch:
+            try:
+                serp = docker_utils.run_search(q)
+                results.extend(serp)
+            except Exception as e:
+                print(f"[agent] search error for {q}: {e}")
+        if len(results) >= target_n:
+            break
+    return results
+
 
 def _plan_terms(spec: QuerySpec) -> List[str]:
     try:
@@ -199,157 +195,483 @@ def _plan_terms(spec: QuerySpec) -> List[str]:
 
 
 def _run_search_terms(
-    terms: List[str], k_per_query: int = 10) -> List[Dict[str, Any]]:
+    terms: List[str], pages: int = 1, k_per_query: int = 10, search_engines: List[str] = None
+) -> List[Dict[str, Any]]:
     results: List[Dict[str, Any]] = []
     if not terms:
         return results
-    try:
-        from azure.ai.projects import AIProjectClient 
-        from azure.ai.agents.models import ListSortOrder
-        from azure.identity import  AzureCliCredential
-    except ImportError as e:
-        print(f"Azure SDK ImportError: {e}")
-    
-    try:
-        endpoint = getattr(config, "AZURE_AI_PROJECT_ENDPOINT", None)
-        agent_name = getattr(config, "AZURE_AI_PROJECT_AGENT_NAME", None)
-        
-        project = AIProjectClient(
-            credential = AzureCliCredential(),
-            endpoint = endpoint
-        )    
-        agent = project.agents.get_agent(agent_name)
-        
-        for idx,term in enumerate(terms):
+    if search_engines is None:
+        search_engines = config.SEARXNG_ENGINES
+    # Dynamic concurrency: search terms are IO-bound
+    max_workers = get_optimal_workers(len(terms), 'io_bound')
+    max_workers = min(max_workers, 20)  # Cap at 20 to avoid overwhelming search engines
+    print(f"[_run_search_terms] Using {max_workers} workers for {len(terms)} search terms")
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        fut2term = {
+            ex.submit(
+                docker_utils.run_search, t, pages=pages, k_per_query=k_per_query, search_engines=search_engines
+            ): t
+            for t in terms
+        }
+        for fut in as_completed(fut2term):
+            t = fut2term[fut]
             try:
-                thread = project.agents.threads.create()
-                search_prompt=f"""
-                Give me 10 papers focused on ""{term}"",preferably those accepted at ICML,NeurIPS,ICLR,or domain-specific conferences such as ACL,EMNLP
-                NAACL for NLP-related topics, or ICCV, ECCV, CVPR for computer vision-related topics,as well as other high-impact papers from arXiv of Google Scholar.
-                The papers should also be available on arXiv and please provide their corresponding arXiv links.You must output in json format below:
-                [
-                    {{
-                        "title": "...",
-                        "authors": ["...", "..."],
-                        "arxiv_link": "...",
-                        "abstract": "...",
-                        "introduction": "... (first 2-3 paragraphs of the introduction section if available)"
-                    }},
-                    ...
-                ]
-                """
-                message = project.agents.messages.create(
-                    thread_id=thread.id,
-                    role="user",
-                    content=search_prompt
-                )
-                run = project.agents.runs.create_and_process(
-                    thread_id=thread.id,
-                    agent_id=agent.id
-                )
-                if run.status == "failed":
-                    print(f"[agent.search] term error: {term} -> run failed")
-                    continue
-                messages = project.agents.messages.list(
-                    thread_id=thread.id,
-                    order=ListSortOrder.ASCENDING
-                )
-                papers_found = 0
-                for msg in messages :
-                    if msg.role == "assistant" and msg.text_messages:
-                        test_msg = msg.text_messages[0]
-                        content = None
-                        if hasattr(test_msg, 'text') and hasattr(test_msg.text, 'value'):
-                            content = test_msg.text.value
-                        elif hasattr(test_msg, 'value'):
-                            content = test_msg.value
-                        elif hasattr(test_msg, 'text') and isinstance(test_msg.text, str):
-                            content = test_msg.text
-                        else:
-                            content = str(test_msg)
-                            if not content or not isinstance(content, str):
-                                print(f"[agent.search] term error: {term} -> no valid content")
-                                continue
-                        try:
-                            json_str = content.strip()
-                            
-                            
-                            if "```json" in json_str:
-                                start = json_str.find("```json") + 7
-                                end = json_str.find("```", start)
-                                json_str = json_str[start:end].strip()
-                            elif "```" in json_str:
-                                start = json_str.find("```") + 3
-                                end = json_str.find("```", start)
-                                json_str = json_str[start:end].strip()
-                            
-                            if json_str.startswith("json"):
-                                json_str = json_str[4:].strip()
-                            
-                            papers = json.loads(json_str)
-                            
-                            if not isinstance(papers,list):
-                                if isinstance(papers,dict) and 'papers' in papers:
-                                    papers = papers['papers']
-                                else:
-                                    papers = [papers]
-                            
-                            for paper in papers[:k_per_query]:
-                                url = paper.get("arxiv_link", "").strip()
-                                title = paper.get("title","").strip()
-                                abstract = paper.get("abstract", "").strip()
-                                introduction = paper.get("introduction", "").strip()
-                                if not url or not url.startswith("http") or not title:
-                                    continue
-                                authors_list = paper.get("authors", [])
-                                authors_formatted = []
-                                for author_name in authors_list:
-                                    if isinstance(author_name, str):
-                                        authors_formatted.append({"name": author_name})
-                                result ={
-                                    "url": url,
-                                    "title": title,
-                                    "authors": authors_formatted,
-                                    "snippet": abstract[:500],
-                                    "abstract": abstract,  # Keep full abstract
-                                    "introduction": introduction,  # Add introduction field
-                                    "engine": "azure_ai_agent",
-                                    "category": paper,
-                                    "term": term,
-                                    "parsed_url": url,
-                                    "engines": ["azure_aiagent"],
-                                    "positions":[len(results) + 1]
-                                }
-                                
-                                results.append(result)
-                                papers_found += 1
-                        except json.JSONDecodeError as je:
-                            print(f"[agent.search] JSON decode error for term '{term}': {je}")
-                        except Exception as e:
-                            print(f"[agent.search] error processing message for term '{term}': {e}")
-                        
-                        break
+                rows = fut.result() or []
+                for r in rows:
+                    if r.get("url", "").startswith("http"):
+                        r["term"] = t
+                        results.append(r)
             except Exception as e:
-                print(f"[agent.search] term error: {term} -> {e}")
-                import traceback
-                traceback.print_exc()
-                continue
-    
-    except Exception as e:
-        print(f"[agent.search] overall search error: {e}")
-        import traceback
-        traceback.print_exc()
-        return []
-    
+                print(f"[agent.search] term error: {t} -> {e}")
+    # dedupe by url
     seen = set()
     uniq = []
     for r in results:
-        u = r.get("url","")
+        u = r.get("url", "")
         if u and u not in seen:
             seen.add(u)
             uniq.append(r)
+    return uniq
+
+
+def _filter_serp_urls(
+    serp: List[Dict[str, Any]], spec: QuerySpec
+) -> List[Dict[str, Any]]:
+    """Filter out obviously low-quality or irrelevant domains from SERP.
+
+    Mirrors the stricter filtering used in the demo notebook: removes social media,
+    code hosting, general forums/news, and low-signal blogs.
+    """
+    if not serp:
+        return []
+
+    # Static allow/block heuristics; keep local to avoid coupling to config unless needed
+    not_allowed_domains = {
+        "x.com",
+        "twitter.com",
+        "github.com",
+        "linkedin.com",
+        "facebook.com",
+        "youtube.com",
+        "reddit.com",
+        "medium.com",
+        "substack.com",
+    }
+    low_quality_indicators = {
+        "news",
+        # "blog",
+        "forum",  # Note: OpenReview使用/forum/，会在下面白名单
+        "discussion",
+        "comment",
+        "review",
+    }
     
-    return uniq  
+    # 白名单：这些域名即使包含低质量指标词也应保留
+    whitelist_domains = {
+        "openreview.net",  # OpenReview的论文页都是/forum?id=xxx格式
+        "arxiv.org",
+        "aclanthology.org",
+        "proceedings.mlr.press",
+        "proceedings.neurips.cc",
+    }
+
+    filtered: List[Dict[str, Any]] = []
+    filtered_out: Dict[str, List[str]] = {
+        "no_url": [],
+        "blocked_domain": [],
+        "low_quality": []
+    }
+    
+    for item in serp:
+        url = (item.get("url") or "").lower()
+        title = (item.get("title") or "")[:80]  # 截断标题用于显示
+        
+        if not url:
+            filtered_out["no_url"].append(f"[No URL] {title}")
+            continue
+        
+        # 检查是否在白名单（白名单域名跳过所有过滤）
+        is_whitelisted = any(wl_domain in url for wl_domain in whitelist_domains)
+        
+        if is_whitelisted:
+            filtered.append(item)
+            continue
+            
+        # Blocked domains
+        blocked_domain = None
+        for dom in not_allowed_domains:
+            if dom in url:
+                blocked_domain = dom
+                break
+        if blocked_domain:
+            filtered_out["blocked_domain"].append(f"[{blocked_domain}] {title} -> {url[:60]}")
+            continue
+            
+        # Low-quality indicators in path/host
+        low_quality_match = None
+        for ind in low_quality_indicators:
+            if ind in url:
+                low_quality_match = ind
+                break
+        if low_quality_match:
+            filtered_out["low_quality"].append(f"[{low_quality_match}] {title} -> {url[:60]}")
+            continue
+            
+        filtered.append(item)
+    
+    # Print debug information
+    total_filtered = sum(len(v) for v in filtered_out.values())
+    if total_filtered > 0:
+        print(f"\n{'='*80}")
+        print(f"[FILTER DEBUG] Filtered {total_filtered}/{len(serp)} papers, kept {len(filtered)}")
+        print(f"{'='*80}")
+        
+        if filtered_out["no_url"]:
+            print(f"\nNO URL ({len(filtered_out['no_url'])} papers):")
+            for item in filtered_out["no_url"][:5]:  # 只显示前5个
+                print(f"  • {item}")
+            if len(filtered_out["no_url"]) > 5:
+                print(f"  ... and {len(filtered_out['no_url']) - 5} more")
+        
+        if filtered_out["blocked_domain"]:
+            print(f"\nBLOCKED DOMAIN ({len(filtered_out['blocked_domain'])} papers):")
+            for item in filtered_out["blocked_domain"][:5]:
+                print(f"  • {item}")
+            if len(filtered_out["blocked_domain"]) > 5:
+                print(f"  ... and {len(filtered_out['blocked_domain']) - 5} more")
+        
+        if filtered_out["low_quality"]:
+            print(f"\nLOW QUALITY INDICATOR ({len(filtered_out['low_quality'])} papers):")
+            for item in filtered_out["low_quality"][:5]:
+                print(f"  • {item}")
+            if len(filtered_out["low_quality"]) > 5:
+                print(f"  ... and {len(filtered_out['low_quality']) - 5} more")
+        
+        print(f"\nKEPT ({len(filtered)} papers) - will proceed to LLM scoring")
+        for i, item in enumerate(filtered[:3], 1):
+            title = (item.get("title") or "")[:80]
+            url = (item.get("url") or "")[:60]
+            print(f"  {i}. {title} -> {url}")
+        if len(filtered) > 3:
+            print(f"  ... and {len(filtered) - 3} more")
+        print(f"{'='*80}\n")
+    
+    return filtered
+
+
+def _select_urls(
+    serp: List[Dict[str, Any]], spec: QuerySpec, api_key: str = None
+) -> Tuple[List[str], List[Dict[str, Any]], List[schemas.PaperWithScore]]:
+    """
+    Select URLs to fetch using unified LLM scoring system.
+    
+    Strategy:
+    1. Hard filter SERP (remove obvious non-academic sites)
+    2. LLM score all remaining papers (1-10 based on title + snippet)
+    3. Sort by score, apply domain limits, select top N
+    4. Fallback to heuristic if LLM fails
+    """
+    try:
+        # 1) Hard filter SERP first
+        serp_filtered = _filter_serp_urls(serp, spec)
+
+        # Early exit: if nothing left
+        if not serp_filtered:
+            return [], [], []
+        print(f"[select] serp_filtered: {len(serp_filtered)}")
+        
+        # 2) Use LLM-based scoring (unified approach)
+        use_llm_scoring = getattr(config, "USE_LLM_PAPER_SCORING", True)
+        
+        if use_llm_scoring:
+            try:
+                # Use LLM to score papers based on title and abstract
+                llm_instance = llm.get_llm("select", temperature=0.1, api_key=api_key)
+                
+                # Build the user query context
+                query_parts = []
+                if spec.keywords:
+                    query_parts.append(" ".join(spec.keywords))
+                if spec.venues:
+                    query_parts.append(f"conferences: {', '.join(spec.venues)}")
+                user_query = " ".join(query_parts) or "research papers"
+                
+                # Get scored papers (returns list of (url, score) tuples)
+                # This function:
+                # 1. Scores all papers using LLM (1-10 scale)
+                # 2. Sorts by score (descending)
+                # 3. Applies domain limits (max 6 per domain)
+                # 4. Returns top 20 papers
+                scored_urls = search.llm_pick_urls(
+                    serp_filtered, 
+                    user_query, 
+                    llm_instance,
+                    need=30,  # 增加到 20 篇论文以扩大候选池
+                    max_per_domain=6  # 同时增加每域上限以获得更多样化的候选人
+                )
+                
+                # Extract URLs and create aligned SERP list
+                urls = [url for url, score in scored_urls]
+                url_to_score = {url: score for url, score in scored_urls}
+                url_set = set(urls)
+                
+                # Create aligned SERP list with scores
+                serps = []
+                for it in serp_filtered:
+                    url = it.get("url", "")
+                    if url in url_set:
+                        # Add score to the SERP item for logging/debugging
+                        it_with_score = it.copy()
+                        it_with_score["llm_score"] = url_to_score.get(url, 0)
+                        serps.append(it_with_score)
+                
+                # Order SERP items to match URL order
+                url_to_item = {it.get("url"): it for it in serps}
+                serps_ordered = [url_to_item.get(u) for u in urls if url_to_item.get(u)]
+                
+                # Create PaperWithScore objects for all scored papers
+                scored_papers = []
+                for it in serps_ordered:
+                    url = it.get("url", "")
+                    score = url_to_score.get(url, 0)
+                    
+                    # Calculate relevant_tier and completeness_score
+                    relevant_tier = 1 if score >= 9 else 0
+                    
+                    # Calculate completeness score
+                    completeness = 0.0
+                    title = it.get("title", "")
+                    abstract = it.get("snippet", "")
+                    
+                    if title and len(title) >= 20:
+                        completeness += 2.0
+                    if abstract:
+                        if len(abstract) >= 300:
+                            completeness += 3.0
+                        elif len(abstract) >= 150:
+                            completeness += 2.0
+                        elif len(abstract) >= 50:
+                            completeness += 1.0
+                    
+                    import re
+                    if re.search(r'20\d{2}', title):
+                        completeness += 0.5
+                    
+                    url_lower = url.lower()
+                    high_quality_domains = ["arxiv.org", "openreview.net", "aclanthology.org", 
+                                          "proceedings.neurips.cc", "proceedings.mlr.press"]
+                    if any(domain in url_lower for domain in high_quality_domains):
+                        completeness += 1.0
+
+                    paper = schemas.PaperWithScore(
+                        url=url,
+                        title=title,
+                        abstract=abstract,
+                        score=score,
+                        relevant_tier=relevant_tier,
+                        completeness_score=completeness,
+                        associated_candidates=[]  # Will be filled later
+                    )
+                    scored_papers.append(paper)
+                
+                # Log the results
+                if config.VERBOSE:
+                    print(f"[select] LLM scoring completed. Selected {len(scored_urls)} papers for crawling:")
+                    for i, (url, score) in enumerate(scored_urls[:10], 1):
+                        print(f"  {i}. Score {score}/10: {url}")
+                
+                return urls, serps_ordered, scored_papers
+                
+            except Exception as e:
+                if config.VERBOSE:
+                    print(f"[select] LLM scoring failed, falling back to heuristic: {e}")
+                # Fall through to heuristic method
+        
+        # Fallback: heuristic method (when LLM disabled or failed)
+        urls = search.heuristic_pick_urls(
+            serp_filtered, spec.keywords, need=config.SELECT_K, max_per_domain=4
+        )
+        url_set = set(urls)
+        serps = [it for it in serp_filtered if (it.get("url") or "") in url_set]
+        url_to_item = {it.get("url"): it for it in serps}
+        serps_ordered = [url_to_item.get(u) for u in urls if url_to_item.get(u)]
+        return urls, serps_ordered, []  # No scored papers for heuristic path
+    except Exception:
+        return [], [], []
+
+
+def _extract_single_paper_name(
+    fetch_item: Tuple[str, str], 
+    spec: QuerySpec,
+    api_key: str = None
+) -> Tuple[bool, str, str]:
+    """
+    Extract paper name from a single source. Returns (success, paper_name, url) tuple.
+    
+    Args:
+        fetch_item: Tuple of (url, content_text)
+        spec: Query specification for context
+        api_key: API key for LLM calls
+    
+    Returns:
+        Tuple of (success, paper_name, url)
+    """
+    url, content_text = fetch_item
+    
+    try:
+        spec_item = extraction.extract_paper_name_from_sources(fetch_item, spec, api_key)
+        have = getattr(spec_item, "have_paper_name", False)
+        pname = getattr(spec_item, "paper_name", "")
+        
+        if have and pname:
+            return True, pname, url
+        else:
+            return False, "", url
+            
+    except Exception as e:
+        if config.VERBOSE:
+            print(f"[paper-name] {url} -> {e}")
+        return False, "", url
+
+
+def _extract_paper_names_concurrent(
+    fetched_source: Dict[str, str], 
+    spec: QuerySpec, 
+    paper_collection: schemas.PaperCollection,
+    max_workers: int = None,
+    api_key: str = None
+) -> None:
+    """
+    Extract paper names from multiple sources concurrently using ThreadPoolExecutor.
+    
+    Args:
+        fetched_source: Dictionary mapping URLs to their fetched text content
+        spec: Query specification for context
+        paper_collection: PaperCollection object to add papers to
+        max_workers: Maximum number of concurrent threads (default: config.EXTRACTION_MAX_WORKERS)
+        api_key: API key for LLM calls
+    """
+    if not fetched_source:
+        return
+    
+    # Use config default if max_workers not specified
+    if max_workers is None:
+        # Dynamic concurrency: URL extraction is IO-bound
+        max_workers = get_extraction_workers(len(fetched_source))
+        print(f"[_extract_paper_names_concurrent] Using {max_workers} workers for {len(fetched_source)} URLs")
+    
+    # Use ThreadPoolExecutor for concurrent extraction
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all extraction tasks
+        future_to_url = {
+            executor.submit(_extract_single_paper_name, fetch_item, spec, api_key): fetch_item[0]
+            for fetch_item in fetched_source.items()
+        }
+        
+        # Collect results as they complete
+        for future in as_completed(future_to_url):
+            try:
+                success, paper_name, url = future.result()
+                if success and paper_name:
+                    paper_collection.add_paper(paper_name=paper_name, url=url)
+            except Exception as e:
+                url = future_to_url[future]
+                if config.VERBOSE:
+                    print(f"[paper-name.concurrent] error for {url}: {e}")
+
+
+def _fetch_single_url(serp_item: Dict[str, Any]) -> Tuple[str, str]:
+    """
+    Fetch text for a single URL. Returns (url, text) tuple.
+    Returns (url, "") if fetch fails or text is too short.
+    """
+    u = serp_item.get("url", "")
+    snippet = serp_item.get("snippet", "")
+    
+    if not u:
+        return u, ""
+    
+    try:
+        txt = search.fetch_text(u, config.FETCH_MAX_CHARS, snippet=snippet)
+        if len(txt) >= config.MIN_TEXT_LENGTH:
+            return u, txt
+        else:
+            return u, ""
+    except Exception as e:
+        print(f"[agent.fetch] {u} -> {e}")
+        return u, ""
+
+
+def _fetch_many(selected_serps: List[Dict[str, Any]], max_workers: int = None) -> Dict[str, str]:
+    """
+    Fetch text from multiple URLs concurrently using ThreadPoolExecutor.
+    
+    Args:
+        selected_serps: List of SERP items containing URL and snippet info
+        max_workers: Maximum number of concurrent threads (default: config.FETCH_MAX_WORKERS)
+    
+    Returns:
+        Dictionary mapping URLs to their fetched text content
+    """
+    sources: Dict[str, str] = {}
+    if not selected_serps:
+        return sources
+    
+    # Use config default if max_workers not specified
+    if max_workers is None:
+        # Dynamic concurrency: URL fetching is IO-bound
+        max_workers = get_extraction_workers(len(selected_serps))
+        print(f"[_fetch_many] Using {max_workers} workers for {len(selected_serps)} URLs")
+    
+    # Use ThreadPoolExecutor for concurrent fetching
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # Submit all fetch tasks
+        future_to_url = {
+            executor.submit(_fetch_single_url, serp_item): serp_item.get("url", "")
+            for serp_item in selected_serps
+        }
+        
+        # Collect results as they complete
+        for future in as_completed(future_to_url):
+            try:
+                url, text = future.result()
+                if text:  # Only add if we got valid text
+                    sources[url] = text
+            except Exception as e:
+                url = future_to_url[future]
+                print(f"[agent.fetch.concurrent] {url} -> {e}")
+    
+    return sources
+
+
+def _expand_author_queries(names: List[str]) -> List[str]:
+    add: List[str] = []
+    for n in names:
+        n = (n or "").strip()
+        if not n:
+            continue
+        add.extend(
+            [
+                f'"{n}" OpenReview',
+                f'"{n}" Semantic Scholar',
+                f'"{n}" LinkedIn',
+                f'"{n}" Twitter OR X',
+                f'"{n}" homepage OR personal site OR github.io OR GitHub',
+            ]
+        )
+    # dedupe preserve order, limit
+    seen = set()
+    out = []
+    for q in add:
+        if q not in seen:
+            seen.add(q)
+            out.append(q)
+            if len(out) >= 80:
+                break
+    return out
+
+
+
 
 def classify_role_rule_based(role_text: str) -> str:
     """Rule-based role classification as fallback
@@ -601,6 +923,66 @@ def classify_role(role_text: str, api_key: str = None, use_llm: bool = None) -> 
     else:
         return classify_role_rule_based(role_text)
 
+
+def _role_matches_degree(role_text: str, degree_levels: List[str]) -> bool:
+    """Rule-based degree matching function that checks current role vs degree requirements
+    
+    This function ensures proper matching:
+    - If PhD is required, current role should be PhD student, not AP/Postdoc
+    - If Master is required, current role should be Master student, not PhD student
+    """
+    t = (role_text or "").lower()
+    if not degree_levels:
+        return True
+    degs = [d.lower() for d in degree_levels]
+    
+    # Define role patterns with their academic level
+    role_patterns = {
+        "phd_student": ["phd student", "doctoral student", "ph.d student", "phd candidate", "doctoral candidate"],
+        "master_student": ["master student", "msc student", "ms student", "m.eng student", "m eng student"],
+        "undergraduate_student": ["undergraduate student", "bachelor student", "bsc student", "bs student", "undergrad"],
+        "graduate_student": ["graduate student", "grad student"],
+        "assistant_professor": ["assistant professor", "ap", "assistant prof", "asst prof"],
+        "associate_professor": ["associate professor", "assoc prof"],
+        "professor": ["professor", "prof", "full professor"],
+        "postdoc": ["postdoc", "post-doctoral", "post doctoral", "postdoctoral", "post-doc"],
+        "researcher": ["researcher", "research scientist", "research fellow"],
+    }
+    
+    # Check for overqualified positions first
+    overqualified_patterns = ["assistant professor", "associate professor", "professor", "postdoc", "post-doctoral", "post doctoral", "postdoctoral"]
+    
+    # If any overqualified position is detected, check if it matches degree requirements
+    for pattern in overqualified_patterns:
+        if pattern in t:
+            # If PhD is required and person is AP/Professor/Postdoc, they are overqualified
+            if "phd" in degs and any(over in t for over in ["assistant professor", "associate professor", "professor", "postdoc", "post-doctoral"]):
+                return False
+            # If Master is required and person is PhD student or higher, they are overqualified
+            if "master" in degs and any(over in t for over in ["phd student", "doctoral student", "assistant professor", "associate professor", "professor", "postdoc"]):
+                return False
+    
+    # Check for appropriate matches
+    for degree in degs:
+        if degree == "phd":
+            # PhD required - look for PhD student or equivalent
+            if any(pattern in t for pattern in role_patterns["phd_student"] + role_patterns["graduate_student"]):
+                return True
+        elif degree in ["master", "msc", "ms"]:
+            # Master required - look for Master student, not PhD student
+            if any(pattern in t for pattern in role_patterns["master_student"] + role_patterns["graduate_student"]):
+                # But exclude PhD students
+                if not any(phd_pattern in t for phd_pattern in role_patterns["phd_student"]):
+                    return True
+        elif degree in ["bachelor", "undergraduate"]:
+            # Bachelor required - look for undergraduate student
+            if any(pattern in t for pattern in role_patterns["undergraduate_student"]):
+                return True
+    
+    # If no specific match found, return False (strict matching)
+    return False
+
+
 def role_matches_degree(role_text: str, degree_levels: List[str], api_key: str = None) -> bool:
 
     """NEW: Main degree matching function using role classification system
@@ -658,6 +1040,97 @@ def role_matches_degree(role_text: str, degree_levels: List[str], api_key: str =
         print(f"[role_matches_degree] Result: ❌ NO MATCH")
     return False
 
+
+def _llm_role_matches_degree(role_text: str, degree_levels: List[str], api_key: str = None) -> bool:
+    """LLM-based degree matching that checks if person has the required degree
+    
+    This function now accepts:
+    - PhD requirement: PhD students, Postdocs, Research Scientists with PhD degree
+    - Master requirement: Master students, Research Assistants with Master degree
+    - Rejects: Faculty positions (AP/Professor), non-degree holders
+    
+    Args:
+        role_text: The role/position text to analyze
+        degree_levels: List of required degree levels
+        api_key: Optional API key for LLM calls
+    """
+    if not degree_levels:
+        return True
+    
+    if not role_text or not role_text.strip():
+        return False
+    
+    try:
+        from backend.llm import get_llm
+        
+        # Create LLM instance with provided API key
+        llm = get_llm("degree_matcher", temperature=0.1, api_key=api_key)
+        
+        # More detailed prompt that considers current position vs degree requirements
+        degree_list = ", ".join(degree_levels)
+        prompt = f"""
+Analyze whether the person's academic background matches the REQUIRED degree level.
+
+Current Role/Position: "{role_text}"
+Required Degree Level(s): {degree_list}
+
+MATCHING RULES:
+
+**PhD required** → Accept if ANY of these are true:
+  ✅ Currently "PhD student" / "Doctoral candidate" / "PhD candidate"
+  ✅ "Postdoc" / "Postdoctoral researcher" (recent PhD graduates, typically within 1-3 years)
+  ✅ Text explicitly mentions "I got my Ph.D. degree" / "Ph.D. from [university]" / "PhD graduate"
+  ✅ "Research Scientist" / "Researcher" / "Senior Researcher" who explicitly states having PhD degree
+  ❌ "Assistant Professor" / "Associate Professor" / "Professor" (too senior for recruitment)
+  ❌ No mention of PhD degree at all
+
+**Master required** → Accept if ANY of these are true:
+  ✅ Currently "Master student" / "MSc student" / "MS student"
+  ✅ Text mentions "Master's degree from" or similar
+  ✅ "Research Assistant" with Master's degree mentioned
+  ❌ "PhD student" (overqualified for Master requirement)
+  ❌ Senior positions without Master mention
+
+**Graduate required** → Very broad:
+  ✅ Any graduate student (Master, PhD)
+  ✅ Postdoc
+  ✅ Research positions with graduate degree mentioned
+
+IMPORTANT:
+- Focus on whether they HAVE the required degree, not just current student status
+- Postdocs are recent PhDs and should MATCH for PhD requirement
+- Industry researchers (Research Scientist, Senior Researcher) who explicitly mention PhD → MATCH
+- Only reject if they are faculty (AP/Professor) or clearly don't have the degree
+
+Examples:
+- Required: PhD, Current: "PhD student at MIT" → MATCH
+- Required: PhD, Current: "Postdoc at Harvard" → MATCH ✅ (changed)
+- Required: PhD, Current: "I got my Ph.D. degree in CUHK. Research Scientist at NVIDIA" → MATCH ✅ (changed)
+- Required: PhD, Current: "Senior Researcher working on generative models" (no PhD mentioned) → NO
+- Required: PhD, Current: "Assistant Professor at Stanford" → NO
+- Required: Master, Current: "Master student at CMU" → MATCH
+- Required: Master, Current: "PhD student at Berkeley" → NO
+
+Answer only: MATCH or NO
+"""
+        
+        # Get LLM response
+        response = llm.invoke(prompt, enable_thinking=False)
+        result = response.content.strip().upper()
+        
+        if config.VERBOSE:
+            print(f"[_llm_role_matches_degree] Role: '{role_text}', Required: {degree_list}, Result: {result}")
+        
+        # Simple check
+        return "MATCH" in result
+        
+    except Exception as e:
+        # Fallback to rule-based matching if LLM fails
+        if config.VERBOSE:
+            print(f"[_llm_role_matches_degree] LLM failed, using rule-based: {e}")
+        return _role_matches_degree(role_text, degree_levels)
+
+
 def _overview_matches_spec(ov: CandidateOverview, spec: QuerySpec, api_key: str = None) -> bool:
     """Check CandidateOverview against student/degree requirements in QuerySpec.
 
@@ -673,6 +1146,14 @@ def _overview_matches_spec(ov: CandidateOverview, spec: QuerySpec, api_key: str 
     try:
         role_text = getattr(ov, "current_role_affiliation", "") or ""
         status_text = getattr(ov, "current_status", "") or ""
+
+        # # Student requirement
+        # if spec.must_be_current_student:
+        #     if not utils.looks_like_student(role_text) and not utils.looks_like_student(
+        #         status_text
+        #     ):
+        #         return False
+
         # Degree level requirement
         if spec.degree_levels:
             print(f"\n{'='*80}")
@@ -719,6 +1200,56 @@ def _overview_matches_spec(ov: CandidateOverview, spec: QuerySpec, api_key: str 
             print(f"   → Filtering out due to exception with constraints")
             return False
         return True
+
+
+def _filter_candidates(
+    cands: List[Dict[str, Any]], spec: QuerySpec, api_key: str = None
+) -> List[Dict[str, Any]]:
+    out = []
+    for c in cands:
+        role = c.get("Current Role & Affiliation", "")
+        if spec.must_be_current_student:
+            if not utils.looks_like_student(role) and not utils.looks_like_student(
+                c.get("Evidence Notes", "")
+            ):
+                continue
+        if spec.degree_levels:
+            if not role_matches_degree(role, spec.degree_levels, api_key):
+                continue
+        out.append(c)
+    return out
+
+
+def _score_candidate(c: Dict[str, Any], spec: QuerySpec) -> float:
+    score = 0.0
+    role = (c.get("Current Role & Affiliation") or "").lower()
+    profs = c.get("Profiles") or {}
+    focus = c.get("Research Focus") or []
+    # links
+    score += 5.0 if profs.get("Homepage") else 0.0
+    score += 3.0 if profs.get("Google Scholar") else 0.0
+    score += 2.0 if profs.get("OpenReview") else 0.0
+    score += 1.5 if profs.get("GitHub") else 0.0
+    score += 1.0 if profs.get("LinkedIn") else 0.0
+    # focus alignment
+    if spec.keywords:
+        text = " ".join(focus).lower()
+        score += sum(1.0 for kw in spec.keywords if kw.lower() in text)
+    # role
+    if "phd" in role or "doctoral" in role:
+        score += 3.0
+    if "master" in role or "msc" in role:
+        score += 2.0
+    if "postdoc" in role:
+        score += 1.0
+    # student requirement bonus
+    if spec.must_be_current_student and utils.looks_like_student(role):
+        score += 1.0
+    # focus richness
+    score += min(len(focus), 5) * 0.5
+    return score
+
+
 def agent_execute_search(
     spec: QuerySpec, 
     api_key: str = None, 
@@ -743,16 +1274,11 @@ def agent_execute_search(
     """
     from task_manager import create_task_state_from_spec, save_task_state
     
-    def report_progress(event: str, pct: float, detail: Optional[schemas.ProgressDetail] = None):
-        """Helper to safely report progress with optional detailed information"""
+    def report_progress(event: str, pct: float):
+        """Helper to safely report progress"""
         if progress_callback:
             try:
-                if detail:
-                    # Send detailed progress information
-                    progress_callback(event, pct, detail)
-                else:
-                    # Backward compatibility - just event and percentage
-                    progress_callback(event, pct)
+                progress_callback(event, pct)
             except Exception:
                 pass
     
@@ -771,13 +1297,7 @@ def agent_execute_search(
         selected_serp_url_set = resume_state.selected_serp_url_set
     else:
         # Start new search
-        detail = schemas.ProgressDetail(
-            event="parsing",
-            progress=0.05,
-            current_action="Planning search strategy and keywords",
-            target_candidates=spec.top_n
-        )
-        report_progress("parsing", 0.05, detail)
+        report_progress("parsing", 0.05)
         terms = _plan_terms(spec)
         # Create new task state
         state = create_task_state_from_spec(spec, terms)
@@ -794,6 +1314,9 @@ def agent_execute_search(
     chunk = config.SEARCH_BATCH_CHUNK
     rounds_this_run = 0  # Track rounds in current run
     
+    # Track scored papers with their metadata
+    paper_to_candidate: Dict[str, str] = {}  # paper_url -> candidate_name
+
     # Main search loop - continue until run out of terms (no early stopping based on candidate count)
     while pos < len(terms):
         # Increment round counters at the START of each round
@@ -807,258 +1330,214 @@ def agent_execute_search(
         
         # Report search progress (10% - 30%)
         search_progress = 0.10 + (pos / len(terms)) * 0.20
-        # Calculate actual search terms for this batch
-        current_terms_sample = batch_terms[:3] if len(batch_terms) > 3 else batch_terms
-        terms_preview = " | ".join([f'"{t}"' for t in current_terms_sample])
-        if len(batch_terms) > 3:
-            terms_preview += f" ... (+{len(batch_terms)-3} more)"
-        
-        detail = schemas.ProgressDetail(
-            event="searching",
-            progress=search_progress,
-            current_action="Searching academic papers",
-            search_terms_batch=rounds_completed,
-            search_terms_total=len(terms) // chunk + (1 if len(terms) % chunk else 0),
-            found_candidates=len(candidates_accum),
-            target_candidates=spec.top_n,
-            extra_info={
-                "search_terms": terms_preview,
-                "batch_size": len(batch_terms),
-                "total_terms": len(terms),
-                "venues": ", ".join(spec.venues[:3]) if spec.venues else "All venues",
-                "years": f"{min(spec.years)}-{max(spec.years)}" if spec.years else "All years"
-            }
-        )
-        report_progress("searching", search_progress, detail)
+        report_progress("searching", search_progress)
         
         # Use function defaults: pages=1, k_per_query=6 (more conservative to avoid rate limiting)
-        serp = _run_search_terms(batch_terms)
+        serp = _run_search_terms(batch_terms, search_engines=config.SEARXNG_ENGINES_PAPER_SEARCH)
         all_serp.extend(serp)
-        
-        # ========== 【新增】论文打分和分档 ==========
-        if config.USE_LLM_PAPER_SCORING and serp:
-            print(f"\n[Round {rounds_completed}] 📊 Starting paper scoring for {len(serp)} papers...")
-            
-            # Get LLM instance for scoring
-            llm_instance = llm.get_llm("select", temperature=0.3, api_key=api_key)
-            
-            # Build query string from spec
-            query_parts = []
-            if spec.keywords:
-                query_parts.extend(spec.keywords)
-            if spec.research_field:
-                query_parts.append(spec.research_field)
-            user_query = " ".join(query_parts) or "research papers"
-            
-            # Parallel scoring with two-tier classification
-            ranked_papers = score_and_rank_papers_parallel(
-                serp=serp,
-                user_query=user_query,
-                llm=llm_instance,
-                min_score=5  # Only keep papers with score >= 5
-            )
-            
-            print(f"[Round {rounds_completed}] ✅ Paper scoring complete: {len(ranked_papers)}/{len(serp)} papers passed filter\n")
-            
-            # Use ranked papers instead of original serp
-            serp_to_process = ranked_papers
-        else:
-            # If LLM scoring disabled, use all papers
-            print(f"[Round {rounds_completed}] ⚠️ LLM paper scoring disabled, using all {len(serp)} papers")
-            serp_to_process = serp
-        
-        # Extract first authors from scored/filtered papers
-        new_candidates_count = 0
-        tier1_candidates = 0
-        tier0_candidates = 0
-        filter_first_author_name_set = set()
-        if search_candidate_set:
-            filter_first_author_name_set = set(first_name for first_name, _, _, _ in search_candidate_set)
-        
-        print(f"\n[Round {rounds_completed}] 👥 Extracting first authors from ranked papers...")
-        
-        for item in serp_to_process:
-            authors = item.get("authors", [])
-            if authors:
-                first_author = authors[0] if isinstance(authors[0], dict) else {"name": str(authors[0])}
-                author_name = first_author.get("name", "").strip()
-                author_id = first_author.get("id", None)  # 提取 Semantic Scholar ID
-                paper_title = item.get("title", "").strip()
-                paper_url = item.get("url", "").strip()
-                paper_score = item.get("score", 0)  # Get LLM score
-                paper_tier = item.get("relevant_tier", 0)  # Get tier
-                
-                if author_name and paper_title and author_name not in filter_first_author_name_set:
-                    filter_first_author_name_set.add(author_name)
-                    search_candidate_set.add((author_name, author_id, paper_title, paper_url))  # 4元组
-                    new_candidates_count += 1
-                    
-                    # Count by tier
-                    if paper_tier == 1:
-                        tier1_candidates += 1
-                    else:
-                        tier0_candidates += 1
-                    
-                    # Record paper score to all_scored_papers
-                    if paper_url and paper_url not in all_scored_papers:
-                        all_scored_papers[paper_url] = schemas.PaperWithScore(
-                            url=paper_url,
-                            title=paper_title,
-                            abstract=item.get("abstract", "") or item.get("snippet", ""),
-                            score=paper_score,
-                            relevant_tier=paper_tier,
-                            completeness_score=0.0,  # Not used in new scoring
-                            associated_candidates=[]
-                        )
-        
-        # Print candidate extraction statistics
-        print(f"[Round {rounds_completed}] ✅ Candidate extraction complete:")
-        print(f"  New candidates: {new_candidates_count}")
-        print(f"  └─ From Tier 1 papers (7-8分): {tier1_candidates} candidates")
-        print(f"  └─ From Tier 0 papers (1-6分): {tier0_candidates} candidates")
-        print(f"  Total in pool: {len(search_candidate_set)}\n")
+
+        selected_urls, selected_serp, batch_scored_papers = _select_urls(serp, spec, api_key)        
+        # Save scored papers to our collection
+        for paper in batch_scored_papers:
+            if paper.url not in all_scored_papers:
+                all_scored_papers[paper.url] = paper
+
+        print(f"[agent.execute_search] start remove duplicate serp items")
+        # Deduplicate SERP items by URL
+        new_serp_items = []
+        for it in selected_serp:
+            u = (it.get("url") or "").strip()
+            if u and u not in selected_serp_url_set:
+                selected_serp_url_set.add(u)
+                new_serp_items.append(it)
+
+        print(f"[agent.execute_search] start remove duplicate serp url")
+        # Track URLs as well
+        for u in selected_urls:
+            if u not in selected_urls_set:
+                selected_urls_set.add(u)
+
         # Report fetching progress (30% - 40%)
-        detail = schemas.ProgressDetail(
-            event="analyzing",
-            progress=0.49,
-            current_action="Processing candidate information",
-            items_processed=len(selected_urls_set),
-            found_candidates=len(candidates_accum),
-            target_candidates=spec.top_n,
-            extra_info={
-                "candidates_in_pool": len(search_candidate_set),
-                "papers_with_abstracts": len([item for item in serp if item.get("abstract")]),
-            }
-        )
-        report_progress("searching", 0.49, detail)
-        if len(search_candidate_set) == 0:
-            print(f"[agent.execute_search] New candidates added to search pool: {len(filter_first_author_name_set)}")
-        else:
-            items = list(search_candidate_set)
-            max_workers = min(len(items), 30)
-            def _submit_one(ex, first_name, first_id, paper_title, paper_url):
-                return ex.submit(
-                    orchestrate_candidate_report,
-                    first_author=first_name,
-                    paper_title=paper_title,
-                    paper_url=paper_url,
-                    aliases=[first_name],
-                    author_id=first_id,  # 传递 Semantic Scholar ID
-                    api_key=api_key,
+        report_progress("searching", 0.35)
+        
+        print(f"[agent.execute_search] new_serp_items: {len(new_serp_items)}")
+        fetched_source = _fetch_many(new_serp_items)
+        sources.update(fetched_source)
+
+        print(f"[agent.execute_search] fetched_source: {len(fetched_source)}")
+
+        # Report extraction progress (40% - 45%)
+        report_progress("searching", 0.42)
+        
+        # Extract paper names and build a deduplicated collection (align with notebook)
+        paper_collection = schemas.PaperCollection()
+        _extract_paper_names_concurrent(fetched_source, spec, paper_collection, api_key=api_key)
+        
+        print(f"[agent.execute_search] paper_collection: {len(paper_collection.get_all_papers())}")
+
+        # Build mapping url -> paper_name using primary url per paper
+        final_fetch_paper_name: Dict[str, str] = {}
+        for p in paper_collection.get_all_papers():
+            primary_url = p.primary_url or (p.urls[0] if p.urls else None)
+            if primary_url:
+                final_fetch_paper_name[primary_url] = p.paper_name
+
+        print(f"[agent.execute_search] final_fetch_paper_name: {len(final_fetch_paper_name)}")
+
+        # Query Semantic Scholar to get authors by paper title (batch)
+        s2_authors_all: List[str] = []
+        if final_fetch_paper_name:
+            try:
+                # Report analyzing progress (45% - 50%)
+                report_progress("analyzing", 0.48)
+                
+                client = SemanticScholarClient()
+
+                results = client.search_papers_with_authors_batch(
+                    url_to_title=final_fetch_paper_name,
+                    min_score=0.80,
                 )
+                
+                results = [r for r in results if r.found]
+                seen_names = set()
+                for r in results:
+                    for a in r.authors or []:
+                        nm = (a.name or "").strip()
+                        if nm and nm not in seen_names:
+                            seen_names.add(nm)
+                            s2_authors_all.append(nm)
+                        # only process the first author
+                        break
+
+                if config.VERBOSE:
+                    print(f"[S2] Found {len(s2_authors_all)} authors through Semantic Scholar")
+
+                # Build candidate overviews concurrently with cap = left_required_candidates
+                filter_first_author_name_set = set()
+                if search_candidate_set:
+                    filter_first_author_name_set = set(first_name for first_name, _, _, _ in search_candidate_set)
+                
+                for r in results:
+                    if not (r.authors and r.paper_name):
+                        continue
+                    first = r.authors[0]
+                    first_name = (first.name or "").strip()
+                    first_id = first.author_id or None
+                    if not first_name:
+                        continue
+                    if first_name not in filter_first_author_name_set:
+                        filter_first_author_name_set.add(first_name)
+                        search_candidate_set.add((first_name, first_id, r.paper_name, r.url))
+                        # Prefer Semantic Scholar canonical link if available; fallback to original URL (could be arXiv, OpenReview, etc.)
+                        canonical_url = (r.paper_url or "").strip()
+                        preferred_url = canonical_url if canonical_url else r.url
+                        search_candidate_set.add((first_name, first_id, r.paper_name, preferred_url))
+
+                
+                # Check if we have candidates to process
+                if len(search_candidate_set) == 0:
+                    print(f"[agent.execute_search] No candidates in pool for this round")
+                    # Don't continue yet - still check for pause at end of round
+                    pass
+                else:
+                    ######################################################################################
+                    # Prepare candidates item to search 
+                    items = list(search_candidate_set)
                     
-            # Report candidate analysis start (50% - 80% will be dynamic)
-            detail = schemas.ProgressDetail(
-                event="analyzing",
-                progress=0.50,
-                current_action="Starting candidate evaluation",
-                items_total=len(items),
-                found_candidates=len(candidates_accum),
-                target_candidates=spec.top_n,
-                extra_info={
-                    "candidates_to_analyze": len(items),
-                    "matches_so_far": len(candidates_accum),
-                    "round": rounds_completed,
-                    "parallel_workers": max_workers
-                }
-            )
-            report_progress("analyzing", 0.50, detail)
+                    # Dynamic concurrency: maximize resource usage
+                    # Use maximum workers regardless of candidate count
+                    max_workers = min(len(items), 30)  # Cap at 30 for maximum parallelism
                     
-            print("="*50)
-            print(f"[agent.execute_search] start submit search candidate task with: {len(items)} candidates")
-            print(f"[agent.execute_search] start submit tasks with max_workers: {max_workers}")
-            print(f'API key: {api_key}')
-            with ThreadPoolExecutor(max_workers=max_workers) as ex:
-                # Submit initial window up to max_workers
-                idx = 0
-                futures = {}
-                while idx < len(items) and len(futures) < max_workers:
-                    first_name, first_id, paper_title, paper_url = items[idx]
-                    fut = _submit_one(ex, first_name, first_id, paper_title, paper_url)
-                    futures[fut] = (first_name, first_id, paper_title, paper_url)
-                    idx += 1
+                    print(f"[Concurrency] Using max_workers: {max_workers} for {len(items)} candidates")
 
-                # Process as they complete; process all candidates in this round (no early stopping)
-                while futures:
-                    for fut in as_completed(list(futures.keys()), timeout=None):
-                        first_name, first_id, paper_title, paper_url = futures.pop(fut)
-                                
-                        # remove this candidate from search_candidate_set
-                        search_candidate_set.remove((first_name, first_id, paper_title, paper_url))
-                        try:
-                            profile, overview, eval_res = fut.result()
-                        except Exception as e:
-                            print(f"[orchestrate] {first_name} error: {e}")
-                            profile, overview = None, None
-
-                        if overview:
-                            if _overview_matches_spec(overview, spec, api_key):
-                                print(f"[agent.execute_search] add candidate to candidates_accum: {first_name}")
-                                candidates_accum[first_name] = overview
-                                # Record paper-to-candidate mapping
-                                if paper_url and paper_url in all_scored_papers:
-                                    if first_name not in all_scored_papers[paper_url].associated_candidates:
-                                        all_scored_papers[paper_url].associated_candidates.append(first_name)
-                            else:
-                                print(f"[agent.execute_search] {first_name} -> overview not matches spec filtered")
-                            
-                            # Report dynamic analyzing progress (50% - 75%)
-                            # Use max of spec.top_n and current count to avoid division by zero
-                            target_for_progress = max(spec.top_n, len(candidates_accum) + 1)
-                            analyzing_progress = 0.50 + min(len(candidates_accum) / target_for_progress, 1.0) * 0.25
-                                    
-                            # Count processed and remaining
-                            processed_count = len(items) - len(search_candidate_set)
-                            detail = schemas.ProgressDetail(
-                                        event="analyzing",
-                                        progress=min(analyzing_progress, 0.75),
-                                        current_action=f"Analyzing candidate: {first_name}",
-                                        items_processed=processed_count,
-                                        items_total=len(items),
-                                        found_candidates=len(candidates_accum),
-                                        target_candidates=spec.top_n,
-                                        current_candidate=first_name,
-                                        extra_info={
-                                            "active_workers": len(futures),
-                                            "matches_found": len(candidates_accum)
-                                        }
-                            )
-                            report_progress("analyzing", min(analyzing_progress, 0.75), detail)
-                                    
-                            print(f"[agent.execute_search] current found candidates: {len(candidates_accum)}")
-                            print(f"[agent.execute_search] target: {spec.top_n}")
-                        else:
-                            print(f"[orchestrate] {first_name} -> overview is None")
-
-                        # Rolling window: submit next task to keep max_workers saturated
-                        if idx < len(items):
-                            next_first_name, next_first_id, next_paper_title, next_paper_url = items[idx]
-                            print(f"[Rolling Window] Submitting next candidate: {next_first_name} ({idx+1}/{len(items)})")
-                            nfut = _submit_one(ex, next_first_name, next_first_id, next_paper_title, next_paper_url)
-                            futures[nfut] = (next_first_name, next_first_id, next_paper_title, next_paper_url)
+                    def _submit_one(ex, first_name, first_id, paper_title, paper_url):
+                        return ex.submit(
+                            orchestrate_candidate_report,
+                            first_author=first_name,
+                            paper_title=paper_title,
+                            paper_url=paper_url,
+                            aliases=[first_name],
+                            author_id=first_id,
+                            api_key=api_key,
+                        )
+                    
+                    # Report candidate analysis start (50% - 80% will be dynamic)
+                    report_progress("analyzing", 0.50)
+                    
+                    print("="*50)
+                    print(f"[agent.execute_search] start submit search candidate task with: {len(items)} candidates")
+                    print(f"[agent.execute_search] start submit tasks with max_workers: {max_workers}")
+                    print(f'API key: {api_key}')
+                    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+                        # Submit initial window up to max_workers
+                        idx = 0
+                        futures = {}
+                        while idx < len(items) and len(futures) < max_workers:
+                            first_name, first_id, paper_title, paper_url = items[idx]
+                            fut = _submit_one(ex, first_name, first_id, paper_title, paper_url)
+                            futures[fut] = (first_name, first_id, paper_title, paper_url)
                             idx += 1
-                            print(f"[Rolling Window] Active workers: {len(futures)}, Processed: {idx}/{len(items)})")
 
-                        # Report progress every few candidates
-                        if idx % 3 == 0 or idx == len(items):  # Update every 3 candidates or at the end
-                                    progress_pct = 0.50 + (idx / len(items)) * 0.25
-                                    # Use first_name as current candidate (the one just processed)
-                                    detail = schemas.ProgressDetail(
-                                        event="analyzing",
-                                        progress=min(progress_pct, 0.75),
-                                        current_action="Evaluating candidates",
-                                        items_processed=idx - len(futures),  # Completed count
-                                        items_total=len(items),
-                                        found_candidates=len(candidates_accum),
-                                        target_candidates=spec.top_n,
-                                        current_candidate=first_name,
-                                        extra_info={
-                                            "active_workers": len(futures),
-                                            "matches_found": len(candidates_accum),
-                                            "queue_remaining": len(items) - idx
-                                        }
-                                    )
-                                    report_progress("analyzing", min(progress_pct, 0.75), detail)
+                        # Process as they complete; process all candidates in this round (no early stopping)
+                        while futures:
+                            for fut in as_completed(list(futures.keys()), timeout=None):
+                                first_name, first_id, paper_title, paper_url = futures.pop(fut)
+                                
+                                # remove this candidate from search_candidate_set
+                                search_candidate_set.remove((first_name, first_id, paper_title, paper_url))
+                                try:
+                                    profile, overview, eval_res = fut.result()
+                                except Exception as e:
+                                    print(f"[orchestrate] {first_name} error: {e}")
+                                    profile, overview = None, None
+
+                                if overview:
+                                    if _overview_matches_spec(overview, spec, api_key):
+                                        print(f"[agent.execute_search] add candidate to candidates_accum: {first_name}")
+                                        candidates_accum[first_name] = overview
+                                        
+                                        # Record paper-to-candidate mapping
+                                        if paper_url and paper_url in all_scored_papers:
+                                            if first_name not in all_scored_papers[paper_url].associated_candidates:
+                                                all_scored_papers[paper_url].associated_candidates.append(first_name)
+                                    else:
+                                        print(f"[agent.execute_search] {first_name} -> overview not matches spec filtered")
+                                    
+                                    # Report dynamic analyzing progress (50% - 75%)
+                                    # Use max of spec.top_n and current count to avoid division by zero
+                                    target_for_progress = max(spec.top_n, len(candidates_accum) + 1)
+                                    analyzing_progress = 0.50 + min(len(candidates_accum) / target_for_progress, 1.0) * 0.25
+                                    report_progress("analyzing", min(analyzing_progress, 0.75))
+                                    
+                                    print(f"[agent.execute_search] current found candidates: {len(candidates_accum)}")
+                                    print(f"[agent.execute_search] target: {spec.top_n}")
+                                else:
+                                    print(f"[orchestrate] {first_name} -> overview is None")
+
+                                # Rolling window: submit next task to keep max_workers saturated
+                                if idx < len(items):
+                                    next_first_name, next_first_id, next_paper_title, next_paper_url = items[idx]
+                                    print(f"[Rolling Window] Submitting next candidate: {next_first_name} ({idx+1}/{len(items)})")
+                                    nfut = _submit_one(ex, next_first_name, next_first_id, next_paper_title, next_paper_url)
+                                    futures[nfut] = (next_first_name, next_first_id, next_paper_title, next_paper_url)
+                                    idx += 1
+                                    print(f"[Rolling Window] Active workers: {len(futures)}, Processed: {idx}/{len(items)})")
+
+                        # If enough gathered, best-effort cancel remaining
+                        for fut in list(futures.keys()):  # Create a copy of keys to avoid RuntimeError
+                            first_name, first_id, paper_title, paper_url = futures.pop(fut)
+                            search_candidate_set.remove((first_name, first_id, paper_title, paper_url))
+                            fut.cancel()
+                    
+                    print(f"[agent.execute_search] finished search candidate task with: {len(candidates_accum)} candidates")
+                    print("="*50)
+                
+            except Exception as e:
+                if config.VERBOSE:
+                    print(f"[S2] error: {e}")
+        else:
+            # No papers found in this batch
+            print(f"[agent.execute_search] final_fetch_paper_name is empty for this round")
         
         # ========== End of round - check if we need to pause ==========
         print(f"\n[Round {rounds_completed}] ✅ This round of processing is complete")
@@ -1104,8 +1583,7 @@ def agent_execute_search(
             print(f"  - current_candidates number: {len(candidates_accum)}")
             print(f"  ⚠️ Attention: candidates are not sorted (sorting will be done when user chooses 'finish')")
             
-            # Use model_construct to avoid re-validation of already validated Pydantic objects
-            partial_result = schemas.PartialSearchResults.model_construct(
+            partial_result = schemas.PartialSearchResults(
                 task_id=task_id,
                 need_user_decision=True,
                 rounds_completed=rounds_completed,
@@ -1116,19 +1594,7 @@ def agent_execute_search(
             return partial_result
     # ========== RANKING & SCORING (Step 3) - Outside search loop ==========
     # Report ranking progress (75% - 85%)
-    detail = schemas.ProgressDetail(
-        event="ranking",
-        progress=0.78,
-        current_action="Ranking and scoring candidates",
-        found_candidates=len(candidates_accum),
-        target_candidates=spec.top_n,
-        extra_info={
-            "total_candidates": len(candidates_accum),
-            "papers_evaluated": len(all_scored_papers),
-            "search_rounds": rounds_completed
-        }
-    )
-    report_progress("ranking", 0.78, detail)
+    report_progress("ranking", 0.78)
     
     # Create task state for final processing
     final_task_state = schemas.SearchTaskState(
@@ -1147,37 +1613,16 @@ def agent_execute_search(
     )
     
     # Report ranking progress (85% - 90%)
-    detail = schemas.ProgressDetail(
-        event="ranking",
-        progress=0.88,
-        current_action="Applying filters and sorting",
-        found_candidates=len(candidates_accum),
-        target_candidates=spec.top_n
-    )
-    report_progress("ranking", 0.88, detail)
+    report_progress("ranking", 0.88)
     
     # Report finalizing progress (90% - 95%)
-    detail = schemas.ProgressDetail(
-        event="finalizing",
-        progress=0.92,
-        current_action="Preparing final results",
-        found_candidates=len(candidates_accum),
-        target_candidates=spec.top_n
-    )
-    report_progress("finalizing", 0.92, detail)
+    report_progress("finalizing", 0.92)
     
     # Use unified finish function to rank and prepare results
     results = agent_finish_search(final_task_state, api_key)
     
     # Report completion (100%)
-    detail = schemas.ProgressDetail(
-        event="done",
-        progress=1.0,
-        current_action="Search completed",
-        found_candidates=len(candidates_accum),
-        target_candidates=spec.top_n
-    )
-    report_progress("done", 1.0, detail)
+    report_progress("done", 1.0)
     
     return results
 
@@ -1233,8 +1678,7 @@ def agent_finish_search(task_state: schemas.SearchTaskState, api_key: str = None
     user_query = " ".join(query_parts) or "research papers"
     
     # Create and return SearchResults
-    # Use model_construct to avoid re-validation of already validated Pydantic objects
-    results = schemas.SearchResults.model_construct(
+    results = schemas.SearchResults(
         recommended_candidates=recommended,
         additional_candidates=additional,
         reference_papers=reference_papers,
@@ -1681,4 +2125,3 @@ def agent_generate_search_summary(results, query_spec):
     
     areas_text = ", ".join(list(set(areas))[:5]) if areas else "relevant research areas"
     return f"Found {total} candidates specializing in {areas_text}."
-

@@ -13,28 +13,11 @@ try:
     backend_dir = current_dir.parent
     sys.path.insert(0, str(backend_dir))
 
-    from backend import config
+    import config
     import utils
     from utils import normalize_whitespace, normalize_url
 except Exception as e:
     print(f"Schemas ImportError: {e}")
-
-# ============================ PROGRESS TRACKING SCHEMAS ============================
-
-class ProgressDetail(BaseModel):
-    """Detailed progress information for real-time updates"""
-    event: str  # Current event/stage name
-    progress: float  # Progress percentage (0.0 - 1.0)
-    current_action: Optional[str] = None  # What is currently being done
-    items_processed: Optional[int] = None  # Number of items processed
-    items_total: Optional[int] = None  # Total items to process
-    found_candidates: Optional[int] = None  # Current number of candidates found
-    target_candidates: Optional[int] = None  # Target number of candidates
-    current_candidate: Optional[str] = None  # Name of candidate being processed
-    search_terms_batch: Optional[int] = None  # Current batch of search terms
-    search_terms_total: Optional[int] = None  # Total number of search term batches
-    papers_found: Optional[int] = None  # Number of papers found
-    extra_info: Optional[Dict[str, Any]] = None  # Any additional information
 
 # ============================ QUERY AND PLANNING SCHEMAS ============================
 
@@ -44,7 +27,6 @@ class QuerySpec(BaseModel):
     years: List[int] = Field(default_factory=lambda: config.DEFAULT_YEARS)
     venues: List[str] = Field(default_factory=lambda: ["ICLR","ICML","NeurIPS"])     # e.g., ["ICLR","ICML","NeurIPS",...]
     keywords: List[str] = Field(default_factory=lambda: ["social simulation","multi-agent"])   # e.g., ["social simulation","multi-agent",...]
-    research_field: str = Field(default="Machine Learning", description="Primary research field/direction")  # e.g., "Robotics", "Natural Language Processing"
     must_be_current_student: bool = True
     degree_levels: List[str] = Field(default_factory=lambda: ["PhD","Master"])
     author_priority: List[str] = Field(default_factory=lambda: ["first"])
@@ -96,7 +78,6 @@ class QuerySpecDiff(BaseModel):
     years: Optional[List[int]] = None
     venues: Optional[List[str]] = None
     keywords: Optional[List[str]] = None
-    research_field: Optional[str] = None
     must_be_current_student: Optional[bool] = None
     degree_levels: Optional[List[str]] = None
     author_priority: Optional[List[str]] = None
@@ -447,37 +428,6 @@ class ResearchState(BaseModel):
 
 # Removed create_selection_prompt - now handled directly in graph.py
 
-# ============================ PAPER SCORING SCHEMAS ============================
-
-class PaperScoreSpec(BaseModel):
-    """LLM output for paper relevance scoring"""
-    score: int = Field(..., ge=1, le=10, description="Relevance score from 1-10, where 10 is most relevant")
-
-class PaperWithScore(BaseModel):
-    """Paper with its relevance score"""
-    url: str = Field(..., description="URL of the paper")
-    title: str = Field(..., description="Title of the paper")
-    abstract: str = Field(default="", description="Abstract or snippet of the paper")
-    score: int = Field(..., ge=1, le=10, description="Relevance score from 1-10")
-    relevant_tier: int = Field(default=0, description="Relevance tier: 1 for highly relevant (>=9), 0 for moderately relevant (6<score<9)")
-    completeness_score: float = Field(default=0.0, description="Information completeness score based on metadata availability")
-    associated_candidates: List[str] = Field(default_factory=list, description="Names of candidates associated with this paper")
-    
-    @field_validator("url")
-    @classmethod
-    def normalize_url_field(cls, v):
-        return normalize_url(v)
-
-class SearchResults(BaseModel):
-    """Complete search results including candidates and reference papers"""
-    recommended_candidates: List['CandidateOverview'] = Field(default_factory=list, description="Top recommended candidates based on score")
-    additional_candidates: List['CandidateOverview'] = Field(default_factory=list, description="Additional candidates that may be of interest")
-    reference_papers: List[PaperWithScore] = Field(default_factory=list, description="All scored papers with associated candidates")
-    total_candidates_found: int = Field(default=0, description="Total number of candidates found")
-    search_query: str = Field(default="", description="Original search query")
-    
-    model_config = ConfigDict(arbitrary_types_allowed=True)
-
 # ============================ EVALUATION & OVERVIEW SCHEMAS ============================
 
 class EvaluationItem(BaseModel):
@@ -532,79 +482,8 @@ class CandidateOverview(BaseModel):
     service_talks: List[str] = Field(default_factory=list, alias="Academic Service / Invited Talks")
     open_source_projects: List[str] = Field(default_factory=list, alias="Open-source / Datasets / Projects")
     representative_papers: List[RepresentativePaper] = Field(default_factory=list, alias="Representative Papers")
-    trigger_paper_title: str = Field(default="", alias="Trigger Paper Title")
-    trigger_paper_url: str = Field(default="", alias="Trigger Paper URL")
     highlights: List[str] = Field(default_factory=list, alias="Highlights")
     radar: Dict[str, int] = Field(default_factory=dict, alias="Radar")
     total_score: int = Field(default=0, alias="Total Score")
     detailed_scores: Dict[str, str] = Field(default_factory=dict, alias="Detailed Scores")
     model_config = ConfigDict(populate_by_name=True)
-
-# ============================ TASK STATE SCHEMAS FOR INCREMENTAL SEARCH ============================
-
-class SearchTaskState(BaseModel):
-    """State snapshot for resumable search tasks"""
-    task_id: str = Field(..., description="Unique task ID")
-    spec: QuerySpec = Field(..., description="Original query specification")
-    
-    # Search progress state
-    pos: int = Field(default=0, description="Current position in search terms")
-    terms: List[str] = Field(default_factory=list, description="All search terms")
-    rounds_completed: int = Field(default=0, description="Number of candidate pool processing rounds completed")
-    
-    # Accumulated results
-    candidates_accum: Dict[str, 'CandidateOverview'] = Field(
-        default_factory=dict, 
-        description="Accumulated candidates {name -> CandidateOverview}"
-    )
-    all_serp: List[Dict[str, Any]] = Field(default_factory=list, description="All SERP results (flexible schema)")
-    sources: Dict[str, str] = Field(default_factory=dict, description="Fetched sources {url -> text}")
-    all_scored_papers: Dict[str, PaperWithScore] = Field(
-        default_factory=dict,
-        description="All scored papers {url -> PaperWithScore}"
-    )
-    search_candidate_set: List[tuple] = Field(
-        default_factory=list,
-        description="Set of candidates to process: [(name, id, paper_title, paper_url), ...]"
-    )
-    
-    # Tracking sets (for deduplication)
-    selected_urls_set: set = Field(default_factory=set, description="Set of selected URLs")
-    selected_serp_url_set: set = Field(default_factory=set, description="Set of SERP URLs")
-    
-    # Metadata
-    created_at: float = Field(default_factory=lambda: __import__('time').time())
-    updated_at: float = Field(default_factory=lambda: __import__('time').time())
-    
-    model_config = ConfigDict(arbitrary_types_allowed=True)
-
-
-class PartialSearchResults(BaseModel):
-    """Partial search results returned during incremental search"""
-    task_id: str = Field(..., description="Task ID for resuming")
-    need_user_decision: bool = Field(default=False, description="Whether user decision is needed")
-    rounds_completed: int = Field(default=0, description="Number of rounds completed")
-    total_candidates_found: int = Field(default=0, description="Total candidates found so far")
-    current_candidates: List['CandidateOverview'] = Field(
-        default_factory=list, 
-        description="Current candidates found"
-    )
-    message: str = Field(default="", description="Status message for user")
-    
-    model_config = ConfigDict(arbitrary_types_allowed=True)
-
-
-class SearchTaskAction(BaseModel):
-    """Action to perform on a search task"""
-    action: str = Field(..., description="Action: 'start', 'resume', or 'finish'")
-    task_id: Optional[str] = Field(default=None, description="Task ID (required for resume/finish)")
-    spec: Optional[QuerySpec] = Field(default=None, description="Query spec (required for start)")
-
-
-# Rebuild models to resolve forward references
-SearchResults.model_rebuild()
-PartialSearchResults.model_rebuild()
-# 🔥 Critical: SearchTaskState contains forward refs to CandidateOverview / PaperWithScore
-# If we don't rebuild it, runtime validation may treat nested models as plain dicts,
-# causing errors like "Input should be a valid dictionary or instance of CandidateOverview".
-SearchTaskState.model_rebuild()

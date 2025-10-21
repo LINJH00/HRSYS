@@ -1,0 +1,681 @@
+{
+  "task_id": "task_20251021_031149_768f64b4",
+  "spec": {
+    "top_n": 6,
+    "years": [
+      2025,
+      2024,
+      2026
+    ],
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS",
+      "ACL",
+      "EMNLP",
+      "NAACL"
+    ],
+    "keywords": [
+      "text-generation",
+      "diffusion model"
+    ],
+    "research_field": "Natural Language Processing",
+    "must_be_current_student": true,
+    "degree_levels": [
+      "PhD"
+    ],
+    "author_priority": [
+      "first",
+      "last"
+    ],
+    "extra_constraints": []
+  },
+  "pos": 16,
+  "terms": [
+    "text generation, diffusion model ICLR 2026",
+    "text generation, diffusion model ICML 2026",
+    "text generation, diffusion model NeurIPS 2026",
+    "text generation, diffusion model ACL 2026",
+    "text generation, diffusion model EMNLP 2026",
+    "text generation, diffusion model NAACL 2026",
+    "text generation, diffusion model ICLR 2025",
+    "text generation, diffusion model ICML 2025",
+    "text generation, diffusion model NeurIPS 2025",
+    "text generation, diffusion model ACL 2025",
+    "text generation, diffusion model EMNLP 2025",
+    "text generation, diffusion model NAACL 2025",
+    "text generation, diffusion model ICLR 2024",
+    "text generation, diffusion model ICML 2024",
+    "text generation, diffusion model NeurIPS 2024",
+    "text generation, diffusion model ACL 2024",
+    "text generation, diffusion model EMNLP 2024",
+    "text generation, diffusion model NAACL 2024"
+  ],
+  "rounds_completed": 2,
+  "candidates_accum": {},
+  "all_serp": [
+    {
+      "title": "Text Diffusion Model with Encoder-Decoder Transformers for Sequence-to-Sequence Generation - ACL Anthology",
+      "url": "https://aclanthology.org/2024.naacl-long.2/",
+      "snippet": "In this work, we propose SeqDiffuSeq, a text diffusion model, to approach sequence-to-sequence text generation with an encoder-decoder Transformer architecture.To improve the generation performance, SeqDiffuSeq is equipped with the self-conditioning technique and our newly proposed adaptive noise schedule technique.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Diffusion models in text generation: a survey - PMC",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10909201/",
+      "snippet": "Zhang, Liu & Zhang (2023).Zhang H, Liu X, Zhang J. DiffuSum: generation enhanced extractive summarization with diffusion. Findings of the Association for Computational Linguistics: ACL 2023; Toronto, Canada: Association for Computational Linguistics; 2023. pp. 13089–13100.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Text generation with diffusion language models | Proceedings of the 40th International Conference on Machine Learning",
+      "url": "https://dl.acm.org/doi/10.5555/3618408.3619275",
+      "snippet": "Self-conditioned embedding diffusion for text generation. arXiv preprint arXiv:2211.04236, 2022. ... Su, Y., Cai, D., Wang, Y., Vandyke, D., Baker, S., Li, P., and Collier, N. Non-autoregressive text generation with pre-trained language models. In EACL, pp. 234-243. Association for Computational Linguistics, 2021. ... Susanto, R. H., Chollampatt, S., and Tan, L. Lexically constrained neural machine translation with levenshtein transformer. In ACL, pp.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Energy-Based Diffusion Language Models for Text Generation",
+      "url": "https://arxiv.org/abs/2410.21357",
+      "snippet": "Our analysis reveals that this degradation is a consequence of an imperfect approximation used by diffusion models. In this work, we propose Energy-based Diffusion Language Model (EDLM), an energy-based model operating at the full sequence level for each diffusion step, introduced to improve the underlying approximation used by diffusion models.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Main Conference - ACL 2023",
+      "url": "https://2023.aclweb.org/program/accepted_main_conference/",
+      "snippet": "SSD-LM: Semi-autoregressive Simplex-based Diffusion Language Model for Text Generation and Modular Control Xiaochuang Han, Sachin Kumar and Yulia Tsvetkov",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "PDF Diffusion Models for Non-autoregressive Text Generation: A Survey - IJCAI",
+      "url": "https://www.ijcai.org/proceedings/2023/0750.pdf",
+      "snippet": "As the background, we first present the general definition of diffusion mod-els and the text diffusion models, and then dis-cuss their merits for NAR generation. As the core content, we further introduce two mainstream dif-fusion models in existing work of text diffusion, and review the key designs of the diffusion pro-cess.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models",
+      "url": "https://openreview.net/forum?id=jQj-_rLVXsj",
+      "snippet": "Abstract: Recently, diffusion models have emerged as a new paradigm for generative models. Despite the success in domains using continuous signals such as vision and audio, adapting diffusion models to natural language is under-explored due to the discrete nature of texts, especially for conditional generation. We tackle this challenge by proposing DiffuSeq: a diffusion model designed for ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Multimodal diffusion framework for collaborative text image audio generation and applications | Scientific Reports",
+      "url": "https://www.nature.com/articles/s41598-025-05794-4",
+      "snippet": "AudioViewer: Learning audio-visual correspondence for synchronized audio-visual generation. arXiv preprint arXiv:2306.17160 (2023). Wu, Q., Zhao, T., Chen, Z. et al. MSP: Multi-stage prompting for making pre-trained language models better translators. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics 14219–14232 (ACL, 2023). Huang, X., Wu, X., Liu, B. et al. HiCo: Hierarchical co-speech gesture synthesis with controllable diffusion models.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Text Diffusion Model with Encoder-Decoder Transformers for Sequence-to ...",
+      "url": "https://papers.cool/venue/2024.naacl-long.2@ACL",
+      "snippet": "The diffusion model, a new generative modeling paradigm, has achieved great success in image, audio, and video generation.However, considering the discrete categorical nature of the text, it is not trivial to extend continuous diffusion models to natural language. In this work, we propose SeqDiffuSeq, a text diffusion model, to approach sequence-to-sequence text generation with an encoder ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "Can Diffusion Model Achieve Better Performance in Text Generation ? Bridging the Gap between Training and Inference ! - ACL Anthology",
+      "url": "https://aclanthology.org/2023.findings-acl.721/",
+      "snippet": "Extensive experiments on 6 generation tasks confirm the superiority of our methods, which can achieve \\mathbf100\\times \\rightarrow \\mathbf200\\times speedup with better performance. Our code will be released at https://github.com/CODINNLG/Bridge_Gap_Diffusion. %R 10.18653/v1/2023.findings-acl.721 %U https://aclanthology.org/2023.findings-acl.721/ %U https://doi.org/10.18653/v1/2023.findings-acl.721 %P 11359-11386",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ACL 2026"
+    },
+    {
+      "title": "EMNLP: Empirical Methods in Natural Language Processing 2026 2025 2024 ...",
+      "url": "http://www.wikicfp.com/cfp/program?id=883",
+      "snippet": "",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "Energy-Based Diffusion Language Models for Text Generation",
+      "url": "https://arxiv.org/html/2410.21357v1",
+      "snippet": "In this work, we propose Energy-based Diffusion Language Model (EDLM), an energy-based model operating at the full sequence level for each diffusion step, introduced to improve the underlying approximation used by diffusion models.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "Natural Language Processing Conferences to Attend in 2026",
+      "url": "https://www.aiworldzone.com/conferences/natural-language-processing-conferences-2026/",
+      "snippet": "3. EMNLP 2026 - Conference on Empirical Methods in Natural Language Processing Tokyo, Japan | November 9-14, 2026 EMNLP is a top-tier AI conference focused on empirical approaches to natural language understanding, AI text generation, and multimodal NLP. Expect a mix of academic research, deep learning breakthroughs, and applied industry ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "EMNLP 23 Tutorial on Creative Natural Language Generation",
+      "url": "https://emnlp2023-creative-nlg.github.io",
+      "snippet": "Incorporating Domain Knowledge DOMAIN KNOWLEDGE FROM WEB Comprehending and Generating Apt Metaphors: A Web-driven, Case-based Approach to Figurative Language Veale et al (2007) DOMAIN KNOWLEDGE FROM EXTERNAL KNOWLEDGE MODELS Generating similes effortlessly like a Pro : A Style Transfer Approach for Simile Generation Chakrabarty et al (2020) MERMAID: Metaphor Generation with Symbolism and Discriminative Decoding Chakrabarty et al (2021) DOMAIN KNOWLEDGE FROM PROMPTING LLMS I Spy a Metaphor: Large Language Models and Diffusion Models Co-Create Visual Metaphors Chakrabarty et al (2023)",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "Diffusion Language Models: The New Paradigm - Hugging Face",
+      "url": "https://huggingface.co/blog/ProCreations/diffusion-language-model",
+      "snippet": "Diffusion Language Models represent the most significant architectural innovation in language generation since the introduction of transformers, with Google's Gemini Diffusion achieving the first commercial-grade performance parity with autoregressive models in May 2025. Unlike traditional GPT-style models that generate text sequentially token by token, DLMs employ a revolutionary two-phase ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "AoiDragon/Awesome-Text-Diffusion-Models - GitHub",
+      "url": "https://github.com/AoiDragon/Awesome-Text-Diffusion-Models",
+      "snippet": "A collection of papers related to text diffusion models. The organization of papers refer to our survey 'Diffusion Models for Non-autoregressive Text Generation: A Survey' , which is accepted by IJCAI 2023 survey track. If you find our survey useful for your research, please cite the following paper:",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "GitHub - quqxui/Awesome-LLM4IE-Papers: Awesome papers about generative Information Extraction (IE) using Large Language Models (LLMs)",
+      "url": "https://github.com/quqxui/Awesome-LLM4IE-Papers",
+      "snippet": "EMNLP Findings · 2023-12 · GIELLM: Japanese General Information Extraction Large Language Model Utilizing Mutual Reinforcement Effect · Arxiv · 2023-11 · GLiNER: Generalist Model for Named Entity Recognition using Bidirectional Transformer · Arxiv · 2023-11 · GitHub · Context-Aware Prompt for Generation-based Event Argument Extraction with Diffusion Models ·",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "FS-DFM: Fast and Accurate Long Text Generation with Few-Step Diffusion ...",
+      "url": "https://machinelearning.apple.com/research/fs-dfm",
+      "snippet": "Diffusion Language Models (DLMs) parallelize across positions and thus appear promising for language generation, yet standard discrete diffusion typically needs hundreds to thousands of model evaluations to reach high quality, trading serial depth for iterative breadth. We introduce FS-DFM, Few-Step Discrete Flow-Matching.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "Synthetic Data Generation with Large Language Models for Text",
+      "url": "https://mingyin.org/paper/EMNLP-23/emnlp2023.pdf",
+      "snippet": "conference on natural language processing (EMNLP- IJCNLP), pages 188–197. Alex Nichol, Prafulla Dhariwal, Aditya Ramesh, Pranav Shyam, Pamela Mishkin, Bob McGrew, Ilya · Sutskever, and Mark Chen. 2021. Glide: To- wards photorealistic image generation and editing · with text-guided diffusion models.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model EMNLP 2026"
+    },
+    {
+      "title": "ICML LLM-grounded Text-to-Image Diffusion Models",
+      "url": "https://icml.cc/virtual/2023/27246",
+      "snippet": "We propose to equip diffusion models with enhanced reasoning capabilities by using off-the-shelf pretrained large language models (LLMs) in a novel two-stage generation process. First, we adapt an LLM to be a text-guided layout generator through in-context learning.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2026"
+    },
+    {
+      "title": "ICML Poster Upcycling Text-to-Image Diffusion Models for Multi-Task Capabilities",
+      "url": "https://icml.cc/virtual/2025/poster/45817",
+      "snippet": "However, existing approaches typically require resource-intensive re-training or additional parameters to accommodate for the new tasks, which makes the model inefficient for on-device deployment. We propose Multi-Task Upcycling (MTU), a simple yet effective recipe that extends the capabilities of a pre-trained text-to-image diffusion model to support a variety of image-to-image generation tasks.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2026"
+    },
+    {
+      "title": "ICML Poster Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution",
+      "url": "https://icml.cc/virtual/2024/poster/34686",
+      "snippet": "For comparable model sizes, SEDD beats existing language diffusion paradigms (reducing perplexity by $25$-$75$%) and is competitive with autoregressive models, in particular outperforming GPT-2. Furthermore, compared to autoregressive mdoels, SEDD generates faithful text without requiring distribution annealing techniques like temperature scaling (around $6$-$8\\times$ better generative perplexity than un-annealed GPT-2), can trade compute and quality (similar quality with $32\\times$ fewer network evaluations), and enables controllable infilling (matching nucleus sampling quality while enabling other strategies besides left to right prompting).",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2026"
+    },
+    {
+      "title": "ICML Poster I Think, Therefore I Diffuse: Enabling Multimodal In-Context Reasoning in Diffusion Models",
+      "url": "https://icml.cc/virtual/2025/poster/46563",
+      "snippet": "Our work, ThinkDiff, introduces a new approach that empowers image generation models with multimodal in-context understanding and reasoning. Instead of relying on scarce and complex reasoning datasets to train diffusion models, we align vision-language models (VLMs) with the decoder of a large language model (LLM), which shares a common feature space with diffusion decoders. This proxy task allows us to transfer reasoning ability from the VLMs to the diffusion models without direct diffusion training.With only 5 hours of training on 4 A100 GPUs, ThinkDiff effectively unifies the understanding, reasoning, and generation capabilities in one model.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2026"
+    },
+    {
+      "title": "Generative AI Models: Diffusion Models and Text-to-Image Generation 2026",
+      "url": "https://johal.in/generative-ai-models-diffusion-models-and-text-to-image-generation-2026/",
+      "snippet": "Theoretical Foundation: Understanding Generative AI Models: Diffusion Models and Text-to-Image Generation 2026 At its core, Generative AI Models: Diffusion Models and Text-to-Image Generation 2026 represents a paradigm shift in how we approach artificial intelligence challenges. Unlike traditional methods that rely on [briefly describe traditional approach], this new approach leverages [key ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2026"
+    },
+    {
+      "title": "Downloads",
+      "url": "https://iclr.cc/Downloads/2025",
+      "snippet": "COFlowNet: Conservative Constraints on Flows Enable High-Quality Candidate Generation · CogCoM: A Visual Language Model with Chain-of-Manipulations Reasoning · CogVideoX: Text-to-Video Diffusion Models with An Expert Transformer",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "Consistent Diffusion Language Models - OpenReview",
+      "url": "https://openreview.net/forum?id=inXScPz1gT",
+      "snippet": "Diffusion-based language models (DLMs) have emerged as compelling alternatives to sequential autoregressive generation, offering the promise of parallel decoding. Yet existing discrete diffusion models require hundreds of refinement steps for high-quality text, undermining the efficiency gains of parallelism. We introduce the Consistent Diffusion Language Model (CDLM), a new family of ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "ICLR Poster DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models",
+      "url": "https://iclr.cc/virtual/2023/poster/11561",
+      "snippet": "Despite the success in domains ... We tackle this challenge by proposing DiffuSeq: a diffusion model designed for sequence-to-sequence (Seq2Seq) text generation tasks....",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "ICLR 2025 Schedule",
+      "url": "https://iclr.cc/virtual/2025/calendar",
+      "snippet": "Text-to-Image Rectified Flow as Plug-and-Play Priors · AvatarGO: Zero-shot 4D Human-Object Interaction Generation and Animation · InstantSwap: Fast Customized Concept Swapping across Sharp Shape Differences · Synthesizing Realistic fMRI: A Physiological Dynamics-Driven Hierarchical Diffusion Model for Efficient fMRI Acquisition",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "GitHub - Shark-NLP/DiffuSeq: [ICLR'23] DiffuSeq: Sequence to Sequence ...",
+      "url": "https://github.com/Shark-NLP/DiffuSeq",
+      "snippet": "Official Codebase for DiffuSeq: Sequence to Sequence Text Generation With Diffusion Models and DiffuSeq-v2: Bridging Discrete and Continuous Text Spaces for Accelerated Seq2Seq Diffusion Models. The diffusion process of our conditional diffusion language model DiffuSeq. The diffusion process of accelerated DiffuSeq.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "AnyText2: Visual Text Generation and Editing With Customizable Attributes",
+      "url": "https://arxiv.org/html/2411.15245v1",
+      "snippet": "In visual text generation, the use of synthetic data for customizing text attributes is also an intuitive approach. Notably, DiffSTE [16] and Glyph-SDXL [22] allow for the integration of font and color names directly into prompts, enabling diffusion models to learn these concepts and facilitating precise control over text attributes during inference.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "ICLR Poster Scaling up Masked Diffusion Models on Text",
+      "url": "https://iclr.cc/virtual/2025/poster/29366",
+      "snippet": "Masked diffusion models (MDMs) have shown promise in language modeling, yet their scalability and effectiveness in core language tasks, such as text generation and language understanding, remain underexplored.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model ICLR 2026"
+    },
+    {
+      "title": "Apple Machine Learning Research at ICML 2025 - Apple Machine Learning Research",
+      "url": "https://machinelearning.apple.com/research/icml-2025",
+      "snippet": "At the Apple booth, researchers will showcase fine-tuning a 7B parameter LLM on an iPhone, image generation using a large diffusion model on an iPad, and text generation using a number of LLMs on an M2 Ultra Mac Studio. Apple is committed to supporting underrepresented groups in the ML community. We are proud to again sponsor several affinity groups hosting events onsite at ICML, including LatinX in AI(workshop on July 14) and Women in Machine Learning (WiML)(workshop on July 16).",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "ICML Poster The Diffusion Duality",
+      "url": "https://icml.cc/virtual/2025/poster/46226",
+      "snippet": "Building on this insight, we introduce ... on several benchmarks.To enable rapid text generation, we also propose a novel algorithm called Discrete Consistency Distillation....",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "ICML 2025 Schedule",
+      "url": "https://icml.cc/virtual/2025/calendar",
+      "snippet": "Orthus: Autoregressive Interleaved Image-Text Generation with Modality-Specific Heads · Portable Reward Tuning: Towards Reusable Fine-Tuning across Different Pretrained Models ... Score-of-Mixture Training: One-Step Generative Model Training Made Simple via Score Estimation of Mixture Distributions · Vector Grimoire: Codebook-based Shape Generation under Raster Image Supervision · Latent Thought Models with Variational Bayes Inference-Time Computation · UniDB: A Unified Diffusion Bridge Framework via Stochastic Optimal Control",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "ICML Poster Diffuse Everything: Multimodal Diffusion Models on Arbitrary State Spaces",
+      "url": "https://dev.icml.cc/virtual/2025/poster/46155",
+      "snippet": "To lift this restriction, we propose a novel framework for building multimodal diffusion models on arbitrary state spaces, enabling native generation of coupled data across different modalities. By introducing an innovative decoupled noise schedule for each modality, we enable both unconditional and modality-conditioned generation within a single model simultaneously. We empirically validate our approach for text-image generation and mixed-type tabular data synthesis, demonstrating that it achieves competitive performance.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "Downloads",
+      "url": "https://icml.cc/Downloads/2024",
+      "snippet": "BRAIn: Bayesian Reward-conditioned Amortized Inference for natural language generation from feedback · Breadth-First Exploration on Adaptive Grid for Reinforcement Learning · Breaking the Barrier: Enhanced Utility and Robustness in Smoothed DRL Agents · Breaking through the learning plateaus of in-context learning in Transformer · Break the Sequential Dependency of LLM Inference Using Lookahead Decoding · Bridging Data Gaps in Diffusion Models with Adversarial Noise-Based Transfer Learning",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "GitHub - moatifbutt/awesome-diffusion-iclr-2025: List of diffusion related active submissions on OpenReview for ICLR 2025.",
+      "url": "https://github.com/moatifbutt/awesome-diffusion-iclr-2025",
+      "snippet": "3DTopia-XL: Scaling High-quality 3D Asset Generation via Primitive Diffusion [PDF] 3D-free meets 3D priors: Novel View Synthesis from a Single Image with Pretrained Diffusion Guidance [PDF] Geometry Image Diffusion: Fast and Data-Efficient Text-to-3D with Image-Based Surface Representation [PDF] ZERO-1-to-G: Taming Pretrained 2D Diffusion Models for Direct 3D Generation [PDF]",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "ICML Poster Simple and Critical Iterative Denoising: A Recasting of Discrete Diffusion in Graph Generation",
+      "url": "https://icml.cc/virtual/2025/poster/44256",
+      "snippet": "Our empirical evaluations demonstrate ... tasks. ... This paper looks at denoising models for structured data like text or molecules—where the information is made up of distinct elements, such as words or atoms....",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "Downloads 2025",
+      "url": "https://icml.cc/Downloads/2025",
+      "snippet": "LaRA: Benchmarking Retrieval-Augmented Generation and Long-Context LLMs – No Silver Bullet for LC or RAG Routing ... Layer-wise Alignment: Examining Safety Alignment Across Image Encoder Layers in Vision Language Models · Layer-wise Quantization for Quantized Optimistic Dual Averaging · LBI-FL: Low-Bit Integerized Federated Learning with Temporally Dynamic Bit-Width Allocation · L-Diffusion: Laplace Diffusion for Efficient Pathology Image Segmentation · LDMol: A Text-to-Molecule Diffusion Model with Structurally Informative Latent Space Surpasses AR Models",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model ICML 2025"
+    },
+    {
+      "title": "[2305.10855] TextDiffuser: Diffusion Models as Text Painters",
+      "url": "https://arxiv.org/abs/2305.10855",
+      "snippet": "Diffusion models have gained increasing attention for their impressive generation abilities but currently struggle with rendering accurate and coherent text. To address this issue, we introduce TextDiffuser, focusing on generating images with visually appealing text that is coherent with backgrounds. TextDiffuser consists of two stages: first, a Transformer model generates the layout of ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "PDF AR-DIFFUSION: Auto-Regressive Diffusion Model for Text Generation - NeurIPS",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/7d866abba506e5a56335e4644ebe18f9-Supplemental-Conference.pdf",
+      "snippet": "Abstract Diffusion models have gained significant attention in the realm of image generation due to their exceptional performance. Their success has been recently expanded to text generation via generating all tokens within a sequence concurrently. How-ever, natural language exhibits a far more pronounced sequential dependency in comparison to images, and the majority of existing language ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "TextDiffuser: Diffusion Models as Text Painters - GitHub Pages",
+      "url": "https://jingyechen.github.io/textdiffuser/",
+      "snippet": "TextDiffuser consists of two stages. In the first Layout Generation stage, a Transformer-based encoder-decoder model generates character-level segmentation masks that indicate the layout of keywords in images from text prompts. In the second Image Generation stage, a diffusion model generates images conditioned on noisy features, segmentation masks, feature masks, and masked features (from ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "NeurIPS Text-to-Audio Generation via Bridging Audio Language Model and Latent Diffusion",
+      "url": "https://neurips.cc/virtual/2024/105743",
+      "snippet": "These autoregressive models offer flexibility by predicting discrete audio tokens, but they often fail to achieve high fidelity. In this work, we propose an advanced system that integrates the autoregressive language model with the diffusion model, achieving flexible and refined audio generation.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "Diffusion-LM Improves Controllable Text Generation",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/1be5bc25d50895ee656b8c2d9eb89d6a-Abstract-Conference.html",
+      "snippet": "Controlling the behavior of language models (LMs) without re-training is a major open problem in natural language generation. While recent works have demonstrated successes on controlling simple sentence attributes (e.g., sentiment), there has been little progress on complex, fine-grained controls (e.g., syntactic structure). To address this challenge, we develop a new non-autoregressive language model based on continuous diffusions that we call Diffusion-LM.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "[NeurIPS 2024 spotlight] Text-DiFuse: An Interactive Multi ... - GitHub",
+      "url": "https://github.com/Leiii-Cao/Text-DiFuse",
+      "snippet": "This is the official code of the NeurIPS 2024 paper \"Text-DiFuse: An Interactive Multi-Modal Image Fusion Framework based on Text-modulated Diffusion Model\" - Leiii-Cao/Text-DiFuse",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+      "url": "https://imagen.research.google/paper.pdf",
+      "snippet": "Deep Generative Image · Models using a Laplacian Pyramid of Adversarial Networks. In NIPS, 2015. [15] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT: Pre-training of · Deep Bidirectional Transformers for Language Understanding. In NAACL, 2019. [16] Prafulla Dhariwal and Alex Nichol. Diffusion models beat gans on image synthesis. In NeurIPS,",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "NeurIPS Poster AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation",
+      "url": "https://neurips.cc/virtual/2023/poster/73068",
+      "snippet": "This results in tokens on the left undergoing fewer denoising steps than those on the right, thereby enabling them to generate earlier and subsequently influence the generation of tokens on the right.In a series of experiments on various text generation tasks, including text summarization, machine translation, and common sense generation, AR-Diffusion clearly demonstrated its superiority over existing diffusion language models and that it can be $100\\times\\sim600\\times$ faster when achieving comparable results.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2026"
+    },
+    {
+      "title": "Next Semantic Scale Prediction via Hierarchical Diffusion Language Models",
+      "url": "https://arxiv.org/pdf/2510.08632",
+      "snippet": "modeling: Scalable image generation via next-scale prediction. Advances in neural information ... Hofmann. Generalized interpolating discrete diffusion. arXiv preprint arXiv:2503.04482, 2025. [35] Minkai Xu, Tomas Geffner, Karsten Kreis, Weili Nie, Yilun Xu, Jure Leskovec, Stefano Ermon, and Arash Vahdat. Energy-based diffusion language models for text generation.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "NeurIPS 2024: Diffusion Themes and Memes – Joshua Bambrick’s Blog",
+      "url": "https://joshbambrick.com/blog/posts/neurips-2024/",
+      "snippet": "@article{bambrick2025neurips2024, title = \"NeurIPS 2024: Diffusion Themes and Memes\", author = \"Bambrick, Joshua\", journal = \"Joshua Bambrick's Blog\", year = \"2025\", month = \"Jan\", url = \"https://joshbambrick.com/blog/posts/neurips-2025/\" } ... Abramson J, Adler J, Dunger J, et al (2024) Accurate structure prediction of biomolecular interactions with AlphaFold 3. Nature ... Luo C (2022) Understanding diffusion models: A unified perspective.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "VIPL's 9 papers on text-to-image diffusion models and other aspects are accepted by NeurIPS 2025----Visual Information Processing and Learning (VIPL)",
+      "url": "https://vipl.ict.ac.cn/en/news/researchevents/202510/t20251014_782727.html",
+      "snippet": "VIPL's 9 papers are accepted by NeurIPS 2025. NeurIPS, officially known as Annual Conference on Neural Information Processing Systems, is a top-tier conference in the field of artificial intelligence. The conference will be held in San Diego, USA from December 2nd to December 7th. The accepted papers are summarized as follows. 1. LightFair: Towards an Efficient Alternative for Fair T2I Diffusion via Debiasing Pre-trained Text Encoders (Boyu Han, Qianqian Xu, Shilong Bao, Zhiyong Yang, Kangli Zi, Qingming Huang)",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "NeurIPS Poster Next Semantic Scale Prediction via Hierarchical Diffusion Language Models",
+      "url": "https://neurips.cc/virtual/2025/poster/116380",
+      "snippet": "1 month ago - We derive closed-form expressions for the diffusion Evidence Lower Bound (ELBO), and show that HDLM can be implemented in a flexible manner and that it includes an existing discrete diffusion model as a special case. Extensive text generation experiments demonstrate the effectiveness of HDLM.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "Exploring the Deep Fusion of Large Language Models and Diffusion",
+      "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Tang_Exploring_the_Deep_Fusion_of_Large_Language_Models_and_Diffusion_CVPR_2025_paper.pdf",
+      "snippet": "tive models? arXiv:2502.13129, 2025. 5 · [43] Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszko- reit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia · Polosukhin. Attention is all you need. In NeurIPS, 2017. 1 · [44] Zhenyu Wang, Enze Xie, Aoxue Li, Zhongdao Wang, Xihui · Liu, and Zhenguo Li. Divide and conquer: Language mod- els can plan and self-correct for compositional text-to-image · generation.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "Downloads 2025",
+      "url": "https://neurips.cc/Downloads/2025",
+      "snippet": "Adversarial Diffusion for Robust Reinforcement Learning · Adversarial generalization of unfolding (model-based) networks · Adversarial Graph Fusion for Incomplete Multi-view Semi-supervised Learning with Tensorial Imputation · Adversarial Locomotion and Motion Imitation for Humanoid Policy Learning · Adversarial Paraphrasing: A Universal Attack for Humanizing AI-Generated Text",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "Diffusion-LM Improves Controllable Text Generation | OpenReview",
+      "url": "https://openreview.net/forum?id=3s9IrEsjLyk",
+      "snippet": "Go to NeurIPS 2022 Conference homepage ... language model, diffusion model · TL;DR: We propose a non-autoregressive language model based on continuous diffusions, which demonstrate strong performance in controllable text generation....",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding | OpenReview",
+      "url": "https://openreview.net/forum?id=08Yk-n5l2Al",
+      "snippet": "Go to NeurIPS 2022 Conference homepage · Published: 31 Oct 2022, Last Modified: 04 Aug 2025NeurIPS 2022 AcceptReaders: Everyone · Keywords: text-to-image, generative models, diffusion models · TL;DR: We present Imagen, a simple approach to text-to-image synthesis using diffusion models.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/7d866abba506e5a56335e4644ebe18f9-Abstract-Conference.html",
+      "snippet": "However, natural language exhibits ... we introduce Auto-Regressive Diffusion (AR-Diffusion). AR-Diffusion ensures that the generation of tokens on the right depends on the generated ones on the left, a mechanism achieved through employing a dynamic number of denoising steps ...",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "NeurIPS Poster AR-Diffusion: Auto-Regressive Diffusion Model for Text Generation",
+      "url": "https://neurips.cc/virtual/2023/poster/73068",
+      "snippet": "This results in tokens on the left undergoing fewer denoising steps than those on the right, thereby enabling them to generate earlier and subsequently influence the generation of tokens on the right.In a series of experiments on various text generation tasks, including text summarization, machine translation, and common sense generation, AR-Diffusion clearly demonstrated its superiority over existing diffusion language models and that it can be $100\\times\\sim600\\times$ faster when achieving comparable results.",
+      "engine": "brave",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2025"
+    },
+    {
+      "title": "Discrete Diffusion Language Model for Efficient Text Summarization",
+      "url": "https://aclanthology.org/2025.findings-naacl.352/",
+      "snippet": "Abstract While diffusion models excel at conditionally generating high-quality images, prior works in discrete diffusion models were not evaluated on conditional long-text generation. This work addresses the limitations of prior discrete diffusion models for conditional long-text generation, particularly in the long abstractive summarization task.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Accepted Papers - NAACL-HLT 2025",
+      "url": "https://2025.naacl.org/program/accepted_papers/",
+      "snippet": "Private Synthetic Text Generation with Diffusion Models Sebastian Ochs, Ivan Habernal HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem Vladimir Malinovskii, Andrei Panferov, Ivan Ilin, Han Guo, Peter Richtárik, Dan Alistarh",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Energy-Based Diffusion Language Models for Text Generation",
+      "url": "https://arxiv.org/abs/2410.21357",
+      "snippet": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Discrete Diffusion Language Model for Efficient Text Summarization",
+      "url": "https://gengo.sotaro.io/2025.findings-naacl.352",
+      "snippet": "dat-etal-2025-discrete Text Generation Gigaword CNN/ DailyMail Arxiv diffusion models discrete diffusion models prior discrete diffusion models autoregressive backbone architectures random noising process semantic-aware noising process Transformer backbones CrossMamba Mamba model encoder-decoder paradigm random absorbing noising process ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Paper Digest: NAACL 2025 Papers & Highlights",
+      "url": "https://resources.paperdigest.org/2025/05/naacl-2025-papers-highlights/",
+      "snippet": "Note: NAACL-2025 accepts more than 700 papers, this page only includes 500 of them selected by our daily paper digest algorithm. Interested users can choose to read All ~800 NAACL-2025 papers in a separate page, which takes quite some time to load.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Private Synthetic Text Generation with Diffusion Models",
+      "url": "https://aclanthology.org/2025.naacl-long.532/",
+      "snippet": "Bibkey: Cite (ACL): Sebastian Ochs and Ivan Habernal. 2025. Private Synthetic Text Generation with Diffusion Models. In Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers), pages 10612-10626, Albuquerque, New Mexico.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "FS-DFM: Fast and Accurate Long Text Generation with Few-Step Diffusion ...",
+      "url": "https://machinelearning.apple.com/research/fs-dfm",
+      "snippet": "Diffusion Language Models (DLMs) parallelize across positions and thus appear promising for language generation, yet standard discrete diffusion typically needs hundreds to thousands of model evaluations to reach high quality, trading serial depth for iterative breadth. We introduce FS-DFM, Few-Step Discrete Flow-Matching.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "NeurIPS",
+      "url": "https://neurips.cc/",
+      "snippet": "About the Conference. The conference was founded in 1987 and is now a multi-track interdisciplinary annual meeting that includes invited talks, demonstrations, symposia, and oral",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Tutorials - NAACL-HLT 2025",
+      "url": "https://2025.naacl.org/program/tutorials/",
+      "snippet": "NAACL 2025 Tutorials",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "[2212.11685] Text Generation with Diffusion Language Models: A Pre ...",
+      "url": "https://arxiv.org/abs/2212.11685",
+      "snippet": "In this paper, we introduce a novel dIffusion language modEl pre-training framework for text generation, which we call GENIE. GENIE is a large-scale pretrained diffusion language model that consists of an encoder and a diffusion-based decoder, which can generate text by gradually transforming a random noise sequence into a coherent text sequence. To pre-train GENIE on a large-scale language ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NAACL 2025"
+    },
+    {
+      "title": "Text-DiFuse: An Interactive Multi-Modal Image Fusion Framework based on ...",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/45e409b46bebd648e9041a628a1a9964-Abstract-Conference.html",
+      "snippet": "To address these challenges, this study proposes a novel interactive multi-modal image fusion framework based on the text-modulated diffusion model, called Text-DiFuse. First, this framework integrates feature-level information integration into the diffusion process, allowing adaptive degradation removal and multi-modal information fusion.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "[NeurIPS 2024 spotlight] Text-DiFuse: An Interactive Multi ... - GitHub",
+      "url": "https://github.com/Leiii-Cao/Text-DiFuse",
+      "snippet": "This repository is the official implementation of the NeurIPS 2024 paper: \"Text-DiFuse: An Interactive Multi-Modal Image Fusion Framework based on Text-modulated Diffusion Model\"",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "Text Generation · NeurIPS 2024",
+      "url": "https://deep-diver.github.io/neurips2024/tags/text-generation/",
+      "snippet": "Simplified and generalized masked diffusion models achieve state-of-the-art results in discrete data generation, surpassing previous methods in text and image modeling.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "UniTMGE: Uniform Text-Motion Generation and Editing via Diffusion Model",
+      "url": "https://nips.cc/virtual/2024/104945",
+      "snippet": "The NeurIPS Logo above may be used on presentations. Right-click and choose download. It is a vector graphic and may be used at any scale.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "[2410.23905] Text-DiFuse: An Interactive Multi-Modal Image Fusion ...",
+      "url": "https://arxiv.org/abs/2410.23905",
+      "snippet": "To address these challenges, this study proposes a novel interactive multi-modal image fusion framework based on the text-modulated diffusion model, called Text-DiFuse. First, this framework integrates feature-level information integration into the diffusion process, allowing adaptive degradation removal and multi-modal information fusion.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "NeurIPS Poster Meta-Diffu$B$: A Contextualized Sequence-to-Sequence ...",
+      "url": "https://neurips.cc/virtual/2024/poster/95436",
+      "snippet": "Abstract: The diffusion model, a new generative modeling paradigm, has achieved significant success in generating images, audio, video, and text. It has been adapted for sequence-to-sequence text generation (Seq2Seq) through DiffuSeq, termed the S2S-Diffusion model. Existing S2S-Diffusion models predominantly rely on fixed or hand-crafted rules to schedule noise during the diffusion and ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "Text-DiFuse: An Interactive Multi-Modal Image Fusion Framework based on ...",
+      "url": "https://deep-diver.github.io/neurips2024/spotlight-others/ybrxzibyeg/",
+      "snippet": "Text-DiFuse addresses these issues by introducing a novel interactive framework that uses a text-modulated diffusion model. It integrates feature-level information integration into the diffusion process, allowing for adaptive degradation removal and multi-modal fusion.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "[NeurIPS 2024] Faster Diffusion: Rethinking the Role of ... - GitHub",
+      "url": "https://github.com/hutaiHang/Faster-Diffusion",
+      "snippet": "🚀 [NeurIPS 2024] Faster Diffusion: Rethinking the Role of UNet Encoder in Diffusion Models Our approach can easily be combined with various diffusion model-based tasks 🧠 (such as text-to-image, personalized generation, video generation, etc.) and various sampling strategies (like DDIM-50 steps, Dpm-solver-20 steps) to achieve training ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "Towards Understanding the Working Mechanism of Text-to-Image Diffusion ...",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/63e8bc7bbf1cfea36d1d1b6538aecce5-Abstract-Conference.html",
+      "snippet": "After that, the diffusion model completes the details of generated images by information from themselves. Finally, we propose to apply this observation to accelerate the process of T2I generation by properly removing text guidance, which finally accelerates the sampling up to 25\\%+.",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    },
+    {
+      "title": "[2305.10855] TextDiffuser: Diffusion Models as Text Painters",
+      "url": "https://arxiv.org/abs/2305.10855",
+      "snippet": "Diffusion models have gained increasing attention for their impressive generation abilities but currently struggle with rendering accurate and coherent text. To address this issue, we introduce TextDiffuser, focusing on generating images with visually appealing text that is coherent with backgrounds. TextDiffuser consists of two stages: first, a Transformer model generates the layout of ...",
+      "engine": "duckduckgo",
+      "authors": [],
+      "term": "text generation, diffusion model NeurIPS 2024"
+    }
+  ],
+  "sources": {},
+  "all_scored_papers": {},
+  "search_candidate_set": [],
+  "selected_urls_set": [],
+  "selected_serp_url_set": [],
+  "created_at": 1760987570.416091,
+  "updated_at": 1760987570.416091
+}

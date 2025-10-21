@@ -19,23 +19,6 @@ try:
 except Exception as e:
     print(f"Schemas ImportError: {e}")
 
-# ============================ PROGRESS TRACKING SCHEMAS ============================
-
-class ProgressDetail(BaseModel):
-    """Detailed progress information for real-time updates"""
-    event: str  # Current event/stage name
-    progress: float  # Progress percentage (0.0 - 1.0)
-    current_action: Optional[str] = None  # What is currently being done
-    items_processed: Optional[int] = None  # Number of items processed
-    items_total: Optional[int] = None  # Total items to process
-    found_candidates: Optional[int] = None  # Current number of candidates found
-    target_candidates: Optional[int] = None  # Target number of candidates
-    current_candidate: Optional[str] = None  # Name of candidate being processed
-    search_terms_batch: Optional[int] = None  # Current batch of search terms
-    search_terms_total: Optional[int] = None  # Total number of search term batches
-    papers_found: Optional[int] = None  # Number of papers found
-    extra_info: Optional[Dict[str, Any]] = None  # Any additional information
-
 # ============================ QUERY AND PLANNING SCHEMAS ============================
 
 class QuerySpec(BaseModel):
@@ -44,7 +27,6 @@ class QuerySpec(BaseModel):
     years: List[int] = Field(default_factory=lambda: config.DEFAULT_YEARS)
     venues: List[str] = Field(default_factory=lambda: ["ICLR","ICML","NeurIPS"])     # e.g., ["ICLR","ICML","NeurIPS",...]
     keywords: List[str] = Field(default_factory=lambda: ["social simulation","multi-agent"])   # e.g., ["social simulation","multi-agent",...]
-    research_field: str = Field(default="Machine Learning", description="Primary research field/direction")  # e.g., "Robotics", "Natural Language Processing"
     must_be_current_student: bool = True
     degree_levels: List[str] = Field(default_factory=lambda: ["PhD","Master"])
     author_priority: List[str] = Field(default_factory=lambda: ["first"])
@@ -96,7 +78,6 @@ class QuerySpecDiff(BaseModel):
     years: Optional[List[int]] = None
     venues: Optional[List[str]] = None
     keywords: Optional[List[str]] = None
-    research_field: Optional[str] = None
     must_be_current_student: Optional[bool] = None
     degree_levels: Optional[List[str]] = None
     author_priority: Optional[List[str]] = None

@@ -201,12 +201,7 @@ class TrendTalentSearcher:
         print(f"开始按姓名搜索 {len(names)} 位人才...")
         print(f"搜索策略: 直接从学术数据源(OpenReview等)构建profile，跳过前期搜索")
             
-        for name in names:
-            # 如果已经找到足够的人才，停止搜索
-            if len(out) >= max_per_name:
-                print(f"已达到目标数量 {max_per_name}，停止搜索")
-                break
-                
+        for name in names[:max_per_name]:
             try:
                 print(f"\n   正在搜索: {name}")
 
@@ -226,20 +221,13 @@ class TrendTalentSearcher:
 
                 # 完全信任 Targeted Search 的内部过滤逻辑
                 if overview is None:
-                    print(f"   ❌ {name} 未找到OpenReview档案（已被Targeted Search内部过滤）")
+                    print(f"{name} 未找到OpenReview档案（已被Targeted Search内部过滤）")
                     continue
 
                 formatted = self._format_candidate(overview, name)
-                
-                # 🔧 修复：将格式化后的候选人添加到结果列表
-                if formatted:
-                    out.append(formatted)
-                    print(f"   ✅ {name} 搜索成功，评分: {formatted.get('total_score', 0)}/35")
-                else:
-                    print(f"   ⚠️ {name} 格式化失败")
 
             except Exception as e:
-                print(f"   ❌ {name} 搜索失败: {e}")
+                print(f"{name} 搜索失败: {e}")
                 import traceback
                 traceback.print_exc()
                 continue

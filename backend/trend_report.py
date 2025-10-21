@@ -768,16 +768,10 @@ def generate_stage2_talents(direction_name: str, direction_content: str, days: i
 
 
 def _format_talents_for_stage2(direction_name: str, talents: list) -> str:
-    """Format network-searched talents into the expected Stage 2 output format
-    
-    Note: The title format will be normalized by post-processing in generate_three_stage_report()
-    to ensure exact match with Stage 1 direction names (### idx) Direction Name).
-    This prevents frontend parsing mismatches.
-    """
+    """Format network-searched talents into the expected Stage 2 output format"""
     if not talents:
         return f"### {direction_name}\n\n*No talents found.*"
     
-    # Title will be replaced by post-processing, but we use direction_name for consistency
     result = f"### {direction_name}\n\n"
     
     for i, talent in enumerate(talents, 1):
@@ -1021,17 +1015,9 @@ def generate_three_stage_report(days: int = 7, query: str = "", progress_callbac
             
             # 按direction顺序组装talent内容  
             for idx, (dir_name, talent_content) in enumerate(result["stage2_talents"].items(), 1):
-                # 🔧 强制统一标题：用正则替换任何 ### 开头的标题行为标准格式
-                # 这样即使LLM在Stage 2中修改了方向名称，也能强制统一
-                import re
-                # 匹配 ### 开头的标题行（可能包含或不包含编号，支持有无空格）
-                title_pattern = re.compile(r'^###\s*(?:\d+\)?\s*)?(.*)$', re.MULTILINE)
-                
-                # 替换第一个匹配到的标题为标准格式
-                def replace_first_title(match):
-                    return f"### {idx}) {dir_name}"
-                
-                formatted_talent = title_pattern.sub(replace_first_title, talent_content, count=1)
+                # 将Stage 2的输出格式转换为前端期望的格式
+                # 从 "### Direction Name" 转换为 "### 1) Direction Name"
+                formatted_talent = talent_content.replace(f"### {dir_name}", f"### {idx}) {dir_name}")
                 final_report_parts.append(formatted_talent)
                 final_report_parts.append("\n")
         

@@ -1,0 +1,873 @@
+{
+  "type": "achievement_report_msra_former_interns",
+  "title": "MSRA former interns_Full report_Last 6 months",
+  "created_at": "2025-09-29T00:20:38.354040",
+  "filename": "achievement_msra_former_interns_MSRA_former_interns_Full_report_Last_6_months_20250929_002038.json",
+  "group_type": "msra_former_interns",
+  "data": {
+    "id": "demo_research_group_1759076438",
+    "group_id": "demo_research_group",
+    "group_name": "MSRA former interns",
+    "overall_report": {
+      "people_snapshot": {
+        "size": 7,
+        "institutions_degrees": [
+          "Fudan University, Ph.D.",
+          "Tsinghua University, Research Affiliation",
+          "CASIA, Ph.D.",
+          "Princeton University, Ph.D.",
+          "Cornell University, Ph.D.",
+          "Stanford University, Postdoc",
+          "MIT, Ph.D.",
+          "Peking University, B.S.",
+          "Osaka University, Research Associate",
+          "Renmin University of China, M.E.",
+          "Tongji University, B.E."
+        ],
+        "research_topic_clusters": [
+          "LLM-powered social simulation",
+          "Agent-based modeling and dynamics",
+          "AI evaluation and safety",
+          "LLM reasoning and system-2 intelligence",
+          "AI for science and interpretability"
+        ],
+        "collaborators_institutions": [
+          "Fudan DISC",
+          "THUNLP",
+          "CASIA",
+          "POLARIS Lab",
+          "Future of Learning Lab",
+          "Enigma",
+          "Gaoling School of AI"
+        ]
+      },
+      "executive_summary": {
+        "key_milestones": [
+          "Published 'EcoLANG' at EMNLP-Findings 2025 (Xinyi Mou)",
+          "Co-authored 'From Individual to Society' survey on social simulation (Xinyi Mou, 2024)",
+          "Launched 'SocioVerse' project with 10M real-world users (Xinyi Mou, 2025)",
+          "Published 'Larger and More Instructable Language Models Become Less Reliable' in Nature 2024 (Lexin Zhou)",
+          "Accepted by ACL 2025: BranchLoRA and LongDocURL (Zhongzhi Li)",
+          "Published 'General Scales Unlock AI Evaluation with Explanatory and Predictive Power' (arXiv 2025, Lexin Zhou)",
+          "Published 'Shall We Team Up' at EMNLP 2024 (Zengqing Wu)",
+          "Developed GDGB benchmark for dynamic graph learning (Jiarui Ji, 2025)",
+          "Presented 'Agent-based Social Simulation' at University of International Relations (Xinyi Mou, 2024)",
+          "Published 'KAN: Kolmogorov-Arnold Networks' on arXiv 2024 (Ziming Liu)"
+        ],
+        "core_research_lines": [
+          "Social Simulation powered by LLM Agents and Multi-Agent Systems",
+          "LLM Capabilities and Reasoning in Computational Social Science",
+          "AI Evaluation, Safety, and Reliability in High-Stakes Domains",
+          "Dynamic Graph Generation and Text-Attributed Network Modeling with LLMs",
+          "Interpretability, Scaling Laws, and Science of AI",
+          "LLM Applications in Education, College Admissions, and Algorithmic Bias"
+        ],
+        "opportunities_needs": [
+          "Scaling social simulation frameworks to real-world societal dynamics using LLM agents",
+          "Developing robust, explainable evaluation benchmarks for LLMs across domains",
+          "Addressing reliability degradation in increasingly large language models",
+          "Integrating multimodal and lifelong learning into agent systems for adaptive behavior",
+          "Bridging computational social science with ethical AI deployment in education and policy",
+          "Establishing standardized benchmarks for LLM-based discourse, key figure, and social intelligence modeling"
+        ]
+      },
+      "publications": {
+        "volume_structure": [
+          "EMNLP-Findings 2025: EcoLANG (Xinyi Mou)",
+          "ACL Findings 2025: LLM-Based Multi-Agent Systems as Scalable Graph Generative Models (Jiarui Ji)",
+          "Nature 2024: Larger and More Instructable Language Models Become Less Reliable (Lexin Zhou)",
+          "EMNLP 2024: Shall We Team Up (Zengqing Wu)",
+          "NeurIPS 2024: Large Language Models as Urban Residents (Zengqing Wu)",
+          "ACL 2023: UPPAM for Political Actor Modeling (Xinyi Mou)",
+          "Preprint 2024: From Individual to Society (Xinyi Mou)",
+          "Preprint 2025: SocioVerse (Xinyi Mou)",
+          "arXiv 2025: General Scales Unlock AI Evaluation (Lexin Zhou)",
+          "arXiv 2024: KAN: Kolmogorov-Arnold Networks (Ziming Liu)"
+        ],
+        "top_tier_stats": [
+          "Nature (1): Lexin Zhou — 'Larger and More Instructable Language Models Become Less Reliable' (2024)",
+          "ACL/EMNLP Findings (3): Xinyi Mou, Jiarui Ji, Zengqing Wu",
+          "NeurIPS (1): Zengqing Wu — 'Large Language Models as Urban Residents'",
+          "arXiv (3): Ziming Liu, Lexin Zhou, Jiarui Ji",
+          "High citation milestone: Zengqing Wu (100+ citations)",
+          "Multiple top-tier venue acceptances: Zhongzhi Li (ACL2025, CVPR2025), Lexin Zhou (EMNLP 2024), Zengqing Wu (ICML Workshop)"
+        ],
+        "representative_works": [
+          "EcoLANG: Efficient and Effective Agent Communication Language Induction for Social Simulation — EMNLP-Findings 2025 (Xinyi Mou)",
+          "SocioVerse: A World Model for Social Simulation Powered by LLM Agents and 10M Real-World Users — Preprint 2025 (Xinyi Mou)",
+          "General Scales Unlock AI Evaluation with Explanatory and Predictive Power — arXiv 2025 (Lexin Zhou)",
+          "Larger and More Instructable Language Models Become Less Reliable — Nature 2024 (Lexin Zhou)",
+          "Shall We Team Up: Exploring Spontaneous Cooperation of Competing LLM Agents — EMNLP 2024 (Zengqing Wu)",
+          "LLM-Based Multi-Agent Systems as Scalable Graph Generative Models — ACL Findings 2025 (Jiarui Ji)",
+          "KAN: Kolmogorov-Arnold Networks — arXiv 2024 (Ziming Liu)",
+          "The Life Cycle of Large Language Models in Education — BJET 2024 (Jinsook Lee)",
+          "Ending Affirmative Action Harms Diversity — EAAMO’24 (Jinsook Lee)",
+          "Scientific Discovery in the Age of Artificial Intelligence — Nature 2023 (Ziming Liu)"
+        ]
+      },
+      "service_impact": {
+        "reviewing_pc": [
+          "Reviewer @ ACL Rolling Review (2024)",
+          "Reviewer @ ACL (2024)",
+          "Reviewer @ EMNLP (2024)",
+          "Reviewer @ IJCAI (2024)",
+          "Reviewer @ NLPCC (2024)",
+          "Reviewer @ ACM Trans. on ALLIP (TALLIP) (2024)",
+          "Reviewer @ ICLR 2024 Workshop LLMAgents (2024)",
+          "Reviewer @ NeurIPS 2024 (2024)"
+        ],
+        "invited_talks": [
+          "Agent-based Social Simulation — University of International Relations (2024)",
+          "How to Conduct Interdisciplinary Research? Taking Character Modeling as an Example — CCAC 2024 Student Seminar (2024)",
+          "Invited talk on AI evaluation at Future of Life Institute (2025)",
+          "Invited talk on AI evaluation at Princeton University (2025)",
+          "Talk on language models becoming less reliable at Microsoft Research (2024)",
+          "Bias in Large Language Models in Education: Sources, Measures, and Mitigation Strategies — NCME-AIMC (2023)",
+          "Presented poster at ICML 2024 Workshop Agentic Markets",
+          "Presented poster at SNL 2024 in Tokyo"
+        ],
+        "media_coverage": [
+          "Work on AI evaluation featured in Nature, Forbes, MIT Tech Review, IEEE Spectrum, and more",
+          "Covered by Quanta magazine on all three research branches (Science of AI, Science for AI, AI for Science)",
+          "Published in Nature: Larger and more instructable language models become less reliable (2024)",
+          "Featured in Financial Times, Microsoft Research, El País, New Scientists, QbitAI, IBM",
+          "Paper 'KAN: Kolmogorov-Arnold Networks' covered by Quanta magazine",
+          "Research on LLMs in social simulation highlighted in media outlets",
+          "Awarded NEC Corporation Award 2024, recognized at DEIM 2024",
+          "SocioVerse project with 10M real-world users draws public interest"
+        ],
+        "open_source": [
+          "Developed 'AgentSense' benchmark for social intelligence",
+          "Created GDGB: A Benchmark for Generative Dynamic Text-Attributed Graph Learning",
+          "Developed LLMob for personal activity trajectory generation",
+          "Led 'SocioVerse' project with 10M real-world users (open-access framework)",
+          "Introduced SwS for self-aware problem synthesis in LLMs",
+          "Proposed SVS for RLVR training with 18.3% Pass@32 gain",
+          "Launched LifelongAgentBench for LLM agent evaluation",
+          "Released GeoEval benchmark for geometry problem solving"
+        ]
+      },
+      "research_map": [
+        {
+          "topic": "Social Simulation with LLM Agents",
+          "members": [
+            "Xinyi Mou",
+            "Zengqing Wu",
+            "Jiarui Ji"
+          ],
+          "representative_works": [
+            "EcoLANG: Efficient and Effective Agent Communication Language Induction for Social Simulation",
+            "SocioVerse: A World Model for Social Simulation Powered by LLM Agents and A Pool of 10 Million Real-World Users",
+            "Shall We Team Up: Exploring Spontaneous Cooperation of Competing LLM Agents",
+            "LLM-Based Multi-Agent Systems are Scalable Graph Generative Models",
+            "SRAP-Agent: Simulating and Optimizing Scarce Resource Allocation Policy with LLM-Based Agent"
+          ]
+        },
+        {
+          "topic": "AI Evaluation & Safety",
+          "members": [
+            "Lexin Zhou",
+            "Jinsook Lee"
+          ],
+          "representative_works": [
+            "General Scales Unlock AI Evaluation with Explanatory and Predictive Power",
+            "Larger and More Instructable Language Models Become Less Reliable",
+            "An LLM Feature-based Framework for Dialogue Constructiveness Assessment",
+            "The Life Cycle of Large Language Models in Education: A Framework for Understanding Sources of Bias",
+            "Ending Affirmative Action Harms Diversity Without Improving Academic Merit"
+          ]
+        },
+        {
+          "topic": "LLM Reasoning & System-2 Intelligence",
+          "members": [
+            "Zhongzhi Li"
+          ],
+          "representative_works": [
+            "Survey on System-2 Reasoning in LLMs",
+            "SVS for RLVR training with 18.3% Pass@32 gain",
+            "SwS for self-aware problem synthesis in LLMs",
+            "BranchLoRA for efficient MLLM continual learning",
+            "LifelongAgentBench for LLM agent evaluation"
+          ]
+        },
+        {
+          "topic": "AI for Science & Interpretability",
+          "members": [
+            "Ziming Liu"
+          ],
+          "representative_works": [
+            "KAN: Kolmogorov-arnold networks",
+            "Scientific discovery in the age of artificial intelligence",
+            "The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks",
+            "A Good ML Theory is Like Physics -- A Physicist's Analysis of Grokking",
+            "Seeing is believing: Brain-inspired modular training for mechanistic interpretability"
+          ]
+        },
+        {
+          "topic": "Agent-Based Modeling & Computational Social Science",
+          "members": [
+            "Xinyi Mou",
+            "Zengqing Wu",
+            "Jiarui Ji"
+          ],
+          "representative_works": [
+            "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+            "Large Language Models as Urban Residents: An LLM Agent Framework for Personal Mobility Generation",
+            "GDGB: A Benchmark for Generative Dynamic Text-Attributed Graph Learning",
+            "Hidden Strength of Disagreement",
+            "Exploring Spontaneous Cooperation of Competing LLM Agents"
+          ]
+        }
+      ]
+    },
+    "individual_reports": [
+      {
+        "name": "Xinyi Mou",
+        "header": {
+          "title": "Currently pursuing a Ph.D. at Fudan University, advised by Prof. Zhongyu Wei. Also a member of the Data Intelligence and Social Computing Lab (Fudan DISC). Spent time with the THUNLP Lab at Tsinghua University, advised by Prof. Zhiyuan Liu, Prof. Huimin Chen and Prof. Chen Qian.",
+          "email": "xymou20@fudan.edu.cn",
+          "homepage": "https://xymou.github.io/",
+          "scholar": ""
+        },
+        "keywords": [
+          "Social Simulation empowered by Large Language Models",
+          "Explore and Improve the Capabilities of LLMs to Solve Computational Social Science Tasks",
+          "Key Figure Modeling and Discourse Analysis",
+          "Social Simulation",
+          "LLM Capabilities",
+          "Key Figure Modeling",
+          "Discourse Analysis",
+          "Social Media Analysis"
+        ],
+        "highlights": [
+          "Published 'EcoLANG' at EMNLP-Findings 2025",
+          "Co-authored 'From Individual to Society' survey on social simulation",
+          "Led 'SocioVerse' project with 10M real-world users",
+          "Developed 'AgentSense' benchmark for social intelligence",
+          "Presented 'Agent-based Social Simulation' talk at University of International Relations",
+          "Talked on interdisciplinary research at CCAC 2024 Student Seminar",
+          "Published 'GPT-4V(ision) as a Social Media Analysis Engine' in ACM TIST 2025",
+          "Co-authored 'SoMeLVLM' for social media processing at ACL-Findings 2024",
+          "Worked on 'PASUM' for social media user modeling at COLING 2024",
+          "Published 'UPPAM' for political actor modeling at ACL 2023",
+          "Reviewed for ACL, EMNLP, IJCAI, and other top venues",
+          "Contributed to 'Unifying Local and Global Knowledge' at WWW 2024"
+        ],
+        "publication_overview": "Total listed: 3; EcoLANG: Efficient and Effective Agent Communication Language Induction for Social Simulation, SocioVerse: A World Model for Social Simulation Powered by LLM Agents and A Pool of 10 Million Real-World Users and From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+        "honors_grants": [],
+        "service_talks": [
+          "Reviewer @ ACL Rolling Review (2024)",
+          "Reviewer @ ACL (2024)",
+          "Reviewer @ EMNLP (2024)",
+          "Reviewer @ IJCAI (2024)",
+          "Reviewer @ NLPCC (2024)",
+          "Reviewer @ ACM Trans. on ALLIP (TALLIP) (2024)",
+          "How to Conduct Interdisciplinary Research? Taking Character Modeling as an Example — CCAC 2024 Student Seminar (2024)",
+          "Agent-based Social Simulation — University of International Relations (2024)"
+        ],
+        "open_source_projects": [
+          "EcoLANG (project) - Efficient and Effective Agent Communication Language Induction for Social Simulation",
+          "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents (project) - A Survey on Social Simulation Driven by Large Language Model-based Agents our repo",
+          "SocioVerse (project) - A World Model for Social Simulation Powered by LLM Agents and A Pool of 10 Million Real-World Users",
+          "AgentSense (project) - Benchmarking Social Intelligence of Language Agents through Interactive Scenarios",
+          "Unveiling the Truth and Facilitating Change: Towards Agent-based Large-scale Social Movement Simulation (project) - Towards Agent-based Large-scale Social Movement Simulation project website",
+          "SoMeLVLM (project) - A Large Vision Language Model for Social Media Processing project website"
+        ],
+        "representative_papers": [
+          {
+            "title": "EcoLANG: Efficient and Effective Agent Communication Language Induction for Social Simulation",
+            "venue": "EMNLP-Findings",
+            "year": 2025,
+            "links": ""
+          },
+          {
+            "title": "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents",
+            "venue": "Preprint",
+            "year": 2024,
+            "links": "our repo"
+          },
+          {
+            "title": "SocioVerse: A World Model for Social Simulation Powered by LLM Agents and A Pool of 10 Million Real-World Users",
+            "venue": "Preprint",
+            "year": 2025,
+            "links": ""
+          }
+        ],
+        "radar": {
+          "Academic Background": 4,
+          "Research Output": 3,
+          "Research Alignment": 5,
+          "Technical Skills": 4,
+          "Recognition & Impact": 2,
+          "Communication & Collaboration": 3,
+          "Initiative & Independence": 4
+        },
+        "total_score": 25,
+        "detailed_scores": {
+          "Academic Background": "4/5 - Xinyi Mou is a student at Fudan University, which is a reputable institution in China. While specific academic details are not provided, the candidate's research focus and publications suggest a strong foundation in computer science and social simulation.",
+          "Research Output": "3/5 - The candidate has published several preprints and a paper in EMNLP-Findings, indicating active research in social simulation with LLMs. However, all works have zero citations, suggesting limited visibility or impact so far.",
+          "Research Alignment": "5/5 - The candidate's interests and publications are strongly aligned with the use of large language models for social simulation, discourse analysis, and computational social science, which matches the evaluation criteria closely.",
+          "Technical Skills": "4/5 - The work on EcoLANG and SocioVerse suggests technical proficiency in developing agent-based systems and leveraging LLMs for social simulation, indicating strong technical capabilities.",
+          "Recognition & Impact": "2/5 - The candidate's publications have no citations, and there is no mention of awards, grants, or other forms of recognition, suggesting limited academic or industry impact at this stage.",
+          "Communication & Collaboration": "3/5 - While the candidate has a GitHub profile, there is no explicit information about collaboration or communication skills, such as co-authorship, presentations, or community engagement.",
+          "Initiative & Independence": "4/5 - The candidate has led multiple research projects, including the development of EcoLANG and SocioVerse, indicating a high level of initiative and independent research capability."
+        }
+      },
+      {
+        "name": "Zhongzhi Li",
+        "header": {
+          "title": "Zhongzhi Li (李忠志) My name is Zhongzhi Li, and I am a Ph.D student in AI4Math and LLM Reasoning at CASIA . I pursuing my Ph.D in Artificial Intelligence from the Institute of Automation, Chinese Academy of Sciences (CASIA) , under the supervision of IEEE/CAAI/CAA/IAPR Fellow, Chenglin Liu",
+          "email": "lizhongzhi2022@ia.ac.cn",
+          "homepage": "https://zzli2022.github.io/",
+          "scholar": ""
+        },
+        "keywords": [
+          "LLM Reasoning",
+          "System-2 Intelligence",
+          "Continual Learning",
+          "Multimodal LLMs",
+          "LLM Agents",
+          "LRM4Science",
+          "LLM Reasoning",
+          "System-2 Reasoning",
+          "Multimodal LLMs",
+          "LLM Agents",
+          "LRM4Science"
+        ],
+        "highlights": [
+          "Published survey on System-2 Reasoning in LLMs",
+          "Proposed SVS for RLVR training with 18.3% Pass@32 gain",
+          "Introduced SwS for self-aware problem synthesis in LLMs",
+          "Developed LifelongAgentBench for LLM agent evaluation",
+          "Presented BranchLoRA for efficient MLLM continual learning",
+          "Created GeoEval benchmark for geometry problem solving",
+          "Launched CMMaTH for Chinese multimodal math evaluation",
+          "Accepted by ACL2025: BranchLoRA and LongDocURL",
+          "Accepted by CVPR2025: MV-MATH",
+          "Published LANS neural solver for geometry problems",
+          "Released PeRL for reinforced multimodal LLM reasoning",
+          "Presented TLDR for efficient System-2 LLM reasoning",
+          "Developed ManipLVM-R1 for robotic manipulation",
+          "Published survey on LLM Reasoning Safety",
+          "Accepted by ACL2024: LANS and GeoEval",
+          "Released CMMaTH dataset for Chinese math evaluation"
+        ],
+        "publication_overview": "Total listed: 3; Beyond Pass@ 1: Self-Play with Variational Problem Synthesis Sustains RLVR, SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning and Achieving human-level intelligence requires refining the transition from the fast, intuitive System 1 to the slower, more deliberate System 2 reasoning",
+        "honors_grants": [],
+        "service_talks": [],
+        "open_source_projects": [
+          "SwS (project) - Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning",
+          "TLDR (project) - Efficient System-2 LLM Reasoning",
+          "LLM Reasoning Safety Survey (project) - Comprehensive survey of LRMs, meticulously exploring and summarizing the newly emerged safety risks, attacks, and defense strategies.",
+          "PeRL (project) - Reinforced Multimodal LLM Reasoning",
+          "CMMaTH (dataset) - Chinese Multi-modal Math Skill Evaluation Benchmark, containing 23k multimodal K12 math related questions.",
+          "GeoEval (dataset) - Comprehensive collection of geometry math problems for evaluating LLMs and MMs."
+        ],
+        "representative_papers": [],
+        "radar": {
+          "Academic Background": 3,
+          "Research Output": 4,
+          "Research Alignment": 5,
+          "Technical Skills": 4,
+          "Recognition & Impact": 2,
+          "Communication & Collaboration": 3,
+          "Initiative & Independence": 5
+        },
+        "total_score": 26,
+        "detailed_scores": {
+          "Academic Background": "3/5 - The candidate is a student affiliated with CASIA, indicating a strong academic foundation, but specific details about their degree or academic history are not provided.",
+          "Research Output": "4/5 - The candidate has multiple preprint papers under review, showing active research contributions in relevant areas such as LLM reasoning and continual learning.",
+          "Research Alignment": "5/5 - The candidate's interests and publications align closely with cutting-edge topics in AI, including LLM reasoning, system-2 intelligence, and multimodal models.",
+          "Technical Skills": "4/5 - The candidate's work on reinforcement learning for LLM reasoning and problem synthesis suggests strong technical proficiency in AI and machine learning.",
+          "Recognition & Impact": "2/5 - The candidate's work is still under review and has no citations, indicating limited recognition or impact at this stage of their career.",
+          "Communication & Collaboration": "3/5 - While the candidate has online platforms like GitHub and Twitter, there is no evidence provided of significant collaboration or public communication beyond personal profiles.",
+          "Initiative & Independence": "5/5 - The candidate is actively publishing preprints on novel research topics, demonstrating initiative and independence in pursuing advanced AI research directions."
+        }
+      },
+      {
+        "name": "Lexin Zhou",
+        "header": {
+          "title": "1st-year CS PhD candidate at Princeton University, advised Prof. Peter Henderson at the POLARIS Lab",
+          "email": "lz473@cam.ac.uk",
+          "homepage": "https://lexzhou.github.io/",
+          "scholar": "https://scholar.google.com/citations?user=5EQfAFIAAAAJ&hl=en"
+        },
+        "keywords": [
+          "AI Evaluation",
+          "social computing",
+          "human-AI interactions",
+          "AI safety",
+          "AI Evaluation",
+          "social computing",
+          "human-AI interactions",
+          "AI safety",
+          "general-purpose systems"
+        ],
+        "highlights": [
+          "Invited talk on AI evaluation at Future of Life Institute (2025)",
+          "Started PhD studies at Princeton University (2025)",
+          "Invited talk on AI evaluation at Princeton University (2025)",
+          "New preprint on AI evaluation with explanatory and predictive power (2025)",
+          "Talk on language models becoming less reliable at Microsoft Research (2024)",
+          "Published in Nature: Larger and more instructable language models become less reliable (2024)",
+          "Accepted at EMNLP: LLM feature-based framework for dialogue assessment (2024)",
+          "Participated in GPT-4 Red Team at OpenAI (2022)",
+          "Work on AI evaluation featured in Nature, Forbes, MIT Tech Review, IEEE Spectrum, and more",
+          "General Scales Unlock AI Evaluation with Explanatory and Predictive Power (2025) – Lexin’s favorite paper",
+          "Larger and More Instructable Language Models Become Less Reliable (2024) – Extensive media coverage",
+          "An LLM Feature-based Framework for Dialogue Constructiveness Assessment (2024) – Top 0.5% of submissions",
+          "Subphenotyping of Mexican patients with COVID-19 awarded 1st Impact Factor Prize (2022)",
+          "Published in JMIR Public Health and Surveillance (2022)"
+        ],
+        "publication_overview": "Total listed: 3; General Scales Unlock AI Evaluation with Explanatory and Predictive Power, Larger and More Instructable Language Models Become Less Reliable and An LLM Feature-based Framework for Dialogue Constructiveness Assessment",
+        "honors_grants": [
+          "1st Impact Factor Prize for 'Subphenotyping of Mexican patients with COVID-19 at preadmission to anticipate severity stratification: age-sex unbiased meta-clustering technique' (2022)",
+          "Top 0.5% of Submissions for 'An LLM Feature-based Framework for Dialogue Constructiveness Assessment' (EMNLP 2024)",
+          "Featured in Nature, Financial Times, Microsoft Research, MIT Tech Review, Forbes, IEEE Spectrum, El País, New Scientists, QbitAI, IBM"
+        ],
+        "service_talks": [
+          "General Scales Unlock AI Evaluation with Explanatory and Predictive Power — Future of Life Institute (2025)",
+          "General Scales Unlock AI Evaluation with Explanatory and Predictive Power — Princeton University (2025)",
+          "Larger and More Instructable Language Models Become Less Reliable — Microsoft Research (2024)"
+        ],
+        "open_source_projects": [
+          "General Scales Unlock AI Evaluation with Explanatory and Predictive Power (project) - New preprint on introducing conceptual and technological innovations for a science of AI Evaluation.",
+          "Larger and More Instructable Language Models Become Less Reliable (project) - A paper published in Nature, highlighting the trade-offs between model size and reliability.",
+          "An LLM Feature-based Framework for Dialogue Constructiveness Assessment (project) - Accepted by EMNLP 2024, receiving high review scores that placed it in the top 0.5% of all submissions.",
+          "PredictaBoard: Benchmarking LLM score predictability (project) - A benchmarking project for LLM score predictability, published in Findings of ACL.",
+          "Reject Before You Run: Small Assessors Anticipate Big Language Models (project) - A workshop paper presented at IJCAI, focusing on early detection of model limitations.",
+          "Subphenotyping of Mexican patients with COVID-19 (dataset) - A study published in JMIR Public Health and Surveillance, focusing on age-sex unbiased meta-clustering technique."
+        ],
+        "representative_papers": [
+          {
+            "title": "General Scales Unlock AI Evaluation with Explanatory and Predictive Power",
+            "venue": "arXiv",
+            "year": 2025,
+            "links": ""
+          },
+          {
+            "title": "Larger and More Instructable Language Models Become Less Reliable",
+            "venue": "Nature",
+            "year": 2024,
+            "links": ""
+          },
+          {
+            "title": "An LLM Feature-based Framework for Dialogue Constructiveness Assessment",
+            "venue": "EMNLP",
+            "year": 2024,
+            "links": ""
+          }
+        ],
+        "radar": {
+          "Academic Background": 5,
+          "Research Output": 4,
+          "Research Alignment": 5,
+          "Technical Skills": 5,
+          "Recognition & Impact": 5,
+          "Communication & Collaboration": 4,
+          "Initiative & Independence": 5
+        },
+        "total_score": 33,
+        "detailed_scores": {
+          "Academic Background": "5/5 - Lexin Zhou is a student at Princeton University, a top-tier institution known for its rigorous academic programs and strong emphasis on research. This suggests a solid foundation in their field of study.",
+          "Research Output": "4/5 - Lexin has published several high-impact papers in reputable venues such as Nature and EMNLP, demonstrating consistent and meaningful contributions to AI evaluation and related areas.",
+          "Research Alignment": "5/5 - Lexin's research interests align closely with cutting-edge topics in AI, including AI evaluation, human-AI interactions, and AI safety, which are critical areas in the current landscape of artificial intelligence.",
+          "Technical Skills": "5/5 - The technical depth of Lexin's work, including projects involving large language models and dialogue assessment, indicates strong technical proficiency and expertise in AI systems.",
+          "Recognition & Impact": "5/5 - Lexin has received significant recognition, including being featured in major media outlets and winning prestigious awards, which highlights the broader impact and visibility of their work.",
+          "Communication & Collaboration": "4/5 - Lexin's presence on multiple platforms like Twitter, LinkedIn, and GitHub suggests an active engagement with the research community, indicating good communication skills and potential for collaboration.",
+          "Initiative & Independence": "5/5 - Lexin has independently pursued impactful research across multiple dimensions of AI, including developing novel frameworks and techniques, showing a high level of initiative and intellectual independence."
+        }
+      },
+      {
+        "name": "Jinsook Lee",
+        "header": {
+          "title": "Ph.D. candidate in Information Science at Cornell University under the guidance of René F. Kizilcec in the Future of Learning Lab",
+          "email": "jl3369@cornell.edu",
+          "homepage": "https://jinsook-jennie-lee.github.io/",
+          "scholar": ""
+        },
+        "keywords": [
+          "AI evaluation in education systems",
+          "high-stakes decision-making processes",
+          "college admissions",
+          "LLM-generated content",
+          "algorithmic predictions",
+          "computational social science",
+          "AI evaluation in education",
+          "high-stakes decision-making",
+          "LLM-generated content analysis",
+          "algorithmic predictions",
+          "college admissions"
+        ],
+        "highlights": [
+          "PhD candidate at Cornell University in Information Science",
+          "Research on AI evaluation in education systems and college admissions",
+          "Paper accepted to EAAMO’24: Ending Affirmative Action Harms Diversity",
+          "Work presented at ICLR-HAIC 2025 and Georgetown University",
+          "Relocating to NYC as a PiTech Fellow",
+          "Paper accepted to COLM Social Simulation with LLMs Workshop",
+          "Published in British Journal of Educational Technology",
+          "Published in Journal of Big Data",
+          "Awarded $12,000 grant from Cornell Center for Social Sciences",
+          "Collaborates with Thorsten Joachims, Nikhil Garg, and AJ Alvero",
+          "Taught Learning Analytics and Designing Technologies for Social Impact",
+          "Developed course recommender systems at Korea University",
+          "Presented literature review on bias in LLMs at NCME-AIMC",
+          "Workshop paper accepted to AIED Tokyo 2023"
+        ],
+        "publication_overview": "Total listed: 3; Ending Affirmative Action Harms Diversity Without Improving Academic Merit, The Life Cycle of Large Language Models in Education: A Framework for Understanding Sources of Bias and Large Language Models, Social Demography, and Hegemony: Comparing Authorship in Human and Synthetic Text",
+        "honors_grants": [
+          "Became a PhD candidate in May 2025",
+          "Awarded a grant from the Cornell Center for Social Sciences ($12,000) in April 2024",
+          "Presented work at ICLR-HAIC 2025 workshop and Georgetown University in April 2025",
+          "Relocating to NYC this summer as a PiTech Fellow in April 2025"
+        ],
+        "service_talks": [
+          "Reviewer @ Frontiers in Psychiatry",
+          "AC @ ACM Conference on Fairness, Accountability, and Transparency (FAccT’25)",
+          "Reviewer @ International Journal of Artificial Intelligence in Education (IJAIED)",
+          "Bias in Large Language Models in Education: Sources, Measures, and Mitigation Strategies — NCME-AIMC (2023)"
+        ],
+        "open_source_projects": [
+          "Evaluating the Impact of Different Application Ranking Policies on College Admission Outcomes (project) - Our project \"Evaluating the Impact of Different Application Ranking Policies on College Admission Outcomes\" has been awarded a grant from the Cornell Center for Social Sciences! ($12,000)",
+          "Large Language Models, Social Demography, and Hegemony: Comparing Authorship in Human and Synthetic Text (paper) - Large Language Models, Social Demography, and Hegemony: Comparing Authorship in Human and Synthetic Text",
+          "The Life Cycle of Large Language Models in Education: A Framework for Understanding Sources of Bias (paper) - The Life Cycle of Large Language Models in Education: A Framework for Understanding Sources of Bias",
+          "Development and Application of an AI-Powered Adaptive Course Recommender System in Higher Education: An Example From K University (paper) - Development and Application of an AI-Powered Adaptive Course Recommender System in Higher Education: An Example From K University",
+          "Augmenting Holistic Review in University Admission using Natural Language Processing for Essays and Recommendation Letters (paper) - Augmenting Holistic Review in University Admission using Natural Language Processing for Essays and Recommendation Letters",
+          "Alignment and Controllability of Large Language Models in College Admissions (working paper) - Alignment and Controllability of Large Language Models in College Admissions"
+        ],
+        "representative_papers": [
+          {
+            "title": "Ending Affirmative Action Harms Diversity Without Improving Academic Merit",
+            "venue": "EAAMO '24",
+            "year": 2024,
+            "links": ""
+          },
+          {
+            "title": "The Life Cycle of Large Language Models in Education: A Framework for Understanding Sources of Bias",
+            "venue": "British Journal of Educational Technology (BJET)",
+            "year": 2024,
+            "links": ""
+          },
+          {
+            "title": "Large Language Models, Social Demography, and Hegemony: Comparing Authorship in Human and Synthetic Text",
+            "venue": "Journal of Big Data",
+            "year": 2024,
+            "links": ""
+          }
+        ],
+        "radar": {
+          "Academic Background": 5,
+          "Research Output": 3,
+          "Research Alignment": 5,
+          "Technical Skills": 4,
+          "Recognition & Impact": 4,
+          "Communication & Collaboration": 3,
+          "Initiative & Independence": 5
+        },
+        "total_score": 29,
+        "detailed_scores": {
+          "Academic Background": "5/5 - Jinsook Lee is a PhD candidate at Cornell University, indicating a strong academic foundation and commitment to advanced research in relevant fields such as AI, education, and computational social science.",
+          "Research Output": "3/5 - Jinsook has published three papers in reputable journals and conferences, though none have citations yet, suggesting early-stage research that may gain traction over time.",
+          "Research Alignment": "5/5 - Jinsook's research interests align closely with the evaluation of AI in education systems, algorithmic bias, and social impact, which are highly relevant to the evaluation criteria.",
+          "Technical Skills": "4/5 - Jinsook's work on large language models, data science, and computational social science suggests strong technical skills, though specific details about their technical proficiency are not provided.",
+          "Recognition & Impact": "4/5 - Jinsook has received a grant from the Cornell Center for Social Sciences and presented at notable workshops, indicating recognition within the academic community and potential for future impact.",
+          "Communication & Collaboration": "3/5 - While Jinsook has presented work at conferences, there is limited information about collaborative projects or communication skills beyond academic presentations.",
+          "Initiative & Independence": "5/5 - Jinsook has taken initiative by securing a grant, presenting at workshops, and relocating for a fellowship, demonstrating independence and proactive engagement in their research career."
+        }
+      },
+      {
+        "name": "Ziming Liu",
+        "header": {
+          "title": "currently a postdoc at Stanford & Enigma, working with Prof. Andreas Tolias",
+          "email": "zmliu1@stanford.edu",
+          "homepage": "https://kindxiaoming.github.io/",
+          "scholar": "https://scholar.google.com/citations?user=QeXHxlIAAAAJ"
+        },
+        "keywords": [
+          "Science of AI",
+          "Science for AI",
+          "AI for Science",
+          "neural scaling laws",
+          "grokking",
+          "Poisson Flow",
+          "Science of AI",
+          "Science for AI",
+          "AI for Science",
+          "Neural networks",
+          "Interpretability"
+        ],
+        "highlights": [
+          "Postdoc at Stanford & Enigma, working with Prof. Andreas Tolias",
+          "PhD from MIT, advised by Prof. Max Tegmark",
+          "B.S. from Peking University",
+          "Research in AI + Science: Science of AI, Science for AI, AI for Science",
+          "Covered by Quanta magazine on all three research branches",
+          "Philosophical thoughts on Kolmogorov-Arnold Networks",
+          "Symbolic Regression? Structure Regression!",
+          "A Good ML Theory is Like Physics -- A Physicist's Analysis of Grokking",
+          "KAN: Kolmogorov-Arnold Networks paper (arXiv:2404.19756)",
+          "Seeing is believing: Brain-inspired modular training for mechanistic interpretability",
+          "The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks",
+          "Omnigrok: Grokking Beyond Algorithmic Data",
+          "Poisson Flow Generative Models",
+          "Machine Learning Hidden Symmetries",
+          "Machine Learning Conservation Laws from Trajectories",
+          "Research philosophy inspired by John Hopfield"
+        ],
+        "publication_overview": "Total listed: 3; KAN: Kolmogorov-arnold networks, Seeing is believing: Brain-inspired modular training for mechanistic interpretability and The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks",
+        "honors_grants": [],
+        "service_talks": [],
+        "open_source_projects": [
+          "KAN: Kolmogorov-arnold networks (project) - KAN: Kolmogorov-arnold networks Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y Hou, and Max Tegmark arXiv:2404.19756 , 2024 PDF https://arxiv.org/abs/2404.19756",
+          "Seeing is believing: Brain-inspired modular training for mechanistic interpretability (project) - Seeing is believing: Brain-inspired modular training for mechanistic interpretability Ziming Liu, Eric Gan, and Max Tegmark Entropy , 2023 PDF https://www.mdpi.com/1099-4300/25/6/847",
+          "The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks (project) - The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks Ziqian Zhong, Ziming Liu, Max Tegmark, and Jacob Andreas In Thirty-seventh Conference on Neural Information Processing Systems , 2023 PDF https://proceedings.neurips.cc/paper/2023/file/3a9e3f5c2b6d95990b6f68e0b339e83e-Paper.pdf",
+          "Omnigrok: Grokking Beyond Algorithmic Data (project) - Omnigrok: Grokking Beyond Algorithmic Data Ziming Liu, Eric J Michaud, and Max Tegmark In The Eleventh International Conference on Learning Representations , 2023 PDF https://openreview.net/pdf?id=2RqJYFgV1Z",
+          "Poisson Flow Generative Models (project) - Poisson Flow Generative Models Yilun Xu, Ziming Liu, Max Tegmark, and Tommi S. Jaakkola In Advances in Neural Information Processing Systems , 2022 PDF https://proceedings.neurips.cc/paper/2022/file/7e03023012e36e900282103f23f1203b-Paper.pdf",
+          "Machine Learning Hidden Symmetries (project) - Machine Learning Hidden Symmetries Ziming Liu, and Max Tegmark Phys. Rev. Lett. , 2022 PDF https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.129.120501"
+        ],
+        "representative_papers": [
+          {
+            "title": "KAN: Kolmogorov-arnold networks",
+            "venue": "arXiv",
+            "year": 2024,
+            "links": "https://arxiv.org/abs/2404.19756"
+          },
+          {
+            "title": "Scientific discovery in the age of artificial intelligence",
+            "venue": "Nature",
+            "year": 2023,
+            "links": "https://arxiv.org/abs/2308.05892"
+          },
+          {
+            "title": "The Clock and the Pizza: Two Stories in Mechanistic Explanation of Neural Networks",
+            "venue": "NeurIPS",
+            "year": 2023,
+            "links": "https://arxiv.org/abs/2308.05892"
+          }
+        ],
+        "radar": {
+          "Academic Background": 4,
+          "Research Output": 3,
+          "Research Alignment": 5,
+          "Technical Skills": 5,
+          "Recognition & Impact": 2,
+          "Communication & Collaboration": 3,
+          "Initiative & Independence": 5
+        },
+        "total_score": 27,
+        "detailed_scores": {
+          "Academic Background": "4/5 - Ziming Liu is a postdoc affiliated with Stanford and Enigma, indicating a strong academic foundation and access to high-quality research environments. His work spans multiple cutting-edge areas in AI, suggesting a well-rounded academic background.",
+          "Research Output": "3/5 - Ziming Liu has published several papers on novel topics like KAN, mechanistic interpretability, and neural scaling laws, though none have been cited yet. This suggests active research output, but the lack of citations indicates limited visibility or recent publication.",
+          "Research Alignment": "5/5 - His interests and publications align closely with前沿 research in AI, including topics such as mechanistic interpretability, neural scaling laws, and symbolic regression. This demonstrates strong alignment with current and emerging research directions.",
+          "Technical Skills": "5/5 - Ziming Liu's work on KAN, Poisson Flow, and other advanced AI techniques demonstrates strong technical skills in both theoretical and applied aspects of machine learning and neural network design.",
+          "Recognition & Impact": "2/5 - As of now, Ziming Liu's work has not received significant recognition or citations, which may reflect the early stage of his research or limited dissemination. However, this could change as his work gains more attention.",
+          "Communication & Collaboration": "3/5 - While there is no explicit information about his communication or collaboration experience, his participation in conferences and open-source contributions suggest some level of engagement with the broader research community.",
+          "Initiative & Independence": "5/5 - Ziming Liu has pursued a diverse set of research topics, including original work on KAN and mechanistic interpretability, indicating a high degree of initiative and independence in identifying and exploring new research directions."
+        }
+      },
+      {
+        "name": "Zengqing Wu",
+        "header": {
+          "title": "Research associate / technical staff in the Graduate School of Information Science and Technology at Osaka University, under the guidance of Prof. Chuan Xiao. Part-time lecturer for the mathematical modeling course at the Computer Center of China Welfare Institute Children’s Palace.",
+          "email": "wuzengqing@outlook.com",
+          "homepage": "https://wuzengqing001225.github.io/",
+          "scholar": "https://scholar.google.com/citations?user=8p3HcqsAAAAJ"
+        },
+        "keywords": [
+          "Computer Simulation",
+          "Agent-Based Modeling",
+          "Large Language Models in Computer Simulation",
+          "Computational Social Science",
+          "Complex Systems",
+          "Social Simulation",
+          "Computer Simulation",
+          "Computational Social Science",
+          "Education",
+          "Large Language Models",
+          "Agent-Based Modeling"
+        ],
+        "highlights": [
+          "Published at EMNLP 2025: Hidden Strength of Disagreement",
+          "Published at EMNLP 2024 (Findings): Shall We Team Up",
+          "Developed LLMob for personal activity trajectory generation, to appear at NeurIPS 2024",
+          "Paper on Shannon entropy in education accepted in IEEE-TE 2024",
+          "Presented poster at ICML 2024 Workshop Agentic Markets",
+          "Presented poster at SNL 2024 in Tokyo",
+          "Received 100 citations milestone",
+          "Awarded NEC Corporation Award 2024",
+          "Part-time lecturer at China Welfare Institute Children’s Palace",
+          "Research associate at Osaka University under Prof. Chuan Xiao",
+          "Reviewed for ICLR 2025, NeurIPS 2024, ACL 2025, and more",
+          "Developed SABM framework for LLM-based agent modeling",
+          "Published arXiv paper on LLMs in computer simulations",
+          "Presented poster at ADC 2024 in Tokyo",
+          "Awarded Teraura Sayoko Scholarship 2022",
+          "Meritorious in MCM 2020"
+        ],
+        "publication_overview": "Total listed: 3; Shall We Team Up: Exploring Spontaneous Cooperation of Competing LLM Agents, Large Language Models as Urban Residents: An LLM Agent Framework for Personal Mobility Generation and Utilization of Information Entropy in Training and Evaluation of Students’ Abstraction Performance and Algorithm Efficiency in Programming",
+        "honors_grants": [
+          "Reached the milestone of 100 citations",
+          "2024 NEC Corporation Award, DEIM 2024 / 第22回日本データベース学会年次大会スポンサー賞 日本電気株式会社賞",
+          "2022 Teraura Sayoko Scholarship",
+          "2020 Meritorious in Mathematical Contest in Modeling (MCM)",
+          "2018 Top 10 Outstanding Youth in Shanghai Changning District"
+        ],
+        "service_talks": [
+          "Reviewer @ ICLR 2024 Workshop LLMAgents (2024)",
+          "Reviewer @ NeurIPS 2024 (2024)",
+          "Reviewer @ ICLR 2025 (2025)",
+          "Reviewer @ AISTATS 2025 (2025)",
+          "Reviewer @ ICML 2025 (2025)",
+          "Reviewer @ ACL 2025 (2025)",
+          "Reviewer @ NeurIPS 2025 DB Track (2025)",
+          "Reviewer @ EMNLP 2025 (2025)",
+          "Reviewer @ ICML 2025 Workshop CFAgentic (2025)",
+          "Reviewer @ ADMA 2025 (2025)",
+          "External Reviewer @ CIKM 2022 (2022)",
+          "External Reviewer @ DASFAA 2023 (2023)",
+          "External Reviewer @ KDD 2023 (2023)",
+          "External Reviewer @ ADMA 2023 (2023)",
+          "External Reviewer @ APWeb-WAIM 2024 (2024)",
+          "External Reviewer @ EMNLP 2024 (2024)",
+          "External Reviewer @ ADMA 2024 (2024)",
+          "Reviewer @ IEEE Access (2024)",
+          "The Database Society of Japan (DBSJ) (2024)",
+          "The Association for Computational Linguistics (ACL) (2024)",
+          "Presented a poster at the 2024 Australasian Database Conference (ADC 2024) in Tokyo, Japan @ Tokyo Institute of Technology (2024)",
+          "Presented a poster online at the ICML 2024 Workshop Agentic Markets (AMW @ ICML 2024) (2024)",
+          "Presented a poster at the Eighth International Workshop on Symbolic-Neural Learning (SNL 2024) in Tokyo, Japan @ National Museum of Emerging Science and Innovation (Miraikan) (2024)"
+        ],
+        "open_source_projects": [
+          "Shall We Team Up (project) - Following the SABM framework, we discovered the spontaneous cooperation of LLM agents in competing environments. Source codes for case studies are available here. https://example.com/shall-we-team-up",
+          "LLMob (project) - As a joint work with the University of Tokyo, we developed an LLM agent framework for the generation of personal activity trajectories. https://example.com/llmob",
+          "SABM (project) - We developed a computer simulation framework that incorporates LLMs into agent-based modeling. We released the slides and source codes. https://example.com/sabm",
+          "Smart Agent-Based Modeling (project) - On the Use of Large Language Models in Computer Simulations https://arxiv.org/abs/2305.12345",
+          "Large Language Models as Urban Residents (project) - An LLM agent framework for personal mobility generation https://neurips.cc/...",
+          "Utilization of Information Entropy in Training and Evaluation (project) - Investigates the application of Shannon entropy in assessing students’ abstraction levels to optimize students’ learning process https://ieeexplore.ieee.org/..."
+        ],
+        "representative_papers": [
+          {
+            "title": "Shall We Team Up: Exploring Spontaneous Cooperation of Competing LLM Agents",
+            "venue": "EMNLP",
+            "year": 2024,
+            "links": "PDF Code"
+          },
+          {
+            "title": "Large Language Models as Urban Residents: An LLM Agent Framework for Personal Mobility Generation",
+            "venue": "NeurIPS",
+            "year": 2024,
+            "links": "PDF Code"
+          },
+          {
+            "title": "Utilization of Information Entropy in Training and Evaluation of Students’ Abstraction Performance and Algorithm Efficiency in Programming",
+            "venue": "IEEE Transactions on Education",
+            "year": 2024,
+            "links": "PDF"
+          }
+        ],
+        "radar": {
+          "Academic Background": 5,
+          "Research Output": 3,
+          "Research Alignment": 5,
+          "Technical Skills": 4,
+          "Recognition & Impact": 4,
+          "Communication & Collaboration": 3,
+          "Initiative & Independence": 5
+        },
+        "total_score": 29,
+        "detailed_scores": {
+          "Academic Background": "5/5 - Zengqing Wu is a graduate student at two prestigious Japanese universities, the Graduate School of Informatics, Kyoto University, and the Graduate School of Information Science and Technology, Osaka University, indicating a strong academic foundation in computer science and related fields.",
+          "Research Output": "3/5 - The candidate has published recent work in top-tier venues such as EMNLP and NeurIPS, though these papers have not yet accumulated citations. This suggests emerging research output with potential for future impact.",
+          "Research Alignment": "5/5 - The candidate's research interests align closely with cutting-edge topics such as agent-based modeling, large language models, and computational social science, which are highly relevant to current trends in AI and simulation research.",
+          "Technical Skills": "4/5 - The candidate demonstrates technical proficiency through work on complex systems, programming, and mathematical modeling, as evidenced by their participation in competitions like the Mathematical Contest in Modeling.",
+          "Recognition & Impact": "4/5 - Zengqing Wu has received multiple awards, including the NEC Corporation Award and the Teraura Sayoko Scholarship, indicating recognition of their academic and research potential, though the social impact of their work is not yet fully detailed.",
+          "Communication & Collaboration": "3/5 - While the candidate has a public profile on platforms like GitHub and LinkedIn, there is limited evidence of collaborative projects or public communication beyond academic publications and personal profiles.",
+          "Initiative & Independence": "5/5 - The candidate has shown initiative through independent research efforts, such as exploring the cooperation of LLM agents and developing an LLM agent framework for urban mobility, suggesting a high level of intellectual independence."
+        }
+      },
+      {
+        "name": "Jiarui Ji",
+        "header": {
+          "title": "Jiarui Ji is currently a second-year M.E. student at the Gaoling School of Artificial Intelligence, Renmin University of China, under the supervision of Prof. Zhewei Wei.",
+          "email": "jijiarui@ruc.edu.cn",
+          "homepage": "https://ji-cather.github.io/homepage/",
+          "scholar": "https://scholar.google.com/citations?user=9QgYx1oAAAAJ"
+        },
+        "keywords": [
+          "LLM-based Agent for social simulation",
+          "dynamic graph generation",
+          "text-attributed graph generation",
+          "LLM-based Agent",
+          "dynamic graph generation",
+          "text-attributed graph generation",
+          "social simulation",
+          "graph generative models"
+        ],
+        "highlights": [
+          "Published in ACL Findings 2025: LLM-Based Multi-Agent Systems as Scalable Graph Generative Models",
+          "Published in EMNLP Findings 2024: SRAP-Agent for Scarce Resource Allocation Policy",
+          "Developed GDGB: A Benchmark for Generative Dynamic Text-Attributed Graph Learning",
+          "Explored Large Language Models as Predictors in Dynamic Text-Attributed Graphs",
+          "Currently a second-year M.E. student at Renmin University under Prof. Zhewei Wei",
+          "Will begin Ph.D. studies at Renmin University in 2025 under Dr. Zhewei Wei",
+          "B.E. in Data Science from Tongji University, June 2023"
+        ],
+        "publication_overview": "Total listed: 3; LLM-Based Multi-Agent Systems are Scalable Graph Generative Models, GDGB: A Benchmark for Generative Dynamic Text-Attributed Graph Learning and SRAP-Agent: Simulating and Optimizing Scarce Resource Allocation Policy with LLM-Based Agent",
+        "honors_grants": [],
+        "service_talks": [],
+        "open_source_projects": [
+          "LLM-Based Multi-Agent Systems are Scalable Graph Generative Models (project) - This work introduces GraphAgent-Generator (GAG), a scalable framework for generating social graphs using LLM-based multi-agent systems.",
+          "SRAP-Agent (project) - This work introduces SRAP-Agent, a multi-agent framework for optimizing resource allocation policies.",
+          "GDGB (dataset) - A benchmark for generative dynamic text-attributed graph learning. https://ji-cather.github.io/homepage/",
+          "Exploring the Potential of Large Language Models as Predictors in Dynamic Text-Attributed Graphs (project) - Explores the potential of large language models as predictors in dynamic text-attributed graphs.",
+          "LLM-Based Multi-Agent Systems are Scalable Graph Generative Models (code) - Code for LLM-Based Multi-Agent Systems are Scalable Graph Generative Models.",
+          "SRAP-Agent: Simulating and Optimizing Scarce Resource Allocation Policy with LLM-Based Agent (code) - Code for SRAP-Agent: Simulating and Optimizing Scarce Resource Allocation Policy with LLM-Based Agent."
+        ],
+        "representative_papers": [
+          {
+            "title": "LLM-Based Multi-Agent Systems are Scalable Graph Generative Models",
+            "venue": "ACL Findings",
+            "year": 2025,
+            "links": "https://ji-cather.github.io/homepage/"
+          },
+          {
+            "title": "SRAP-Agent: Simulating and Optimizing Scarce Resource Allocation Policy with LLM-Based Agent",
+            "venue": "EMNLP Findings",
+            "year": 2024,
+            "links": "https://ji-cather.github.io/homepage/"
+          },
+          {
+            "title": "GDGB: A Benchmark for Generative Dynamic Text-Attributed Graph Learning",
+            "venue": "arXiv",
+            "year": 2025,
+            "links": "https://ji-cather.github.io/homepage/"
+          }
+        ],
+        "radar": {
+          "Academic Background": 3,
+          "Research Output": 2,
+          "Research Alignment": 4,
+          "Technical Skills": 4,
+          "Recognition & Impact": 2,
+          "Communication & Collaboration": 3,
+          "Initiative & Independence": 4
+        },
+        "total_score": 22,
+        "detailed_scores": {
+          "Academic Background": "3/5 - Jiarui Ji is a student at Gaoling School of Artificial Intelligence, Renmin University of China, which is a reputable institution in AI research. However, the specific academic background or degree level is not provided, which limits a more detailed evaluation.",
+          "Research Output": "2/5 - The candidate has published three papers in top venues such as ACL Findings and EMNLP Findings, but all have zero citations, suggesting that the work is very recent or has not yet gained significant attention in the research community.",
+          "Research Alignment": "4/5 - The candidate's research interests in LLM-based agents, dynamic graph generation, and text-attributed graph generation align well with current trends in AI and natural language processing, indicating a focused and relevant research direction.",
+          "Technical Skills": "4/5 - The candidate's work on LLM-based multi-agent systems, dynamic graph generation, and text-attributed graph learning suggests strong technical skills in both machine learning and graph-based modeling.",
+          "Recognition & Impact": "2/5 - The candidate has not yet received significant recognition, as evidenced by the lack of citations and no mention of awards or honors. The impact of their work remains to be seen.",
+          "Communication & Collaboration": "3/5 - While the candidate has a public profile on platforms like Google Scholar and GitHub, there is no direct evidence of collaborative projects or communication skills beyond what is listed.",
+          "Initiative & Independence": "4/5 - The candidate has pursued independent research in emerging areas such as LLM-based agents for social simulation and dynamic graph generation, indicating a high level of initiative and self-direction."
+        }
+      }
+    ],
+    "report_type": "Full report",
+    "time_range": "Last 6 months",
+    "custom_query": "",
+    "created_at": 1759076438.3540409
+  }
+}
