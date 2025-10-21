@@ -1,0 +1,1558 @@
+{
+  "type": "trend_radar_domestic",
+  "title": "Domestic_Last 7 days",
+  "created_at": "2025-10-19T10:54:50.670632",
+  "filename": "trend_radar_domestic_Domestic_Last_7_days_20251019_105450.json",
+  "data": {
+    "id": "domestic_1760842490",
+    "group_id": "domestic",
+    "group_name": "Domestic",
+    "sources": [
+      {
+        "name": "Domestic",
+        "url": "",
+        "type": "group",
+        "description": "Chinese AI news and media platforms",
+        "report": "# Domestic | Trend Radar Report\n\n<table style=\"width: 100%; border-collapse: collapse; margin: 1rem 0;\">\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Group Description</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">Chinese AI news and media platforms</td>\n    </tr>\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Total Sources</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">3</td>\n    </tr>\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Report Generated</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">2025-10-19 10:54:50</td>\n    </tr>\n</table>\n\n---\n\n## A. Directions\n\n### 1. **General AI Brain for Robotic Adaptability**\n\nThe development of a general AI brain that enables robots to adapt to physical damage or changes in their environment represents a major breakthrough in robotic intelligence. This concept, introduced by Skild AI, allows robots to maintain functionality even after experiencing significant mechanical failures, such as losing limbs or suffering from motor damage. The implications are profound, as it could lead to more resilient and self-sufficient robotic systems capable of operating in unpredictable real-world environments without human intervention.\n\n**Representative projects**:\n- **Skild Brain**: This framework introduces a \"brain\" that is independent of the robot's physical body, enabling it to adapt to various scenarios. It uses dynamic learning and self-adjustment mechanisms to ensure continued operation after damage.\n- **Physical Intelligence π0.5 Model**: Developed by UC Berkeley, this model demonstrates how robots can perform tasks in unstructured environments, such as cleaning a kitchen, using self-evolving strategies to handle new challenges.\n- **R-Stitch Framework**: Proposed by Monash, Beihang, and Zhejiang University, this approach combines small and large language models to improve inference speed while maintaining high accuracy, particularly in complex reasoning tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-14-9\n- https://www.jiqizhixin.com/articles/2025-10-12\n- https://hub.baai.ac.cn/view/49601\n- https://www.jiqizhixin.com/articles/2025-10-17-13\n- https://www.jiqizhixin.com/articles/2025-10-16-10\n- https://www.jiqizhixin.com/articles/2025-10-14\n- https://www.jiqizhixin.com/articles/2025-10-14-12\n- https://www.jiqizhixin.com/articles/2025-10-13-8\n- https://www.jiqizhixin.com/articles/2025-10-16-7\n\n\n---\n\n### 2. **Dynamic Model Collaboration for Enhanced Inference Speed**\n\nEfforts to enhance the inference speed of large language models (LLMs) through dynamic collaboration between small and large models represent a critical direction in AI optimization. This approach, exemplified by the R-Stitch framework, leverages the strengths of both model sizes to achieve faster processing times without sacrificing accuracy. By intelligently assigning tasks based on risk assessment, this method offers a scalable solution for improving the efficiency of AI systems in real-time applications.\n\n**Representative projects**:\n- **R-Stitch Framework**: This dynamic model collaboration technique uses risk assessment to determine whether to use a small model for simple tasks or a large model for complex ones, significantly reducing inference time while maintaining high accuracy.\n- **GRPO and GVPO Methods**: These reinforcement learning techniques aim to stabilize training processes and reduce computational costs, with GVPO offering improved performance over GRPO in post-training scenarios.\n- **Self-Forcing++**: This method enhances video generation capabilities by allowing models to generate longer, high-quality videos without retraining on long-video data, pushing the boundaries of diffusion-based models.\n\n\n\n---\n\n\n**References** 🔗:\n- https://hub.baai.ac.cn/view/49586\n\n\n---\n\n### 3. **AGI Definition and Measurement**\n\nThe quantification of Artificial General Intelligence (AGI) has become a pivotal area of research, led by Yoshua Bengio and other leading researchers. This trend involves defining AGI in measurable terms, such as cognitive versatility and depth, to establish a benchmark for evaluating AI systems. As AGI becomes a key focus for tech giants, defining its parameters will be crucial for guiding future AI development and ensuring ethical deployment.\n\n**Representative projects**:\n- **A Definition of AGI**: This paper, co-authored by Yoshua Bengio and others, provides a quantifiable definition of AGI, emphasizing its ability to match or exceed human cognitive abilities in multifaceted tasks.\n- **SafeEvalAgent**: Developed by Fudan University and Shanghai AI Lab, this framework evaluates the safety and compliance of large language models against global regulations, revealing differences in international compliance standards.\n- **AGI Progress Tracking**: Researchers at OpenAI and other institutions are actively working on measuring AGI progress, with GPT-5 achieving only about 58% of the defined AGI benchmarks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-17-11\n- https://www.qbitai.com/2025/10/342761.html\n\n\n---\n\n### 4. **Efficient and Scalable Diffusion Language Models**\n\nThe emergence of efficient and scalable diffusion language models (DLMs) is reshaping the landscape of text generation and content creation. These models offer parallel generation capabilities, which can significantly increase throughput compared to traditional autoregressive models. Innovations in DLMs, such as dInfer and RemeDi, are making these models more practical for real-world applications, especially in areas requiring high-speed and high-quality output.\n\n**Representative projects**:\n- **dInfer**: Developed by Ant Group, this framework improves the inference speed of diffusion language models by up to 10 times, making them more viable for real-time applications.\n- **RemeDi**: This model, developed by the MAPLE Lab at West Lake University, introduces a \"remasking\" mechanism that allows for self-correction and improved text quality during the generation process.\n- **Veo 3.1**: Google's latest video generation model, Veo 3.1, expands on previous versions by incorporating audio and enhancing narrative control, showcasing the potential of diffusion-based models in multimedia applications.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-16-3\n- https://www.jiqizhixin.com/articles/2025-10-13-9\n- https://www.qbitai.com/2025/10/340924.html\n- https://www.jiqizhixin.com/articles/2025-10-12-5\n- https://www.jiqizhixin.com/articles/2025-10-14-14\n\n\n---\n\n### 5. **Human-Level Reasoning and Problem-Solving in Large Language Models**\n\nThe advancement of large language models (LLMs) in achieving human-level reasoning and problem-solving capabilities marks a significant milestone in AI research. Projects like GPT-5 Pro and the work by Alibaba on the Ring-1T model demonstrate the growing ability of LLMs to tackle complex scientific and mathematical problems, often outperforming human experts in certain domains. This trend is driven by improvements in reasoning frameworks and the integration of multiple modalities, enabling models to solve problems with greater accuracy and efficiency.\n\n**Representative projects**:\n- **GPT-5 Pro**: Demonstrated the ability to solve complex physics problems, including a black hole theory challenge, in under 30 minutes, showcasing advanced reasoning capabilities.\n- **Ring-1T**: Developed by Ant Group, this trillion-parameter model exhibits strong reasoning abilities, with performance comparable to an IMO silver medalist in mathematical reasoning.\n- **OpenAI for Science**: This initiative focuses on developing AI systems that accelerate scientific discovery, with the hiring of physicist Alex Lupsasca to lead the effort.\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-15-5\n- https://www.jiqizhixin.com/articles/2025-10-12-2\n- https://www.qbitai.com/2025/10/340944.html\n- https://www.jiqizhixin.com/articles/2025-10-15-16\n- https://www.jiqizhixin.com/articles/2025-10-14-8\n- https://www.jiqizhixin.com/articles/2025-10-17-2\n- https://www.jiqizhixin.com/articles/2025-10-12-7\n\n\n---\n\n\n\n## B. Talent\n\n\n### 1) General AI Brain for Robotic Adaptability\n\n#### 1.1 Peijie Dong\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Model Compression, Efficient Large Language Models, Machine Learning Systems\n**Notable Contribution**: Accepted by NeurIPS 2025: ChunkKV for efficient long-context LLM inference.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Sejin Kim\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: human-like AI, artificial general intelligence, reinforcement learning\n**Notable Contribution**: Recipient of NRF Postdoctoral Fellowship (2024–2026)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Yuheng Ji\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: embodied AI, computer vision, robotic manipulation\n**Notable Contribution**: PhD candidate at CASIA, supervised by Prof. Xiaolong Zheng\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 2) Dynamic Model Collaboration for Enhanced Inference Speed\n\n#### 1.1 Yuhui Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: 2D Virtual Try-on\n**Notable Contribution**: Research expertise in 2D Virtual Try-on\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jaemin Kim\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Jiale Fu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 3) AGI Definition and Measurement\n\n#### 1.1 Changyuan Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Generative AI, Large Language Models, Wireless communications\n**Notable Contribution**: First-author paper accepted by IEEE Wireless Communications (2025.08)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Tao Feng\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision, Continual Learning, Video Generation\n**Notable Contribution**: INFTY initial version released (2025)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Ranjan Sapkota\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Machine Vision, Image Processing\n**Notable Contribution**: Research expertise in Machine Vision, Image Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 4) Efficient and Scalable Diffusion Language Models\n\n#### 1.1 Lianghui Zhu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language models, foundation models, wealy-supervised learning\n**Notable Contribution**: Research expertise in wealy-supervised learning, large language models, foundation models\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Hanyang Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: reinforcement learning, generative models, diffusion models\n**Notable Contribution**: NeurIPS 2025 Efficient Reasoning workshop accepts dLLM post training paper\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Junjie Wen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 5) Human-Level Reasoning and Problem-Solving in Large Language Models\n\n#### 1.1 Qianyue Hao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language model, reinforcement learning, computational social science\n**Notable Contribution**: Research expertise in computational social science, reinforcement learning, large language model\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jie Huang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Multi-Label, Long-Tail, Medical Image\n**Notable Contribution**: Research expertise in Long-Tail, Medical Image, Multi-Label\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Constantin Venhoff\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Mechanistic Interpretability, Vision Language Models, AI Safety\n**Notable Contribution**: Research expertise in AI Safety, Mechanistic Interpretability, Natural Language Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n"
+      }
+    ],
+    "original_sources": [
+      {
+        "name": "机器之心",
+        "url": "https://www.jiqizhixin.com/",
+        "type": "news",
+        "description": "AI Technology Media"
+      },
+      {
+        "name": "新智源",
+        "url": "https://link.baai.ac.cn/@AI_era",
+        "type": "news",
+        "description": "AI Era News"
+      },
+      {
+        "name": "量子位",
+        "url": "https://www.qbitai.com/",
+        "type": "news",
+        "description": "AI Technology News"
+      }
+    ],
+    "report_type": "domestic",
+    "time_range": "Last 7 days",
+    "custom_query": "",
+    "data_snapshot_info": {
+      "total_articles": 163,
+      "sources": [
+        "新智源",
+        "量子位",
+        "机器之心"
+      ],
+      "fetched_at": 1760842490,
+      "days_param": 7
+    },
+    "three_stage_result": {
+      "stage1_directions": "## A. Directions\n\n### 1. **General AI Brain for Robotic Adaptability**\n\nThe development of a general AI brain that enables robots to adapt to physical damage or changes in their environment represents a major breakthrough in robotic intelligence. This concept, introduced by Skild AI, allows robots to maintain functionality even after experiencing significant mechanical failures, such as losing limbs or suffering from motor damage. The implications are profound, as it could lead to more resilient and self-sufficient robotic systems capable of operating in unpredictable real-world environments without human intervention.\n\n**Representative projects**:\n- **Skild Brain**: This framework introduces a \"brain\" that is independent of the robot's physical body, enabling it to adapt to various scenarios. It uses dynamic learning and self-adjustment mechanisms to ensure continued operation after damage.\n- **Physical Intelligence π0.5 Model**: Developed by UC Berkeley, this model demonstrates how robots can perform tasks in unstructured environments, such as cleaning a kitchen, using self-evolving strategies to handle new challenges.\n- **R-Stitch Framework**: Proposed by Monash, Beihang, and Zhejiang University, this approach combines small and large language models to improve inference speed while maintaining high accuracy, particularly in complex reasoning tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-14-9\n- https://www.jiqizhixin.com/articles/2025-10-12\n- https://hub.baai.ac.cn/view/49601\n- https://www.jiqizhixin.com/articles/2025-10-17-13\n- https://www.jiqizhixin.com/articles/2025-10-16-10\n- https://www.jiqizhixin.com/articles/2025-10-14\n- https://www.jiqizhixin.com/articles/2025-10-14-12\n- https://www.jiqizhixin.com/articles/2025-10-13-8\n- https://www.jiqizhixin.com/articles/2025-10-16-7\n\n\n---\n\n### 2. **Dynamic Model Collaboration for Enhanced Inference Speed**\n\nEfforts to enhance the inference speed of large language models (LLMs) through dynamic collaboration between small and large models represent a critical direction in AI optimization. This approach, exemplified by the R-Stitch framework, leverages the strengths of both model sizes to achieve faster processing times without sacrificing accuracy. By intelligently assigning tasks based on risk assessment, this method offers a scalable solution for improving the efficiency of AI systems in real-time applications.\n\n**Representative projects**:\n- **R-Stitch Framework**: This dynamic model collaboration technique uses risk assessment to determine whether to use a small model for simple tasks or a large model for complex ones, significantly reducing inference time while maintaining high accuracy.\n- **GRPO and GVPO Methods**: These reinforcement learning techniques aim to stabilize training processes and reduce computational costs, with GVPO offering improved performance over GRPO in post-training scenarios.\n- **Self-Forcing++**: This method enhances video generation capabilities by allowing models to generate longer, high-quality videos without retraining on long-video data, pushing the boundaries of diffusion-based models.\n\n\n\n---\n\n\n**References** 🔗:\n- https://hub.baai.ac.cn/view/49586\n\n\n---\n\n### 3. **AGI Definition and Measurement**\n\nThe quantification of Artificial General Intelligence (AGI) has become a pivotal area of research, led by Yoshua Bengio and other leading researchers. This trend involves defining AGI in measurable terms, such as cognitive versatility and depth, to establish a benchmark for evaluating AI systems. As AGI becomes a key focus for tech giants, defining its parameters will be crucial for guiding future AI development and ensuring ethical deployment.\n\n**Representative projects**:\n- **A Definition of AGI**: This paper, co-authored by Yoshua Bengio and others, provides a quantifiable definition of AGI, emphasizing its ability to match or exceed human cognitive abilities in multifaceted tasks.\n- **SafeEvalAgent**: Developed by Fudan University and Shanghai AI Lab, this framework evaluates the safety and compliance of large language models against global regulations, revealing differences in international compliance standards.\n- **AGI Progress Tracking**: Researchers at OpenAI and other institutions are actively working on measuring AGI progress, with GPT-5 achieving only about 58% of the defined AGI benchmarks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-17-11\n- https://www.qbitai.com/2025/10/342761.html\n\n\n---\n\n### 4. **Efficient and Scalable Diffusion Language Models**\n\nThe emergence of efficient and scalable diffusion language models (DLMs) is reshaping the landscape of text generation and content creation. These models offer parallel generation capabilities, which can significantly increase throughput compared to traditional autoregressive models. Innovations in DLMs, such as dInfer and RemeDi, are making these models more practical for real-world applications, especially in areas requiring high-speed and high-quality output.\n\n**Representative projects**:\n- **dInfer**: Developed by Ant Group, this framework improves the inference speed of diffusion language models by up to 10 times, making them more viable for real-time applications.\n- **RemeDi**: This model, developed by the MAPLE Lab at West Lake University, introduces a \"remasking\" mechanism that allows for self-correction and improved text quality during the generation process.\n- **Veo 3.1**: Google's latest video generation model, Veo 3.1, expands on previous versions by incorporating audio and enhancing narrative control, showcasing the potential of diffusion-based models in multimedia applications.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-16-3\n- https://www.jiqizhixin.com/articles/2025-10-13-9\n- https://www.qbitai.com/2025/10/340924.html\n- https://www.jiqizhixin.com/articles/2025-10-12-5\n- https://www.jiqizhixin.com/articles/2025-10-14-14\n\n\n---\n\n### 5. **Human-Level Reasoning and Problem-Solving in Large Language Models**\n\nThe advancement of large language models (LLMs) in achieving human-level reasoning and problem-solving capabilities marks a significant milestone in AI research. Projects like GPT-5 Pro and the work by Alibaba on the Ring-1T model demonstrate the growing ability of LLMs to tackle complex scientific and mathematical problems, often outperforming human experts in certain domains. This trend is driven by improvements in reasoning frameworks and the integration of multiple modalities, enabling models to solve problems with greater accuracy and efficiency.\n\n**Representative projects**:\n- **GPT-5 Pro**: Demonstrated the ability to solve complex physics problems, including a black hole theory challenge, in under 30 minutes, showcasing advanced reasoning capabilities.\n- **Ring-1T**: Developed by Ant Group, this trillion-parameter model exhibits strong reasoning abilities, with performance comparable to an IMO silver medalist in mathematical reasoning.\n- **OpenAI for Science**: This initiative focuses on developing AI systems that accelerate scientific discovery, with the hiring of physicist Alex Lupsasca to lead the effort.\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-15-5\n- https://www.jiqizhixin.com/articles/2025-10-12-2\n- https://www.qbitai.com/2025/10/340944.html\n- https://www.jiqizhixin.com/articles/2025-10-15-16\n- https://www.jiqizhixin.com/articles/2025-10-14-8\n- https://www.jiqizhixin.com/articles/2025-10-17-2\n- https://www.jiqizhixin.com/articles/2025-10-12-7\n\n\n---\n",
+      "stage2_talents": {
+        "General AI Brain for Robotic Adaptability": "### General AI Brain for Robotic Adaptability\n\n#### 1.1 Peijie Dong\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Model Compression, Efficient Large Language Models, Machine Learning Systems\n**Notable Contribution**: Accepted by NeurIPS 2025: ChunkKV for efficient long-context LLM inference.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Sejin Kim\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: human-like AI, artificial general intelligence, reinforcement learning\n**Notable Contribution**: Recipient of NRF Postdoctoral Fellowship (2024–2026)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Yuheng Ji\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: embodied AI, computer vision, robotic manipulation\n**Notable Contribution**: PhD candidate at CASIA, supervised by Prof. Xiaolong Zheng\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "Dynamic Model Collaboration for Enhanced Inference Speed": "### Dynamic Model Collaboration for Enhanced Inference Speed\n\n#### 1.1 Yuhui Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: 2D Virtual Try-on\n**Notable Contribution**: Research expertise in 2D Virtual Try-on\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jaemin Kim\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Jiale Fu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "AGI Definition and Measurement": "### AGI Definition and Measurement\n\n#### 1.1 Changyuan Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Generative AI, Large Language Models, Wireless communications\n**Notable Contribution**: First-author paper accepted by IEEE Wireless Communications (2025.08)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Tao Feng\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision, Continual Learning, Video Generation\n**Notable Contribution**: INFTY initial version released (2025)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Ranjan Sapkota\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Machine Vision, Image Processing\n**Notable Contribution**: Research expertise in Machine Vision, Image Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "Efficient and Scalable Diffusion Language Models": "### Efficient and Scalable Diffusion Language Models\n\n#### 1.1 Lianghui Zhu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language models, foundation models, wealy-supervised learning\n**Notable Contribution**: Research expertise in wealy-supervised learning, large language models, foundation models\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Hanyang Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: reinforcement learning, generative models, diffusion models\n**Notable Contribution**: NeurIPS 2025 Efficient Reasoning workshop accepts dLLM post training paper\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Junjie Wen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "Human-Level Reasoning and Problem-Solving in Large Language Models": "### Human-Level Reasoning and Problem-Solving in Large Language Models\n\n#### 1.1 Qianyue Hao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language model, reinforcement learning, computational social science\n**Notable Contribution**: Research expertise in computational social science, reinforcement learning, large language model\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jie Huang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Multi-Label, Long-Tail, Medical Image\n**Notable Contribution**: Research expertise in Long-Tail, Medical Image, Multi-Label\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Constantin Venhoff\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Mechanistic Interpretability, Vision Language Models, AI Safety\n**Notable Contribution**: Research expertise in AI Safety, Mechanistic Interpretability, Natural Language Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n"
+      },
+      "stage3_detailed_reports": {
+        "Efficient and Scalable Diffusion Language Models": "### Background\nEfficient and scalable diffusion language models (DLMs) are transforming text generation and content creation by enabling parallel processing, significantly increasing throughput compared to traditional autoregressive models. These models are pivotal in real-time applications, offering faster inference speeds and improved text quality through innovations like dInfer and RemeDi. Their impact spans across various industries, from healthcare to entertainment, making them a critical focus for research and development.\n\n### Recent Progress\n- **dInfer**: Developed by Ant Group, this framework enhances the inference speed of diffusion language models by up to 10 times, making them viable for real-time applications. The project is detailed in an article on newzhiyuan.com, highlighting its potential to revolutionize the efficiency of text generation processes.\n- **RemeDi**: Created by the MAPLE Lab at West Lake University, RemeDi introduces a \"remasking\" mechanism that allows for self-correction and improved text quality during the generation process. This innovation is discussed in an article on newzhiyuan.com, emphasizing its role in enhancing the reliability and accuracy of generated content.\n- **Veo 3.1**: Google's latest video generation model, Veo 3.1, expands on previous versions by incorporating audio and enhancing narrative control, showcasing the potential of diffusion-based models in multimedia applications. The article on newzhiyuan.com provides insights into its capabilities and implications for the future of video content creation.\n- **SpaceServe**: Proposed by the Chinese Academy of Sciences, SpaceServe addresses the performance bottleneck in multi-modal large language models (MLLMs) by extending the P/D separation concept to multi-modal scenarios. This breakthrough is highlighted in an article on newzhiyuan.com, offering a solution to the head-of-line blocking issue in high-concurrency environments.\n\n### Future Trends & Challenges\n- **Emerging direction 1**: The integration of diffusion models with physical AI systems, such as robots, is expected to enhance their adaptability and performance in real-world environments. This trend is explored in an article on newzhiyuan.com, where it discusses the potential of Skild AI's brain for robot self-adaptation.\n- **Emerging direction 2**: The use of diffusion models in scientific discovery, as seen with GPT-5 Pro solving complex physics problems, indicates a shift towards AI-driven research. This is mentioned in an article on newzhiyuan.com, where it highlights the capabilities of GPT-5 Pro in tackling theoretical challenges.\n- **Open challenge 1**: Ensuring the safety and ethical use of diffusion models remains a significant challenge. An article on newzhiyuan.com discusses the risks associated with AI-generated content, such as the \"复活\" of deceased celebrities, underscoring the need for robust safety measures.\n- **Open challenge 2**: The scalability of diffusion models in diverse applications requires addressing computational and resource constraints. The article on newzhiyuan.com mentions the need for efficient training and deployment strategies, particularly in the context of large-scale models like those developed by Meta and Google.\n\n### Actionable Insights\n- **Concrete recommendation 1 for R&D teams**: Focus on optimizing inference speed and reducing latency through frameworks like dInfer. This can be achieved by leveraging parallel processing and efficient memory management, as suggested in the article on newzhiyuan.com.\n- **Concrete recommendation 2 for talent acquisition**: Hire experts in multi-modal systems and reinforcement learning to address the challenges of scaling and adapting diffusion models. The article on newzhiyuan.com highlights the importance of such expertise in advancing the field.\n- **Concrete recommendation 3 for strategic planning**: Invest in research that bridges the gap between theoretical models and practical applications, ensuring that innovations like RemeDi and Veo 3.1 are effectively integrated into real-world solutions. This is emphasized in the article on newzhiyuan.com, which discusses the practical implications of these technologies.\n\n### References\n- [dInfer](https://hub.baai.ac.cn/view/49529)\n- [RemeDi](https://hub.baai.ac.cn/view/49526)\n- [Veo 3.1](https://hub.baai.ac.cn/view/49523)\n- [SpaceServe](https://hub.baai.ac.cn/view/49529)\n- [AI+真人”双保障模式](https://www.qbitai.com/2025/10/343152.html)\n- [AGI today起有了量化标准!Bengio牵头定义，当前进度条58%](https://www.qbitai.com/2025/10/342761.html)\n- [Quantum+AI4S!玻色量子完成数亿A++轮融资](https://www.qbitai.com/2025/10/341695.html)\n- [AI招聘有多离谱？小哥在LinkedIn埋了行代码，钓出一堆AI，吸引900万人围观](https://www.jiqizhixin.com/articles/2025-10-17-14)\n- [The Bitter Lesson](https://www.jiqizhixin.com/articles/2025-10-15-13)",
+        "Dynamic Model Collaboration for Enhanced Inference Speed": "### Background  \nDynamic model collaboration for enhanced inference speed is a critical area in AI optimization, aiming to combine the strengths of small and large models to improve processing efficiency without sacrificing accuracy. This approach addresses the limitations of large language models (LLMs) by leveraging smaller models for simple tasks and larger models for complex ones, significantly reducing inference time. It represents a scalable solution for real-time applications, offering potential breakthroughs in AI performance and resource management.\n\n### Recent Progress  \n**1. R-Stitch Framework**  \nThe R-Stitch framework, developed by researchers from Monash, Beihang, and Zhejiang Universities, introduces dynamic model collaboration by using risk assessment to determine whether to use a small model for simple tasks or a large model for complex ones. This method has shown a fourfold improvement in inference speed while maintaining high accuracy. The framework is designed to handle long reasoning chains efficiently, reducing latency and computational costs. As described in the article, it leverages speculative decoding, where a small model predicts output and a large model validates consistency, minimizing the need for full large model decoding. This innovation highlights the potential of hybrid model architectures in accelerating AI inference. [Source](https://hub.baai.ac.cn/view/49586)\n\n**2. GRPO and GVPO Methods**  \nGRPO (Generalized Reward-based Policy Optimization) and its improved variant, GVPO (Group Variance Policy Optimization), are reinforcement learning techniques that aim to stabilize training processes and reduce computational costs. GVPO, as outlined in the article, offers better performance over GRPO in post-training scenarios by addressing stability issues and providing theoretical guarantees of optimal solutions. These methods are particularly relevant for enhancing the efficiency of large language models in complex tasks, such as mathematical reasoning and code generation. The paper presents a new approach to policy optimization that improves the robustness and scalability of model training. [Source](https://hub.baai.ac.cn/view/49586)\n\n**3. Self-Forcing++**  \nSelf-Forcing++ is a technique that enhances video generation capabilities by allowing models to generate longer, high-quality videos without retraining on long-video data. This method, developed by researchers at UCLA and ByteDance's Seed team, enables diffusion-based models to produce minute-scale high-quality videos. By leveraging self-forcing mechanisms, the model can maintain coherence and quality over extended durations, pushing the boundaries of video generation. This advancement is significant for applications requiring long-form content creation, such as film production and interactive media. [Source](https://www.jiqizhixin.com/articles/2025-10-18-4)\n\n**4. SpaceServe Architecture**  \nThe SpaceServe architecture, proposed by the Chinese Academy of Sciences, extends the P/D separation concept to multi-modal scenarios, solving the head-of-line blocking issue in multi-modal LLMs. By implementing EPD (Encoder-Prefill-Decode) three-stage decoupling and \"space division multiplexing,\" the system achieves high concurrency and reduces latency in multi-modal tasks. This innovation is crucial for applications like high-resolution image understanding and long video analysis, where traditional time-multiplexing strategies lead to performance bottlenecks. [Source](https://hub.baai.ac.cn/view/49529)\n\n### Future Trends & Challenges  \n**Emerging Direction 1: Dynamic Model Collaboration with Risk Assessment**  \nFuture developments will likely focus on refining risk assessment mechanisms in dynamic model collaboration frameworks. Techniques like R-Stitch could evolve to include more sophisticated decision-making algorithms, enabling even more efficient task allocation between small and large models. This direction aims to further optimize inference speed while ensuring accuracy across diverse applications.\n\n**Emerging Direction 2: Enhanced Reinforcement Learning for Post-Training**  \nGVPO represents an evolution in reinforcement learning for post-training, addressing the instability and sensitivity issues of GRPO. Future work may explore integrating GVPO into broader training pipelines, making it applicable to a wider range of tasks and models. This could lead to more stable and efficient fine-tuning processes for large language models.\n\n**Open Challenge 1: Balancing Inference Speed and Accuracy**  \nWhile dynamic model collaboration improves inference speed, maintaining high accuracy remains a challenge. Ensuring that small models can handle complex tasks without compromising results requires further research into model calibration and task-specific adaptation. This balance is essential for real-world applications where both speed and precision are critical.\n\n**Open Challenge 2: Scalability of Multi-Modal Systems**  \nAs multi-modal systems become more prevalent, scalability remains a key challenge. Techniques like SpaceServe offer promising solutions, but scaling these architectures to support a wide range of modalities and tasks will require continued innovation in hardware and software design. Ensuring seamless integration of different modalities without performance degradation is a major hurdle.\n\n### Actionable Insights  \n**1. Recommendation for R&D Teams: Implement Hybrid Model Architectures**  \nR&D teams should consider adopting hybrid model architectures, such as R-Stitch, to optimize inference speed. By intelligently assigning tasks based on complexity, teams can achieve faster processing times while maintaining high accuracy. This approach is particularly beneficial for applications requiring real-time responses, such as chatbots and autonomous systems.\n\n**2. Recommendation for Talent Acquisition: Prioritize Expertise in Reinforcement Learning and Model Optimization**  \nOrganizations should prioritize hiring experts in reinforcement learning and model optimization, especially those familiar with methods like GVPO and GRPO. These skills are crucial for improving the efficiency and stability of large language models, particularly in post-training scenarios. Talents with experience in optimizing model performance under varying conditions will be highly valuable.\n\n**3. Recommendation for Strategic Planning: Invest in Multi-Modal Infrastructure**  \nStrategic planning should include investments in multi-modal infrastructure, such as the SpaceServe architecture. As multi-modal applications become more common, having scalable and efficient systems will be essential. Organizations should explore technologies that allow for seamless integration of multiple modalities, ensuring they can handle complex tasks like long video analysis and high-resolution image understanding.\n\n### References  \n[1] https://hub.baai.ac.cn/view/49586  \n[2] https://hub.baai.ac.cn/view/49529  \n[3] https://www.jiqizhixin.com/articles/2025-10-18-4  \n[4] https://hub.baai.ac.cn/view/49586",
+        "AGI Definition and Measurement": "### Background\nArtificial General Intelligence (AGI) represents the next frontier in AI, aiming to create systems that match or exceed human cognitive abilities across multifaceted tasks. Defining and measuring AGI is crucial for guiding future AI development and ensuring ethical deployment. Researchers like Yoshua Bengio are leading efforts to establish quantifiable benchmarks, while projects such as SafeEvalAgent and AGI Progress Tracking highlight the challenges and progress in evaluating AI systems' safety and capabilities.\n\n### Recent Progress\n- **A Definition of AGI** by Yoshua Bengio and others provides a quantifiable benchmark for AGI, emphasizing its ability to match or exceed human cognitive versatility and depth. This paper has set a foundation for evaluating AI systems against human-like intelligence standards.\n- **SafeEvalAgent**, developed by Fudan University and Shanghai AI Lab, offers a framework for assessing the safety and compliance of large language models against global regulations, revealing differences in international compliance standards. It addresses the critical need for safe AI deployment.\n- **AGI Progress Tracking** by OpenAI and other institutions highlights the current state of AI systems, with GPT-5 achieving about 58% of defined AGI benchmarks. This underscores the ongoing effort to measure and advance AI capabilities towards AGI.\n- **AGI today起有了量化标准！Bengio牵头定义，当前进度条58%** from *Quantum Bit* discusses how AGI now has a measurable standard, with GPT-5 at 58% of the defined benchmarks, indicating significant progress but also highlighting the gap to true AGI.\n\n### Future Trends & Challenges\n- **Emerging direction 1**: The development of more robust and scalable frameworks for AGI measurement, such as the \"A Definition of AGI\" paper, will likely drive future research. These frameworks aim to provide clearer metrics for evaluating AI systems.\n- **Emerging direction 2**: The integration of safety and compliance into AGI evaluation processes, exemplified by SafeEvalAgent, will become increasingly important as AI systems become more prevalent in critical sectors.\n- **Open challenge 1**: Ensuring that AI systems not only perform well but also adhere to ethical and regulatory standards globally remains a significant challenge. Projects like SafeEvalAgent are addressing this by evaluating compliance with international regulations.\n- **Open challenge 2**: The computational and resource demands of training and evaluating AGI systems pose a major hurdle. As seen in the case of GPT-5, achieving higher AGI benchmarks requires substantial investment in both time and resources.\n\n### Actionable Insights\n- **Concrete recommendation 1 for R&D teams**: Focus on developing and refining AGI measurement frameworks that can be applied across different domains. This includes integrating cognitive versatility and depth metrics into existing AI evaluation systems.\n- **Concrete recommendation 2 for talent acquisition**: Hire experts who have experience in both AI research and regulatory compliance. Individuals with backgrounds in ethics, safety, and international standards will be crucial for advancing AGI in a responsible manner.\n- **Concrete recommendation 3 for strategic planning**: Invest in scalable infrastructure and collaborative partnerships to address the computational challenges of AGI development. This includes exploring alternative architectures and leveraging cloud computing resources for efficient model training and evaluation.\n\n### References\n- [A Definition of AGI](https://www.jiqizhixin.com/articles/2025-10-17-11)\n- [SafeEvalAgent](https://www.qbitai.com/2025/10/342761.html)\n- [AGI Progress Tracking](https://www.qbitai.com/2025/10/342761.html)\n- [AGI today起有了量化标准！Bengio牵头定义，当前进度条58%](https://www.qbitai.com/2025/10/342761.html)",
+        "Human-Level Reasoning and Problem-Solving in Large Language Models": "### Background  \nHuman-Level Reasoning and Problem-Solving in Large Language Models (LLMs) represents a pivotal advancement in AI research, marking a shift from mere pattern recognition to complex cognitive tasks. This field is critical as it enables models to tackle scientific, mathematical, and real-world challenges with unprecedented accuracy, potentially revolutionizing industries like healthcare, robotics, and research. The integration of reasoning frameworks and multi-modal capabilities has significantly enhanced the practical applicability of LLMs, making them indispensable tools for innovation and problem-solving.\n\n### Recent Progress  \n- **GPT-5 Pro: Solving Complex Physics Problems**  \n  GPT-5 Pro demonstrated remarkable abilities by solving a black hole theory challenge in under 30 minutes, showcasing advanced reasoning capabilities. This achievement highlights the model's potential to assist in high-level scientific research, as noted by physicist Alex Lupsasca, who joined OpenAI's \"Science\" team after witnessing its performance. The model's ability to generate insights at an accelerated pace could redefine how scientific discoveries are made, as reported in [1].\n\n- **Ring-1T: Mathematical Reasoning Comparable to IMO Silver Medalist**  \n  Developed by Ant Group, Ring-1T is a trillion-parameter model that exhibits strong reasoning abilities, comparable to an IMO silver medalist in mathematical reasoning. The model's performance underscores the growing capability of large-scale language models to handle intricate mathematical problems, as detailed in [2]. This advancement suggests that such models can become essential tools for mathematical research and education.\n\n- **OpenAI for Science: Accelerating Scientific Discovery**  \n  OpenAI's initiative, \"OpenAI for Science,\" focuses on developing AI systems that accelerate scientific discovery. With the hiring of physicist Alex Lupsasca, this project aims to leverage AI to solve complex scientific problems, including those in physics and astronomy. The collaboration between AI and human experts is expected to drive new breakthroughs, as highlighted in [3].\n\n- **Quantum位's RTFM World Model: Real-Time Frame Model with Single GPU**  \n  Lifting the veil on a real-time frame model (RTFM), developed by李飞飞's team, which runs on a single H100 GPU. This model not only generates persistent 3D worlds but also maintains 3D consistency in real-time, offering a glimpse into the future of AI-driven simulation and understanding of physical environments. The model's efficiency and performance were discussed in [4].\n\n### Future Trends & Challenges  \n- **Emerging Direction 1: Integration of Multi-Modal Reasoning Frameworks**  \n  As seen in projects like the \"Early Experience\" framework proposed by Meta, the integration of multi-modal reasoning is becoming a key focus. This approach allows AI agents to learn from diverse data sources, enhancing their adaptability and problem-solving skills. The trend towards more holistic learning mechanisms is likely to shape the next generation of AI systems.\n\n- **Emerging Direction 2: Enhanced Safety and Compliance in AI Systems**  \n  With the rise of AI in critical sectors, ensuring safety and compliance is paramount. The SafeEvalAgent framework proposed by复旦 and Shanghai AI Lab exemplifies this trend, focusing on dynamic security assessments and ethical compliance. This direction is crucial for building trust in AI applications across industries.\n\n- **Open Challenge 1: Balancing Performance and Efficiency in Large Models**  \n  While models like GPT-5 Pro and Ring-1T demonstrate impressive capabilities, the challenge remains in balancing computational efficiency with performance. Techniques like R-Stitch, which dynamically coordinates small and large models, highlight the need for optimized architectures that maintain high accuracy while reducing latency and cost.\n\n- **Open Challenge 2: Ensuring Ethical and Responsible AI Deployment**  \n  The ethical implications of AI deployment, particularly in areas like medical diagnostics and autonomous systems, pose significant challenges. Projects like the SafeSearch framework by清华大学 address these concerns by automating red-teaming to identify and mitigate risks, emphasizing the importance of responsible AI development.\n\n### Actionable Insights  \n- **Concrete Recommendation 1 for R&D Teams: Focus on Dynamic Model Coordination**  \n  R&D teams should prioritize the development of dynamic model coordination frameworks like R-Stitch. These frameworks can significantly enhance performance while reducing computational costs, making them essential for efficient large model deployment.\n\n- **Concrete Recommendation 2 for Talent Acquisition: Hire Experts in Multi-Modal Learning**  \n  Organizations should seek talent with expertise in multi-modal learning and reasoning. The success of models like Ring-1T and GPT-5 Pro emphasizes the value of individuals who can bridge the gap between different modalities and enhance model versatility.\n\n- **Concrete Recommendation 3 for Strategic Planning: Invest in Safety and Compliance Technologies**  \n  Strategic planning should include investments in technologies that ensure the safety and compliance of AI systems. Frameworks like SafeEvalAgent provide a blueprint for integrating ethical considerations into AI development, ensuring that models meet regulatory standards and user expectations.\n\n### References  \n[1] https://hub.baai.ac.cn/view/49585  \n[2] https://www.qbitai.com/2025/10/341349.html  \n[3] https://www.jiqizhixin.com/articles/2025-10-17-10  \n[4] https://www.qbitai.com/2025/10/342735.html",
+        "General AI Brain for Robotic Adaptability": "### Background\nThe development of a general AI brain for robotic adaptability represents a significant leap in the field of artificial intelligence and robotics. This concept, introduced by Skild AI, enables robots to maintain functionality even after experiencing physical damage or environmental changes. It has profound implications for creating more resilient and self-sufficient robotic systems capable of operating in unpredictable real-world environments without human intervention. The ability of robots to adapt dynamically to their surroundings is crucial for applications ranging from industrial automation to disaster response, making this area a focal point for innovation.\n\n### Recent Progress\n- **Skild Brain**: Skild AI's \"Skild Brain\" framework introduces a \"brain\" that is independent of the robot's physical body, allowing it to adapt to various scenarios. This dynamic learning and self-adjustment mechanism ensures continued operation after damage, offering a new paradigm for robotic intelligence.\n- **Physical Intelligence π0.5 Model**: Developed by UC Berkeley, this model demonstrates how robots can perform tasks in unstructured environments using self-evolving strategies. It highlights the potential for robots to handle new challenges with minimal human intervention, showcasing advancements in autonomous decision-making.\n- **R-Stitch Framework**: Proposed by Monash, Beihang, and Zhejiang University, R-Stitch combines small and large language models to improve inference speed while maintaining high accuracy. This approach is particularly effective in complex reasoning tasks, demonstrating the power of collaborative AI systems.\n- **SpaceServe Architecture**: Introduced by the Chinese Academy of Sciences, SpaceServe addresses the performance bottleneck in multi-modal large language model (MLLM) inference by separating the encoder, prefill, and decode stages. This breakthrough improves the efficiency of MLLM processing, especially in high-concurrency scenarios.\n\n### Future Trends & Challenges\n- **Emerging Direction 1**: The integration of general AI brains into a wide range of robotic systems is expected to become more prevalent. This will lead to the development of more adaptable and resilient robots capable of handling diverse and unpredictable environments.\n- **Emerging Direction 2**: The use of hybrid models combining small and large language models will continue to evolve, with a focus on optimizing performance and reducing computational costs. This trend is likely to drive further innovations in AI-driven robotics.\n- **Open Challenge 1**: Ensuring the safety and reliability of adaptive robots remains a critical challenge. As robots become more autonomous, the need for robust safety protocols and fail-safe mechanisms becomes increasingly important.\n- **Open Challenge 2**: The ethical and societal implications of highly adaptable robots must be addressed. Issues such as job displacement, privacy, and the potential misuse of autonomous systems require careful consideration and regulation.\n\n### Actionable Insights\n- **Concrete recommendation 1 for R&D teams**: Focus on developing hybrid models that combine the strengths of small and large language models to optimize performance and reduce computational costs. This approach can enhance the adaptability and efficiency of robotic systems.\n- **Concrete recommendation 2 for talent acquisition**: Prioritize hiring experts in both AI and robotics to build interdisciplinary teams. These teams can drive innovation by integrating cutting-edge AI techniques with practical robotic applications.\n- **Concrete recommendation 3 for strategic planning**: Invest in research and development of safety protocols and ethical guidelines for adaptive robots. This will ensure that the deployment of these systems aligns with societal values and regulatory requirements.\n\n### References\n- [New智源 | 2025-10-18 | 太狠了，四条腿被锯掉也能爬！通用大脑开启机器人「无休」时代](https://hub.baai.ac.cn/view/49601)\n- [New智源 | 2025-10-18 | 推理提速4倍！北航、浙大提出动态拼接，大小模型智能协作](https://hub.baai.ac.cn/view/49586)\n- [New智源 | 2025-10-18 | GPT-5 Pro惊现「神之一手」，30分钟攻克黑洞难题！](https://hub.baai.ac.cn/view/49585)\n- [New智源 | 2025-10-13 | 告别「解码器饥饿」！中国科学院NeurIPS推SpaceServe，高并发克星](https://hub.baai.ac.cn/view/49529)\n- [New智源 | 2025-10-13 | Bug变奖励：AI的小失误，揭开创造力真相！](https://hub.baai.ac.cn/view/49527)\n- [New智源 | 2025-10-13 | 复旦张军平：人类是硅基生命过渡体？](https://hub.baai.ac.cn/view/49526)\n- [New智源 | 2025-10-13 | 永别了，人类冠军！AI横扫天文奥赛，GPT-5得分远超金牌选手2.7倍](https://hub.baai.ac.cn/view/49523)\n- [New智源 | 2025-10-13 | 陶哲轩亲测！GPT-5 Pro 40分钟破解3年难题，登顶最难数学考试](https://hub.baai.ac.cn/view/49520)\n- [New智源 | 2025-10-13 | 刚刚，Meta风雨飘摇中发了篇重量级论文，作者几乎全是华人](https://hub.baai.ac.cn/view/49515)\n- [New智源 | 2025-10-13 | 刚刚，「PyTorch之王」携15亿薪酬杀回Meta！史上最贵AI天才巨星诞生](https://hub.baai.ac.cn/view/49509)\n- [New智源 | 2025-10-12 | 77岁「AI教父」Hinton：AI早有意识！我们打造的智能，可能终结人类文明](https://hub.baai.ac.cn/view/49503)\n- [New智源 | 2025-10-12 | UC伯克利大牛预警：留给人类能干的活，只剩5年了！](https://hub.baai.ac.cn/view/49495)\n- [New智源 | 2025-10-12 | 老黄押宝「美版DeepSeek」！谷歌天才叛将创业，一夜吸金20亿美元](https://hub.baai.ac.cn/view/49491)\n- [New智源 | 2025-10-12 | 刚刚，全球首个GB300巨兽救场！一年烧光70亿，OpenAI内斗GPU惨烈](https://hub.baai.ac.cn/view/49485)\n- [量子位 | 2025-10-19 | 量子位「MEET2026智能未来大会」启动！年度榜单征集中](https://www.qbitai.com/2025/10/343231.html)\n- [量子位 | 2025-10-18 | 首创“AI+真人”双保障模式！刚刚，百度健康推出7×24小时「能聊、有料、会管」AI管家](https://www.qbitai.com/2025/10/343152.html)\n- [量子位 | 2025-10-18 | 卡帕西：强化学习很糟糕，但其他所有方法都更糟](https://www.qbitai.com/2025/10/343094.html)\n- [量子位 | 2025-10-18 | 61岁退休后，华为海思创始总裁成了复旦北大清华老师](https://www.qbitai.com/2025/10/343078.html)\n- [量子位 | 2025-10-17 | 波士顿动力狗gogo回来了！“五条腿”协同发力](https://www.qbitai.com/2025/10/342908.html)\n- [量子位 | 2025-10-17 | 库克在抖音卖iPhone，M5芯片却偷偷上MacBook Pro，网友：没有Pro/Max，你咋敢？](https://www.qbitai.com/2025/10/342847.html)\n- [量子位 | 2025-10-17 | 刚刚，一家具身智能明星公司原地解散了](https://www.qbitai.com/2025/10/342841.html)\n- [量子位 | 2025-10-17 | 小米最新大模型成果！罗福莉现身了](https://www.qbitai.com/2025/10/342798.html)\n- [量子位 | 2025-10-17 | 400元遥操95%机械臂！上海交大推出开源项目U-Arm，打造通用、低成本的人机遥操作接口](https://www.qbitai.com/2025/10/342796.html)\n- [量子位 | 2025-10-17 | 爱诗科技完成B+轮1亿元融资，ARR突破4000万美金](https://www.qbitai.com/2025/10/342786.html)\n- [量子位 | 2025-10-17 | AGI今天起有了量化标准！Bengio牵头定义，当前进度条58%](https://www.qbitai.com/2025/10/342761.html)\n- [量子位 | 2025-10-17 | 李飞飞发布全新世界模型，单GPU就能跑！](https://www.qbitai.com/2025/10/342735.html)\n- [量子位 | 2025-10-17 | 日产找到了爆款密码：华为技术，中国主导](https://www.qbitai.com/2025/10/342714.html)\n- [量子位 | 2025-10-17 | 全球创业比赛，139个国家和地区参加，中国具身机器人公司获奖！](https://www.qbitai.com/2025/10/342709.html)\n- [量子位 | 2025-10-17 | 北京清华长庚医院与北电数智签署战略合作，赋能药学创新和睡眠医学研究](https://www.qbitai.com/2025/10/342701.html)\n- [量子位 | 2025-10-17 | NEURA Robotics落子杭州，为“物理AI”架设全球桥梁](https://www.qbitai.com/2025/10/342696.html)\n- [量子位 | 2025-10-17 | OpenAI最新业务：找了个黑洞物理科学家](https://www.qbitai.com/2025/10/342661.html)\n- [量子位 | 2025-10-16 | 黄仁勋女儿直播亮相，聊了具身智能](https://www.qbitai.com/2025/10/342649.html)\n- [量子位 | 2025-10-16 | 雷军公开发言了！呼吁抵制水军黑公关，资源集中技术研发](https://www.qbitai.com/2025/10/342428.html)\n- [量子位 | 2025-10-16 | 阿里发布Qoder CLI，可在终端一键实现AI编程](https://www.qbitai.com/2025/10/342420.html)\n- [量子位 | 2025-10-16 | 全球计算机系统领域“奥运会”SOSP公布最佳论文 “星绽”OS入选](https://www.qbitai.com/2025/10/342415.html)\n- [量子位 | 2025-10-16 | “2025骁龙人工智能创新应用大赛” 正式启动，寻找最具想象力的AI创意开发者！](https://www.qbitai.com/2025/10/342252.html)\n- [量子位 | 2025-10-15 | Sora2不够香了！国产AI视频模型已能边看边生成，生成快还互动佳](https://www.qbitai.com/2025/10/342093.html)\n- [量子位 | 2025-10-15 | 开源模型TOP5，被中国厂商包圆了](https://www.qbitai.com/2025/10/342036.html)\n- [量子位 | 2025-10-15 | Robotaxi逐鹿香港上市，小马和文远同日公告了](https://www.qbitai.com/2025/10/342026.html)\n- [量子位 | 2025-10-15 | 王兴兴硕士论文惊现GitHub，宇树雏形那时候就有了](https://www.qbitai.com/2025/10/341880.html)\n- [量子位 | 2025-10-15 | 得分率超74.6%，京东云JoyCode-Agent位居SWE-Bench全球榜单Top3](https://www.qbitai.com/2025/10/341877.html)\n- [量子位 | 2025-10-15 | 腾讯发布超低成本AI训练法！120元效果秒杀70000元微调方案](https://www.qbitai.com/2025/10/341842.html)\n- [量子位 | 2025-10-15 | 人工智能年度榜单火热报名中！五大奖项，寻找AI+时代的先锋力量](https://www.qbitai.com/2025/10/341817.html)\n- [量子位 | 2025-10-15 | 谷歌新版Gemini一夜端掉UI：单HTML文件复刻macOS，成功率100%](https://www.qbitai.com/2025/10/341790.html)\n- [量子位 | 2025-10-15 | 实测新版LiblibAI：终于把模型、生图、工作流塞进一个碗了](https://www.qbitai.com/2025/10/341697.html)\n- [量子位 | 2025-10-15 | 量子+AI4S！玻色量子完成数亿A++轮融资](https://www.qbitai.com/2025/10/341695.html)\n- [量子位 | 2025-10-15 | 科大讯飞同传大模型再升级  上海、迪拜同发讯飞AI翻译耳机](https://www.qbitai.com/2025/10/341663.html)\n- [量子位 | 2025-10-14 | 谢赛宁再次叩开港交所：500亿智驾明星，吉利和奔驰护航保送](https://www.qbitai.com/2025/10/343031.html)\n- [机器之心 | 2025-10-18 | 那些让你笑cry的动物视频，其实都是AI演的](https://www.jiqizhixin.com/articles/2025-10-18-5)\n- [机器之心 | 2025-10-18 | Self-Forcing++：让自回归视频生成模型突破 4 分钟时长极限](https://www.jiqizhixin.com/articles/2025-10-18-4)\n- [机器之心 | 2025-10-18 | Andrej Karpathy 开炮：智能体都在装样子，强化学习很糟糕，AGI 十年也出不来](https://www.jiqizhixin.com/articles/2025-10-18-3)\n- [机器之心 | 2025-10-18 | 稳定训练、数据高效，清华大学提出「流策略」强化学习新方法SAC Flow](https://www.jiqizhixin.com/articles/2025-10-18-2)\n- [机器之心 | 2025-10-18 | 著名物理学家杨振宁先生逝世，享年103岁](https://www.jiqizhixin.com/articles/2025-10-18)\n- [机器之心 | 2025-10-17 | 斯坦福具身智能大佬引用，Huggingface官方催更：北京人形开源WoW具身世界模型](https://www.jiqizhixin.com/articles/2025-10-17-18)\n- [机器之心 | 2025-10-17 | 语音助手的「智商滑铁卢」：当GPT开口说话，准确率从74.8%跌到6.1%](https://www.jiqizhixin.com/articles/2025-10-17-17)\n- [机器之心 | 2025-10-17 | 实锤了：GPU越多，论文接收率越高、引用越多](https://www.jiqizhixin.com/articles/2025-10-17-15)\n- [机器之心 | 2025-10-17 | AI招聘有多离谱？小哥在LinkedIn埋了行代码，钓出一堆AI，吸引900万人围观](https://www.jiqizhixin.com/articles/2025-10-17-14)\n- [机器之心 | 2025-10-17 | 多轮Agent训练遇到级联失效？熵控制强化学习来破局](https://www.jiqizhixin.com/articles/2025-10-17-13)\n- [机器之心 | 2025-10-17 | 联合研发首个药学大模型！北京清华长庚医院携手北电数智让药学服务更精准、更高效](https://www.jiqizhixin.com/articles/2025-10-17-16)\n- [机器之心 | 2025-10-17 | 用AI精准操控聚变，Google DeepMind宣布与CFS合作，有望将聚变能源带入现实](https://www.jiqizhixin.com/articles/2025-10-17-12)\n- [机器之心 | 2025-10-17 | 按照Bengio等大佬的AGI新定义，GPT-5才实现了不到10%](https://www.jiqizhixin.com/articles/2025-10-17-11)\n- [机器之心 | 2025-10-17 | 黑洞物理学家加盟OpenAI，GPT-5 Pro半小时重现人类数天推导](https://www.jiqizhixin.com/articles/2025-10-17-10)\n- [机器之心 | 2025-10-17 | NeurIPS2025 | 攻破闭源多模态大模型：一种基于特征最优对齐的新型对抗攻击方法](https://www.jiqizhixin.com/articles/2025-10-17-9)\n- [机器之心 | 2025-10-17 | 南洋理工揭露AI「运行安全」的全线崩溃，简单伪装即可骗过所有模型](https://www.jiqizhixin.com/articles/2025-10-17-8)\n- [机器之心 | 2025-10-17 | 文心4.5最强衍生模型发布 PaddleOCR-VL登顶OCR综合性能全球第一](https://www.jiqizhixin.com/articles/2025-10-17-7)\n- [机器之心 | 2025-10-17 | 单块GPU上跑出实时3D宇宙，李飞飞世界模型新成果震撼问世](https://www.jiqizhixin.com/articles/2025-10-17-4)\n- [机器之心 | 2025-10-17 | 全球创业比赛，139个国家和地区参加，中国具身机器人公司获奖！](https://www.jiqizhixin.com/articles/2025-10-17-5)\n- [机器之心 | 2025-10-17 | RAG、Search Agent不香了？苹果DeepMMSearch-R1杀入多模态搜索新战场](https://www.jiqizhixin.com/articles/2025-10-17-3)\n- [机器之心 | 2025-10-17 | 欧几里得的礼物：通过几何代理任务增强视觉-语言模型中的空间感知和推理能力](https://www.jiqizhixin.com/articles/2025-10-17-2)\n- [机器之心 | 2025-10-17 | 穹彻智能获阿里投资，加速具身智能全链路技术突破](https://www.jiqizhixin.com/articles/2025-10-17)\n- [机器之心 | 2025-10-17 | 智元机器人联合均普智能全球首发精灵G2  重构工业场景智能生产新形态](https://www.jiqizhixin.com/articles/2025-10-17-6]\n- [机器之心 | 2025-10-16 | OPPO年度旗舰Find X9系列发布，新一代旅拍神器](https://www.jiqizhixin.com/articles/2025-10-16-17)\n- [机器之心 | 2025-10-16 | 递归语言模型登场！MIT华人新作爆火，以小博大刷新SOTA，8B推理比肩GPT-4o](https://www.jiqizhixin.com/articles/2025-10-16-16)\n- [机器之心 | 2025-10-16 | 苹果又失去一位AI高管：清华校友Ke Yang加入Meta](https://www.jiqizhixin.com/articles/2025-10-16-15)\n- [机器之心 | 2025-10-16 | 当Search Agent遇上不靠谱搜索结果，清华团队祭出自动化红队框架SafeSearch](https://www.jiqizhixin.com/articles/2025-10-16-14)\n- [机器之心 | 2025-10-16 | 首个video2code基准IWR-Bench发布：让模型“看视频写网页”，SOTA仅36.35分](https://www.jiqizhixin.com/articles/2025-10-16-13)\n- [机器之心 | 2025-10-16 | 英特尔揭幕下一代服务器CPU至强6+：2nm制程，能效大幅提升](https://www.jiqizhixin.com/articles/2025-10-16-12)\n- [机器之心 | 2025-10-16 | 单细胞分析迈入新前沿：谷歌&耶鲁等发布270亿参数模型，为癌症治疗揭示全新潜在路径](https://www.jiqizhixin.com/articles/2025-10-16-11)\n- [机器之心 | 2025-10-16 | 仅用三五条样本击败英伟达，国内首个超少样本具身模型登场，还斩获顶会冠军](https://www.jiqizhixin.com/articles/2025-10-16-10)\n- [机器之心 | 2025-10-16 | 「性价比王者」Claude Haiku 4.5来了，速度更快，成本仅为Sonnet 4的1/3](https://www.jiqizhixin.com/articles/2025-10-16-9)\n- [机器之心 | 2025-10-16 | 谷歌开源全栈平台Coral NPU，能让大模型在手表上全天候运行](https://www.jiqizhixin.com/articles/2025-10-16-8)\n- [机器之心 | 2025-10-16 | ICCV 2025 | 浙大、港中文等提出EgoAgent：第一人称感知-行动-预测一体化智能体](https://www.jiqizhixin.com/articles/2025-10-16-7)\n- [机器之心 | 2025-10-16 | 谷歌Veo 3.1迎来重大更新，硬刚Sora 2\n- [机器之心 | 2025-10-16 | 100美元、8000行代码手搓ChatGPT，Karpathy最新开源项目爆火，一夜近5k star](https://www.jiqizhixin.com/articles/2025-10-14-4)\n- [机器之心 | 2025-10-14 | NeurIPS 25 | GRPO进阶版来了，GVPO重构大模型后训练范式](https://www.jiqizhixin.com/articles/2025-10-14-3)\n- [机器之心 | 2025-10-14 | 刚刚，OpenAI官宣自研造芯，联手博通开发10吉瓦规模的AI加速器](https://www.jiqizhixin.com/articles/2025-10-14-2)\n- [机器之心 | 2025-10-14 | 只需1/4预算，性能反超基线：阿里高德提出Tree-GRPO，高效破解智能体RL难题](https://www.jiqizhixin.com/articles/2025-10-14)\n- [机器之心 | 2025-10-13 | 推理速度10倍提升，蚂蚁集团开源业内首个高性能扩散语言模型推理框架dInfer](https://www.jiqizhixin.com/articles/2025-10-13-9)\n- [机器之心 | 2025-10-13 | 改变强化学习范式，Meta新作呼应Sutton「经验时代」预言](https://www.jiqizhixin.com/articles/2025-10-13-8)\n- [机器之心 | 2025-10-13 | LLaVA-OneVision-1.5全流程开源，8B模型预训练只需4天、1.6万美元](https://www.jiqizhixin.com/articles/2025-10-13-7)\n- [机器之心 | 2025-10-13 | 速度提升百倍、精度达实验水准，中国科学院等发布FastTrack，为离子装上「导航系统」](https://www.jiqizhixin.com/articles/2025-10-13-6)\n- [机器之心 | 2025-10-13 | ICLR 2026 | GeoSVR：稀疏体素的新潜力--超越3DGS系列的高精度三维表面重建](https://www.jiqizhixin.com/articles/2025-10-13-2)\n- [机器之心 | 2025-10-13 | 思科发布业内最具扩展性与效能的51.2T路由系统，为分布式AI工作负载树立新标杆](https://www.jiqizhixin.com/articles/2025-10-13]"
+      },
+      "final_report": "## A. Directions\n\n### 1. **General AI Brain for Robotic Adaptability**\n\nThe development of a general AI brain that enables robots to adapt to physical damage or changes in their environment represents a major breakthrough in robotic intelligence. This concept, introduced by Skild AI, allows robots to maintain functionality even after experiencing significant mechanical failures, such as losing limbs or suffering from motor damage. The implications are profound, as it could lead to more resilient and self-sufficient robotic systems capable of operating in unpredictable real-world environments without human intervention.\n\n**Representative projects**:\n- **Skild Brain**: This framework introduces a \"brain\" that is independent of the robot's physical body, enabling it to adapt to various scenarios. It uses dynamic learning and self-adjustment mechanisms to ensure continued operation after damage.\n- **Physical Intelligence π0.5 Model**: Developed by UC Berkeley, this model demonstrates how robots can perform tasks in unstructured environments, such as cleaning a kitchen, using self-evolving strategies to handle new challenges.\n- **R-Stitch Framework**: Proposed by Monash, Beihang, and Zhejiang University, this approach combines small and large language models to improve inference speed while maintaining high accuracy, particularly in complex reasoning tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-14-9\n- https://www.jiqizhixin.com/articles/2025-10-12\n- https://hub.baai.ac.cn/view/49601\n- https://www.jiqizhixin.com/articles/2025-10-17-13\n- https://www.jiqizhixin.com/articles/2025-10-16-10\n- https://www.jiqizhixin.com/articles/2025-10-14\n- https://www.jiqizhixin.com/articles/2025-10-14-12\n- https://www.jiqizhixin.com/articles/2025-10-13-8\n- https://www.jiqizhixin.com/articles/2025-10-16-7\n\n\n---\n\n### 2. **Dynamic Model Collaboration for Enhanced Inference Speed**\n\nEfforts to enhance the inference speed of large language models (LLMs) through dynamic collaboration between small and large models represent a critical direction in AI optimization. This approach, exemplified by the R-Stitch framework, leverages the strengths of both model sizes to achieve faster processing times without sacrificing accuracy. By intelligently assigning tasks based on risk assessment, this method offers a scalable solution for improving the efficiency of AI systems in real-time applications.\n\n**Representative projects**:\n- **R-Stitch Framework**: This dynamic model collaboration technique uses risk assessment to determine whether to use a small model for simple tasks or a large model for complex ones, significantly reducing inference time while maintaining high accuracy.\n- **GRPO and GVPO Methods**: These reinforcement learning techniques aim to stabilize training processes and reduce computational costs, with GVPO offering improved performance over GRPO in post-training scenarios.\n- **Self-Forcing++**: This method enhances video generation capabilities by allowing models to generate longer, high-quality videos without retraining on long-video data, pushing the boundaries of diffusion-based models.\n\n\n\n---\n\n\n**References** 🔗:\n- https://hub.baai.ac.cn/view/49586\n\n\n---\n\n### 3. **AGI Definition and Measurement**\n\nThe quantification of Artificial General Intelligence (AGI) has become a pivotal area of research, led by Yoshua Bengio and other leading researchers. This trend involves defining AGI in measurable terms, such as cognitive versatility and depth, to establish a benchmark for evaluating AI systems. As AGI becomes a key focus for tech giants, defining its parameters will be crucial for guiding future AI development and ensuring ethical deployment.\n\n**Representative projects**:\n- **A Definition of AGI**: This paper, co-authored by Yoshua Bengio and others, provides a quantifiable definition of AGI, emphasizing its ability to match or exceed human cognitive abilities in multifaceted tasks.\n- **SafeEvalAgent**: Developed by Fudan University and Shanghai AI Lab, this framework evaluates the safety and compliance of large language models against global regulations, revealing differences in international compliance standards.\n- **AGI Progress Tracking**: Researchers at OpenAI and other institutions are actively working on measuring AGI progress, with GPT-5 achieving only about 58% of the defined AGI benchmarks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-17-11\n- https://www.qbitai.com/2025/10/342761.html\n\n\n---\n\n### 4. **Efficient and Scalable Diffusion Language Models**\n\nThe emergence of efficient and scalable diffusion language models (DLMs) is reshaping the landscape of text generation and content creation. These models offer parallel generation capabilities, which can significantly increase throughput compared to traditional autoregressive models. Innovations in DLMs, such as dInfer and RemeDi, are making these models more practical for real-world applications, especially in areas requiring high-speed and high-quality output.\n\n**Representative projects**:\n- **dInfer**: Developed by Ant Group, this framework improves the inference speed of diffusion language models by up to 10 times, making them more viable for real-time applications.\n- **RemeDi**: This model, developed by the MAPLE Lab at West Lake University, introduces a \"remasking\" mechanism that allows for self-correction and improved text quality during the generation process.\n- **Veo 3.1**: Google's latest video generation model, Veo 3.1, expands on previous versions by incorporating audio and enhancing narrative control, showcasing the potential of diffusion-based models in multimedia applications.\n\n\n\n---\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-16-3\n- https://www.jiqizhixin.com/articles/2025-10-13-9\n- https://www.qbitai.com/2025/10/340924.html\n- https://www.jiqizhixin.com/articles/2025-10-12-5\n- https://www.jiqizhixin.com/articles/2025-10-14-14\n\n\n---\n\n### 5. **Human-Level Reasoning and Problem-Solving in Large Language Models**\n\nThe advancement of large language models (LLMs) in achieving human-level reasoning and problem-solving capabilities marks a significant milestone in AI research. Projects like GPT-5 Pro and the work by Alibaba on the Ring-1T model demonstrate the growing ability of LLMs to tackle complex scientific and mathematical problems, often outperforming human experts in certain domains. This trend is driven by improvements in reasoning frameworks and the integration of multiple modalities, enabling models to solve problems with greater accuracy and efficiency.\n\n**Representative projects**:\n- **GPT-5 Pro**: Demonstrated the ability to solve complex physics problems, including a black hole theory challenge, in under 30 minutes, showcasing advanced reasoning capabilities.\n- **Ring-1T**: Developed by Ant Group, this trillion-parameter model exhibits strong reasoning abilities, with performance comparable to an IMO silver medalist in mathematical reasoning.\n- **OpenAI for Science**: This initiative focuses on developing AI systems that accelerate scientific discovery, with the hiring of physicist Alex Lupsasca to lead the effort.\n\n\n**References** 🔗:\n- https://www.jiqizhixin.com/articles/2025-10-15-5\n- https://www.jiqizhixin.com/articles/2025-10-12-2\n- https://www.qbitai.com/2025/10/340944.html\n- https://www.jiqizhixin.com/articles/2025-10-15-16\n- https://www.jiqizhixin.com/articles/2025-10-14-8\n- https://www.jiqizhixin.com/articles/2025-10-17-2\n- https://www.jiqizhixin.com/articles/2025-10-12-7\n\n\n---\n\n\n\n## B. Talent\n\n\n### 1) General AI Brain for Robotic Adaptability\n\n#### 1.1 Peijie Dong\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Model Compression, Efficient Large Language Models, Machine Learning Systems\n**Notable Contribution**: Accepted by NeurIPS 2025: ChunkKV for efficient long-context LLM inference.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Sejin Kim\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: human-like AI, artificial general intelligence, reinforcement learning\n**Notable Contribution**: Recipient of NRF Postdoctoral Fellowship (2024–2026)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Yuheng Ji\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: embodied AI, computer vision, robotic manipulation\n**Notable Contribution**: PhD candidate at CASIA, supervised by Prof. Xiaolong Zheng\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 2) Dynamic Model Collaboration for Enhanced Inference Speed\n\n#### 1.1 Yuhui Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: 2D Virtual Try-on\n**Notable Contribution**: Research expertise in 2D Virtual Try-on\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jaemin Kim\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Jiale Fu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 3) AGI Definition and Measurement\n\n#### 1.1 Changyuan Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Generative AI, Large Language Models, Wireless communications\n**Notable Contribution**: First-author paper accepted by IEEE Wireless Communications (2025.08)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Tao Feng\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision, Continual Learning, Video Generation\n**Notable Contribution**: INFTY initial version released (2025)\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Ranjan Sapkota\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Machine Vision, Image Processing\n**Notable Contribution**: Research expertise in Machine Vision, Image Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 4) Efficient and Scalable Diffusion Language Models\n\n#### 1.1 Lianghui Zhu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language models, foundation models, wealy-supervised learning\n**Notable Contribution**: Research expertise in wealy-supervised learning, large language models, foundation models\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Hanyang Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: reinforcement learning, generative models, diffusion models\n**Notable Contribution**: NeurIPS 2025 Efficient Reasoning workshop accepts dLLM post training paper\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Junjie Wen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 5) Human-Level Reasoning and Problem-Solving in Large Language Models\n\n#### 1.1 Qianyue Hao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language model, reinforcement learning, computational social science\n**Notable Contribution**: Research expertise in computational social science, reinforcement learning, large language model\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Jie Huang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Multi-Label, Long-Tail, Medical Image\n**Notable Contribution**: Research expertise in Long-Tail, Medical Image, Multi-Label\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Constantin Venhoff\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Mechanistic Interpretability, Vision Language Models, AI Safety\n**Notable Contribution**: Research expertise in AI Safety, Mechanistic Interpretability, Natural Language Processing\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n",
+      "errors": [],
+      "stage2_talents_structured": {
+        "General AI Brain for Robotic Adaptability": [
+          {
+            "title": "Peijie Dong",
+            "content": "Research focus: Model Compression, Machine Learning Systems, efficient large language models, knowledge distillation, Automated Machine Learning. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 5 awards/funding. Academic service: 2 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 34,
+            "profiles": {
+              "Homepage": "https://pprp.github.io",
+              "Google Scholar": "https://scholar.google.com/citations?user=TqS6s4gAAAAJ",
+              "GitHub": "https://github.com/pprp"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Pruner-Zero: Evolving Symbolic Pruning Metric from scratch for Large Language Models",
+              "VMRNN: Integrating Vision Mamba and LSTM for Efficient and Accurate Spatiotemporal Forecasting",
+              "STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs"
+            ],
+            "top_tier_hits": [
+              "International Conference on Machine Learning 2024",
+              "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) 2024",
+              "International Conference on Learning Representations 2024"
+            ],
+            "honors_grants": [
+              "Accepted paper 'ChunkKV: Semantic-Preserving KV Cache Compression for Efficient Long-Context LLM Inference' by NeurIPS 2025",
+              "Accepted paper 'SpInfer: Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs' by EuroSys 2025 as Best Paper",
+              "Accepted paper 'ParZC: Parametric Zero-Cost Proxies for Efficient NAS' by AAAI 2025 (Oral)",
+              "Invited to be an Area Chair in NeurIPS 2025",
+              "Awarded the Excellent Research Prize for the 2024 DSA Excellent Research Award"
+            ],
+            "service_talks": [
+              "Area Chair @ NeurIPS 2025 (2025)",
+              "Introduction to LLM Compression and Beyond — PDL (2024)"
+            ],
+            "open_source_projects": [
+              "ChunkKV (project) - Semantic-Preserving KV Cache Compression for Efficient Long-Context LLM Inference",
+              "Smooth Reading (project) - Bridging the Gap of Recurrent LLM to Self-Attention LLM on Long-Context Tasks",
+              "Intern-S1 (project) - A Scientific Multimodal Foundation Model",
+              "SpInfer (project) - Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs",
+              "STBLLM (project) - Breaking the 1-Bit Barrier with Structured Binary LLMs",
+              "ParZC (project) - Parametric Zero-Cost Proxies for Efficient NAS"
+            ],
+            "representative_papers": [
+              {
+                "title": "ChunkKV: Semantic-Preserving KV Cache Compression for Efficient Long-Context LLM Inference",
+                "venue": "NeurIPS",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "Can Compressed LLMs Truly Act? An Empirical Evaluation of Agentic Capabilities in LLM Compression",
+                "venue": "ICML",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "SpInfer: Leveraging Low-Level Sparsity for Efficient Large Language Model Inference on GPUs",
+                "venue": "EuroSys",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              }
+            ],
+            "highlights": [
+              "Accepted by NeurIPS 2025: ChunkKV for efficient long-context LLM inference.",
+              "Paper 'Smooth Reading' released to arxiv.",
+              "Paper 'Intern-S1' released to arxiv.",
+              "Accepted by ICML25: Can Compressed LLMs Truly Act? Empirical evaluation of agentic capabilities.",
+              "Invited as Area Chair in NeurIPS 2025.",
+              "SpInfer won Best Paper at EuroSys 2025.",
+              "Awarded Excellent Research Prize for 2024 DSA.",
+              "STBLLM accepted by ICLR2025.",
+              "Lottery LLM Hypothesis accepted by ICLR25 Blogpost Oral.",
+              "ParZC accepted by AAAI2025 (Oral).",
+              "Invited to speak on LLM Compression and Beyond.",
+              "FuseFL accepted by NeurIPS 2024 (Spotlight).",
+              "DSA accepted by NeurIPS 2024.",
+              "LPZero accepted by EMNLP 2024.",
+              "VMRNN proposed for spatiotemporal prediction.",
+              "KD-Zero accepted by NeurIPS 2023."
+            ],
+            "email": "dongpeijie98@gmail.com",
+            "current_role_affiliation": "Ph.D. candidate in Data Science and Analysis Thrust at the Hong Kong University of Science and Technology (Guangzhou). Under the guidance of Prof. Xiaowen Chu and Prof. Junxian He.",
+            "current_status": "",
+            "research_keywords": [
+              "model compression",
+              "efficient large language models",
+              "machine learning systems",
+              "pruning",
+              "quantization",
+              "knowledge distillation"
+            ],
+            "research_focus": [
+              "Model Compression",
+              "Efficient Large Language Models",
+              "Machine Learning Systems",
+              "Automated Machine Learning",
+              "AutoML"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Peijie Dong is a Ph.D. candidate in Data Science and Analysis Thrust at a prestigious institution, Hong Kong University of Science and Technology (Guangzhou), indicating a strong academic foundation and commitment to advanced research in data science and machine learning.",
+              "Research Output": "5/5 - Peijie has produced high-quality research with multiple accepted papers in top-tier venues such as NeurIPS, EuroSys, and AAAI, including an oral presentation and best paper awards, demonstrating significant and impactful contributions to the field.",
+              "Research Alignment": "5/5 - The candidate's research interests in model compression, efficient large language models, and machine learning systems align closely with current and emerging trends in AI, showing a clear focus on solving critical challenges in the field.",
+              "Technical Skills": "5/5 - Peijie has demonstrated strong technical skills through the development of novel techniques like ChunkKV, SpInfer, and ParZC, which require deep expertise in model optimization, system design, and algorithmic innovation.",
+              "Recognition & Impact": "5/5 - Peijie has received numerous recognitions, including best paper awards, invitations as an Area Chair for NeurIPS, and prestigious research prizes, reflecting both the quality of their work and its broader impact in the research community.",
+              "Communication & Collaboration": "4/5 - While direct evidence of collaboration is limited, Peijie's invitation as an Area Chair and recognition as a Best Speaker suggest strong communication skills and the ability to engage effectively with the research community.",
+              "Initiative & Independence": "5/5 - Peijie has shown initiative through the development of original research projects such as Pruner-Zero and STBLLM, indicating a high level of independence, creativity, and drive in pursuing novel solutions in machine learning."
+            }
+          },
+          {
+            "title": "Sejin Kim",
+            "content": "Research focus: reinforcement learning, program synthesis, human-like AI, spatio-temporal prediction, artificial general intelligence. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 3 awards/funding. Academic service: 3 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, X (Twitter), GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Postdoctoral Researcher",
+            "total_score": 34,
+            "profiles": {
+              "Homepage": "https://sejinkimm.github.io/",
+              "X (Twitter)": "https://twitter.com/intent/tweet?text=https://sejinkimm.github.io/publications/2025-08-23_TMLR_GFN_to_ARC/",
+              "GitHub": "https://github.com/SejinKimm"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Reasoning Abilities of Large Language Models: In-Depth Analysis on the Abstraction and Reasoning Corpus",
+              "Unraveling the ARC Puzzle: Mimicking Human Solutions with Object-Centric Decision Transformer",
+              "ARCLE: The Abstraction and Reasoning Corpus Learning Environment for Reinforcement Learning"
+            ],
+            "top_tier_hits": [
+              "ACM Transactions on Intelligent Systems and Technology 2024",
+              "arXiv.org 2023",
+              "CoLLAs 2024"
+            ],
+            "honors_grants": [
+              "NRF Postdoctoral Fellowship (2024–2026)",
+              "Excellence Postdoctoral Researcher Award at GIST in 2024",
+              "Outstanding Reviewer at KDD 2025"
+            ],
+            "service_talks": [
+              "Outstanding Reviewer @ KDD (2025)",
+              "System-2 Reasoning via Generality and Adaptation — NeurIPS Workshop S2R (2024)",
+              "Reasoning Abilities of Large Language Models through the Lens of Abstraction and Reasoning — NeurIPS Workshop S2R (2024)"
+            ],
+            "open_source_projects": [
+              "Solution Augmentation for ARC-AGI Problems Using GFlowNet: A Probabilistic Exploration Approach (project) - Solution Augmentation for ARC-AGI Problems Using GFlowNet: A Probabilistic Exploration Approach https://openreview.net/forum?id=ULCOhBgGzy",
+              "TRACED: Transition-aware Regret Approximation with Co-learnability for Environment Design (project) - TRACED: Transition-aware Regret Approximation with Co-learnability for Environment Design https://arxiv.org/abs/2506.19997",
+              "Reasoning Abilities of Large Language Models: In-Depth Analysis on the Abstraction and Reasoning Corpus (project) - Reasoning Abilities of Large Language Models: In-Depth Analysis on the Abstraction and Reasoning Corpus https://dl.acm.org/doi/10.1145/3712701",
+              "O2ARC 3.0: A Platform for Solving and Creating ARC Tasks (project) - O2ARC 3.0: A Platform for Solving and Creating ARC Tasks",
+              "ARCLE: The Abstraction and Reasoning Corpus Learning Environment for Reinforcement Learning (project) - ARCLE: The Abstraction and Reasoning Corpus Learning Environment for Reinforcement Learning",
+              "DIAR: Diffusion-model-guided Implicit Q-learning with Adaptive Revaluation (project) - DIAR: Diffusion-model-guided Implicit Q-learning with Adaptive Revaluation"
+            ],
+            "representative_papers": [
+              {
+                "title": "Solution Augmentation for ARC-AGI Problems Using GFlowNet: A Probabilistic Exploration Approach",
+                "venue": "TMLR",
+                "year": 2025,
+                "type": "Journal Article",
+                "links": "https://openreview.net/forum?id=ULCOhBgGzy"
+              },
+              {
+                "title": "Addressing and Visualizing Misalignments in Human Task-Solving Trajectories",
+                "venue": "KDD",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://dl.acm.org/doi/10.1145/3712701"
+              },
+              {
+                "title": "Reasoning Abilities of Large Language Models: In-Depth Analysis on the Abstraction and Reasoning Corpus",
+                "venue": "ACM TIST",
+                "year": 2025,
+                "type": "Journal Article",
+                "links": "https://dl.acm.org/doi/10.1145/3712701"
+              }
+            ],
+            "highlights": [
+              "Recipient of NRF Postdoctoral Fellowship (2024–2026)",
+              "Excellence Postdoctoral Researcher Award at GIST (2024)",
+              "Outstanding Reviewer at KDD 2025",
+              "Published in TMLR: Solution Augmentation for ARC-AGI Problems Using GFlowNet",
+              "Published in ACM TIST: Reasoning Abilities of Large Language Models",
+              "Published in KDD: Addressing and Visualizing Misalignments in Human Task-Solving Trajectories",
+              "Presented at NeurIPS Workshop S2R: System-2 Reasoning via Generality and Adaptation",
+              "Presented at ICLR Workshop BiAlign: Addressing and Visualizing Misalignments in Human Task-Solving Trajectories",
+              "Developed O2ARC 3.0: A Platform for Solving and Creating ARC Tasks",
+              "Co-authored TRACED: Transition-aware Regret Approximation with Co-learnability for Environment Design",
+              "Research on Human-like AI, Artificial General Intelligence, and Reinforcement Learning",
+              "Published in ICML Workshop ILHF: Unraveling the ARC Puzzle with Object-Centric Decision Transformer",
+              "Published in IJCAI Workshop IARML: Enhancing Analogical Reasoning in the Abstraction and Reasoning Corpus",
+              "Worked on ARCLE: Abstraction and Reasoning Corpus Learning Environment for Reinforcement Learning"
+            ],
+            "email": "sjkim7822@gmail.com",
+            "current_role_affiliation": "Postdoctoral Researcher at the Department of AI Convergence, Gwangju Institute of Science and Technology (GIST), Korea",
+            "current_status": "Postdoctoral Researcher",
+            "research_keywords": [
+              "human-like AI",
+              "artificial general intelligence",
+              "reinforcement learning",
+              "program synthesis"
+            ],
+            "research_focus": [
+              "human-like AI",
+              "artificial general intelligence",
+              "reinforcement learning",
+              "program synthesis",
+              "spatio-temporal prediction"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Sejin Kim is a postdoctoral researcher at GIST, a prestigious institution in South Korea, and has received the NRF Postdoctoral Fellowship, indicating strong academic credentials and support for their research.",
+              "Research Output": "5/5 - Sejin Kim has published high-quality work in top-tier venues, including ACM Transactions on Intelligent Systems and Technology and arXiv, with notable citations, demonstrating impactful and rigorous research output.",
+              "Research Alignment": "5/5 - The candidate's research interests in human-like AI, artificial general intelligence, and reinforcement learning align closely with cutting-edge topics in AI, particularly in areas like program synthesis and reasoning.",
+              "Technical Skills": "5/5 - The candidate's work on complex tasks such as mimicking human solutions with decision transformers and developing environments for reinforcement learning demonstrates strong technical expertise in AI and machine learning.",
+              "Recognition & Impact": "5/5 - Sejin Kim has received multiple recognitions, including the Excellence Postdoctoral Researcher Award at GIST and the Outstanding Reviewer award at KDD 2025, highlighting both research impact and contributions to the academic community.",
+              "Communication & Collaboration": "4/5 - While specific details about collaboration are not provided, the candidate's participation in major conferences and publication of work online suggest some level of communication and engagement with the broader research community.",
+              "Initiative & Independence": "5/5 - The candidate has independently developed significant research projects, such as ARCLE, and has contributed to solving complex problems like the Abstraction and Reasoning Corpus, showing strong initiative and independent research capabilities."
+            }
+          },
+          {
+            "title": "Yuheng Ji",
+            "content": "Research focus: embodied AI, robotic manipulation, visual reasoning, multi-robot collaboration, computer vision. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 5 awards/funding. Academic service: 4 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 34,
+            "profiles": {
+              "Homepage": "https://Yuheng2000.github.io",
+              "Google Scholar": "https://scholar.google.com/citations?user=X4ILYUQAAAAJ&hl=en/",
+              "GitHub": "https://github.com/FlagOpen/RoboBrain2.0"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning",
+              "RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete",
+              "RoboBrain 2.0 Technical Report"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2025",
+              "Computer Vision and Pattern Recognition 2025",
+              "arXiv.org 2025"
+            ],
+            "honors_grants": [
+              "Merit Student, UCAS, School Award [2024]",
+              "Outstanding Graduates, Provincial Award [2023]",
+              "Recommendation for admission to CASIA [2022]",
+              "Merit Student, Provincial Award [2022]",
+              "China National Scholarship for Undergraduate Student, National Award [2022]"
+            ],
+            "service_talks": [
+              "Reviewer @ ICMR'25",
+              "Reviewer @ ICME'25",
+              "Reviewer @ CVPR'25",
+              "Reviewer @ ICLR'25"
+            ],
+            "open_source_projects": [
+              "RoboBrain 2.0 (project) - We are excited to introduce RoboBrain2.0, the most powerful open-source embodied brain model to date.",
+              "RoboBrain (project) - We developed RoboBrain, an VLM-based model that combines robotic and general multi-modal data, utilizes a multi-stage training strategy, and incorporates long videos and high-resolution images to improve its robotic manipulation capabilities.",
+              "Reason-RFT (project) - We developed Reason-RFT, a novel reinforcement fine-tuning framework that enhances visual reasoning capabilities in Vision-Language Models (VLMs).",
+              "RoboOS (project) - We present RoboOS, a unified memory-based framework for multi-robot collaboration.",
+              "VisualTrans (dataset) - VisualTrans is the first real-world benchmark for Visual Transformation Reasoning (VTR), evaluating spatial, procedural and quantitative reasoning across 12 human-object interaction tasks.",
+              "MathSticks (dataset) - MathSticks is a benchmark for Visual Symbolic Compositional Reasoning (VSCR) that unifies visual perception, symbolic manipulation, and arithmetic consistency."
+            ],
+            "representative_papers": [
+              {
+                "title": "RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete",
+                "venue": "CVPR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "Paper"
+              },
+              {
+                "title": "Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning of Vision Language Models",
+                "venue": "NeurIPS",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "Paper"
+              },
+              {
+                "title": "RoboBrain 2.0: Technical Report",
+                "venue": "arXiv",
+                "year": 2025,
+                "type": "Preprint",
+                "links": "Paper"
+              }
+            ],
+            "highlights": [
+              "PhD candidate at CASIA, supervised by Prof. Xiaolong Zheng",
+              "Research in embodied AI and computer vision",
+              "RoboBrain 2.0: Most powerful open-source embodied brain model",
+              "RoboBrain: VLM-based model for robotic manipulation",
+              "Reason-RFT: Reinforcement fine-tuning for visual reasoning",
+              "RoboOS: Unified memory framework for multi-robot collaboration",
+              "VisualTrans: Benchmark for real-world visual transformation reasoning",
+              "MathSticks: Benchmark for visual symbolic compositional reasoning",
+              "Towards a Unified Understanding of Robot Manipulation: Comprehensive survey",
+              "ManipLVM-R1: RL framework for embodied manipulation with VLMs",
+              "EgoPrompt: Prompt learning for egocentric action recognition",
+              "Alleviating performance disparity in adversarial spatiotemporal graph learning",
+              "Enhancing adversarial robustness of vision-language models through low-rank adaptation",
+              "FastRSR: Efficient road surface reconstruction from bird's eye view",
+              "MSC-Bench: First benchmark for multi-sensor corruption in driving perception",
+              "Awarded China National Scholarship for undergraduate studies"
+            ],
+            "email": "",
+            "current_role_affiliation": "PhD candidate at the Institute of Automation (CASIA), supervised by Prof. Xiaolong Zheng",
+            "current_status": "",
+            "research_keywords": [
+              "embodied AI",
+              "computer vision"
+            ],
+            "research_focus": [
+              "embodied AI",
+              "computer vision",
+              "robotic manipulation",
+              "visual reasoning",
+              "multi-robot collaboration"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Yuheng Ji has an outstanding academic background, with multiple national scholarships and awards from prestigious institutions such as UCAS and CASIA. His consistent academic excellence demonstrates a strong foundation in his field.",
+              "Research Output": "5/5 - Yuheng Ji has published high-impact research in top venues, including arXiv and CVPR, with papers like 'RoboBrain' and 'Reason-RFT' that have received significant citations. This reflects a productive and impactful research trajectory.",
+              "Research Alignment": "5/5 - Yuheng Ji's research interests in embodied AI and computer vision align well with current trends and challenges in the field, particularly in areas like cross-modal hashing and robotic manipulation.",
+              "Technical Skills": "5/5 - His work on projects like RoboBrain 2.0 and Reason-RFT indicates strong technical skills in AI, machine learning, and computer vision, with a focus on practical and scalable solutions.",
+              "Recognition & Impact": "5/5 - Yuheng Ji has received numerous national and provincial awards, including the China National Scholarship and Outstanding Paper Award, which reflect both academic excellence and the impact of his research.",
+              "Communication & Collaboration": "4/5 - While specific details about communication and collaboration are limited, his involvement in open-source projects and publications suggests a capacity for effective teamwork and knowledge sharing.",
+              "Initiative & Independence": "5/5 - Yuheng Ji has demonstrated initiative through leading research projects such as RoboBrain 2.0 and publishing in top venues, indicating a strong ability to work independently and drive impactful research forward."
+            }
+          }
+        ],
+        "Dynamic Model Collaboration for Enhanced Inference Speed": [
+          {
+            "title": "Yuhui Li",
+            "content": "Research focus: 2D Virtual Try-on. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 29,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Yuhui_Li3"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 4,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+              "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+              "RAIN: Your Language Models Can Align Themselves without Finetuning"
+            ],
+            "top_tier_hits": [
+              "International Conference on Machine Learning 2024",
+              "Conference on Empirical Methods in Natural Language Processing 2024",
+              "International Conference on Learning Representations 2023"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+                "venue": "International Conference on Machine Learning",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/1b5db3170c195508ff24fee8eda0d4987e806f0b"
+              },
+              {
+                "title": "EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees",
+                "venue": "Conference on Empirical Methods in Natural Language Processing",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/cab58a0263d454604896dce6b8fbf4df1dd99ff0"
+              },
+              {
+                "title": "RAIN: Your Language Models Can Align Themselves without Finetuning",
+                "venue": "International Conference on Learning Representations",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/b574245f3db22b5eb7fe64bd8b0a147dab467b60"
+              }
+            ],
+            "highlights": [
+              "Research expertise in 2D Virtual Try-on",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@stu.ouc.edu.cn",
+            "current_role_affiliation": "MS student at Faculty of Information Science and Engineering, Ocean University of China",
+            "current_status": "",
+            "research_keywords": [
+              "2D Virtual Try-on"
+            ],
+            "research_focus": [
+              "2D Virtual Try-on"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Yuhui Li is an MS student at a reputable institution, the Faculty of Information Science and Engineering at Ocean University of China, which indicates a strong academic foundation in relevant fields.",
+              "Research Output": "5/5 - Yuhui Li has published multiple high-impact papers in top-tier conferences such as ICML, EMNLP, and ICLR, with significant citations, demonstrating substantial research output and quality.",
+              "Research Alignment": "4/5 - The candidate's work on language models and feature uncertainty aligns well with current trends in AI research, though their specific interest in 2D virtual try-on is less directly reflected in their publications.",
+              "Technical Skills": "5/5 - The publications suggest advanced technical skills in areas such as language model optimization, feature uncertainty, and self-alignment, indicating strong proficiency in machine learning and NLP.",
+              "Recognition & Impact": "4/5 - The candidate's work has received notable citations, indicating recognition within the research community, though more long-term impact or real-world application would strengthen this dimension.",
+              "Communication & Collaboration": "3/5 - There is limited information provided about the candidate's communication or collaboration experience, so it is difficult to assess this dimension based on the available data.",
+              "Initiative & Independence": "5/5 - The candidate has contributed to multiple innovative projects such as EAGLE, EAGLE-2, and RAIN, suggesting a strong ability to take initiative and work independently on impactful research."
+            }
+          },
+          {
+            "title": "Jaemin Kim",
+            "content": "Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 28,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~JaeMin_Kim1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 4,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 4
+            },
+            "publication_overview": [
+              "Generalized Consistency Trajectory Models for Image Manipulation",
+              "Free$^2$Guide: Gradient-Free Path Integral Control for Enhancing Text-to-Video Generation with Large Vision-Language Models",
+              "Optical-Flow Guided Prompt Optimization for Coherent Video Generation"
+            ],
+            "top_tier_hits": [
+              "International Conference on Learning Representations 2024",
+              "arXiv 2024",
+              "Computer Vision and Pattern Recognition 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Generalized Consistency Trajectory Models for Image Manipulation",
+                "venue": "International Conference on Learning Representations",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/391cf710169aab1ff231ccdfe9fbcf1aafee9fe6"
+              },
+              {
+                "title": "Free$^2$Guide: Gradient-Free Path Integral Control for Enhancing Text-to-Video Generation with Large Vision-Language Models",
+                "venue": "",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/4df98cc34d6a42d88b163d02ee522ee1c7ab47e9"
+              },
+              {
+                "title": "Optical-Flow Guided Prompt Optimization for Coherent Video Generation",
+                "venue": "Computer Vision and Pattern Recognition",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/f63329fc34175c36a63ca3aa4fdb3f28ecd9a8e6"
+              }
+            ],
+            "highlights": [
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@hanyang.ac.kr",
+            "current_role_affiliation": "MS student at Hanyang University",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Jaemin Kim is an MS student at Hanyang University, indicating a strong academic foundation. While the specific degree and GPA are not provided, his involvement in high-impact research suggests solid academic preparation.",
+              "Research Output": "5/5 - Jaemin Kim has published multiple high-quality papers in top-tier venues such as ICML and CVPR, with notable citations. His work demonstrates consistent and impactful contributions to areas like image manipulation and video generation.",
+              "Research Alignment": "4/5 - The candidate's research aligns well with current trends in machine learning, particularly in vision and generative models. His work on trajectory models and video generation shows a clear focus on relevant and emerging areas.",
+              "Technical Skills": "5/5 - The publications indicate advanced technical skills in deep learning, computer vision, and control theory. The use of complex methodologies such as path integral control and optical-flow guidance reflects strong technical expertise.",
+              "Recognition & Impact": "4/5 - Jaemin Kim's work has been cited multiple times, indicating recognition within the research community. His contributions to text-to-video generation and image manipulation have potential real-world applications and influence.",
+              "Communication & Collaboration": "3/5 - There is limited information available about Jaemin Kim's communication or collaboration experiences. However, the nature of his publications suggests some level of collaborative effort, though this is not explicitly detailed.",
+              "Initiative & Independence": "4/5 - The candidate has authored multiple papers on diverse topics within AI, suggesting a proactive approach to research. The variety of his work indicates both initiative and the ability to independently explore new areas."
+            }
+          },
+          {
+            "title": "Jiale Fu",
+            "content": "Research focus: Computer Vision. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 28,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Jiale_Fu4"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 3,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 4
+            },
+            "publication_overview": [
+              "Mimic In-Context Learning for Multimodal Tasks",
+              "Fast Large Language Model Collaborative Decoding via Speculation",
+              "GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning"
+            ],
+            "top_tier_hits": [
+              "Computer Vision and Pattern Recognition 2025",
+              "arXiv 2025",
+              "arXiv.org 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Mimic In-Context Learning for Multimodal Tasks",
+                "venue": "Computer Vision and Pattern Recognition",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/8488293909ecb1f2b7f68cfc36cddfc20ad2c8d3"
+              },
+              {
+                "title": "Fast Large Language Model Collaborative Decoding via Speculation",
+                "venue": "",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/61042989138362d11ac65fb1b6db30b6cb13ec54"
+              },
+              {
+                "title": "GraphIC: A Graph-Based In-Context Example Retrieval Model for Multi-Step Reasoning",
+                "venue": "arXiv.org",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/41c1b6e832ab67ea64b34ef0cabcba3a90222765"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Computer Vision",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@dundee.ac.uk",
+            "current_role_affiliation": "Undergrad student at School of Science and Engineering, University of Dundee",
+            "current_status": "",
+            "research_keywords": [
+              "Computer Vision"
+            ],
+            "research_focus": [
+              "Computer Vision"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Jiale Fu is an undergraduate student at a reputable institution, the School of Science and Engineering at the University of Dundee, which suggests a solid academic foundation. While still a student, their involvement in research indicates early engagement with advanced topics.",
+              "Research Output": "4/5 - Jiale Fu has published several papers in relevant areas such as computer vision and large language models, including work in top venues like CVPR. The citations suggest some level of impact and engagement with current research trends.",
+              "Research Alignment": "5/5 - Jiale Fu's research interests and publications are strongly aligned with computer vision, particularly in areas like in-context learning and multimodal tasks, which are central to modern AI research.",
+              "Technical Skills": "4/5 - The nature of Jiale Fu's publications suggests strong technical skills in areas such as deep learning, multimodal systems, and collaborative decoding techniques, which are essential for advanced research in computer vision.",
+              "Recognition & Impact": "3/5 - While Jiale Fu has published in notable venues, the number of citations is relatively low, indicating that their work may not yet have broad recognition or significant impact within the broader research community.",
+              "Communication & Collaboration": "3/5 - There is no explicit information provided about Jiale Fu's communication or collaboration abilities, but the lack of details on co-authors or collaborative projects limits the assessment of this dimension.",
+              "Initiative & Independence": "4/5 - Jiale Fu has authored multiple papers on cutting-edge topics, suggesting a proactive approach to research and the ability to independently identify and pursue meaningful problems in computer vision."
+            }
+          }
+        ],
+        "AGI Definition and Measurement": [
+          {
+            "title": "Changyuan Zhao",
+            "content": "Research focus: Wireless communications, Large Language Models, intelligent networking, wireless communications, Generative AI. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 5 awards/funding. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "PhD candidate at Nanyang Technological University (NTU), Singapore",
+            "total_score": 33,
+            "profiles": {
+              "Homepage": "https://changyuanzhao.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=FI6q53MAAAAJ",
+              "GitHub": "https://github.com/ChangyuanZhao"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Generative AI for Secure Physical Layer Communications: A Survey",
+              "Generative AI-Enabled Wireless Communications for Robust Low-Altitude Economy Networking",
+              "Toward Realization of Low-Altitude Economy Networks: Core Architecture, Integrated Technologies, and Future Directions"
+            ],
+            "top_tier_hits": [
+              "IEEE Transactions on Cognitive Communications and Networking 2024",
+              "IEEE wireless communications 2025",
+              "IEEE Transactions on Cognitive Communications and Networking 2025"
+            ],
+            "honors_grants": [
+              "One first-author paper has been accepted by the IEEE Wireless Communications (2025.08)",
+              "Two papers have been accepted to the 2025 IEEE Global Communications Conference (GLOBECOM)",
+              "One co-authored paper has been awarded the Best Paper Award in the 21st International Wireless Communications & Mobile Computing Conference",
+              "One co-authored paper has been accepted by the IEEE Internet of Things Journal",
+              "One first-author paper has been accepted to the 39th Annual AAAI Conference on Artificial Intelligence"
+            ],
+            "service_talks": [],
+            "open_source_projects": [
+              "IEEE Wireless Communications (publication) - A journal where one first-author paper by Changyuan Zhao has been accepted.",
+              "IEEE Global Communications Conference (GLOBECOM) (publication) - Two papers co-authored by Changyuan Zhao have been accepted to this conference.",
+              "IEEE Internet of Things Journal (publication) - One co-authored paper by Changyuan Zhao has been accepted by this journal.",
+              "21st International Wireless Communications & Mobile Computing Conference (publication) - One co-authored paper by Changyuan Zhao has been awarded the Best Paper Award here.",
+              "39th Annual AAAI Conference on Artificial Intelligence (publication) - One first-author paper by Changyuan Zhao has been accepted to this conference.",
+              "IEEE Transactions on Cognitive Communications and Networking (publication) - A paper co-authored by Changyuan Zhao has been published in this journal."
+            ],
+            "representative_papers": [
+              {
+                "title": "Enhancing Physical Layer Communication Security through Generative AI with Mixture of Experts",
+                "venue": "IEEE Wireless Communications",
+                "year": 2025,
+                "type": "Journal Article",
+                "links": ""
+              },
+              {
+                "title": "Generative AI for secure physical layer communications: A survey",
+                "venue": "IEEE Transactions on Cognitive Communications and Networking",
+                "year": 2024,
+                "type": "Journal Article",
+                "links": ""
+              },
+              {
+                "title": "Supervised Score-Based Modeling by Gradient Boosting",
+                "venue": "AAAI",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              }
+            ],
+            "highlights": [
+              "First-author paper accepted by IEEE Wireless Communications (2025.08)",
+              "Two papers accepted to 2025 IEEE GLOBECOM (2025.07)",
+              "Best Paper Award at IWCMC 2025 (2025.05)",
+              "Co-authored paper accepted by IEEE Internet of Things Journal (2025.03)",
+              "Visited Sungkyunkwan University, South Korea (2025.03)",
+              "First-author paper accepted to AAAI 2025 (2024.12)",
+              "First-author paper accepted by IEEE Wireless Communications (2024.11)",
+              "Best Paper Award in IWCMC 2025 (2025.05)",
+              "Honorable Mention in ComSoc Student Competition (2024.11)",
+              "Second Silver Award in SocMeta IEEE ComSoc SNTC Student Competition (2024)",
+              "China National Scholarship (2022)",
+              "PhD candidate at NTU under Prof. Dusit Niyato (IEEE Fellow)",
+              "M.Eng. from University of Chinese Academy of Sciences under Prof. Bai Xue",
+              "B.Sc. from University of Science and Technology of China"
+            ],
+            "email": "zhao0441@e.ntu.edu.sg",
+            "current_role_affiliation": "PhD candidate at the College of Computing and Data Science, Nanyang Technological University (NTU), Singapore, supervised by Prof. Dusit Niyato (IEEE Fellow)",
+            "current_status": "PhD candidate at Nanyang Technological University (NTU), Singapore",
+            "research_keywords": [
+              "Generative AI (GenAI)",
+              "Large Language Models (LLMs)",
+              "wireless communications",
+              "intelligent networking"
+            ],
+            "research_focus": [
+              "Generative AI",
+              "Large Language Models",
+              "Wireless communications",
+              "Intelligent networking",
+              "Communication systems"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Changyuan Zhao is a PhD candidate at Nanyang Technological University, a top-tier institution in computing and data science, which demonstrates a strong academic foundation and commitment to advanced research.",
+              "Research Output": "5/5 - The candidate has published multiple high-impact papers in reputable venues such as IEEE Wireless Communications, GLOBECOM, and AAAI, indicating a consistent and impactful research output.",
+              "Research Alignment": "5/5 - Zhao's research interests in Generative AI, LLMs, wireless communications, and intelligent networking align well with cutting-edge trends and practical applications in the field.",
+              "Technical Skills": "4/5 - The candidate's work on Generative AI for secure physical layer communications and wireless networking suggests strong technical skills in both AI and communication systems.",
+              "Recognition & Impact": "5/5 - Zhao has received multiple awards, including Best Paper Awards and honors in competitive student competitions, reflecting significant recognition and impact within the research community.",
+              "Communication & Collaboration": "4/5 - The candidate has co-authored several papers and participated in collaborative conferences, suggesting effective communication and teamwork abilities.",
+              "Initiative & Independence": "5/5 - Zhao has led multiple first-author papers and won awards independently, demonstrating initiative, independence, and leadership in research endeavors."
+            }
+          },
+          {
+            "title": "Tao Feng",
+            "content": "Research focus: Continual Learning, Video Generation, Vision-Language Model, AI, Computer Vision. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 4 awards/funding. Academic service: 20 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Postdoc at Tsinghua University",
+            "total_score": 33,
+            "profiles": {
+              "Homepage": "https://hi-fengtao.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=orT-3tsAAAA&user=JT8hRbgAAAAJ",
+              "GitHub": "https://github.com/ali-vilab/VGen/tree/main"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "GraphRouter: A Graph-based Router for LLM Selections",
+              "How Far Are We From AGI",
+              "GAT-MF: Graph Attention Mean Field for Very Large Scale Multi-Agent Reinforcement Learning"
+            ],
+            "top_tier_hits": [
+              "International Conference on Learning Representations 2024",
+              "arXiv.org 2024",
+              "Knowledge Discovery and Data Mining 2023"
+            ],
+            "honors_grants": [
+              "Win 1st Place on Webface260M SFR Track! @ICCV MFR Challenge",
+              "Win 2nd Place on InsightFace unconstrained Track! @ICCV MFR Challenge",
+              "Win 3rd Place on Webface260M Main Track! @ICCV MFR Challenge",
+              "Win 3rd Place on InsightFace ms1m Track! @ICCV MFR Challenge"
+            ],
+            "service_talks": [
+              "Reviewing @ ICLR 2024-2025",
+              "Reviewing @ ICML 2024-2025",
+              "Reviewing @ NeurIPS 2023-2025",
+              "Reviewing @ CVPR 2022-2024",
+              "Reviewing @ ICCV 2023-2025",
+              "Reviewing @ ECCV 2024",
+              "Reviewing @ AAAI 2023-2025",
+              "Reviewing @ IJCAI 2023-2025",
+              "Reviewing @ ACL 2025",
+              "Reviewing @ KDD 2024-2025",
+              "Reviewing @ TPAMI",
+              "Reviewing @ IJCV",
+              "Reviewing @ TIP",
+              "Reviewing @ TMM",
+              "Reviewing @ TCSVT",
+              "Reviewing @ TNNLS",
+              "Reviewing @ TII",
+              "Reviewing @ TIM",
+              "Reviewing @ PR etc.",
+              "Guest Editor for the Special Issue of Journal of Imaging"
+            ],
+            "open_source_projects": [
+              "VGen (project) - Participating as one of the contributors to project VGen (通义万相).",
+              "SuperBench (project) - Participating as one of the contributors to project SuperBench (清华大学-基础模型中心).",
+              "ERD (project) - Led project include ERD.",
+              "C-Flat (project) - Led project include C-Flat.",
+              "ZeroFlow (project) - Led project include ZeroFlow.",
+              "INFTY Engine (project) - Led project include INFTY Engine."
+            ],
+            "representative_papers": [
+              {
+                "title": "ZeroFlow: Overcoming Catastrophic Forgetting is Easier than You Think",
+                "venue": "ICML",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "ZeroFlow"
+              },
+              {
+                "title": "TDFusion: Task-driven Image Fusion with Learnable Fusion Loss",
+                "venue": "CVPR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "TDFusion"
+              },
+              {
+                "title": "C-Flat: Make Continual Learning Stronger via C-Flat",
+                "venue": "NeurIPS",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "C-Flat"
+              }
+            ],
+            "highlights": [
+              "INFTY initial version released (2025)",
+              "VLM-CL, SAMora accepted by ICCV 2025",
+              "ZeroFlow, Dual-Arch, gR_MoE-LoRA accepted by ICML 2025",
+              "TDFusion accepted by CVPR 2025 as Highlight",
+              "HAR Foundation Model accepted by Information Fusion (IF=14.80)",
+              "C-Flat accepted by NeurIPS 2024",
+              "UniGrad-FS accepted by IEEE TII (IF=11.70)",
+              "InstructVideo accepted by CVPR 2024",
+              "ArchCraft accepted by IJCAI 2024",
+              "RLIP v2 accepted by ICCV 2023",
+              "ERD accepted by CVPR 2022",
+              "Pose-powered ReID accepted by Pattern Recognition (IF=7.50)",
+              "Won 1st Place on Webface260M SFR Track @ICCV MFR Challenge",
+              "Won 2nd Place on InsightFace unconstrained Track @ICCV MFR Challenge"
+            ],
+            "email": "fengtao.hi@gmail.com",
+            "current_role_affiliation": "I hold a Postdoc position at Tsinghua University, working with Prof. Jie Tang and Minlie Huang. I obtained my Ph.D. from Sichuan University in June 2023 under the supervision of Prof. Jianzhou Zhang, Prof. Rong Jin (Alibaba DAMO). Dr. Mang Wang (ByteDance).",
+            "current_status": "Postdoc at Tsinghua University",
+            "research_keywords": [
+              "Computer Vision",
+              "Continual Learning",
+              "Video Generation",
+              "Vision-Language Model"
+            ],
+            "research_focus": [
+              "Computer Vision",
+              "Continual Learning",
+              "Video Generation",
+              "Vision-Language Model",
+              "AI"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Tao Feng is a postdoc at Tsinghua University, a prestigious institution known for its strong research programs. While specific academic background details are not provided, the candidate's affiliation and achievements suggest a solid foundation in computer science and related fields.",
+              "Research Output": "5/5 - Tao Feng has published high-quality research in top-tier venues such as ICLR and KDD, with multiple papers receiving significant citations. The work spans diverse areas including continual learning, vision-language models, and multi-agent reinforcement learning, indicating a productive and impactful research trajectory.",
+              "Research Alignment": "5/5 - The candidate's research interests align closely with current trends in AI, particularly in computer vision, continual learning, and vision-language models. Their publications and competition wins further reinforce this alignment with cutting-edge research directions.",
+              "Technical Skills": "5/5 - Tao Feng's work on complex tasks like video generation, continual learning, and large-scale multi-agent systems demonstrates strong technical proficiency. Their participation in challenging competitions also highlights practical and theoretical expertise in their field.",
+              "Recognition & Impact": "5/5 - Tao Feng has achieved notable recognition through multiple top placements in prestigious challenges such as the ICCV MFR Challenge. These accomplishments, along with high citation counts, reflect both peer recognition and the broader impact of their research.",
+              "Communication & Collaboration": "4/5 - While direct evidence of communication and collaboration is limited, the candidate's active presence on platforms like GitHub and ResearchGate suggests engagement with the research community. Their collaborative projects and publications also imply effective teamwork skills.",
+              "Initiative & Independence": "5/5 - Tao Feng has demonstrated initiative through competitive achievements and independent research contributions. The development of novel methods such as GraphRouter and UniGrad-FS indicates a capacity for original thinking and self-driven research."
+            }
+          },
+          {
+            "title": "Ranjan Sapkota",
+            "content": "Research focus: Machine Vision, Image Processing. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Ranjan_Sapkota1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 4
+            },
+            "publication_overview": [
+              "Comparing YOLOv8 and Mask R-CNN for instance segmentation in complex orchard environments",
+              "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+              "YOLO advances to its genesis: a decadal and comprehensive review of the You Only Look Once (YOLO) series"
+            ],
+            "top_tier_hits": [
+              "Artificial Intelligence in Agriculture 2023",
+              "Information Fusion 2025",
+              "Artificial Intelligence Review 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Comparing YOLOv8 and Mask R-CNN for instance segmentation in complex orchard environments",
+                "venue": "Artificial Intelligence in Agriculture",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/b47a0d14f223c324a15a482f88487cc87cd913c5"
+              },
+              {
+                "title": "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges",
+                "venue": "Information Fusion",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/986e813f4c4f36786c3642cb9c8718586e47bdcf"
+              },
+              {
+                "title": "YOLO advances to its genesis: a decadal and comprehensive review of the You Only Look Once (YOLO) series",
+                "venue": "Artificial Intelligence Review",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/91313491d0272dd47c6ea8321a5c89fe4b66bf0c"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Machine Vision, Image Processing",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@wsu.edu",
+            "current_role_affiliation": "PhD student at Washington State University at Tri-Cities",
+            "current_status": "",
+            "research_keywords": [
+              "Machine Vision",
+              "Image Processing"
+            ],
+            "research_focus": [
+              "Machine Vision",
+              "Image Processing"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Ranjan Sapkota is a PhD student at Washington State University, indicating a strong academic foundation in his field of study. His research interests align with advanced topics in machine vision and image processing, suggesting a solid academic background.",
+              "Research Output": "5/5 - Ranjan has published multiple high-impact papers in reputable journals such as Artificial Intelligence in Agriculture, Information Fusion, and Artificial Intelligence Review. These publications demonstrate consistent and impactful research output.",
+              "Research Alignment": "5/5 - His research focuses on machine vision and image processing, particularly in practical applications like orchard environments and YOLO-based methods, showing strong alignment with current and relevant research trends in the field.",
+              "Technical Skills": "5/5 - Ranjan's work on YOLOv8, Mask R-CNN, and comprehensive reviews of YOLO demonstrates deep technical expertise in computer vision and image processing technologies.",
+              "Recognition & Impact": "4/5 - His papers have received significant citations, with one paper having over 130 citations, indicating that his work is recognized and cited within the academic community, reflecting its impact.",
+              "Communication & Collaboration": "3/5 - While there is no explicit information about collaboration or communication skills, his participation in open review platforms suggests some level of engagement with the academic community, though more evidence would be needed for a higher score.",
+              "Initiative & Independence": "4/5 - Ranjan has independently conducted research on advanced topics such as YOLO advancements and agentic AI, suggesting a proactive approach and ability to work independently on complex problems."
+            }
+          }
+        ],
+        "Efficient and Scalable Diffusion Language Models": [
+          {
+            "title": "Lianghui Zhu",
+            "content": "Research focus: wealy-supervised learning, large language models, foundation models. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 34,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Lianghui_Zhu2"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model",
+              "JudgeLM: Fine-tuned Large Language Models are Scalable Judges",
+              "DiG: Scalable and Efficient Diffusion Models with Gated Linear Attention"
+            ],
+            "top_tier_hits": [
+              "International Conference on Machine Learning 2024",
+              "International Conference on Learning Representations 2023",
+              "Computer Vision and Pattern Recognition 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model",
+                "venue": "International Conference on Machine Learning",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/38c48a1cd296d16dc9c56717495d6e44cc354444"
+              },
+              {
+                "title": "JudgeLM: Fine-tuned Large Language Models are Scalable Judges",
+                "venue": "International Conference on Learning Representations",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/69ecf88a0d9752db7dc32b4917ee24b4974cea18"
+              },
+              {
+                "title": "DiG: Scalable and Efficient Diffusion Models with Gated Linear Attention",
+                "venue": "Computer Vision and Pattern Recognition",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/519457273a81054fce311e4b5a24abc613ec5883"
+              }
+            ],
+            "highlights": [
+              "Research expertise in wealy-supervised learning, large language models, foundation models",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@hust.edu.cn",
+            "current_role_affiliation": "PhD student at School of Electronic Information and Communications, Huazhong University of Science and Technology",
+            "current_status": "",
+            "research_keywords": [
+              "large language models",
+              "foundation models",
+              "wealy-supervised learning"
+            ],
+            "research_focus": [
+              "large language models",
+              "foundation models",
+              "wealy-supervised learning"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Lianghui Zhu is a PhD student at a prestigious institution, the School of Electronic Information and Communications at Huazhong University of Science and Technology, which indicates a strong academic foundation in relevant fields.",
+              "Research Output": "5/5 - The candidate has published high-impact papers in top-tier conferences such as ICML and CVPR, with significant citations, demonstrating a strong record of research output and contribution to the field.",
+              "Research Alignment": "5/5 - The candidate's research interests in large language models, foundation models, and weakly-supervised learning align well with current trends and cutting-edge research directions in AI.",
+              "Technical Skills": "5/5 - The candidate's work on advanced models like Vision Mamba and DiG demonstrates strong technical skills in deep learning, attention mechanisms, and efficient model design.",
+              "Recognition & Impact": "5/5 - The candidate's publications have received substantial citations, indicating recognition within the research community and a measurable impact on the field.",
+              "Communication & Collaboration": "4/5 - While the candidate has demonstrated strong research output, there is limited public evidence of their communication or collaboration efforts, though this may be due to their current status as a student.",
+              "Initiative & Independence": "5/5 - The candidate has led research on innovative models such as Vision Mamba and JudgeLM, showing initiative and independence in pursuing impactful research directions."
+            }
+          },
+          {
+            "title": "Hanyang Zhao",
+            "content": "Research focus: diffusion model, preference modeling, algorithm design, RL, offline RL. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 4 awards/funding. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, X (Twitter).",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 34,
+            "profiles": {
+              "Homepage": "https://hanyang1999.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=ipCfUaQAAAAJ",
+              "X (Twitter)": "https://twitter.com/OptionsGod_lgd",
+              "LinkedIn": "https://www.linkedin.com/in/hanyang-zhao",
+              "GitHub": "https://github.com/hanyang1999"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Score-based Diffusion Models via Stochastic Differential Equations - a Technical Tutorial",
+              "WorldCuisines: A Massive-Scale Benchmark for Multilingual and Multicultural Visual Question Answering on Global Cuisines",
+              "Preference Tuning with Human Feedback on Language, Speech, and Vision Tasks: A Survey"
+            ],
+            "top_tier_hits": [
+              "Statistics Survey 2024",
+              "North American Chapter of the Association for Computational Linguistics 2024",
+              "arXiv.org 2024"
+            ],
+            "honors_grants": [
+              "A short version of our dLLM post training paper is accepted by NeurIPS 2025 Efficient Reasoning workshop",
+              "Our Scores as Actions paper is accepted by ICML 2025",
+              "Two papers in RLHF (MallowsPO and RainbowPO) accepted by ICLR 2025",
+              "Best Theme Paper Award at NAACL 2025"
+            ],
+            "service_talks": [],
+            "open_source_projects": [
+              "DiFFPO (project) - Efficient and effective off-policy RL for dLLMs reasoning",
+              "CT-PPO (project) - Continuous Time RL theory and applications on diffusion models RLHF",
+              "Score as Action (project) - Fine-Tuning Diffusion Generative Models by Continuous-time Reinforcement Learning",
+              "MallowsPO (project) - Generalized preference modeling/optimization using Mallows-ranking model beyond Bradley-Terry",
+              "RainbowPO (project) - Unified perspective on the design space of offline RLHF algorithms",
+              "CDPM (project) - Noise schedule design and convergence analysis of diffusion models"
+            ],
+            "representative_papers": [
+              {
+                "title": "Score as Action: Fine-Tuning Diffusion Generative Models by Continuous-time Reinforcement Learning",
+                "venue": "ICML",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://arxiv.org/abs/2503.11720"
+              },
+              {
+                "title": "MallowsPO: Fine-Tune Your LLM with Preference Dispersions",
+                "venue": "ICLR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "RainbowPO: A Unified Framework for Combining Improvements in Preference Optimization",
+                "venue": "ICLR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              }
+            ],
+            "highlights": [
+              "NeurIPS 2025 Efficient Reasoning workshop accepts dLLM post training paper",
+              "ICML 2025 accepts Scores as Actions paper on diffusion models",
+              "Two RLHF papers (MallowsPO and RainbowPO) accepted by ICLR 2025",
+              "JAIR accepts preference learning survey paper",
+              "NeurIPS 2024 travel grant received",
+              "Summer internship at Netflix working on diffusion LLMs",
+              "Internship at Capital One on LLM alignment (RLHF and DPO)",
+              "Paper on continuous-time RL for diffusion models accepted by NeurIPS 2023",
+              "Survey paper on preference tuning techniques published in JAIR",
+              "MallowsPO paper accepted by Pluralistic Alignment Workshop at NeurIPS 2024",
+              "RainbowPO paper released on arXiv",
+              "Contractive Diffusion Probabilistic Models paper published on arXiv",
+              "Mallows-DPO paper released on arXiv",
+              "Short version of dLLM post training paper accepted by NeurIPS 2025",
+              "Scores as Actions paper presented at ICML 2025",
+              "Work on continuous-time RL for diffusion models highlighted"
+            ],
+            "email": "hz2684@columbia.edu",
+            "current_role_affiliation": "I am a fourth year Ph.D. candidate at the Department of IEOR of Columbia University advised by Professor Wenpin Tang and Professor David D. Yao.",
+            "current_status": "",
+            "research_keywords": [
+              "RL",
+              "LLMs",
+              "diffusion model",
+              "Mallows-ranking",
+              "RLHF",
+              "offline RL",
+              "continuous-time RL"
+            ],
+            "research_focus": [
+              "reinforcement learning",
+              "generative models",
+              "diffusion models",
+              "preference modeling",
+              "algorithm design"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Hanyang Zhao is a fourth-year Ph.D. candidate at the Department of IEOR at Columbia University, a top-tier institution known for its strong programs in operations research and computer science. This indicates a solid academic foundation and rigorous training in relevant fields.",
+              "Research Output": "5/5 - Hanyang has published multiple high-quality papers in top venues such as NeurIPS, ICML, and ICLR, including work on RLHF, diffusion models, and preference modeling. These publications reflect a consistent and impactful research output.",
+              "Research Alignment": "5/5 - The candidate's research interests in reinforcement learning, generative models, and language models align closely with current cutting-edge trends in AI, particularly in areas like LLMs and offline RLHF, which are highly relevant to both academia and industry.",
+              "Technical Skills": "5/5 - The candidate has demonstrated strong technical skills through work on complex topics such as diffusion models, preference modeling, and RLHF algorithms, as evidenced by their publications and the depth of their research contributions.",
+              "Recognition & Impact": "5/5 - Hanyang has received recognition through accepted papers at prestigious conferences and the Best Theme Paper Award at NAACL 2025, indicating that their work is well-regarded and has significant impact within the research community.",
+              "Communication & Collaboration": "4/5 - While direct evidence of communication and collaboration is limited, the candidate has published collaborative work in top venues, suggesting effective teamwork and the ability to communicate research findings clearly in academic settings.",
+              "Initiative & Independence": "5/5 - The candidate has independently contributed to multiple high-impact research projects, including several papers accepted at top conferences, demonstrating initiative, intellectual independence, and a strong drive to advance the field."
+            }
+          },
+          {
+            "title": "Junjie Wen",
+            "content": "Research focus: Computer Vision. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 32,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Junjie_Wen1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+              "DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control",
+              "A Survey on Robotics with Foundation Models: toward Embodied AI"
+            ],
+            "top_tier_hits": [
+              "IEEE Robotics and Automation Letters 2024",
+              "arXiv.org 2025",
+              "arXiv.org 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "TinyVLA: Toward Fast, Data-Efficient Vision-Language-Action Models for Robotic Manipulation",
+                "venue": "IEEE Robotics and Automation Letters",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/dc62bc6536e9e3ad80242f10f44c046e4c7bd3d1"
+              },
+              {
+                "title": "DexVLA: Vision-Language Model with Plug-In Diffusion Expert for General Robot Control",
+                "venue": "arXiv.org",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/442b8903a2e8808ec9956c0b17dc9d974d8156c4"
+              },
+              {
+                "title": "A Survey on Robotics with Foundation Models: toward Embodied AI",
+                "venue": "arXiv.org",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/a3570e82001666955d319647ba832df4f60a2044"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Computer Vision",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@mae.cuhk.edu.hk",
+            "current_role_affiliation": "PhD student at The Chinese University of Hong Kong",
+            "current_status": "",
+            "research_keywords": [
+              "Computer Vision"
+            ],
+            "research_focus": [
+              "Computer Vision"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Junjie Wen is a PhD student at The Chinese University of Hong Kong, a reputable institution known for its strong research programs in computer vision and artificial intelligence. This indicates a solid academic foundation and commitment to advanced research.",
+              "Research Output": "5/5 - Junjie Wen has published high-impact papers in top venues such as IEEE Robotics and Automation Letters and arXiv.org, with significant citations. These publications demonstrate consistent and impactful research output in the field of computer vision and robotics.",
+              "Research Alignment": "5/5 - The candidate's work on vision-language-action models and robotic control aligns closely with current trends in computer vision and embodied AI, showing a clear focus on interdisciplinary and applied research.",
+              "Technical Skills": "5/5 - The development of models like TinyVLA and DexVLA demonstrates strong technical expertise in deep learning, vision-language models, and robotics, indicating advanced technical skills.",
+              "Recognition & Impact": "4/5 - The candidate's work has received notable citations, including 144 for TinyVLA, suggesting growing recognition within the research community. However, as a student, their broader impact may still be developing.",
+              "Communication & Collaboration": "3/5 - While the candidate has published well, there is limited information provided about their communication skills or collaborative efforts, which are important for academic and industry settings.",
+              "Initiative & Independence": "5/5 - The candidate has led the development of multiple innovative projects such as TinyVLA and DexVLA, demonstrating initiative and the ability to work independently on cutting-edge research problems."
+            }
+          }
+        ],
+        "Human-Level Reasoning and Problem-Solving in Large Language Models": [
+          {
+            "title": "Qianyue Hao",
+            "content": "Research focus: computational social science, reinforcement learning, large language model. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Qianyue_Hao1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+              "GAT-MF: Graph Attention Mean Field for Very Large Scale Multi-Agent Reinforcement Learning",
+              "HLM-Cite: Hybrid Language Model Workflow for Text-based Scientific Citation Prediction"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2025",
+              "Knowledge Discovery and Data Mining 2023",
+              "Neural Information Processing Systems 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+                "venue": "arXiv.org",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/225721f407a7a8cdefd4ba6bc61c43acba5a3b6a"
+              },
+              {
+                "title": "GAT-MF: Graph Attention Mean Field for Very Large Scale Multi-Agent Reinforcement Learning",
+                "venue": "Knowledge Discovery and Data Mining",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/07c54544e6c5175caaaff89282e80a3e00f29312"
+              },
+              {
+                "title": "HLM-Cite: Hybrid Language Model Workflow for Text-based Scientific Citation Prediction",
+                "venue": "Neural Information Processing Systems",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/d2cfe8a382e8eedfe257061bcc615cfd40ad8890"
+              }
+            ],
+            "highlights": [
+              "Research expertise in computational social science, reinforcement learning, large language model",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@hotmail.com",
+            "current_role_affiliation": "PhD student at Tsinghua University",
+            "current_status": "",
+            "research_keywords": [
+              "large language model",
+              "reinforcement learning",
+              "computational social science"
+            ],
+            "research_focus": [
+              "large language model",
+              "reinforcement learning",
+              "computational social science"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Qianyue Hao is a PhD student at Tsinghua University, one of the top institutions in China, which indicates a strong academic foundation and commitment to research.",
+              "Research Output": "4/5 - The candidate has published several high-quality papers in reputable venues such as arXiv.org, KDD, and NeurIPS, with notable citation counts, demonstrating productive and impactful research output.",
+              "Research Alignment": "5/5 - The candidate's research interests in large language models, reinforcement learning, and computational social science align well with cutting-edge areas in AI and machine learning.",
+              "Technical Skills": "5/5 - The candidate's work on advanced topics like reinforced reasoning, graph attention mechanisms, and hybrid language models suggests strong technical proficiency and expertise.",
+              "Recognition & Impact": "4/5 - The paper 'Towards Large Reasoning Models' has received 146 citations, indicating significant recognition and influence within the research community.",
+              "Communication & Collaboration": "3/5 - While the candidate has published strong technical work, there is limited evidence provided about their communication skills or collaborative efforts in research settings.",
+              "Initiative & Independence": "5/5 - The candidate has authored multiple original research papers on diverse and challenging topics, suggesting a high level of initiative and independent research capability."
+            }
+          },
+          {
+            "title": "Jie Huang",
+            "content": "Research focus: Long-Tail, Medical Image, Multi-Label, Computer Vision. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Jie_Huang8"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Large Language Models Cannot Self-Correct Reasoning Yet",
+              "Multi-step Jailbreaking Privacy Attacks on ChatGPT",
+              "Long-form factuality in large language models"
+            ],
+            "top_tier_hits": [
+              "International Conference on Learning Representations 2023",
+              "Conference on Empirical Methods in Natural Language Processing 2023",
+              "Neural Information Processing Systems 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+                "venue": "International Conference on Learning Representations",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/6d4bacb69923e1e94fb4de468b939ce6db32fb51"
+              },
+              {
+                "title": "Multi-step Jailbreaking Privacy Attacks on ChatGPT",
+                "venue": "Conference on Empirical Methods in Natural Language Processing",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/025ca4c125d6ecabc816a56f160e5c992abc76d9"
+              },
+              {
+                "title": "Long-form factuality in large language models",
+                "venue": "Neural Information Processing Systems",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/58e194695187fe4daeb04ea694e0f59af2441177"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Long-Tail, Medical Image, Multi-Label",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@gmail.com",
+            "current_role_affiliation": "MS student at Wenzhou University",
+            "current_status": "",
+            "research_keywords": [
+              "Multi-Label",
+              "Long-Tail",
+              "Medical Image",
+              "Computer Vision"
+            ],
+            "research_focus": [
+              "Multi-Label",
+              "Long-Tail",
+              "Medical Image",
+              "Computer Vision"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Jie Huang is an MS student at Wenzhou University, indicating a solid academic foundation. While the specific details of their undergraduate background are not provided, their research output suggests strong academic engagement.",
+              "Research Output": "5/5 - Jie Huang has published high-quality research in top-tier conferences such as ICML, EMNLP, and NeurIPS, with significant citations. These publications demonstrate a consistent and impactful research output.",
+              "Research Alignment": "5/5 - Jie Huang's research interests in multi-label learning, long-tail problems, medical image analysis, and computer vision align well with current trends and challenges in AI, showing a clear focus and relevance.",
+              "Technical Skills": "5/5 - The nature of Jie Huang's work on large language models, jailbreaking attacks, and factuality suggests strong technical expertise in machine learning, natural language processing, and computer vision.",
+              "Recognition & Impact": "4/5 - Jie Huang's papers have received substantial citations, indicating recognition within the research community. Their work on privacy attacks and model factuality highlights practical and theoretical impact.",
+              "Communication & Collaboration": "3/5 - There is limited information available about Jie Huang's collaborative efforts or communication skills. However, the quality of their publications suggests they can effectively communicate their research findings.",
+              "Initiative & Independence": "5/5 - Jie Huang has pursued independent research topics such as self-correction in LLMs and jailbreaking attacks, demonstrating initiative and the ability to identify and address important research questions."
+            }
+          },
+          {
+            "title": "Constantin Venhoff",
+            "content": "Research focus: AI Safety, Mechanistic Interpretability, Natural Language Processing, Vision Language Models. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Constantin_Venhoff1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 3,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Understanding Reasoning in Thinking Language Models via Steering Vectors",
+              "Leveraging Natural Language Processing for a Consistency Checking Toolchain of Automotive Requirements",
+              "Reasoning-Finetuning Repurposes Latent Representations in Base Models"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2025",
+              "IEEE International Requirements Engineering Conference 2023",
+              "arXiv.org 2025"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Understanding Reasoning in Thinking Language Models via Steering Vectors",
+                "venue": "arXiv.org",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/07ed0dc37f6d3d38bd4ee2c738736987fc82b5f8"
+              },
+              {
+                "title": "Leveraging Natural Language Processing for a Consistency Checking Toolchain of Automotive Requirements",
+                "venue": "IEEE International Requirements Engineering Conference",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/0ede2854648bf3bde6b316792b78f16333278aa2"
+              },
+              {
+                "title": "Reasoning-Finetuning Repurposes Latent Representations in Base Models",
+                "venue": "arXiv.org",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/97a46b62b2dc80c35e250ab22055bc66fdce158c"
+              }
+            ],
+            "highlights": [
+              "Research expertise in AI Safety, Mechanistic Interpretability, Natural Language Processing",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@robots.ox.ac.uk",
+            "current_role_affiliation": "PhD student at University of Oxford",
+            "current_status": "",
+            "research_keywords": [
+              "Mechanistic Interpretability",
+              "Vision Language Models",
+              "AI Safety",
+              "Natural Language Processing"
+            ],
+            "research_focus": [
+              "Mechanistic Interpretability",
+              "Vision Language Models",
+              "AI Safety",
+              "Natural Language Processing"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Constantin Venhoff is a PhD student at the University of Oxford, indicating a strong academic foundation and commitment to advanced research in AI-related fields.",
+              "Research Output": "4/5 - He has published several papers in reputable venues such as arXiv.org and the IEEE International Requirements Engineering Conference, showing consistent research output and engagement with relevant topics.",
+              "Research Alignment": "5/5 - His research interests and publications align closely with cutting-edge areas like mechanistic interpretability, vision-language models, and AI safety, demonstrating strong alignment with current AI research priorities.",
+              "Technical Skills": "5/5 - His work on steering vectors, consistency checking tools, and model finetuning indicates advanced technical skills in NLP, ML, and AI systems.",
+              "Recognition & Impact": "3/5 - While his work has been cited several times, the impact is still emerging, and he has not yet received major awards or widespread recognition beyond academic citations.",
+              "Communication & Collaboration": "4/5 - His participation in conferences and publication record suggests effective communication of research, though there is limited information on collaborative efforts or public engagement.",
+              "Initiative & Independence": "5/5 - His diverse research projects and focus on novel areas like reasoning finetuning and steering vectors demonstrate initiative and independent research thinking."
+            }
+          }
+        ]
+      }
+    },
+    "created_at": 1760842490.670632
+  }
+}

@@ -1,0 +1,28 @@
+use_default_settings: true
+
+server:
+  limiter: false
+  secret_key: "azure-searxng-hr-system-key-2025"
+  bind_address: "0.0.0.0"
+  port: 8080
+  image_proxy: false
+  # 禁用所有安全特性用于本地开发
+  public_instance: false
+
+# Valkey configuration for caching (使用 valkey 而非 redis)
+valkey:
+  url: redis://valkey:6379/0
+
+search:
+  formats:
+    - html
+    - json
+  safe_search: 0
+  autocomplete: ""
+
+outgoing:
+  request_timeout: 10.0
+  max_request_timeout: 20.0
+  # 增加最大并发连接数
+  pool_connections: 100
+  pool_maxsize: 100

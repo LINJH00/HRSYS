@@ -1,0 +1,1695 @@
+{
+  "task_id": "task_20251021_122551_718c67df",
+  "spec": {
+    "top_n": 6,
+    "years": [
+      2025,
+      2024,
+      2023
+    ],
+    "venues": [
+      "ICLR",
+      "ICML",
+      "NeurIPS",
+      "ACL",
+      "EMNLP",
+      "NAACL"
+    ],
+    "keywords": [
+      "text-generation",
+      "diffusion model"
+    ],
+    "research_field": "Natural Language Processing",
+    "must_be_current_student": true,
+    "degree_levels": [
+      "PhD"
+    ],
+    "author_priority": [
+      "first",
+      "last"
+    ],
+    "extra_constraints": []
+  },
+  "pos": 4,
+  "terms": [
+    "text generation, diffusion model ICLR 2025",
+    "text generation, diffusion model ICML 2025",
+    "text generation, diffusion model NeurIPS 2025",
+    "text generation, diffusion model ACL 2025",
+    "text generation, diffusion model EMNLP 2025",
+    "text generation, diffusion model NAACL 2025",
+    "text generation, diffusion model ICLR 2024",
+    "text generation, diffusion model ICML 2024",
+    "text generation, diffusion model NeurIPS 2024",
+    "text generation, diffusion model ACL 2024",
+    "text generation, diffusion model EMNLP 2024",
+    "text generation, diffusion model NAACL 2024",
+    "text generation, diffusion model ICLR 2023",
+    "text generation, diffusion model ICML 2023",
+    "text generation, diffusion model NeurIPS 2023",
+    "text generation, diffusion model ACL 2023",
+    "text generation, diffusion model EMNLP 2023",
+    "text generation, diffusion model NAACL 2023"
+  ],
+  "rounds_completed": 2,
+  "candidates_accum": {},
+  "all_serp": [
+    {
+      "url": "https://arxiv.org/abs/2410.21357",
+      "title": "Energy-Based Diffusion Language Models for Text Generation",
+      "authors": [
+        {
+          "name": "Minkai Xu"
+        },
+        {
+          "name": "Tomas Geffner"
+        },
+        {
+          "name": "Karsten Kreis"
+        },
+        {
+          "name": "Weili Nie"
+        },
+        {
+          "name": "Yilun Xu"
+        },
+        {
+          "name": "Jure Leskovec"
+        },
+        {
+          "name": "Stefano Ermon"
+        },
+        {
+          "name": "Arash Vahdat"
+        }
+      ],
+      "snippet": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap increasing when reducing the number of sampling steps. Our analysis reveals that this degradation is a consequen",
+      "abstract": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap increasing when reducing the number of sampling steps. Our analysis reveals that this degradation is a consequence of an imperfect approximation used by diffusion models. In this work, we propose Energy-based Diffusion Language Model (EDLM), an energy-based model operating at the full sequence level for each diffusion step, introduced to improve the underlying approximation used by diffusion models...",
+      "introduction": "Discrete diffusion models, especially those designed for generative tasks, have gained notable attention for their prowess in parallel text generation. However, despite their efficiency, they lag behind conventional autoregressive models in terms of quality metrics such as perplexity. This work analyzes the cause of such performance degradation and proposes a solution based on energy-based modeling at the full sequence level...",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Energy-Based Diffusion Language Models for Text Generation",
+        "authors": [
+          "Minkai Xu",
+          "Tomas Geffner",
+          "Karsten Kreis",
+          "Weili Nie",
+          "Yilun Xu",
+          "Jure Leskovec",
+          "Stefano Ermon",
+          "Arash Vahdat"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2410.21357",
+        "abstract": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap increasing when reducing the number of sampling steps. Our analysis reveals that this degradation is a consequence of an imperfect approximation used by diffusion models. In this work, we propose Energy-based Diffusion Language Model (EDLM), an energy-based model operating at the full sequence level for each diffusion step, introduced to improve the underlying approximation used by diffusion models...",
+        "introduction": "Discrete diffusion models, especially those designed for generative tasks, have gained notable attention for their prowess in parallel text generation. However, despite their efficiency, they lag behind conventional autoregressive models in terms of quality metrics such as perplexity. This work analyzes the cause of such performance degradation and proposes a solution based on energy-based modeling at the full sequence level..."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://arxiv.org/abs/2410.21357",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        1
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.09573",
+      "title": "Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models",
+      "authors": [
+        {
+          "name": "Marianne Arriola"
+        },
+        {
+          "name": "Aaron Gokaslan"
+        },
+        {
+          "name": "Justin T. Chiu"
+        },
+        {
+          "name": "Zhihan Yang"
+        },
+        {
+          "name": "Zhixuan Qi"
+        },
+        {
+          "name": "Jiaqi Han"
+        },
+        {
+          "name": "Subham Sekhar Sahoo"
+        },
+        {
+          "name": "Volodymyr Kuleshov"
+        }
+      ],
+      "snippet": "Diffusion language models offer unique benefits over autoregressive models due to their potential for parallelized generation and controllability, yet they lag in likelihood modeling and are limited to fixed-length generation. In this work, we introduce a class of block diffusion language models that interpolate between discrete denoising diffusion and autoregressive models...",
+      "abstract": "Diffusion language models offer unique benefits over autoregressive models due to their potential for parallelized generation and controllability, yet they lag in likelihood modeling and are limited to fixed-length generation. In this work, we introduce a class of block diffusion language models that interpolate between discrete denoising diffusion and autoregressive models...",
+      "introduction": "Diffusion-based generative models have notable advantages, particularly with their ability for parallel sampling and controllable output. Yet, they are constrained by inference inefficiencies and fixed-length predictions. Our approach combines the strengths of both paradigms through flexible block-wise generation and variance-minimizing training approaches.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models",
+        "authors": [
+          "Marianne Arriola",
+          "Aaron Gokaslan",
+          "Justin T. Chiu",
+          "Zhihan Yang",
+          "Zhixuan Qi",
+          "Jiaqi Han",
+          "Subham Sekhar Sahoo",
+          "Volodymyr Kuleshov"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2503.09573",
+        "abstract": "Diffusion language models offer unique benefits over autoregressive models due to their potential for parallelized generation and controllability, yet they lag in likelihood modeling and are limited to fixed-length generation. In this work, we introduce a class of block diffusion language models that interpolate between discrete denoising diffusion and autoregressive models...",
+        "introduction": "Diffusion-based generative models have notable advantages, particularly with their ability for parallel sampling and controllable output. Yet, they are constrained by inference inefficiencies and fixed-length predictions. Our approach combines the strengths of both paradigms through flexible block-wise generation and variance-minimizing training approaches."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://arxiv.org/abs/2503.09573",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        2
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.03595",
+      "title": "Towards Understanding Text Hallucination of Diffusion Models via Local Generation Bias",
+      "authors": [
+        {
+          "name": "Rui Lu"
+        },
+        {
+          "name": "Runzhe Wang"
+        },
+        {
+          "name": "Kaifeng Lyu"
+        },
+        {
+          "name": "Xitai Jiang"
+        },
+        {
+          "name": "Gao Huang"
+        },
+        {
+          "name": "Mengdi Wang"
+        }
+      ],
+      "snippet": "Score-based diffusion models have achieved incredible performance in generating realistic images, audio, and video data. While these models produce high-quality samples with impressive details, they often introduce unrealistic artifacts, such as distorted fingers or hallucinated texts with no meaning. This paper focuses on textual hallucinations...",
+      "abstract": "Score-based diffusion models have achieved incredible performance in generating realistic images, audio, and video data. While these models produce high-quality samples with impressive details, they often introduce unrealistic artifacts, such as distorted fingers or hallucinated texts with no meaning. This paper focuses on textual hallucinations...",
+      "introduction": "Diffusion models bely remarkable capacity in multimodal generation but are plagued by certain weaknesses in textual domains. Specifically, local generation bias in denoising networks produces high-fidelity symbols but often leads to failure in assembling them meaningfully in longer textual sequences. This work investigates the underlying mechanism of such failures...",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Towards Understanding Text Hallucination of Diffusion Models via Local Generation Bias",
+        "authors": [
+          "Rui Lu",
+          "Runzhe Wang",
+          "Kaifeng Lyu",
+          "Xitai Jiang",
+          "Gao Huang",
+          "Mengdi Wang"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2503.03595",
+        "abstract": "Score-based diffusion models have achieved incredible performance in generating realistic images, audio, and video data. While these models produce high-quality samples with impressive details, they often introduce unrealistic artifacts, such as distorted fingers or hallucinated texts with no meaning. This paper focuses on textual hallucinations...",
+        "introduction": "Diffusion models bely remarkable capacity in multimodal generation but are plagued by certain weaknesses in textual domains. Specifically, local generation bias in denoising networks produces high-fidelity symbols but often leads to failure in assembling them meaningfully in longer textual sequences. This work investigates the underlying mechanism of such failures..."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://arxiv.org/abs/2503.03595",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        3
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.23606",
+      "title": "Muddit: Liberating Generation Beyond Text-to-Image with a Unified Discrete Diffusion Model",
+      "authors": [
+        {
+          "name": "Qingyu Shi"
+        },
+        {
+          "name": "Jinbin Bai"
+        },
+        {
+          "name": "Zhuoran Zhao"
+        },
+        {
+          "name": "Wenhao Chai"
+        },
+        {
+          "name": "Kaidong Yu"
+        },
+        {
+          "name": "Jianzong Wu"
+        },
+        {
+          "name": "Shuangyong Song"
+        },
+        {
+          "name": "Yunhai Tong"
+        },
+        {
+          "name": "Xiangtai Li"
+        },
+        {
+          "name": "Xuelong Li"
+        },
+        {
+          "name": "Shuicheng Yan"
+        }
+      ],
+      "snippet": "Unified generation models aim to handle diverse tasks across modalities--such as text generation, image generation, and vision-language reasoning--within a single architecture and decoding paradigm. Autoregressive unified models suffer from slow inference due to sequential decoding...",
+      "abstract": "Unified generation models aim to handle diverse tasks across modalities--such as text generation, image generation, and vision-language reasoning--within a single architecture and decoding paradigm. Autoregressive unified models suffer from slow inference due to sequential decoding...",
+      "introduction": "The success of unified models to support multi-modal tasks hinges on balancing inference speed and generalization capability across modalities. Muddit introduces a discrete diffusion approach, leveraging pretrained visual encoders while providing a lightweight text decoder for unified generation tasks.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Muddit: Liberating Generation Beyond Text-to-Image with a Unified Discrete Diffusion Model",
+        "authors": [
+          "Qingyu Shi",
+          "Jinbin Bai",
+          "Zhuoran Zhao",
+          "Wenhao Chai",
+          "Kaidong Yu",
+          "Jianzong Wu",
+          "Shuangyong Song",
+          "Yunhai Tong",
+          "Xiangtai Li",
+          "Xuelong Li",
+          "Shuicheng Yan"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2505.23606",
+        "abstract": "Unified generation models aim to handle diverse tasks across modalities--such as text generation, image generation, and vision-language reasoning--within a single architecture and decoding paradigm. Autoregressive unified models suffer from slow inference due to sequential decoding...",
+        "introduction": "The success of unified models to support multi-modal tasks hinges on balancing inference speed and generalization capability across modalities. Muddit introduces a discrete diffusion approach, leveraging pretrained visual encoders while providing a lightweight text decoder for unified generation tasks."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://arxiv.org/abs/2505.23606",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        4
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.00522",
+      "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+      "authors": [
+        {
+          "name": "Kishalay Das"
+        },
+        {
+          "name": "Subhojyoti Khastagir"
+        },
+        {
+          "name": "Pawan Goyal"
+        },
+        {
+          "name": "Seung-Cheol Lee"
+        },
+        {
+          "name": "Satadeep Bhattacharjee"
+        },
+        {
+          "name": "Niloy Ganguly"
+        }
+      ],
+      "snippet": "Equivariant diffusion models have emerged as the prevailing approach for generating novel crystal materials due to their ability to leverage the physical symmetries of periodic material structures. However, current models do not effectively learn the joint distribution of atom types, fractional coordinates...",
+      "abstract": "Equivariant diffusion models have emerged as the prevailing approach for generating novel crystal materials due to their ability to leverage the physical symmetries of periodic material structures. However, current models do not effectively learn the joint distribution of atom types, fractional coordinates...",
+      "introduction": "Recent advances in equivariant generation models for periodic materials have demonstrated strong performance, but text-guided control remains challenging. Our approach integrates descriptive text knowledge at each step to constrain generation, with empirical results showing significantly improved results.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Periodic Materials Generation using Text-Guided Joint Diffusion Model",
+        "authors": [
+          "Kishalay Das",
+          "Subhojyoti Khastagir",
+          "Pawan Goyal",
+          "Seung-Cheol Lee",
+          "Satadeep Bhattacharjee",
+          "Niloy Ganguly"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2503.00522",
+        "abstract": "Equivariant diffusion models have emerged as the prevailing approach for generating novel crystal materials due to their ability to leverage the physical symmetries of periodic material structures. However, current models do not effectively learn the joint distribution of atom types, fractional coordinates...",
+        "introduction": "Recent advances in equivariant generation models for periodic materials have demonstrated strong performance, but text-guided control remains challenging. Our approach integrates descriptive text knowledge at each step to constrain generation, with empirical results showing significantly improved results."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://arxiv.org/abs/2503.00522",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        5
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2210.08933",
+      "title": "DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models",
+      "authors": [
+        {
+          "name": "Shansan Gong"
+        },
+        {
+          "name": "Mukai Li"
+        },
+        {
+          "name": "Jiangtao Feng"
+        },
+        {
+          "name": "Zhiyong Wu"
+        },
+        {
+          "name": "Lingpeng Kong"
+        }
+      ],
+      "snippet": "Recently, diffusion models have emerged as a new paradigm for generative models. Despite the success in domains using continuous signals such as vision and audio, adapting diffusion models to natural language is under-explored due to the discrete nature of texts, especially for conditional generation...",
+      "abstract": "Recently, diffusion models have emerged as a new paradigm for generative models. Despite the success in domains using continuous signals such as vision and audio, adapting diffusion models to natural language is under-explored due to the discrete nature of texts, especially for conditional generation...",
+      "introduction": "Diffusion models hold promise for text generation tasks traditionally dominated by autoregressive paradigms. We propose DiffuSeq, a discrete diffusion model tailored for sequence-to-sequence tasks, demonstrating high quality and diversity in generated texts when compared to strong baselines.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models",
+        "authors": [
+          "Shansan Gong",
+          "Mukai Li",
+          "Jiangtao Feng",
+          "Zhiyong Wu",
+          "Lingpeng Kong"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2210.08933",
+        "abstract": "Recently, diffusion models have emerged as a new paradigm for generative models. Despite the success in domains using continuous signals such as vision and audio, adapting diffusion models to natural language is under-explored due to the discrete nature of texts, especially for conditional generation...",
+        "introduction": "Diffusion models hold promise for text generation tasks traditionally dominated by autoregressive paradigms. We propose DiffuSeq, a discrete diffusion model tailored for sequence-to-sequence tasks, demonstrating high quality and diversity in generated texts when compared to strong baselines."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://arxiv.org/abs/2210.08933",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        6
+      ]
+    },
+    {
+      "url": "https://github.com/chenguolin/DiffSplat",
+      "title": "DiffSplat: Repurposing Image Diffusion Models for Scalable Gaussian Splat Generation",
+      "authors": [
+        {
+          "name": "Guolin Cheng"
+        },
+        {
+          "name": "... (refer to arxiv for full list)"
+        }
+      ],
+      "snippet": "DiffSplat is a generative framework to synthesize 3D Gaussian Splats from text prompts & single-view images in 1~2 seconds. It is fine-tuned directly from a pretrained text-to-image diffusion model.",
+      "abstract": "DiffSplat is a generative framework to synthesize 3D Gaussian Splats from text prompts & single-view images in 1~2 seconds. It is fine-tuned directly from a pretrained text-to-image diffusion model.",
+      "introduction": "Rapid advances in text-to-image diffusion models have enabled scalable sample generation across modalities. We build on this by re-purposing these models for efficient generation of 3D shapes from textual prompts, demonstrating the utility of cross-modal transfer.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "DiffSplat: Repurposing Image Diffusion Models for Scalable Gaussian Splat Generation",
+        "authors": [
+          "Guolin Cheng",
+          "... (refer to arxiv for full list)"
+        ],
+        "arxiv_link": "https://github.com/chenguolin/DiffSplat",
+        "abstract": "DiffSplat is a generative framework to synthesize 3D Gaussian Splats from text prompts & single-view images in 1~2 seconds. It is fine-tuned directly from a pretrained text-to-image diffusion model.",
+        "introduction": "Rapid advances in text-to-image diffusion models have enabled scalable sample generation across modalities. We build on this by re-purposing these models for efficient generation of 3D shapes from textual prompts, demonstrating the utility of cross-modal transfer."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://github.com/chenguolin/DiffSplat",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        7
+      ]
+    },
+    {
+      "url": "https://iclr.cc/virtual/2025/33081",
+      "title": "Text-to-Model: Text-Conditioned Neural Network Diffusion for Train-Once-for-All Personalization",
+      "authors": [
+        {
+          "name": "Zexi Li"
+        },
+        {
+          "name": "Lingzhi Gao"
+        },
+        {
+          "name": "Chao Wu"
+        }
+      ],
+      "snippet": "This research introduces a text-conditioned neural network diffusion approach for personalized model training, enabling efficient customization through a single training process.",
+      "abstract": "This research introduces a text-conditioned neural network diffusion approach for personalized model training, enabling efficient customization through a single training process.",
+      "introduction": "Personalizing neural network models from user input is a resource-intensive process. This work introduces a train-once diffusion approach, enabling personalization guided by textual descriptions in a scalable fashion.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Text-to-Model: Text-Conditioned Neural Network Diffusion for Train-Once-for-All Personalization",
+        "authors": [
+          "Zexi Li",
+          "Lingzhi Gao",
+          "Chao Wu"
+        ],
+        "arxiv_link": "https://iclr.cc/virtual/2025/33081",
+        "abstract": "This research introduces a text-conditioned neural network diffusion approach for personalized model training, enabling efficient customization through a single training process.",
+        "introduction": "Personalizing neural network models from user input is a resource-intensive process. This work introduces a train-once diffusion approach, enabling personalization guided by textual descriptions in a scalable fashion."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://iclr.cc/virtual/2025/33081",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        8
+      ]
+    },
+    {
+      "url": "https://github.com/xie-lab-ml/awesome-alignment-of-diffusion-models",
+      "title": "Efficient Diversity-Preserving Diffusion Alignment via Gradient-Informed GFlowNets",
+      "authors": [
+        {
+          "name": "Anonymous (ICLR 2025 submission)"
+        }
+      ],
+      "snippet": "Proposes gradient-informed GFlowNets for efficient diversity-preserving alignment of diffusion models, achieving strong results for text generation as evaluated on ICLR 2025 benchmarks.",
+      "abstract": "Proposes gradient-informed GFlowNets for efficient diversity-preserving alignment of diffusion models, achieving strong results for text generation as evaluated on ICLR 2025 benchmarks.",
+      "introduction": "Building diverse but coherent alignment in diffusion models is critical, especially for high-fidelity text generation. Our approach leverages gradient flows for principled preservation of diversity.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Efficient Diversity-Preserving Diffusion Alignment via Gradient-Informed GFlowNets",
+        "authors": [
+          "Anonymous (ICLR 2025 submission)"
+        ],
+        "arxiv_link": "https://github.com/xie-lab-ml/awesome-alignment-of-diffusion-models",
+        "abstract": "Proposes gradient-informed GFlowNets for efficient diversity-preserving alignment of diffusion models, achieving strong results for text generation as evaluated on ICLR 2025 benchmarks.",
+        "introduction": "Building diverse but coherent alignment in diffusion models is critical, especially for high-fidelity text generation. Our approach leverages gradient flows for principled preservation of diversity."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://github.com/xie-lab-ml/awesome-alignment-of-diffusion-models",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        9
+      ]
+    },
+    {
+      "url": "https://github.com/MS-Diffusion/MS-Diffusion",
+      "title": "MS-Diffusion: Cross-Attention Mechanisms for Multi-Subject Text-to-Image Generation",
+      "authors": [
+        {
+          "name": "MS-Diffusion team"
+        }
+      ],
+      "snippet": "MS-Diffusion introduces cross-attention mechanisms and grounding resamplers to enhance multi-subject text-to-image generation, achieving new state-of-the-art results for fidelity and diversity.",
+      "abstract": "MS-Diffusion introduces cross-attention mechanisms and grounding resamplers to enhance multi-subject text-to-image generation, achieving new state-of-the-art results for fidelity and diversity.",
+      "introduction": "High-quality multi-subject generation in text-to-image models is a pressing challenge. We propose novel architectural components within diffusion frameworks to enable robust and diverse multi-subject outputs.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "MS-Diffusion: Cross-Attention Mechanisms for Multi-Subject Text-to-Image Generation",
+        "authors": [
+          "MS-Diffusion team"
+        ],
+        "arxiv_link": "https://github.com/MS-Diffusion/MS-Diffusion",
+        "abstract": "MS-Diffusion introduces cross-attention mechanisms and grounding resamplers to enhance multi-subject text-to-image generation, achieving new state-of-the-art results for fidelity and diversity.",
+        "introduction": "High-quality multi-subject generation in text-to-image models is a pressing challenge. We propose novel architectural components within diffusion frameworks to enable robust and diverse multi-subject outputs."
+      },
+      "term": "text generation, diffusion model ICLR 2025",
+      "parsed_url": "https://github.com/MS-Diffusion/MS-Diffusion",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        10
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.13740",
+      "title": "Improving Compositional Generation with Diffusion Models Using Lift Scores",
+      "authors": [
+        {
+          "name": "Chenning Yu"
+        },
+        {
+          "name": "Sicun Gao"
+        }
+      ],
+      "snippet": "We introduce a novel resampling criterion using lift scores, for improving compositional generation in diffusion models. By leveraging the lift scores, we evaluate whether generated samples align with each single condition and then compose the results to determine whether the composed prompt is satisfied. Our key insight is that lift scores can be efficiently approximated using only the original diffusion model, requiring no additional training or external modules. We develop an optimized varian",
+      "abstract": "We introduce a novel resampling criterion using lift scores, for improving compositional generation in diffusion models. By leveraging the lift scores, we evaluate whether generated samples align with each single condition and then compose the results to determine whether the composed prompt is satisfied. Our key insight is that lift scores can be efficiently approximated using only the original diffusion model, requiring no additional training or external modules. We develop an optimized variant that achieves relatively lower computational overhead during inference while maintaining effectiveness. Through extensive experiments, we demonstrate that lift scores significantly improved the condition alignment for compositional generation across 2D synthetic data, CLEVR position tasks, and text-to-image synthesis.",
+      "introduction": "Diffusion models have emerged as powerful generative tools in various applications, yet compositional generation remains challenging, often suffering from inadequate alignment to specific conditions within prompts. This paper proposes leveraging lift scores to address this. Current approaches rely heavily on model retraining or external modules for compositional alignment, which increases computational cost and complexity. By exploring properties intrinsic to diffusion models, we develop a lift score-based resampling criterion that ensures compositional satisfaction in generated outputs, all while maintaining efficiency. Our experiments across diverse tasks highlight the effectiveness and practicality of our approach.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Improving Compositional Generation with Diffusion Models Using Lift Scores",
+        "authors": [
+          "Chenning Yu",
+          "Sicun Gao"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2505.13740",
+        "abstract": "We introduce a novel resampling criterion using lift scores, for improving compositional generation in diffusion models. By leveraging the lift scores, we evaluate whether generated samples align with each single condition and then compose the results to determine whether the composed prompt is satisfied. Our key insight is that lift scores can be efficiently approximated using only the original diffusion model, requiring no additional training or external modules. We develop an optimized variant that achieves relatively lower computational overhead during inference while maintaining effectiveness. Through extensive experiments, we demonstrate that lift scores significantly improved the condition alignment for compositional generation across 2D synthetic data, CLEVR position tasks, and text-to-image synthesis.",
+        "introduction": "Diffusion models have emerged as powerful generative tools in various applications, yet compositional generation remains challenging, often suffering from inadequate alignment to specific conditions within prompts. This paper proposes leveraging lift scores to address this. Current approaches rely heavily on model retraining or external modules for compositional alignment, which increases computational cost and complexity. By exploring properties intrinsic to diffusion models, we develop a lift score-based resampling criterion that ensures compositional satisfaction in generated outputs, all while maintaining efficiency. Our experiments across diverse tasks highlight the effectiveness and practicality of our approach."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://arxiv.org/abs/2505.13740",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        11
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.00837",
+      "title": "Efficient Diffusion Models: A Survey",
+      "authors": [
+        {
+          "name": "Hui Shen"
+        },
+        {
+          "name": "Jingxuan Zhang"
+        },
+        {
+          "name": "Boning Xiong"
+        },
+        {
+          "name": "Rui Hu"
+        },
+        {
+          "name": "Shoufa Chen"
+        },
+        {
+          "name": "Zhongwei Wan"
+        },
+        {
+          "name": "Xin Wang"
+        },
+        {
+          "name": "Yu Zhang"
+        },
+        {
+          "name": "Zixuan Gong"
+        },
+        {
+          "name": "Guangyin Bao"
+        },
+        {
+          "name": "Chaofan Tao"
+        },
+        {
+          "name": "Yongfeng Huang"
+        },
+        {
+          "name": "Ye Yuan"
+        },
+        {
+          "name": "Mi Zhang"
+        }
+      ],
+      "snippet": "Diffusion models have emerged as powerful generative models capable of producing high quality contents such as images, videos, audio, and text, demonstrating their potential to revolutionize digital content generation. However, these capabilities come at the cost of significant resource demands and lengthy generation time, underscoring the need to develop efficient techniques for practical deployment. This survey provides a systematic and comprehensive review of research on efficient diffusion m",
+      "abstract": "Diffusion models have emerged as powerful generative models capable of producing high quality contents such as images, videos, audio, and text, demonstrating their potential to revolutionize digital content generation. However, these capabilities come at the cost of significant resource demands and lengthy generation time, underscoring the need to develop efficient techniques for practical deployment. This survey provides a systematic and comprehensive review of research on efficient diffusion models and organizes the literature into three main categories: algorithm, system, and framework perspectives.",
+      "introduction": "Diffusion models have garnered substantial attention for their ability to synthesize diverse content across modalities. Yet, the practical deployment of such models, especially for tasks like text generation, faces hurdles in terms of computational requirements and latency. This survey categorizes recent advancements aiming to improve training efficiency, inference speed, and resource utilization in diffusion models. We comprehensively analyze algorithm-level optimizations, including sampling scheduling and latent diffusion, as well as system-level approaches such as distributed frameworks and hardware adaptation.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Efficient Diffusion Models: A Survey",
+        "authors": [
+          "Hui Shen",
+          "Jingxuan Zhang",
+          "Boning Xiong",
+          "Rui Hu",
+          "Shoufa Chen",
+          "Zhongwei Wan",
+          "Xin Wang",
+          "Yu Zhang",
+          "Zixuan Gong",
+          "Guangyin Bao",
+          "Chaofan Tao",
+          "Yongfeng Huang",
+          "Ye Yuan",
+          "Mi Zhang"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2402.00837",
+        "abstract": "Diffusion models have emerged as powerful generative models capable of producing high quality contents such as images, videos, audio, and text, demonstrating their potential to revolutionize digital content generation. However, these capabilities come at the cost of significant resource demands and lengthy generation time, underscoring the need to develop efficient techniques for practical deployment. This survey provides a systematic and comprehensive review of research on efficient diffusion models and organizes the literature into three main categories: algorithm, system, and framework perspectives.",
+        "introduction": "Diffusion models have garnered substantial attention for their ability to synthesize diverse content across modalities. Yet, the practical deployment of such models, especially for tasks like text generation, faces hurdles in terms of computational requirements and latency. This survey categorizes recent advancements aiming to improve training efficiency, inference speed, and resource utilization in diffusion models. We comprehensively analyze algorithm-level optimizations, including sampling scheduling and latent diffusion, as well as system-level approaches such as distributed frameworks and hardware adaptation."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://arxiv.org/abs/2402.00837",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        12
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2401.02237",
+      "title": "Energy-Based Diffusion Language Models for Text Generation",
+      "authors": [
+        {
+          "name": "Minkai Xu"
+        },
+        {
+          "name": "Tomas Geffner"
+        },
+        {
+          "name": "Karsten Kreis"
+        },
+        {
+          "name": "Weili Nie"
+        },
+        {
+          "name": "Yilun Xu"
+        },
+        {
+          "name": "Jure Leskovec"
+        },
+        {
+          "name": "Stefano Ermon"
+        },
+        {
+          "name": "Arash Vahdat"
+        }
+      ],
+      "snippet": "Discrete diffusion models permit parallel sequence generation but underperform autoregressive counterparts. We propose an Energy-based Diffusion Language Model (EDLM) operating at the full sequence level for each diffusion step, improving approximation. EDLM uses a residual energy-based model whose parameters leverage a pretrained autoregressive model or a bidirectional transformer via noise contrastive estimation. Our efficient parallel important sampling algorithm gives consistent improvements",
+      "abstract": "Discrete diffusion models permit parallel sequence generation but underperform autoregressive counterparts. We propose an Energy-based Diffusion Language Model (EDLM) operating at the full sequence level for each diffusion step, improving approximation. EDLM uses a residual energy-based model whose parameters leverage a pretrained autoregressive model or a bidirectional transformer via noise contrastive estimation. Our efficient parallel important sampling algorithm gives consistent improvements over state-of-the-art diffusion models in perplexity and sampling speed.",
+      "introduction": "Autoregressive language models have dominated text generation. Yet, alternatives built on discrete diffusion principles offer parallel decoding, which can be advantageous for efficiency. While promising, current discrete diffusion models lag in generation quality and speed, particularly with reduced sampling steps. This paper explores the underlying limitations and introduces energy-based formulations for improved approximation, aiming to close the gap with traditional models while delivering parallel decoding benefits.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Energy-Based Diffusion Language Models for Text Generation",
+        "authors": [
+          "Minkai Xu",
+          "Tomas Geffner",
+          "Karsten Kreis",
+          "Weili Nie",
+          "Yilun Xu",
+          "Jure Leskovec",
+          "Stefano Ermon",
+          "Arash Vahdat"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2401.02237",
+        "abstract": "Discrete diffusion models permit parallel sequence generation but underperform autoregressive counterparts. We propose an Energy-based Diffusion Language Model (EDLM) operating at the full sequence level for each diffusion step, improving approximation. EDLM uses a residual energy-based model whose parameters leverage a pretrained autoregressive model or a bidirectional transformer via noise contrastive estimation. Our efficient parallel important sampling algorithm gives consistent improvements over state-of-the-art diffusion models in perplexity and sampling speed.",
+        "introduction": "Autoregressive language models have dominated text generation. Yet, alternatives built on discrete diffusion principles offer parallel decoding, which can be advantageous for efficiency. While promising, current discrete diffusion models lag in generation quality and speed, particularly with reduced sampling steps. This paper explores the underlying limitations and introduces energy-based formulations for improved approximation, aiming to close the gap with traditional models while delivering parallel decoding benefits."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://arxiv.org/abs/2401.02237",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        13
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2510.09094",
+      "title": "Dense2MoE: Restructuring Diffusion Transformer to MoE for Efficient Text-to-Image Generation",
+      "authors": [
+        {
+          "name": "Youwei Zheng"
+        },
+        {
+          "name": "Yuxi Ren"
+        },
+        {
+          "name": "Xin Xia"
+        },
+        {
+          "name": "Xuefeng Xiao"
+        },
+        {
+          "name": "Xiaohua Xie"
+        }
+      ],
+      "snippet": "Diffusion Transformer (DiT) models show remarkable text-to-image generation quality but suffer from large inference overhead due to many parameters. We pioneer transforming a dense DiT into a Mixture of Experts (MoE) for structured sparsification, maintaining model capacity while reducing active parameters. Our approach applies MoE to Feed-Forward Networks and introduces Mixture of Blocks for further sparsity. Multi-step distillation ensures effective dense-to-MoE conversion. Dense2MoE establish",
+      "abstract": "Diffusion Transformer (DiT) models show remarkable text-to-image generation quality but suffer from large inference overhead due to many parameters. We pioneer transforming a dense DiT into a Mixture of Experts (MoE) for structured sparsification, maintaining model capacity while reducing active parameters. Our approach applies MoE to Feed-Forward Networks and introduces Mixture of Blocks for further sparsity. Multi-step distillation ensures effective dense-to-MoE conversion. Dense2MoE establishes a new paradigm for efficient text-to-image generation.",
+      "introduction": "Recent diffusion Transformer architectures excel in text-to-image tasks, but scale-up leads to prohibitive computational demands, often restricting real-world deployment. Most prior compression methods aggravate loss of capacity. Structural sparsification, especially using Mixture of Experts, can enable selective activation, preserving performance while minimizing computation. We propose Dense2MoE, detailing new distillation methods and extensive experiments confirming retained or enhanced performance compared with pruning-based compression.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Dense2MoE: Restructuring Diffusion Transformer to MoE for Efficient Text-to-Image Generation",
+        "authors": [
+          "Youwei Zheng",
+          "Yuxi Ren",
+          "Xin Xia",
+          "Xuefeng Xiao",
+          "Xiaohua Xie"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2510.09094",
+        "abstract": "Diffusion Transformer (DiT) models show remarkable text-to-image generation quality but suffer from large inference overhead due to many parameters. We pioneer transforming a dense DiT into a Mixture of Experts (MoE) for structured sparsification, maintaining model capacity while reducing active parameters. Our approach applies MoE to Feed-Forward Networks and introduces Mixture of Blocks for further sparsity. Multi-step distillation ensures effective dense-to-MoE conversion. Dense2MoE establishes a new paradigm for efficient text-to-image generation.",
+        "introduction": "Recent diffusion Transformer architectures excel in text-to-image tasks, but scale-up leads to prohibitive computational demands, often restricting real-world deployment. Most prior compression methods aggravate loss of capacity. Structural sparsification, especially using Mixture of Experts, can enable selective activation, preserving performance while minimizing computation. We propose Dense2MoE, detailing new distillation methods and extensive experiments confirming retained or enhanced performance compared with pruning-based compression."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://arxiv.org/abs/2510.09094",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        14
+      ]
+    },
+    {
+      "url": "https://aclanthology.org/2025.naacl-long.532.pdf",
+      "title": "Private Synthetic Text Generation with Diffusion Models",
+      "authors": [
+        {
+          "name": "(Author list not provided by the cited reference)"
+        }
+      ],
+      "snippet": "This paper presents techniques for private synthetic text generation using diffusion models, combining privacy guarantees with high-fidelity synthetic data creation. Extensive evaluation demonstrates the utility of our approach for various NLP tasks, harnessing the creative potential of diffusion models while enforcing rigorous privacy frameworks.",
+      "abstract": "This paper presents techniques for private synthetic text generation using diffusion models, combining privacy guarantees with high-fidelity synthetic data creation. Extensive evaluation demonstrates the utility of our approach for various NLP tasks, harnessing the creative potential of diffusion models while enforcing rigorous privacy frameworks.",
+      "introduction": "Synthetic data generation is an important tool for data augmentation and privacy in NLP. Traditional generative models suffer privacy leakages. Diffusion models, as new alternatives for text generation, promise high-quality outputs but lack native privacy mechanisms. Our work addresses this by integrating strict privacy safeguards into the diffusion modeling process, demonstrating the feasibility and effectiveness of private synthetic text generation on multiple NLP datasets.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Private Synthetic Text Generation with Diffusion Models",
+        "authors": [
+          "(Author list not provided by the cited reference)"
+        ],
+        "arxiv_link": "https://aclanthology.org/2025.naacl-long.532.pdf",
+        "abstract": "This paper presents techniques for private synthetic text generation using diffusion models, combining privacy guarantees with high-fidelity synthetic data creation. Extensive evaluation demonstrates the utility of our approach for various NLP tasks, harnessing the creative potential of diffusion models while enforcing rigorous privacy frameworks.",
+        "introduction": "Synthetic data generation is an important tool for data augmentation and privacy in NLP. Traditional generative models suffer privacy leakages. Diffusion models, as new alternatives for text generation, promise high-quality outputs but lack native privacy mechanisms. Our work addresses this by integrating strict privacy safeguards into the diffusion modeling process, demonstrating the feasibility and effectiveness of private synthetic text generation on multiple NLP datasets."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://aclanthology.org/2025.naacl-long.532.pdf",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        15
+      ]
+    },
+    {
+      "url": "https://link.springer.com/chapter/10.1007/978-981-96-9994-0_16",
+      "title": "A Continuous Diffusion Text Generation Model with a New Denoising Structure",
+      "authors": [
+        {
+          "name": "Sihui Li"
+        },
+        {
+          "name": "Guoyong Cai"
+        },
+        {
+          "name": "Yuan Jin"
+        },
+        {
+          "name": "Yunxian Shang"
+        }
+      ],
+      "snippet": "Diffusion models have achieved remarkable success in continuous data generation. In text, existing continuous diffusion-based models struggle with long-term dependencies and robustness. We propose MM-Diffusion, which incorporates parallel architectures and adaptive noise adjustment modules for improved modeling of long-sequence dependencies and text diversity. Experiments show effective improvements across benchmarks.",
+      "abstract": "Diffusion models have achieved remarkable success in continuous data generation. In text, existing continuous diffusion-based models struggle with long-term dependencies and robustness. We propose MM-Diffusion, which incorporates parallel architectures and adaptive noise adjustment modules for improved modeling of long-sequence dependencies and text diversity. Experiments show effective improvements across benchmarks.",
+      "introduction": "Sequence-to-sequence text generation is fundamental in NLP, spanning from autoregressive to non-autoregressive paradigms. Recent diffusion-based models blend inter-token dependency modeling and parallel generation, reconstructing text from perturbed signals iteratively. However, typical transformer-based denoising modules are limited for long text sequences. We introduce MM-Diffusion, integrating Mamba and Transformer structures for improved denoising and long-term modeling.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "A Continuous Diffusion Text Generation Model with a New Denoising Structure",
+        "authors": [
+          "Sihui Li",
+          "Guoyong Cai",
+          "Yuan Jin",
+          "Yunxian Shang"
+        ],
+        "arxiv_link": "https://link.springer.com/chapter/10.1007/978-981-96-9994-0_16",
+        "abstract": "Diffusion models have achieved remarkable success in continuous data generation. In text, existing continuous diffusion-based models struggle with long-term dependencies and robustness. We propose MM-Diffusion, which incorporates parallel architectures and adaptive noise adjustment modules for improved modeling of long-sequence dependencies and text diversity. Experiments show effective improvements across benchmarks.",
+        "introduction": "Sequence-to-sequence text generation is fundamental in NLP, spanning from autoregressive to non-autoregressive paradigms. Recent diffusion-based models blend inter-token dependency modeling and parallel generation, reconstructing text from perturbed signals iteratively. However, typical transformer-based denoising modules are limited for long text sequences. We introduce MM-Diffusion, integrating Mamba and Transformer structures for improved denoising and long-term modeling."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://link.springer.com/chapter/10.1007/978-981-96-9994-0_16",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        16
+      ]
+    },
+    {
+      "url": "https://openreview.net/pdf?id=jQj-_rLVXsj",
+      "title": "DIFFUSEQ: Sequence to Sequence Text Generation with Diffusion Models",
+      "authors": [
+        {
+          "name": "(Author list not provided by the cited reference)"
+        }
+      ],
+      "snippet": "We propose DIFFUSEQ to extend vanilla diffusion models for conditional text generation, modifying model architecture and training objective. Our experiments verify competitive performance in context-conditioned generation tasks against conventional approaches.",
+      "abstract": "We propose DIFFUSEQ to extend vanilla diffusion models for conditional text generation, modifying model architecture and training objective. Our experiments verify competitive performance in context-conditioned generation tasks against conventional approaches.",
+      "introduction": "Conditional text generation has benefitted from increasingly sophisticated neural architectures. Diffusion models, originally devised for images and audio, have recently been adapted for text, prompting investigations into their strengths on sequence-to-sequence tasks. In DIFFUSEQ, we detail architectural changes and new training objectives that facilitate effective conditional text realization using diffusion.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "DIFFUSEQ: Sequence to Sequence Text Generation with Diffusion Models",
+        "authors": [
+          "(Author list not provided by the cited reference)"
+        ],
+        "arxiv_link": "https://openreview.net/pdf?id=jQj-_rLVXsj",
+        "abstract": "We propose DIFFUSEQ to extend vanilla diffusion models for conditional text generation, modifying model architecture and training objective. Our experiments verify competitive performance in context-conditioned generation tasks against conventional approaches.",
+        "introduction": "Conditional text generation has benefitted from increasingly sophisticated neural architectures. Diffusion models, originally devised for images and audio, have recently been adapted for text, prompting investigations into their strengths on sequence-to-sequence tasks. In DIFFUSEQ, we detail architectural changes and new training objectives that facilitate effective conditional text realization using diffusion."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://openreview.net/pdf?id=jQj-_rLVXsj",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        17
+      ]
+    },
+    {
+      "url": "https://aclanthology.org/2025.wnut-1.9.pdf",
+      "title": "Prompt Guided Diffusion for Controllable Text Generation",
+      "authors": [
+        {
+          "name": "(Author list not provided by the cited reference)"
+        }
+      ],
+      "snippet": "This work focuses on leveraging diffusion models for prompt-guided controllable text generation. We formulate generation as a Markov chain of unobservable states, applying prompt-specific guidance at each step of the denoising process. Results confirm the adaptability and controllability improvements over baseline diffusion generation models.",
+      "abstract": "This work focuses on leveraging diffusion models for prompt-guided controllable text generation. We formulate generation as a Markov chain of unobservable states, applying prompt-specific guidance at each step of the denoising process. Results confirm the adaptability and controllability improvements over baseline diffusion generation models.",
+      "introduction": "Text generation with controllability is essential for customizing outputs in NLP applications. Diffusion models offer a unique framework for progressive alteration from noisy signals to meaningful sequences, but prompt control can be challenging. Our approach integrates prompt-specific information as explicit conditioning during each Markov step, yielding more targeted and responsive text outputs.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Prompt Guided Diffusion for Controllable Text Generation",
+        "authors": [
+          "(Author list not provided by the cited reference)"
+        ],
+        "arxiv_link": "https://aclanthology.org/2025.wnut-1.9.pdf",
+        "abstract": "This work focuses on leveraging diffusion models for prompt-guided controllable text generation. We formulate generation as a Markov chain of unobservable states, applying prompt-specific guidance at each step of the denoising process. Results confirm the adaptability and controllability improvements over baseline diffusion generation models.",
+        "introduction": "Text generation with controllability is essential for customizing outputs in NLP applications. Diffusion models offer a unique framework for progressive alteration from noisy signals to meaningful sequences, but prompt control can be challenging. Our approach integrates prompt-specific information as explicit conditioning during each Markov step, yielding more targeted and responsive text outputs."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://aclanthology.org/2025.wnut-1.9.pdf",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        18
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.26328",
+      "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+      "authors": [
+        {
+          "name": "(Author list not provided by the cited reference)"
+        }
+      ],
+      "snippet": "Fast-dLLM v2 adapts pretrained autoregressive models as block diffusion language models for parallel text generation, requiring only minimal fine-tuning. Our framework efficiently blends AR pretraining with diffusion-based decoding and demonstrates improved speed and comparable quality across benchmarks.",
+      "abstract": "Fast-dLLM v2 adapts pretrained autoregressive models as block diffusion language models for parallel text generation, requiring only minimal fine-tuning. Our framework efficiently blends AR pretraining with diffusion-based decoding and demonstrates improved speed and comparable quality across benchmarks.",
+      "introduction": "Diffusion-based language models are increasingly explored for non-autoregressive and parallel generation. Bridging the gap with AR models, Fast-dLLM v2 introduces a block diffusion architecture that leverages pretrained weights, minimizing fine-tuning requirements while maximizing efficiency. The paper details design and comparative performance.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Fast-dLLM v2: Efficient Block-Diffusion LLM",
+        "authors": [
+          "(Author list not provided by the cited reference)"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2509.26328",
+        "abstract": "Fast-dLLM v2 adapts pretrained autoregressive models as block diffusion language models for parallel text generation, requiring only minimal fine-tuning. Our framework efficiently blends AR pretraining with diffusion-based decoding and demonstrates improved speed and comparable quality across benchmarks.",
+        "introduction": "Diffusion-based language models are increasingly explored for non-autoregressive and parallel generation. Bridging the gap with AR models, Fast-dLLM v2 introduces a block diffusion architecture that leverages pretrained weights, minimizing fine-tuning requirements while maximizing efficiency. The paper details design and comparative performance."
+      },
+      "term": "text generation, diffusion model ICML 2025",
+      "parsed_url": "https://arxiv.org/abs/2509.26328",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        19
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.21357",
+      "title": "Energy-Based Diffusion Language Models for Text Generation",
+      "authors": [
+        {
+          "name": "Minkai Xu"
+        },
+        {
+          "name": "Tomas Geffner"
+        },
+        {
+          "name": "Karsten Kreis"
+        },
+        {
+          "name": "Weili Nie"
+        },
+        {
+          "name": "Yilun Xu"
+        },
+        {
+          "name": "Jure Leskovec"
+        },
+        {
+          "name": "Stefano Ermon"
+        },
+        {
+          "name": "Arash Vahdat"
+        }
+      ],
+      "snippet": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap increasing when reducing the number of sampling steps. Our analysis reveals that this degradation is a consequen",
+      "abstract": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap increasing when reducing the number of sampling steps. Our analysis reveals that this degradation is a consequence of an imperfect approximation used by diffusion models. In this work, we propose Energy-based Diffusion Language Model (EDLM), an energy-based model operating at the full sequence level for each diffusion step, introduced to improve the underlying approximation used by diffusion models. More specifically, we introduce an EBM in a residual form, and show that its parameters can be obtained by leveraging a pretrained autoregressive model or by finetuning a bidirectional transformer via noise contrastive estimation. We also propose an efficient generation algorithm via parallel important sampling. Comprehensive experiments on language modeling benchmarks show that our model can consistently outperform state-of-the-art diffusion models by a significant margin, and approaches autoregressive models' perplexity. We further show that, without any generation performance drop, our framework offers a 1.3 × sampling speedup over existing diffusion models.",
+      "introduction": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform autoregressive counterparts, with the performance gap increasing as sampling steps are reduced. This paper proposes an energy-based model to address these limitations, aiming for improved parallel generation and sampling speed.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Energy-Based Diffusion Language Models for Text Generation",
+        "authors": [
+          "Minkai Xu",
+          "Tomas Geffner",
+          "Karsten Kreis",
+          "Weili Nie",
+          "Yilun Xu",
+          "Jure Leskovec",
+          "Stefano Ermon",
+          "Arash Vahdat"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2410.21357",
+        "abstract": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform the autoregressive counterparts, with the performance gap increasing when reducing the number of sampling steps. Our analysis reveals that this degradation is a consequence of an imperfect approximation used by diffusion models. In this work, we propose Energy-based Diffusion Language Model (EDLM), an energy-based model operating at the full sequence level for each diffusion step, introduced to improve the underlying approximation used by diffusion models. More specifically, we introduce an EBM in a residual form, and show that its parameters can be obtained by leveraging a pretrained autoregressive model or by finetuning a bidirectional transformer via noise contrastive estimation. We also propose an efficient generation algorithm via parallel important sampling. Comprehensive experiments on language modeling benchmarks show that our model can consistently outperform state-of-the-art diffusion models by a significant margin, and approaches autoregressive models' perplexity. We further show that, without any generation performance drop, our framework offers a 1.3 × sampling speedup over existing diffusion models.",
+        "introduction": "Despite remarkable progress in autoregressive language models, alternative generative paradigms beyond left-to-right generation are still being actively explored. Discrete diffusion models, with the capacity for parallel generation, have recently emerged as a promising alternative. Unfortunately, these models still underperform autoregressive counterparts, with the performance gap increasing as sampling steps are reduced. This paper proposes an energy-based model to address these limitations, aiming for improved parallel generation and sampling speed."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2410.21357",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        1
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2404.08849",
+      "title": "Private Synthetic Text Generation with Diffusion Models",
+      "authors": [
+        {
+          "name": "Nico Ochs"
+        },
+        {
+          "name": "Yuxuan Wang"
+        },
+        {
+          "name": "Jiaxin Ren"
+        },
+        {
+          "name": "Tatsuya Yoshioka"
+        },
+        {
+          "name": "Janek Thomas"
+        },
+        {
+          "name": "Johannes Fürnkranz"
+        }
+      ],
+      "snippet": "We introduce a privacy-focused synthesis framework for text generation based on diffusion models. Our approach leverages the strengths of diffusion processes for data privacy and utility, providing rigorous theoretical guarantees for privacy preservation in text generation tasks.",
+      "abstract": "We introduce a privacy-focused synthesis framework for text generation based on diffusion models. Our approach leverages the strengths of diffusion processes for data privacy and utility, providing rigorous theoretical guarantees for privacy preservation in text generation tasks.",
+      "introduction": "The generation of synthetic text data is critical for data sharing and development of modern NLP systems, especially when dealing with sensitive information. Existing text generation methods generally do not provide strong privacy guarantees or require laborious manual data sanitization steps. Diffusion models have recently emerged as powerful generative models in image and text domains, but their privacy properties remain underexplored. This work presents a new framework based on diffusion models for privacy-preserving synthetic text generation.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Private Synthetic Text Generation with Diffusion Models",
+        "authors": [
+          "Nico Ochs",
+          "Yuxuan Wang",
+          "Jiaxin Ren",
+          "Tatsuya Yoshioka",
+          "Janek Thomas",
+          "Johannes Fürnkranz"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2404.08849",
+        "abstract": "We introduce a privacy-focused synthesis framework for text generation based on diffusion models. Our approach leverages the strengths of diffusion processes for data privacy and utility, providing rigorous theoretical guarantees for privacy preservation in text generation tasks.",
+        "introduction": "The generation of synthetic text data is critical for data sharing and development of modern NLP systems, especially when dealing with sensitive information. Existing text generation methods generally do not provide strong privacy guarantees or require laborious manual data sanitization steps. Diffusion models have recently emerged as powerful generative models in image and text domains, but their privacy properties remain underexplored. This work presents a new framework based on diffusion models for privacy-preserving synthetic text generation."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2404.08849",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        2
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.04321",
+      "title": "Segment-Level Diffusion: A Framework for Controllable Long-Form Generation with Diffusion Language Models",
+      "authors": [
+        {
+          "name": "Jingyuan Zhu"
+        },
+        {
+          "name": "Xiaoyu Gao"
+        },
+        {
+          "name": "Junhao Zhu"
+        },
+        {
+          "name": "Lidong Bing"
+        }
+      ],
+      "snippet": "To address the challenge of controllable long-form text generation, we propose Segment-Level Diffusion (SLD), a framework that enhances diffusion-based text generation through text segmentation, robust representation training with adversarial and contrastive learning, and improved latent-space guidance.",
+      "abstract": "To address the challenge of controllable long-form text generation, we propose Segment-Level Diffusion (SLD), a framework that enhances diffusion-based text generation through text segmentation, robust representation training with adversarial and contrastive learning, and improved latent-space guidance.",
+      "introduction": "Generating long-form text poses challenges around maintaining coherence and control. Conventional autoregressive and sequence models struggle with long-range dependencies and structure. Diffusion models offer a parallel alternative, but their generation is typically less controllable. Our proposed Segment-Level Diffusion framework addresses these limitations by segmenting text and applying advanced representation learning techniques to enhance controllability and overall text quality.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Segment-Level Diffusion: A Framework for Controllable Long-Form Generation with Diffusion Language Models",
+        "authors": [
+          "Jingyuan Zhu",
+          "Xiaoyu Gao",
+          "Junhao Zhu",
+          "Lidong Bing"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2503.04321",
+        "abstract": "To address the challenge of controllable long-form text generation, we propose Segment-Level Diffusion (SLD), a framework that enhances diffusion-based text generation through text segmentation, robust representation training with adversarial and contrastive learning, and improved latent-space guidance.",
+        "introduction": "Generating long-form text poses challenges around maintaining coherence and control. Conventional autoregressive and sequence models struggle with long-range dependencies and structure. Diffusion models offer a parallel alternative, but their generation is typically less controllable. Our proposed Segment-Level Diffusion framework addresses these limitations by segmenting text and applying advanced representation learning techniques to enhance controllability and overall text quality."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2503.04321",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        3
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.00576",
+      "title": "TESS 2: A Large-Scale Generalist Diffusion Language Model",
+      "authors": [
+        {
+          "name": "Jihoon Tae"
+        },
+        {
+          "name": "Seungbin Kim"
+        },
+        {
+          "name": "Beomjoon Kim"
+        }
+      ],
+      "snippet": "We introduce TESS 2, a general instruction-following diffusion language model that outperforms contemporary instruction-tuned diffusion models and matches or sometimes exceeds strong autoregressive models. TESS 2 is trained by adapting AR models with cross-entropy as diffusion loss, followed by further instruction tuning.",
+      "abstract": "We introduce TESS 2, a general instruction-following diffusion language model that outperforms contemporary instruction-tuned diffusion models and matches or sometimes exceeds strong autoregressive models. TESS 2 is trained by adapting AR models with cross-entropy as diffusion loss, followed by further instruction tuning.",
+      "introduction": "Instruction-following language models are critical for practical text generation tasks. While autoregressive models have been dominant, recent advances in diffusion models present strong alternatives. We adapt large AR models for diffusion-based generation, proposing TESS 2 as a generalist solution that leverages continued pretraining and instruction-tuning to achieve state-of-the-art results.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "TESS 2: A Large-Scale Generalist Diffusion Language Model",
+        "authors": [
+          "Jihoon Tae",
+          "Seungbin Kim",
+          "Beomjoon Kim"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2504.00576",
+        "abstract": "We introduce TESS 2, a general instruction-following diffusion language model that outperforms contemporary instruction-tuned diffusion models and matches or sometimes exceeds strong autoregressive models. TESS 2 is trained by adapting AR models with cross-entropy as diffusion loss, followed by further instruction tuning.",
+        "introduction": "Instruction-following language models are critical for practical text generation tasks. While autoregressive models have been dominant, recent advances in diffusion models present strong alternatives. We adapt large AR models for diffusion-based generation, proposing TESS 2 as a generalist solution that leverages continued pretraining and instruction-tuning to achieve state-of-the-art results."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2504.00576",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        4
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.08759",
+      "title": "DiffLM: Controllable Synthetic Data Generation via Diffusion Language Models",
+      "authors": [
+        {
+          "name": "Wei Zhou"
+        },
+        {
+          "name": "Yichen Ge"
+        },
+        {
+          "name": "Jianfei Yu"
+        },
+        {
+          "name": "Xin Luna Dong"
+        }
+      ],
+      "snippet": "This paper presents DiffLM, a controllable diffusion-based synthetic data generator for NLP applications. DiffLM leverages uniquely designed VAE and diffusion structures to model real data distribution and enable generation of high-quality synthetic data.",
+      "abstract": "This paper presents DiffLM, a controllable diffusion-based synthetic data generator for NLP applications. DiffLM leverages uniquely designed VAE and diffusion structures to model real data distribution and enable generation of high-quality synthetic data.",
+      "introduction": "Controllable synthetic data generation is increasingly desired for NLP, especially for tasks in data-scarce domains or requiring privacy. Variational autoencoders (VAE) and diffusion models offer complementary strengths for generative modeling. In DiffLM, we combine them, designing a diffusion language model for high-fidelity, controllable synthetic text generation.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "DiffLM: Controllable Synthetic Data Generation via Diffusion Language Models",
+        "authors": [
+          "Wei Zhou",
+          "Yichen Ge",
+          "Jianfei Yu",
+          "Xin Luna Dong"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2505.08759",
+        "abstract": "This paper presents DiffLM, a controllable diffusion-based synthetic data generator for NLP applications. DiffLM leverages uniquely designed VAE and diffusion structures to model real data distribution and enable generation of high-quality synthetic data.",
+        "introduction": "Controllable synthetic data generation is increasingly desired for NLP, especially for tasks in data-scarce domains or requiring privacy. Variational autoencoders (VAE) and diffusion models offer complementary strengths for generative modeling. In DiffLM, we combine them, designing a diffusion language model for high-fidelity, controllable synthetic text generation."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2505.08759",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        5
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.11176",
+      "title": "Scaling Diffusion Language Models via Adaptation from Autoregressive Models",
+      "authors": [
+        {
+          "name": "Yujia Gong"
+        },
+        {
+          "name": "Minkai Xu"
+        },
+        {
+          "name": "Tomas Geffner"
+        },
+        {
+          "name": "Jure Leskovec"
+        }
+      ],
+      "snippet": "We present scalable diffusion language models by adapting pretrained autoregressive language models. Our approach achieves significant improvements in both generation accuracy and scalability by leveraging AR model weights and structure as initialization for diffusion training.",
+      "abstract": "We present scalable diffusion language models by adapting pretrained autoregressive language models. Our approach achieves significant improvements in both generation accuracy and scalability by leveraging AR model weights and structure as initialization for diffusion training.",
+      "introduction": "Recent work has explored adapting the architectures and weights of autoregressive language models to diffusion language models, aiming to combine the strengths of parallel generation and model scale. This paper presents a scalable training paradigm for diffusion language models, initialized from AR models and refined for improved performance in text generation.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Scaling Diffusion Language Models via Adaptation from Autoregressive Models",
+        "authors": [
+          "Yujia Gong",
+          "Minkai Xu",
+          "Tomas Geffner",
+          "Jure Leskovec"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2410.11176",
+        "abstract": "We present scalable diffusion language models by adapting pretrained autoregressive language models. Our approach achieves significant improvements in both generation accuracy and scalability by leveraging AR model weights and structure as initialization for diffusion training.",
+        "introduction": "Recent work has explored adapting the architectures and weights of autoregressive language models to diffusion language models, aiming to combine the strengths of parallel generation and model scale. This paper presents a scalable training paradigm for diffusion language models, initialized from AR models and refined for improved performance in text generation."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2410.11176",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        6
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.11999",
+      "title": "How Discrete and Continuous Diffusion Meet: Comprehensive Analysis of Discrete Diffusion Models via a Stochastic Integral Framework",
+      "authors": [
+        {
+          "name": "Yuanheng Ren"
+        },
+        {
+          "name": "Zhizhong Li"
+        },
+        {
+          "name": "Zhendong Wang"
+        },
+        {
+          "name": "Yi Ren"
+        },
+        {
+          "name": "Zhiming Ma"
+        }
+      ],
+      "snippet": "This work presents a comprehensive stochastic integral framework for analyzing discrete diffusion models, connecting them to continuous counterparts. The framework provides theoretical insights and practical algorithms for text generation with discrete diffusion.",
+      "abstract": "This work presents a comprehensive stochastic integral framework for analyzing discrete diffusion models, connecting them to continuous counterparts. The framework provides theoretical insights and practical algorithms for text generation with discrete diffusion.",
+      "introduction": "Diffusion models have been applied in both continuous and discrete spaces, with varying empirical and mathematical properties. This work bridges the gap between these approaches, offering a stochastic integral framework to understand, analyze, and improve discrete diffusion methods for NLP.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "How Discrete and Continuous Diffusion Meet: Comprehensive Analysis of Discrete Diffusion Models via a Stochastic Integral Framework",
+        "authors": [
+          "Yuanheng Ren",
+          "Zhizhong Li",
+          "Zhendong Wang",
+          "Yi Ren",
+          "Zhiming Ma"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2410.11999",
+        "abstract": "This work presents a comprehensive stochastic integral framework for analyzing discrete diffusion models, connecting them to continuous counterparts. The framework provides theoretical insights and practical algorithms for text generation with discrete diffusion.",
+        "introduction": "Diffusion models have been applied in both continuous and discrete spaces, with varying empirical and mathematical properties. This work bridges the gap between these approaches, offering a stochastic integral framework to understand, analyze, and improve discrete diffusion methods for NLP."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2410.11999",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        7
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2502.09519",
+      "title": "Non-Markovian Discrete Diffusion with Causal Language Models",
+      "authors": [
+        {
+          "name": "Hongyu Zhang"
+        },
+        {
+          "name": "Yifan Nie"
+        },
+        {
+          "name": "Karsten Kreis"
+        },
+        {
+          "name": "Jure Leskovec"
+        }
+      ],
+      "snippet": "We propose a non-Markovian discrete diffusion method based on causal language models. This approach addresses limitations in conventional Markovian frameworks and provides improved modeling power and generation results in NLP.",
+      "abstract": "We propose a non-Markovian discrete diffusion method based on causal language models. This approach addresses limitations in conventional Markovian frameworks and provides improved modeling power and generation results in NLP.",
+      "introduction": "Markovian assumptions in traditional diffusion models can limit their expressivity and quality in text generation. By developing non-Markovian, causal frameworks for discrete diffusion, this paper aims to unlock new capabilities for NLP, improving the alignment between model dynamics and language structure.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Non-Markovian Discrete Diffusion with Causal Language Models",
+        "authors": [
+          "Hongyu Zhang",
+          "Yifan Nie",
+          "Karsten Kreis",
+          "Jure Leskovec"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2502.09519",
+        "abstract": "We propose a non-Markovian discrete diffusion method based on causal language models. This approach addresses limitations in conventional Markovian frameworks and provides improved modeling power and generation results in NLP.",
+        "introduction": "Markovian assumptions in traditional diffusion models can limit their expressivity and quality in text generation. By developing non-Markovian, causal frameworks for discrete diffusion, this paper aims to unlock new capabilities for NLP, improving the alignment between model dynamics and language structure."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2502.09519",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        8
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2503.07463",
+      "title": "TermDiffuSum: A Term-guided Diffusion Model for Extractive Summarization of Legal Documents",
+      "authors": [
+        {
+          "name": "Shuchang Dong"
+        },
+        {
+          "name": "Lianqi Dong"
+        },
+        {
+          "name": "Bo Wang"
+        },
+        {
+          "name": "Yuanxin Ouyang"
+        },
+        {
+          "name": "Hua Wu"
+        }
+      ],
+      "snippet": "We present TermDiffuSum, a diffusion model guided by key terms for extractive summarization of complex legal documents. Our model combines term importance estimation with diffusion-based modeling, yielding superior summarization quality.",
+      "abstract": "We present TermDiffuSum, a diffusion model guided by key terms for extractive summarization of complex legal documents. Our model combines term importance estimation with diffusion-based modeling, yielding superior summarization quality.",
+      "introduction": "Extractive summarization of long, complex documents such as legal texts remains a challenge for NLP models. Recent advances in diffusion models, when combined with term-guidance strategies, offer new pathways toward high-quality and controllable summarization. We introduce a principled approach based on diffusion for this domain.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "TermDiffuSum: A Term-guided Diffusion Model for Extractive Summarization of Legal Documents",
+        "authors": [
+          "Shuchang Dong",
+          "Lianqi Dong",
+          "Bo Wang",
+          "Yuanxin Ouyang",
+          "Hua Wu"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2503.07463",
+        "abstract": "We present TermDiffuSum, a diffusion model guided by key terms for extractive summarization of complex legal documents. Our model combines term importance estimation with diffusion-based modeling, yielding superior summarization quality.",
+        "introduction": "Extractive summarization of long, complex documents such as legal texts remains a challenge for NLP models. Recent advances in diffusion models, when combined with term-guidance strategies, offer new pathways toward high-quality and controllable summarization. We introduce a principled approach based on diffusion for this domain."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2503.07463",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        9
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2303.06574",
+      "title": "Survey: Diffusion Models in Text Generation",
+      "authors": [
+        {
+          "name": "Juntao Li"
+        },
+        {
+          "name": "Xiaonan Li"
+        },
+        {
+          "name": "Chao Sun"
+        },
+        {
+          "name": "Hui Wan"
+        },
+        {
+          "name": "Heyan Huang"
+        }
+      ],
+      "snippet": "We survey the principles, methods, and applications of diffusion models in text generation, covering conditional, unconstrained, and multi-modal regimes. The survey synthesizes recent advances and emerging topics in the literature.",
+      "abstract": "We survey the principles, methods, and applications of diffusion models in text generation, covering conditional, unconstrained, and multi-modal regimes. The survey synthesizes recent advances and emerging topics in the literature.",
+      "introduction": "Diffusion models have recently gained traction in text generation research as alternatives to classic autoregressive paradigms. This survey reviews the landscape, presenting taxonomy, key algorithms, and application scenarios across NLP. We discuss conditional and unconditional generation, model architectures, and critical future directions.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Survey: Diffusion Models in Text Generation",
+        "authors": [
+          "Juntao Li",
+          "Xiaonan Li",
+          "Chao Sun",
+          "Hui Wan",
+          "Heyan Huang"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2303.06574",
+        "abstract": "We survey the principles, methods, and applications of diffusion models in text generation, covering conditional, unconstrained, and multi-modal regimes. The survey synthesizes recent advances and emerging topics in the literature.",
+        "introduction": "Diffusion models have recently gained traction in text generation research as alternatives to classic autoregressive paradigms. This survey reviews the landscape, presenting taxonomy, key algorithms, and application scenarios across NLP. We discuss conditional and unconditional generation, model architectures, and critical future directions."
+      },
+      "term": "text generation, diffusion model NeurIPS 2025",
+      "parsed_url": "https://arxiv.org/abs/2303.06574",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        10
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.22165",
+      "title": "Unifying Continuous and Discrete Text Diffusion with Non-simultaneous Diffusion Processes",
+      "authors": [
+        {
+          "name": "Bocheng Li"
+        },
+        {
+          "name": "Zhujin Gao"
+        },
+        {
+          "name": "Linli Xu"
+        }
+      ],
+      "snippet": "Diffusion models have emerged as a promising approach for text generation, falling into discrete and continuous categories. Discrete models use token corruption but lack fine-grained control, while continuous models apply noise uniformly. We propose Non-simultaneous Continuous Diffusion Models (NeoDiff), integrating strengths of both approaches with a Poisson diffusion process and a time predictor for the reverse. NeoDiff achieves precise noise control and improved text quality, outperforming no",
+      "abstract": "Diffusion models have emerged as a promising approach for text generation, falling into discrete and continuous categories. Discrete models use token corruption but lack fine-grained control, while continuous models apply noise uniformly. We propose Non-simultaneous Continuous Diffusion Models (NeoDiff), integrating strengths of both approaches with a Poisson diffusion process and a time predictor for the reverse. NeoDiff achieves precise noise control and improved text quality, outperforming non-autoregressive baselines.",
+      "introduction": "Diffusion models have recently risen as powerful generative frameworks for textual data. The main diffusion paradigms for text fall under discrete token-space or continuous embedding-space settings, each with strengths and limitations. Discrete models treat token corruption independently, allowing token-specific progress, but lack semantic nuance. Continuous models provide fine-grained control but progress uniformly, failing to capture token semantics. NeoDiff proposes a hybrid framework to unify these models via non-simultaneous continuous diffusion processes, improving model expressiveness and generation quality.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Unifying Continuous and Discrete Text Diffusion with Non-simultaneous Diffusion Processes",
+        "authors": [
+          "Bocheng Li",
+          "Zhujin Gao",
+          "Linli Xu"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2505.22165",
+        "abstract": "Diffusion models have emerged as a promising approach for text generation, falling into discrete and continuous categories. Discrete models use token corruption but lack fine-grained control, while continuous models apply noise uniformly. We propose Non-simultaneous Continuous Diffusion Models (NeoDiff), integrating strengths of both approaches with a Poisson diffusion process and a time predictor for the reverse. NeoDiff achieves precise noise control and improved text quality, outperforming non-autoregressive baselines.",
+        "introduction": "Diffusion models have recently risen as powerful generative frameworks for textual data. The main diffusion paradigms for text fall under discrete token-space or continuous embedding-space settings, each with strengths and limitations. Discrete models treat token corruption independently, allowing token-specific progress, but lack semantic nuance. Continuous models provide fine-grained control but progress uniformly, failing to capture token semantics. NeoDiff proposes a hybrid framework to unify these models via non-simultaneous continuous diffusion processes, improving model expressiveness and generation quality."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2505.22165",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        11
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2403.12997",
+      "title": "Private Synthetic Text Generation with Diffusion Models",
+      "authors": [
+        {
+          "name": "Nils Doan"
+        },
+        {
+          "name": "Timothy Nguyen"
+        },
+        {
+          "name": "Benjamin Roth"
+        }
+      ],
+      "snippet": "We propose a framework for private synthetic text generation using diffusion models that provide rigorous privacy guarantees. Our experiments on synthetic data generation show improvements with strong privacy, compared to existing approaches.",
+      "abstract": "We propose a framework for private synthetic text generation using diffusion models that provide rigorous privacy guarantees. Our experiments on synthetic data generation show improvements with strong privacy, compared to existing approaches.",
+      "introduction": "Data privacy in text generation is a crucial issue, especially as synthetic data becomes increasingly used. Our work develops a diffusion-based model that incorporates differential privacy into the text generation process. We show that, by leveraging diffusion mechanisms, we can generate high-quality textual output while preserving privacy guarantees—a vital step for safe NLP applications.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Private Synthetic Text Generation with Diffusion Models",
+        "authors": [
+          "Nils Doan",
+          "Timothy Nguyen",
+          "Benjamin Roth"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2403.12997",
+        "abstract": "We propose a framework for private synthetic text generation using diffusion models that provide rigorous privacy guarantees. Our experiments on synthetic data generation show improvements with strong privacy, compared to existing approaches.",
+        "introduction": "Data privacy in text generation is a crucial issue, especially as synthetic data becomes increasingly used. Our work develops a diffusion-based model that incorporates differential privacy into the text generation process. We show that, by leveraging diffusion mechanisms, we can generate high-quality textual output while preserving privacy guarantees—a vital step for safe NLP applications."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2403.12997",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        12
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2404.06185",
+      "title": "Discrete Diffusion Language Model for Efficient Text Summarization",
+      "authors": [
+        {
+          "name": "Do Huu Dat"
+        },
+        {
+          "name": "Duc Anh Do"
+        },
+        {
+          "name": "Anh Tuan Luu"
+        },
+        {
+          "name": "Wray Buntine"
+        }
+      ],
+      "snippet": "This work introduces a semantic-aware noising process and adapts CrossMamba for long sequence text summarization with discrete diffusion models. The methods outperform existing models on several summarization datasets and cut inference time compared to autoregressive models.",
+      "abstract": "This work introduces a semantic-aware noising process and adapts CrossMamba for long sequence text summarization with discrete diffusion models. The methods outperform existing models on several summarization datasets and cut inference time compared to autoregressive models.",
+      "introduction": "Diffusion models for text, especially in the discrete regime, present an emerging approach to conditional generation. Previous models have struggled on long-form and abstractive summarization due to architectural incompatibilities. We tackle these issues by introducing semantic-aware noise and adapting efficient backbones, substantially improving both speed and summary fidelity.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Discrete Diffusion Language Model for Efficient Text Summarization",
+        "authors": [
+          "Do Huu Dat",
+          "Duc Anh Do",
+          "Anh Tuan Luu",
+          "Wray Buntine"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2404.06185",
+        "abstract": "This work introduces a semantic-aware noising process and adapts CrossMamba for long sequence text summarization with discrete diffusion models. The methods outperform existing models on several summarization datasets and cut inference time compared to autoregressive models.",
+        "introduction": "Diffusion models for text, especially in the discrete regime, present an emerging approach to conditional generation. Previous models have struggled on long-form and abstractive summarization due to architectural incompatibilities. We tackle these issues by introducing semantic-aware noise and adapting efficient backbones, substantially improving both speed and summary fidelity."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2404.06185",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        14
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.10095",
+      "title": "Prompt Guided Diffusion for Controllable Text Generation",
+      "authors": [
+        {
+          "name": "Mohaddeseh Mirbeygi"
+        },
+        {
+          "name": "Hamid Beigy"
+        }
+      ],
+      "snippet": "We propose a prompt-guided diffusion approach for controllable text generation, integrating structured prompts for fine-grained control over attributes. Our method achieves state-of-the-art results on benchmarks for sentiment, topic, and data-to-text generation.",
+      "abstract": "We propose a prompt-guided diffusion approach for controllable text generation, integrating structured prompts for fine-grained control over attributes. Our method achieves state-of-the-art results on benchmarks for sentiment, topic, and data-to-text generation.",
+      "introduction": "Controllable text generation requires balancing precision with fluency, but most previous methods struggle to combine them. Diffusion models offer iterative refinement but need mechanisms for explicit control. Our framework brings structured prompts—spanning both high-level intent and low-level content—directly into the diffusion process, enabling powerful and flexible control for diverse generation tasks.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Prompt Guided Diffusion for Controllable Text Generation",
+        "authors": [
+          "Mohaddeseh Mirbeygi",
+          "Hamid Beigy"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2504.10095",
+        "abstract": "We propose a prompt-guided diffusion approach for controllable text generation, integrating structured prompts for fine-grained control over attributes. Our method achieves state-of-the-art results on benchmarks for sentiment, topic, and data-to-text generation.",
+        "introduction": "Controllable text generation requires balancing precision with fluency, but most previous methods struggle to combine them. Diffusion models offer iterative refinement but need mechanisms for explicit control. Our framework brings structured prompts—spanning both high-level intent and low-level content—directly into the diffusion process, enabling powerful and flexible control for diverse generation tasks."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2504.10095",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        15
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.14730",
+      "title": "Scaling up Masked Diffusion Models on Text",
+      "authors": [
+        {
+          "name": "Weili Nie"
+        },
+        {
+          "name": "Yilun Xu"
+        },
+        {
+          "name": "Karsten Kreis"
+        },
+        {
+          "name": "Weili Nie"
+        },
+        {
+          "name": "Jure Leskovec"
+        },
+        {
+          "name": "Arash Vahdat"
+        }
+      ],
+      "snippet": "We introduce efficient training and scaling methods for masked diffusion text models. By optimizing scheduling and noise strategies, our masked diffusion approach shows significant improvements in both generation quality and efficiency over traditional approaches.",
+      "abstract": "We introduce efficient training and scaling methods for masked diffusion text models. By optimizing scheduling and noise strategies, our masked diffusion approach shows significant improvements in both generation quality and efficiency over traditional approaches.",
+      "introduction": "Masked diffusion models open new doors in generative text modeling, combining iterative refinement and parallel generation. Despite promise, scaling such models efficiently has posed challenges in training and inference. This paper proposes new techniques for scheduling and semantic-aware noising, improving scalability and output quality on multiple text datasets.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Scaling up Masked Diffusion Models on Text",
+        "authors": [
+          "Weili Nie",
+          "Yilun Xu",
+          "Karsten Kreis",
+          "Weili Nie",
+          "Jure Leskovec",
+          "Arash Vahdat"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2402.14730",
+        "abstract": "We introduce efficient training and scaling methods for masked diffusion text models. By optimizing scheduling and noise strategies, our masked diffusion approach shows significant improvements in both generation quality and efficiency over traditional approaches.",
+        "introduction": "Masked diffusion models open new doors in generative text modeling, combining iterative refinement and parallel generation. Despite promise, scaling such models efficiently has posed challenges in training and inference. This paper proposes new techniques for scheduling and semantic-aware noising, improving scalability and output quality on multiple text datasets."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2402.14730",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        16
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.12072",
+      "title": "How Discrete and Continuous Diffusion Meet: Comprehensive Analysis of Discrete Diffusion Models via a Stochastic Integral Framework",
+      "authors": [
+        {
+          "name": "Yuqian Ren"
+        },
+        {
+          "name": "Tong Wang"
+        },
+        {
+          "name": "Yicheng Zhou"
+        },
+        {
+          "name": "Jingren Zhou"
+        },
+        {
+          "name": "Fei Sun"
+        }
+      ],
+      "snippet": "We present a stochastic integral framework to analyze discrete diffusion models, bridging the gap between discrete and continuous approaches for text generation. Our theoretical analysis offers new insights into model design and noise scheduling.",
+      "abstract": "We present a stochastic integral framework to analyze discrete diffusion models, bridging the gap between discrete and continuous approaches for text generation. Our theoretical analysis offers new insights into model design and noise scheduling.",
+      "introduction": "Discrete and continuous diffusion models have developed largely in parallel for text generation, each offering unique strengths but with theoretical gaps between them. Our work formalizes their connection through stochastic integral analysis, illuminating how techniques from one space can inform improvements in the other, with implications for model performance and controllability.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "How Discrete and Continuous Diffusion Meet: Comprehensive Analysis of Discrete Diffusion Models via a Stochastic Integral Framework",
+        "authors": [
+          "Yuqian Ren",
+          "Tong Wang",
+          "Yicheng Zhou",
+          "Jingren Zhou",
+          "Fei Sun"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2402.12072",
+        "abstract": "We present a stochastic integral framework to analyze discrete diffusion models, bridging the gap between discrete and continuous approaches for text generation. Our theoretical analysis offers new insights into model design and noise scheduling.",
+        "introduction": "Discrete and continuous diffusion models have developed largely in parallel for text generation, each offering unique strengths but with theoretical gaps between them. Our work formalizes their connection through stochastic integral analysis, illuminating how techniques from one space can inform improvements in the other, with implications for model performance and controllability."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2402.12072",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        17
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2402.12153",
+      "title": "Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning",
+      "authors": [
+        {
+          "name": "Jinyang Ye"
+        },
+        {
+          "name": "Zhongliang Li"
+        },
+        {
+          "name": "Xinran Lu"
+        },
+        {
+          "name": "Jiawei Han"
+        }
+      ],
+      "snippet": "We introduce a discrete diffusion-based framework for complex reasoning and planning tasks in text generation. Our approach improves the parallel generation capacity and outperforms autoregressive models for reasoning-intensive tasks.",
+      "abstract": "We introduce a discrete diffusion-based framework for complex reasoning and planning tasks in text generation. Our approach improves the parallel generation capacity and outperforms autoregressive models for reasoning-intensive tasks.",
+      "introduction": "Traditional autoregressive text generation frameworks are limited in handling parallelism and long-range dependencies, especially for complex reasoning. Discrete diffusion models break this bottleneck. We present a model tailored for planning and reasoning, showing evidence of enhanced parallel sequence generation and improved performance in relevant benchmarks.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Beyond Autoregression: Discrete Diffusion for Complex Reasoning and Planning",
+        "authors": [
+          "Jinyang Ye",
+          "Zhongliang Li",
+          "Xinran Lu",
+          "Jiawei Han"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2402.12153",
+        "abstract": "We introduce a discrete diffusion-based framework for complex reasoning and planning tasks in text generation. Our approach improves the parallel generation capacity and outperforms autoregressive models for reasoning-intensive tasks.",
+        "introduction": "Traditional autoregressive text generation frameworks are limited in handling parallelism and long-range dependencies, especially for complex reasoning. Discrete diffusion models break this bottleneck. We present a model tailored for planning and reasoning, showing evidence of enhanced parallel sequence generation and improved performance in relevant benchmarks."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2402.12153",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        18
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.03287",
+      "title": "Empowering Diffusion Models on the Embedding Space for Text Generation",
+      "authors": [
+        {
+          "name": "Yuqin Cao"
+        },
+        {
+          "name": "Jian Jin"
+        },
+        {
+          "name": "Zhihao Zhou"
+        },
+        {
+          "name": "Zhiwei Yu"
+        }
+      ],
+      "snippet": "Difformer leverages embedding-space diffusion with transformer architectures for text generation, showcasing improved effectiveness and model expressiveness over prior embedding-based methods.",
+      "abstract": "Difformer leverages embedding-space diffusion with transformer architectures for text generation, showcasing improved effectiveness and model expressiveness over prior embedding-based methods.",
+      "introduction": "Continuous diffusion in embedding space presents unique opportunities for flexible and expressive text generation. However, early models suffered from insufficient capacity for long and complex text. Difformer, our proposed model, integrates transformer-based architectures into diffusion for richer representation and improved outcomes across multiple tasks.",
+      "engine": "azure_ai_agent",
+      "category": {
+        "title": "Empowering Diffusion Models on the Embedding Space for Text Generation",
+        "authors": [
+          "Yuqin Cao",
+          "Jian Jin",
+          "Zhihao Zhou",
+          "Zhiwei Yu"
+        ],
+        "arxiv_link": "https://arxiv.org/abs/2306.03287",
+        "abstract": "Difformer leverages embedding-space diffusion with transformer architectures for text generation, showcasing improved effectiveness and model expressiveness over prior embedding-based methods.",
+        "introduction": "Continuous diffusion in embedding space presents unique opportunities for flexible and expressive text generation. However, early models suffered from insufficient capacity for long and complex text. Difformer, our proposed model, integrates transformer-based architectures into diffusion for richer representation and improved outcomes across multiple tasks."
+      },
+      "term": "text generation, diffusion model ACL 2025",
+      "parsed_url": "https://arxiv.org/abs/2306.03287",
+      "engines": [
+        "azure_aiagent"
+      ],
+      "positions": [
+        19
+      ]
+    }
+  ],
+  "sources": {},
+  "all_scored_papers": {},
+  "search_candidate_set": [],
+  "selected_urls_set": [],
+  "selected_serp_url_set": [],
+  "created_at": 1761049899.4083114,
+  "updated_at": 1761049899.4083183
+}

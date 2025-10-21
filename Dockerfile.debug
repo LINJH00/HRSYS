@@ -1,0 +1,194 @@
+# SearXNG Debug Dockerfile
+# For diagnosing SearXNG installation issues in Azure
+
+FROM python:3.11-slim
+
+# Install system dependencies (same as main)
+RUN apt-get update && apt-get install -y \
+    curl \
+    redis-server \
+    supervisor \
+    git \
+    build-essential \
+    libxml2-dev \
+    libxslt1-dev \
+    zlib1g-dev \
+    libjpeg-dev \
+    libffi-dev \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements file and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install SearXNG from source (same as main)
+RUN git clone https://github.com/searxng/searxng.git /opt/searxng
+WORKDIR /opt/searxng
+RUN pip install --no-cache-dir -e .
+
+# Create searxng user and directories (same as main)
+RUN groupadd --system --gid 991 searxng && \
+    useradd --system --uid 991 --gid 991 --shell /bin/false --home-dir /usr/local/searxng searxng
+RUN mkdir -p /etc/searxng /var/log/supervisor /usr/local/searxng
+RUN chown -R searxng:searxng /usr/local/searxng
+
+# Copy application code
+WORKDIR /app
+COPY . .
+
+# Copy SearXNG configuration
+COPY backend/searxng/config/settings.yml /etc/searxng/settings.yml
+RUN chown searxng:searxng /etc/searxng/settings.yml
+
+# Create diagnostic script directly in container
+RUN echo '#!/usr/bin/env python3\n\
+"""\n\
+SearXNG Installation and Configuration Test\n\
+"""\n\
+import sys, os, subprocess, importlib\n\
+from pathlib import Path\n\
+\n\
+def test_python_environment():\n\
+    print("🐍 Python Environment Test")\n\
+    print("=" * 50)\n\
+    print(f"Python Version: {sys.version}")\n\
+    print(f"Python Executable: {sys.executable}")\n\
+    print(f"Python Path: {sys.path}")\n\
+    print()\n\
+\n\
+def test_searxng_installation():\n\
+    print("📦 SearXNG Installation Test")\n\
+    print("=" * 50)\n\
+    import_tests = [\n\
+        ("searx", "Main searx module"),\n\
+        ("searx.webapp", "SearXNG webapp module"),\n\
+        ("searx.settings", "SearXNG settings module"),\n\
+    ]\n\
+    for module, description in import_tests:\n\
+        try:\n\
+            imported = importlib.import_module(module)\n\
+            print(f"✅ {description}: SUCCESS")\n\
+            if hasattr(imported, "__file__"):\n\
+                print(f"   Location: {imported.__file__}")\n\
+        except ImportError as e:\n\
+            print(f"❌ {description}: FAILED - {e}")\n\
+        except Exception as e:\n\
+            print(f"⚠️ {description}: ERROR - {e}")\n\
+    print()\n\
+\n\
+def test_searxng_directories():\n\
+    print("📁 SearXNG Directory Test")\n\
+    print("=" * 50)\n\
+    paths_to_check = [\n\
+        "/opt/searxng",\n\
+        "/opt/searxng/searx",\n\
+        "/opt/searxng/searx/webapp.py",\n\
+        "/etc/searxng",\n\
+        "/etc/searxng/settings.yml",\n\
+        "/var/log/supervisor",\n\
+        "/usr/local/searxng"\n\
+    ]\n\
+    for path in paths_to_check:\n\
+        p = Path(path)\n\
+        if p.exists():\n\
+            if p.is_file():\n\
+                print(f"✅ File exists: {path}")\n\
+            else:\n\
+                print(f"✅ Directory exists: {path}")\n\
+        else:\n\
+            print(f"❌ Missing: {path}")\n\
+    print()\n\
+\n\
+def test_manual_searxng_start():\n\
+    print("🚀 Manual SearXNG Start Test")\n\
+    print("=" * 50)\n\
+    test_commands = [\n\
+        ["python", "-c", "import searx; print(\"SearXNG import OK\")"],\n\
+        ["python", "-c", "import searx.webapp; print(\"webapp import OK\")"],\n\
+        ["python", "-m", "searx.webapp", "--help"],\n\
+    ]\n\
+    for cmd in test_commands:\n\
+        try:\n\
+            print(f"Testing: {\" \".join(cmd)}")\n\
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=10, cwd="/opt/searxng")\n\
+            if result.returncode == 0:\n\
+                print(f"✅ SUCCESS")\n\
+                if result.stdout:\n\
+                    print(f"Output: {result.stdout.strip()}")\n\
+            else:\n\
+                print(f"❌ FAILED (exit code: {result.returncode})")\n\
+                if result.stderr:\n\
+                    print(f"Error: {result.stderr.strip()}")\n\
+        except subprocess.TimeoutExpired:\n\
+            print(f"⏱️ TIMEOUT")\n\
+        except Exception as e:\n\
+            print(f"❌ EXCEPTION: {e}")\n\
+        print()\n\
+\n\
+def main():\n\
+    print("🔍 SearXNG Diagnostic Tool")\n\
+    print("=" * 60)\n\
+    print()\n\
+    test_python_environment()\n\
+    test_searxng_installation()\n\
+    test_searxng_directories()\n\
+    test_manual_searxng_start()\n\
+    print("🏁 Diagnostic Complete")\n\
+    print("=" * 60)\n\
+\n\
+if __name__ == "__main__":\n\
+    main()\n\
+' > /app/test_searxng.py && chmod +x /app/test_searxng.py
+
+# Create diagnostic supervisord configuration (Redis + Streamlit + Diagnostic)
+RUN echo '[supervisord]\n\
+nodaemon=true\n\
+user=root\n\
+logfile=/var/log/supervisor/supervisord.log\n\
+pidfile=/var/run/supervisord.pid\n\
+\n\
+[program:redis]\n\
+command=redis-server --daemonize no --port 6379\n\
+autostart=true\n\
+autorestart=true\n\
+stderr_logfile=/var/log/supervisor/redis_stderr.log\n\
+stdout_logfile=/var/log/supervisor/redis_stdout.log\n\
+\n\
+[program:diagnostic]\n\
+command=python /app/test_searxng.py\n\
+autostart=true\n\
+autorestart=false\n\
+startsecs=0\n\
+stderr_logfile=/var/log/supervisor/diagnostic_stderr.log\n\
+stdout_logfile=/var/log/supervisor/diagnostic_stdout.log\n\
+user=root\n\
+\n\
+[program:streamlit]\n\
+command=streamlit run app.py --server.port=8501 --server.address=0.0.0.0 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false --browser.gatherUsageStats=false\n\
+directory=/app\n\
+autostart=true\n\
+autorestart=true\n\
+stderr_logfile=/var/log/supervisor/streamlit_stderr.log\n\
+stdout_logfile=/var/log/supervisor/streamlit_stdout.log\n\
+user=root' > /etc/supervisor/conf.d/supervisord.conf
+
+# Set permissions
+RUN chmod -R 755 /app
+RUN chmod 644 /etc/searxng/settings.yml
+RUN mkdir -p /var/log/supervisor/searxng
+RUN chown -R searxng:searxng /var/log/supervisor/searxng
+RUN chmod -R 755 /var/log/supervisor
+
+# Expose ports
+EXPOSE 8501 6379
+
+# Health check for Streamlit
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
+
+# Start all services with supervisord
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]

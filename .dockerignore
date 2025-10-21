@@ -1,0 +1,126 @@
+# Docker build context exclusions for KDD HR System
+
+# Git and version control
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.pytest_cache/
+htmlcov/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local development files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+*.tmp
+
+# Documentation and README files that aren't needed in container
+README.md
+*.md
+docs/
+documentation/
+
+# Test files
+tests/
+test_*.py
+*_test.py
+pytest.ini
+tox.ini
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Deployment files and scripts (not needed in container)
+deploy-aci.sh
+deploy-aci.ps1
+aci-deployment.yml
+docker-compose*.yml
+.deployment
+startup.sh
+
+# Local data and results (can be large)
+results/
+# Allow essential data files for the application
+# data/  ← Commented out to include config data
+# *.json ← Commented out to include config JSON files
+*.jsonl
+*.csv
+*.xlsx
+
+# But exclude large data files if needed
+data/logs/
+data/temp/
+data/cache/
+
+# Cache directories
+.cache/
+.npm/
+node_modules/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Large binary files that shouldn't be in container
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Local configuration that might contain secrets
+config.local.py
+secrets/
+credentials/
+
+# Development tools
+Makefile
+.pre-commit-config.yaml
+
+# Container-specific exclusions
+temp_config/
+deploy_package.zip
+*.yml.bak

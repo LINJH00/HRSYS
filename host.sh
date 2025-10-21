@@ -1,0 +1,1 @@
+ssh -CNg -L 6006:127.0.0.1:6006 root@connect.westc.gpuhub.com -p 12738

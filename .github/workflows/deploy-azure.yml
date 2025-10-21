@@ -1,0 +1,170 @@
+# GitHub Actions CI/CD for Azure Container Apps
+name: Deploy KDD HR System to Azure
+
+on:
+  push:
+    branches: 
+      - main
+      - develop
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+  pull_request:
+    branches: 
+      - main
+    types: 
+      - closed
+
+env:
+  REGISTRY_NAME: ${{ secrets.AZURE_CONTAINER_REGISTRY }}
+  RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+  APP_NAME: kdd-hr-system-app
+  PROJECT_NAME: kdd-hr-system
+
+jobs:
+  # 构建和测试阶段
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run basic tests
+      run: |
+        python -c "import streamlit; print('Streamlit import successful')"
+        python -c "import pandas; print('Pandas import successful')"
+        python -c "from backend import config; print('Backend import successful')"
+
+    - name: Validate Dockerfile
+      run: |
+        docker build -t test-build . --no-cache
+        docker images | grep test-build
+
+  # 部署到Azure
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Login to Azure Container Registry
+      run: |
+        echo ${{ secrets.AZURE_CREDENTIALS }} | jq -r .clientSecret | docker login ${{ env.REGISTRY_NAME }}.azurecr.io -u $(echo ${{ secrets.AZURE_CREDENTIALS }} | jq -r .clientId) --password-stdin
+
+    - name: Get build number
+      id: build_number
+      run: |
+        BUILD_NUMBER=${{ github.run_number }}
+        SHORT_SHA=${GITHUB_SHA::8}
+        IMAGE_TAG="${BUILD_NUMBER}-${SHORT_SHA}"
+        echo "IMAGE_TAG=${IMAGE_TAG}" >> $GITHUB_OUTPUT
+        echo "Building image with tag: ${IMAGE_TAG}"
+
+    - name: Build and push Docker image
+      run: |
+        IMAGE_NAME="${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.PROJECT_NAME }}:${{ steps.build_number.outputs.IMAGE_TAG }}"
+        LATEST_IMAGE="${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.PROJECT_NAME }}:latest"
+        
+        # Build image
+        docker build -t ${IMAGE_NAME} -t ${LATEST_IMAGE} .
+        
+        # Push both tags
+        docker push ${IMAGE_NAME}
+        docker push ${LATEST_IMAGE}
+        
+        echo "IMAGE_NAME=${IMAGE_NAME}" >> $GITHUB_ENV
+
+    - name: Update Container App
+      run: |
+        # 更新主应用
+        az containerapp update \
+          --name ${{ env.APP_NAME }} \
+          --resource-group ${{ env.RESOURCE_GROUP }} \
+          --image ${{ env.IMAGE_NAME }} \
+          --output table
+
+    - name: Verify deployment
+      run: |
+        # 等待部署完成
+        sleep 30
+        
+        # 检查应用状态
+        STATUS=$(az containerapp show --name ${{ env.APP_NAME }} --resource-group ${{ env.RESOURCE_GROUP }} --query "properties.provisioningState" -o tsv)
+        echo "App provisioning state: ${STATUS}"
+        
+        if [ "${STATUS}" != "Succeeded" ]; then
+          echo "Deployment failed with status: ${STATUS}"
+          exit 1
+        fi
+        
+        # 获取应用URL
+        APP_URL=$(az containerapp show --name ${{ env.APP_NAME }} --resource-group ${{ env.RESOURCE_GROUP }} --query "properties.configuration.ingress.fqdn" -o tsv)
+        echo "Application URL: https://${APP_URL}"
+
+    - name: Run smoke tests
+      run: |
+        APP_URL=$(az containerapp show --name ${{ env.APP_NAME }} --resource-group ${{ env.RESOURCE_GROUP }} --query "properties.configuration.ingress.fqdn" -o tsv)
+        
+        # 等待应用启动
+        sleep 60
+        
+        # 健康检查
+        HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" "https://${APP_URL}/_stcore/health" || echo "000")
+        echo "Health check status: ${HTTP_STATUS}"
+        
+        if [ "${HTTP_STATUS}" -eq "200" ]; then
+          echo "✅ Application is healthy"
+        else
+          echo "❌ Application health check failed"
+          # 获取应用日志进行调试
+          az containerapp logs show --name ${{ env.APP_NAME }} --resource-group ${{ env.RESOURCE_GROUP }} --tail 50
+          exit 1
+        fi
+
+    - name: Notify deployment success
+      if: success()
+      run: |
+        APP_URL=$(az containerapp show --name ${{ env.APP_NAME }} --resource-group ${{ env.RESOURCE_GROUP }} --query "properties.configuration.ingress.fqdn" -o tsv)
+        echo "🎉 Deployment successful!"
+        echo "📱 Application URL: https://${APP_URL}"
+        echo "🏷️ Image Tag: ${{ steps.build_number.outputs.IMAGE_TAG }}"
+
+  # 部署到开发环境（可选）
+  deploy-dev:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    environment: development
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS_DEV }}
+
+    - name: Deploy to Development
+      run: |
+        echo "🔧 Deploying to development environment..."
+        # 这里可以添加开发环境特定的部署逻辑
+        # 例如使用不同的资源组或配置参数
