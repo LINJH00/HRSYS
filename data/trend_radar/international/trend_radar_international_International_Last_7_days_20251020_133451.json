@@ -1,0 +1,1739 @@
+{
+  "type": "trend_radar_international",
+  "title": "International_Last 7 days",
+  "created_at": "2025-10-20T13:34:51.046134",
+  "filename": "trend_radar_international_International_Last_7_days_20251020_133451.json",
+  "data": {
+    "id": "international_1760938491",
+    "group_id": "international",
+    "group_name": "International",
+    "sources": [
+      {
+        "name": "International",
+        "url": "",
+        "type": "group",
+        "description": "International AI news, research, and technology media platforms",
+        "report": "# International | Trend Radar Report\n\n<table style=\"width: 100%; border-collapse: collapse; margin: 1rem 0;\">\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Group Description</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">International AI news, research, and technology media platforms</td>\n    </tr>\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Total Sources</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">4</td>\n    </tr>\n    <tr>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd; font-weight: bold; background-color: #f8f9fa;\">Report Generated</td>\n        <td style=\"padding: 0.5rem; border: 1px solid #ddd;\">2025-10-20 13:34:51</td>\n    </tr>\n</table>\n\n---\n\n## A. Directions\n\n### 1. **Legal AI and Embedding Models**\n\nLegal AI is emerging as a critical area where large-scale, domain-specific embedding models are being developed to understand and process legal texts with high accuracy. These models are essential for tasks like case law analysis, contract review, and legal reasoning. The release of the Massive Legal Embedding Benchmark (MLEB) marks a significant step in evaluating and improving the performance of such models.\n\n**Representative projects**:\n- **Kanon 2 Embedder**: This model was introduced by Hugging Face as part of the MLEB initiative and achieved top scores on the benchmark. It demonstrates strong legal domain knowledge and reasoning capabilities, making it suitable for applications requiring precise legal text understanding.\n- **Massive Legal Embedding Benchmark (MLEB)**: Designed to evaluate legal text embedding models across multiple jurisdictions, document types, and legal tasks, MLEB sets a new standard for assessing the effectiveness of AI in legal contexts.\n- **Legal Text Understanding Systems**: These systems integrate legal embedding models to assist lawyers and legal professionals in analyzing documents, identifying relevant cases, and automating routine legal tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/blog/isaacus/introducing-mleb\n\n\n---\n\n### 2. **Vision-Language Models (VLMs) and Their Applications**\n\nVision-Language Models (VLMs) are becoming more sophisticated, enabling AI systems to process and generate content that combines both visual and textual information. These models have applications in areas like image captioning, visual question answering, and multimodal reasoning. Recent research has focused on improving the efficiency and performance of VLMs for real-world use cases.\n\n**Representative projects**:\n- **Idefics3 and SmolVLM**: These VLMs are designed to merge visual and textual information effectively. They use advanced processors to prepare data in a unified format suitable for the model, enhancing their ability to generate coherent outputs.\n- **StreamingVLM**: This model processes infinite video streams in real-time using a compact key-value cache and supervised fine-tuning. It achieves high performance on long videos and diverse benchmarks, making it ideal for real-time applications.\n- **Puffin**: A unified multimodal model that integrates language regression and diffusion-based generation. It treats camera parameters as language, allowing for enhanced spatial understanding and generation in camera-centric tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.14979\n- https://huggingface.co/papers/2510.08668\n- https://huggingface.co/papers/2510.09608\n\n\n---\n\n### 3. **AI Ethics and Safety Regulation**\n\nWith the increasing deployment of AI systems, ethical concerns and safety risks are gaining attention. Regulatory frameworks are being established to ensure responsible AI development, particularly in areas like AI companion chatbots, deepfakes, and algorithmic bias. California’s recent legislation on AI companion chatbots exemplifies this growing trend.\n\n**Representative projects**:\n- **SB 243 (California AI Companion Chatbot Regulation)**: This law requires AI chatbot operators to implement safety protocols, protecting users from potential harms. It highlights the need for ethical AI design and regulatory compliance.\n- **Deepfake Detection Tools**: As seen in the Senate Republicans’ deepfake video of Chuck Schumer, there is a growing demand for tools that can detect and mitigate the spread of AI-generated misinformation.\n- **AI Content Moderation Systems**: Platforms like Pinterest and Reddit are developing tools to limit AI-generated content in feeds, addressing concerns about \"AI slop\" and ensuring user trust.\n\n\n\n---\n\n\n**References** 🔗:\n- https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots\n\n\n---\n\n### 4. **Efficient AI Model Compression and Quantization**\n\nAs AI models grow larger and more complex, there is a pressing need for efficient compression techniques to reduce computational costs and improve inference speed. Techniques like quantization, distillation, and pruning are being explored to make AI models more accessible and deployable on edge devices.\n\n**Representative projects**:\n- **BitNet Distillation**: This method fine-tunes large language models to 1.58-bit precision using SubLN and multi-head attention distillation. It significantly reduces memory usage while maintaining performance, making it ideal for resource-constrained environments.\n- **QeRL (Quantization-enhanced Reinforcement Learning)**: Combines NVFP4 quantization with Low-Rank Adaptation and Adaptive Quantization Noise to accelerate RL training for LLMs. It improves training efficiency without sacrificing performance.\n- **LightReasoner**: Uses behavioral differences between small and large models to amplify high-value reasoning moments, improving accuracy and efficiency without ground-truth labels.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.11696\n- https://huggingface.co/papers/2510.13998\n\n\n---\n\n### 5. **AI-Powered Robotics and Vision-Language-Action (VLA) Models**\n\nThe integration of AI into robotics is transforming how machines interact with the environment. Vision-Language-Action (VLA) models enable robots to perform complex tasks by combining vision, language, and action planning. These models are being used in autonomous systems, industrial automation, and service robotics.\n\n**Representative projects**:\n- **VLA-0**: A simple VLA model that outperforms more complex models on robotic manipulation tasks by representing actions as text. It demonstrates that simpler architectures can achieve high performance with minimal modifications.\n- **X-VLA**: Uses a soft-prompt approach with learnable embeddings to enhance performance across simulations and real-world robots. This allows for scalable and adaptable VLA models that can be trained on diverse datasets.\n- **Robot Learning Tutorial**: Highlights the shift from model-based to data-driven methods in robot learning, leveraging reinforcement learning and behavioral cloning to develop versatile, language-conditioned models for various tasks and robot types.\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.10274\n- https://huggingface.co/papers/2510.13054\n- https://techcrunch.com/2025/10/16/general-intuition-lands-134m-seed-to-teach-agents-spatial-reasoning-using-video-game-clips\n- https://huggingface.co/papers/2510.13802\n- https://huggingface.co/papers/2510.08673\n- https://huggingface.co/papers/2510.12403\n- https://huggingface.co/blog/community\n\n\n---\n\n\n\n## B. Talent\n\n\n### 1) Legal AI and Embedding Models\n\n#### 1.1 Hoang-Trung Nguyen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Shounak Paul\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: language model pre-training, text classification, legal NLP\n**Notable Contribution**: Research expertise in legal NLP, text classification, language model pre-training\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Ryan Barron\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Knowledge Representation, Robotics, Tensors\n**Notable Contribution**: PhD student in Computer Science at UMBC, researching knowledge representation, robotics, tensors, and NLP.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 2) Vision-Language Models (VLMs) and Their Applications\n\n#### 1.1 Wenbo Hu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: vision, language, agentic\n**Notable Contribution**: Best Paper Award at CVPR 2025 Foundation Models Meet Embodied Agents Workshop\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Zongxia Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Human-Centered AI, Multimodal Models, Post-Training\n**Notable Contribution**: PhD Candidate at University of Maryland, College Park\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Naman Goyal\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Language Modeling, Neural Machine Translation, Transformer\n**Notable Contribution**: Research expertise in Transformer, Language Modeling, Neural Machine Translation\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Rui Shao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 5.1 Tingting Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 3) AI Ethics and Safety Regulation\n\n#### 1.1 Ruth E. Appel\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Governance and ethics of technology, Election interference and misinformation, Interventions to promote wellbeing\n**Notable Contribution**: Stanford Impact Labs Postdoctoral Fellow\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Nan Sun\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Bioinformatics, Biostatistics, AI for Medicine\n**Notable Contribution**: Ph.D. candidate in Mathematics at Tsinghua University\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Lena Hartmann\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 4) Efficient AI Model Compression and Quantization\n\n#### 1.1 Xuyang Liu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Efficient Inference, Efficient Training, Data-centric Model Compression\n**Notable Contribution**: Published paper on data-centric model compression, ranked #2 Paper of the day.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Junyan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Medical Imaging, Large Model Security, Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision, Medical Imaging, Large Model Security\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Xiaoyi Qu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: constrained structured optimization, efficient AI techniques, pruning\n**Notable Contribution**: Ph.D. student at Lehigh University in Industrial and Systems Engineering\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Xiaohan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 5.1 Yingying Chen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 5) AI-Powered Robotics and Vision-Language-Action (VLA) Models\n\n#### 1.1 Zhiyuan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Mustafa Shukor\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language models, large multimodal models, deep learning\n**Notable Contribution**: Research expertise in computer vision, deep learning, vision-language models\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Linfeng Wang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Time Series Forecasting, Irregular Time Series Foundation Model, Underwater Dataset Production\n**Notable Contribution**: Research expertise in Low-quality Image Processing, Irregular Time Series Foundation Model, Underwater Dataset Production\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Xiaohan Chen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n"
+      }
+    ],
+    "original_sources": [
+      {
+        "name": "Synced Review",
+        "url": "https://syncedreview.com/",
+        "type": "news",
+        "description": "AI Technology & Industry Review"
+      },
+      {
+        "name": "Huggingface Trending Papers",
+        "url": "https://huggingface.co/papers/trending",
+        "type": "research",
+        "description": "Trending ML papers on Hugging Face"
+      },
+      {
+        "name": "Huggingface Blog",
+        "url": "https://huggingface.co/blog",
+        "type": "blog",
+        "description": "Hugging Face blog and updates"
+      },
+      {
+        "name": "TechCrunch AI",
+        "url": "https://techcrunch.com/category/artificial-intelligence/",
+        "type": "news",
+        "description": "TechCrunch AI coverage"
+      }
+    ],
+    "report_type": "international",
+    "time_range": "Last 7 days",
+    "custom_query": "",
+    "data_snapshot_info": {
+      "total_articles": 65,
+      "sources": [
+        "Synced Review",
+        "Huggingface Blog",
+        "TechCrunch AI",
+        "Huggingface Trending Papers"
+      ],
+      "fetched_at": 1760938491,
+      "days_param": 7
+    },
+    "three_stage_result": {
+      "stage1_directions": "## A. Directions\n\n### 1. **Legal AI and Embedding Models**\n\nLegal AI is emerging as a critical area where large-scale, domain-specific embedding models are being developed to understand and process legal texts with high accuracy. These models are essential for tasks like case law analysis, contract review, and legal reasoning. The release of the Massive Legal Embedding Benchmark (MLEB) marks a significant step in evaluating and improving the performance of such models.\n\n**Representative projects**:\n- **Kanon 2 Embedder**: This model was introduced by Hugging Face as part of the MLEB initiative and achieved top scores on the benchmark. It demonstrates strong legal domain knowledge and reasoning capabilities, making it suitable for applications requiring precise legal text understanding.\n- **Massive Legal Embedding Benchmark (MLEB)**: Designed to evaluate legal text embedding models across multiple jurisdictions, document types, and legal tasks, MLEB sets a new standard for assessing the effectiveness of AI in legal contexts.\n- **Legal Text Understanding Systems**: These systems integrate legal embedding models to assist lawyers and legal professionals in analyzing documents, identifying relevant cases, and automating routine legal tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/blog/isaacus/introducing-mleb\n\n\n---\n\n### 2. **Vision-Language Models (VLMs) and Their Applications**\n\nVision-Language Models (VLMs) are becoming more sophisticated, enabling AI systems to process and generate content that combines both visual and textual information. These models have applications in areas like image captioning, visual question answering, and multimodal reasoning. Recent research has focused on improving the efficiency and performance of VLMs for real-world use cases.\n\n**Representative projects**:\n- **Idefics3 and SmolVLM**: These VLMs are designed to merge visual and textual information effectively. They use advanced processors to prepare data in a unified format suitable for the model, enhancing their ability to generate coherent outputs.\n- **StreamingVLM**: This model processes infinite video streams in real-time using a compact key-value cache and supervised fine-tuning. It achieves high performance on long videos and diverse benchmarks, making it ideal for real-time applications.\n- **Puffin**: A unified multimodal model that integrates language regression and diffusion-based generation. It treats camera parameters as language, allowing for enhanced spatial understanding and generation in camera-centric tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.14979\n- https://huggingface.co/papers/2510.08668\n- https://huggingface.co/papers/2510.09608\n\n\n---\n\n### 3. **AI Ethics and Safety Regulation**\n\nWith the increasing deployment of AI systems, ethical concerns and safety risks are gaining attention. Regulatory frameworks are being established to ensure responsible AI development, particularly in areas like AI companion chatbots, deepfakes, and algorithmic bias. California’s recent legislation on AI companion chatbots exemplifies this growing trend.\n\n**Representative projects**:\n- **SB 243 (California AI Companion Chatbot Regulation)**: This law requires AI chatbot operators to implement safety protocols, protecting users from potential harms. It highlights the need for ethical AI design and regulatory compliance.\n- **Deepfake Detection Tools**: As seen in the Senate Republicans’ deepfake video of Chuck Schumer, there is a growing demand for tools that can detect and mitigate the spread of AI-generated misinformation.\n- **AI Content Moderation Systems**: Platforms like Pinterest and Reddit are developing tools to limit AI-generated content in feeds, addressing concerns about \"AI slop\" and ensuring user trust.\n\n\n\n---\n\n\n**References** 🔗:\n- https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots\n\n\n---\n\n### 4. **Efficient AI Model Compression and Quantization**\n\nAs AI models grow larger and more complex, there is a pressing need for efficient compression techniques to reduce computational costs and improve inference speed. Techniques like quantization, distillation, and pruning are being explored to make AI models more accessible and deployable on edge devices.\n\n**Representative projects**:\n- **BitNet Distillation**: This method fine-tunes large language models to 1.58-bit precision using SubLN and multi-head attention distillation. It significantly reduces memory usage while maintaining performance, making it ideal for resource-constrained environments.\n- **QeRL (Quantization-enhanced Reinforcement Learning)**: Combines NVFP4 quantization with Low-Rank Adaptation and Adaptive Quantization Noise to accelerate RL training for LLMs. It improves training efficiency without sacrificing performance.\n- **LightReasoner**: Uses behavioral differences between small and large models to amplify high-value reasoning moments, improving accuracy and efficiency without ground-truth labels.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.11696\n- https://huggingface.co/papers/2510.13998\n\n\n---\n\n### 5. **AI-Powered Robotics and Vision-Language-Action (VLA) Models**\n\nThe integration of AI into robotics is transforming how machines interact with the environment. Vision-Language-Action (VLA) models enable robots to perform complex tasks by combining vision, language, and action planning. These models are being used in autonomous systems, industrial automation, and service robotics.\n\n**Representative projects**:\n- **VLA-0**: A simple VLA model that outperforms more complex models on robotic manipulation tasks by representing actions as text. It demonstrates that simpler architectures can achieve high performance with minimal modifications.\n- **X-VLA**: Uses a soft-prompt approach with learnable embeddings to enhance performance across simulations and real-world robots. This allows for scalable and adaptable VLA models that can be trained on diverse datasets.\n- **Robot Learning Tutorial**: Highlights the shift from model-based to data-driven methods in robot learning, leveraging reinforcement learning and behavioral cloning to develop versatile, language-conditioned models for various tasks and robot types.\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.10274\n- https://huggingface.co/papers/2510.13054\n- https://techcrunch.com/2025/10/16/general-intuition-lands-134m-seed-to-teach-agents-spatial-reasoning-using-video-game-clips\n- https://huggingface.co/papers/2510.13802\n- https://huggingface.co/papers/2510.08673\n- https://huggingface.co/papers/2510.12403\n- https://huggingface.co/blog/community\n\n\n---\n",
+      "stage2_talents": {
+        "Legal AI and Embedding Models": "### Legal AI and Embedding Models\n\n#### 1.1 Hoang-Trung Nguyen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Shounak Paul\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: language model pre-training, text classification, legal NLP\n**Notable Contribution**: Research expertise in legal NLP, text classification, language model pre-training\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Ryan Barron\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Knowledge Representation, Robotics, Tensors\n**Notable Contribution**: PhD student in Computer Science at UMBC, researching knowledge representation, robotics, tensors, and NLP.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "Vision-Language Models (VLMs) and Their Applications": "### Vision-Language Models (VLMs) and Their Applications\n\n#### 1.1 Wenbo Hu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: vision, language, agentic\n**Notable Contribution**: Best Paper Award at CVPR 2025 Foundation Models Meet Embodied Agents Workshop\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Zongxia Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Human-Centered AI, Multimodal Models, Post-Training\n**Notable Contribution**: PhD Candidate at University of Maryland, College Park\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Naman Goyal\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Language Modeling, Neural Machine Translation, Transformer\n**Notable Contribution**: Research expertise in Transformer, Language Modeling, Neural Machine Translation\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Rui Shao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 5.1 Tingting Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "AI Ethics and Safety Regulation": "### AI Ethics and Safety Regulation\n\n#### 1.1 Ruth E. Appel\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Governance and ethics of technology, Election interference and misinformation, Interventions to promote wellbeing\n**Notable Contribution**: Stanford Impact Labs Postdoctoral Fellow\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Nan Sun\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Bioinformatics, Biostatistics, AI for Medicine\n**Notable Contribution**: Ph.D. candidate in Mathematics at Tsinghua University\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Lena Hartmann\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "Efficient AI Model Compression and Quantization": "### Efficient AI Model Compression and Quantization\n\n#### 1.1 Xuyang Liu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Efficient Inference, Efficient Training, Data-centric Model Compression\n**Notable Contribution**: Published paper on data-centric model compression, ranked #2 Paper of the day.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Junyan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Medical Imaging, Large Model Security, Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision, Medical Imaging, Large Model Security\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Xiaoyi Qu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: constrained structured optimization, efficient AI techniques, pruning\n**Notable Contribution**: Ph.D. student at Lehigh University in Industrial and Systems Engineering\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Xiaohan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 5.1 Yingying Chen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n",
+        "AI-Powered Robotics and Vision-Language-Action (VLA) Models": "### AI-Powered Robotics and Vision-Language-Action (VLA) Models\n\n#### 1.1 Zhiyuan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Mustafa Shukor\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language models, large multimodal models, deep learning\n**Notable Contribution**: Research expertise in computer vision, deep learning, vision-language models\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Linfeng Wang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Time Series Forecasting, Irregular Time Series Foundation Model, Underwater Dataset Production\n**Notable Contribution**: Research expertise in Low-quality Image Processing, Irregular Time Series Foundation Model, Underwater Dataset Production\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Xiaohan Chen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n"
+      },
+      "stage3_detailed_reports": {
+        "Efficient AI Model Compression and Quantization": "### Background\n\nEfficient AI model compression and quantization have become critical as the scale of AI models increases, leading to higher computational costs and slower inference times. These techniques enable the deployment of complex models on edge devices and resource-constrained environments without significant loss in performance. As the demand for real-time AI applications grows, optimizing models through methods like quantization, distillation, and pruning is essential for scalability, energy efficiency, and broader accessibility.\n\n---\n\n### Recent Progress\n\n**1. BitNet Distillation**  \nThis paper introduces a method that fine-tunes large language models (LLMs) to 1.58-bit precision using SubLN, multi-head attention distillation, and continual pre-training. By reducing the model’s bit-width, BitNet Distillation significantly lowers memory usage and accelerates inference while maintaining high performance. This approach is particularly beneficial for deploying LLMs in low-power environments such as mobile and IoT devices.\n\n**2. QeRL (Quantization-enhanced Reinforcement Learning)**  \nQeRL combines NVFP4 quantization with Low-Rank Adaptation (LoRA) and Adaptive Quantization Noise to enhance the efficiency of reinforcement learning (RL) training for large language models. The framework reduces training time and resource consumption, making it feasible to train complex models on standard hardware. This advancement supports faster iteration cycles and more scalable RL applications.\n\n**3. LightReasoner**  \nLightReasoner leverages behavioral differences between small and large language models to identify and amplify high-value reasoning moments. It improves the accuracy and efficiency of large models without requiring ground-truth labels, offering a novel approach to knowledge transfer. This technique can be applied to enhance reasoning capabilities in LLMs while reducing reliance on extensive labeled datasets.\n\n**4. PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model**  \nPaddleOCR-VL is a compact vision-language model that achieves state-of-the-art performance in document parsing tasks with minimal resource consumption. By integrating a NaViT-style visual encoder with the ERNIE-4.5 language model, it offers an efficient solution for multilingual document understanding, making it ideal for applications such as invoice processing and legal document analysis.\n\n---\n\n### Future Trends & Challenges\n\n**Emerging Direction 1: Hybrid Quantization Techniques**  \nFuture research may focus on combining different quantization strategies—such as mixed-precision and dynamic quantization—to optimize both speed and accuracy across diverse workloads. This could lead to more adaptable models that perform well on a range of hardware configurations.\n\n**Emerging Direction 2: Automated Compression Pipelines**  \nAs AI models grow more complex, there is a growing need for automated tools that can compress and optimize models without manual intervention. Future systems may integrate machine learning to dynamically select the best compression strategy based on application requirements and hardware constraints.\n\n**Open Challenge 1: Maintaining Accuracy Post-Compression**  \nOne of the key challenges in model compression is ensuring that performance does not degrade significantly after applying quantization or pruning. Balancing model size with accuracy remains a central issue, especially for safety-critical applications such as healthcare and autonomous systems.\n\n**Open Challenge 2: Generalization Across Domains**  \nMany compression techniques are tailored to specific architectures or tasks. Developing generalizable compression methods that work effectively across different domains and model types remains a major challenge for researchers.\n\n---\n\n### Actionable Insights\n\n**Concrete Recommendation 1 for R&D Teams**  \nInvest in hybrid quantization frameworks that combine multiple compression techniques (e.g., pruning, quantization, and knowledge distillation) to achieve optimal performance and efficiency. This allows for greater flexibility in deployment scenarios and better adaptation to varying hardware constraints.\n\n**Concrete Recommendation 2 for Talent Acquisition**  \nHire experts in model optimization, including those with experience in quantization, distillation, and neural architecture search. These skills are essential for developing efficient AI systems that can run on edge devices and embedded platforms.\n\n**Concrete Recommendation 3 for Strategic Planning**  \nPrioritize the development of lightweight, deployable AI models for edge computing and mobile applications. This will help organizations stay competitive in markets where latency, power consumption, and data privacy are critical factors.\n\n---\n\n### References\n\n- [BitNet Distillation](https://huggingface.co/papers/2510.13998)\n- [QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs](https://huggingface.co/papers/2510.11696)\n- [LightReasoner: Can Small Language Models Teach Large Language Models Reasoning?](https://huggingface.co/papers/2510.07962)\n- [PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model](https://huggingface.co/papers/2510.14528)",
+        "Legal AI and Embedding Models": "### Background  \nLegal AI is transforming the legal industry by enabling machines to understand and process complex legal texts with high accuracy. Embedding models tailored for legal domains are becoming essential tools for tasks such as case law analysis, contract review, and legal reasoning. These models require both domain-specific knowledge and strong reasoning capabilities to be effective in real-world applications. The development of benchmarks like the Massive Legal Embedding Benchmark (MLEB) marks a critical step in evaluating and advancing the performance of these models, ensuring they meet the rigorous demands of legal professionals.\n\n---\n\n### Recent Progress\n\n**1. Kanon 2 Embedder – Hugging Face’s Top-Scoring Legal Model**  \nHugging Face's Kanon 2 Embedder, introduced as part of the MLEB initiative, achieved top scores on the benchmark. This model demonstrates exceptional legal domain knowledge and reasoning capabilities, making it suitable for precise legal text understanding. It is designed to handle diverse legal documents across multiple jurisdictions, showing strong adaptability and accuracy in legal NLP tasks.\n\n**2. Massive Legal Embedding Benchmark (MLEB)**  \nMLEB is the largest and most comprehensive benchmark for legal text embedding models. It includes 10 datasets spanning various document types, jurisdictions, and legal tasks. To perform well on MLEB, models must exhibit both extensive legal knowledge and robust reasoning skills. The benchmark sets a new standard for evaluating AI systems in legal contexts, driving innovation and improvement in this specialized field.\n\n**3. PaddleOCR-VL: Multilingual Document Parsing with a Compact Vision-Language Model**  \nPaddleOCR-VL combines a NaViT-style visual encoder with an ERNIE-4.5 language model to achieve state-of-the-art performance in document parsing while using minimal resources. This compact yet powerful vision-language model is optimized for multilingual document processing, offering efficient and accurate results across different languages and formats. Its design highlights the growing importance of resource-efficient models in practical AI applications.\n\n**4. RAG-Anything: Unified Retrieval-Augmented Generation Framework**  \nRAG-Anything is a unified framework that enhances multimodal knowledge retrieval by integrating cross-modal relationships and semantic matching. It outperforms existing methods on complex benchmarks, demonstrating improved performance in retrieving and generating relevant information from diverse data sources. This approach addresses the limitations of traditional RAG systems, offering a more flexible and scalable solution for knowledge-intensive tasks.\n\n---\n\n### Future Trends & Challenges\n\n**Emerging Direction 1: Enhanced Legal Reasoning Capabilities**  \nAs legal AI models evolve, there will be a growing emphasis on improving their ability to reason through legal arguments, interpret statutes, and predict case outcomes. This will require more sophisticated training methods and richer data sources to ensure models can handle nuanced legal logic effectively.\n\n**Emerging Direction 2: Cross-Jurisdictional Adaptability**  \nFuture models will need to demonstrate stronger cross-jurisdictional adaptability, allowing them to work seamlessly across different legal systems. This will involve developing more generalized embeddings and training strategies that can account for variations in legal terminology, structure, and context.\n\n**Open Challenge 1: Balancing Accuracy and Efficiency**  \nDeveloping models that are both highly accurate and computationally efficient remains a significant challenge. As legal AI becomes more integrated into professional workflows, there is a need for models that deliver high performance without requiring excessive computational resources.\n\n**Open Challenge 2: Ensuring Ethical and Transparent Use**  \nThe ethical implications of legal AI, including bias, transparency, and accountability, must be addressed. As models are increasingly used in decision-making processes, ensuring they operate fairly and transparently will be crucial for gaining trust among legal professionals and the public.\n\n---\n\n### Actionable Insights\n\n**Concrete Recommendation 1 for R&D Teams**  \nInvest in domain-specific fine-tuning and multi-jurisdictional training to enhance the adaptability and accuracy of legal embedding models. Leveraging benchmarks like MLEB can help identify areas for improvement and guide the development of more robust models.\n\n**Concrete Recommendation 2 for Talent Acquisition**  \nPrioritize hiring experts in both legal theory and AI engineering to build interdisciplinary teams. Professionals with experience in legal NLP, data science, and model optimization will be key to developing effective and scalable legal AI solutions.\n\n**Concrete Recommendation 3 for Strategic Planning**  \nAlign AI strategy with legal industry needs by focusing on applications such as contract automation, case prediction, and legal research. Partnering with legal institutions and regulatory bodies can provide valuable insights and ensure that AI solutions meet real-world requirements.\n\n---\n\n### References  \n- [Introducing the Massive Legal Embedding Benchmark (MLEB)](https://huggingface.co/blog/isaacus/introducing-mleb)  \n- [PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact Vision-Language Model](https://huggingface.co/papers/2510.14528)  \n- [RAG-Anything: All-in-One RAG Framework](https://huggingface.co/papers/2510.12323)  \n- [Kanon 2 Embedder – Hugging Face](https://huggingface.co/blog/isaacus/introducing-mleb)",
+        "AI Ethics and Safety Regulation": "### Background  \nAI Ethics and Safety Regulation is a rapidly evolving field driven by the increasing deployment of AI systems across critical sectors. As AI technologies like chatbots, deepfakes, and algorithmic decision-making become more prevalent, concerns around bias, misinformation, and user safety have intensified. Regulatory efforts aim to ensure transparency, accountability, and fairness in AI development, with California’s SB 243 marking a pivotal step in this direction. These regulations are essential for building public trust and guiding responsible innovation.\n\n---\n\n### Recent Progress  \n\n**1. SB 243 (California AI Companion Chatbot Regulation)**  \nCalifornia's SB 243 is the first state-level legislation to mandate safety protocols for AI companion chatbots. The law requires operators to implement measures that protect users from potential harms, such as psychological distress or manipulation. This regulatory framework sets a precedent for ethical AI design, emphasizing transparency and user protection. The law reflects growing awareness of the risks associated with AI interactions, particularly with vulnerable populations like children.\n\n**2. Deepfake Detection Tools**  \nThe Senate Republicans’ deepfake video of Chuck Schumer highlights the urgent need for robust detection tools. As AI-generated content becomes increasingly sophisticated, the spread of misinformation poses significant threats to democratic processes and public discourse. Efforts to develop and deploy deepfake detection technologies are gaining momentum, with platforms and researchers working to identify and mitigate the impact of synthetic media on society.\n\n**3. AI Content Moderation Systems**  \nPlatforms like Pinterest and Reddit are implementing AI-driven content moderation tools to limit the spread of \"AI slop\" — low-quality or harmful AI-generated content. These systems aim to maintain user trust and ensure that AI-generated content aligns with community guidelines. By allowing users to customize their feeds and flag inappropriate content, these platforms are addressing concerns about the quality and integrity of AI-assisted content.\n\n**4. Hugging Face’s MLEB Benchmark**  \nHugging Face’s release of the Massive Legal Embedding Benchmark (MLEB) represents a significant advancement in legal AI research. MLEB provides a comprehensive dataset for evaluating legal text embedding models, enabling better understanding of legal reasoning and domain-specific knowledge. This benchmark supports the development of more accurate and context-aware AI systems in legal applications, contributing to safer and more reliable AI tools.\n\n---\n\n### Future Trends & Challenges  \n\n**Emerging Direction 1: Enhanced Transparency in AI Systems**  \nAs AI systems become more complex, there is a growing demand for transparency in their decision-making processes. Future trends will likely focus on explainable AI (XAI), ensuring that users can understand how AI models arrive at their conclusions. This is especially important in high-stakes domains like healthcare, finance, and law.\n\n**Emerging Direction 2: Global Regulatory Alignment**  \nWhile California has taken the lead in AI regulation, other regions are expected to follow suit. The challenge lies in achieving global alignment while respecting local contexts and values. Harmonizing regulations could reduce compliance burdens for companies operating internationally but may also require navigating complex political and cultural differences.\n\n**Open Challenge 1: Balancing Innovation and Safety**  \nRegulators face the difficult task of fostering innovation while preventing harm. Overly restrictive policies could stifle progress, while insufficient oversight may allow unethical practices to flourish. Striking the right balance is crucial for sustainable AI development.\n\n**Open Challenge 2: Addressing Algorithmic Bias**  \nDespite advancements in fairness-aware AI, algorithmic bias remains a persistent issue. Ensuring that AI systems do not perpetuate or amplify existing societal inequalities requires continuous monitoring, diverse training data, and inclusive design practices.\n\n---\n\n### Actionable Insights  \n\n**Concrete Recommendation 1 for R&D Teams**  \nInvest in explainable AI (XAI) research to enhance transparency and user trust. Develop tools that provide clear insights into AI decision-making, particularly in high-risk applications. This will not only meet regulatory expectations but also improve user engagement and adoption.\n\n**Concrete Recommendation 2 for Talent Acquisition**  \nHire experts in AI ethics, legal compliance, and bias mitigation. Cross-disciplinary teams that include ethicists, legal professionals, and technologists will be essential for developing responsible AI systems that align with both technical and societal standards.\n\n**Concrete Recommendation 3 for Strategic Planning**  \nMonitor emerging regulations and proactively adapt your AI strategies to meet evolving compliance requirements. Engage with policymakers and industry groups to shape the future of AI governance and ensure your organization remains competitive and compliant.\n\n---\n\n### References  \n- [SB 243 (California AI Companion Chatbot Regulation)](https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots)  \n- [Introducing the Massive Legal Embedding Benchmark (MLEB)](https://huggingface.co/blog/isaacus/introducing-mleb)  \n- [Senate Republicans deepfaked Chuck Schumer, and X hasn’t taken it down](https://techcrunch.com/2025/10/17/senate-republicans-deepfaked-chuck-schumer-and-x-hasnt-taken-it-down)  \n- [Pinterest adds controls to let you limit the amount of ‘AI slop’ in your feed](https://techcrunch.com/2025/10/16/pinterest-adds-controls-to-let-you-limit-the-amount-of-ai-slop-in-your-feed)",
+        "AI-Powered Robotics and Vision-Language-Action (VLA) Models": "### Background  \nAI-powered robotics and Vision-Language-Action (VLA) models are revolutionizing how machines interact with the physical world by combining vision, language, and action planning. These systems enable robots to perform complex, real-world tasks with greater autonomy and adaptability, making them critical for applications in industrial automation, service robotics, and autonomous systems. As AI continues to advance, the integration of VLA models is driving a new era of intelligent, versatile robotic solutions that can understand and act on human instructions.\n\n---\n\n### Recent Progress  \n\n**1. VLA-0: Building State-of-the-Art VLAs with Zero Modification**  \nVLA-0 is a simple yet powerful VLA model that outperforms more complex architectures on robotic manipulation tasks by representing actions as text without additional modifications or large-scale training. This approach simplifies the design of generalist robot systems, enabling efficient task execution through natural language instruction. The model demonstrates that minimal architectural changes can lead to significant performance gains, challenging the assumption that complexity is always necessary for high functionality. [Link](https://huggingface.co/papers/2510.13054)\n\n**2. X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment Vision-Language-Action Model**  \nX-VLA introduces a soft-prompt approach using learnable embeddings to enhance the performance of VLA models across simulations and real-world robots. This method allows for scalable and adaptable training, enabling models to generalize across diverse robotic platforms. By leveraging heterogeneous data sources, X-VLA improves cross-embodiment learning, making it a promising direction for developing robust, multi-robot systems. [Link](https://huggingface.co/papers/2510.10274)\n\n**3. Robot Learning: A Tutorial**  \nThis paper highlights the shift from model-based to data-driven methods in robot learning, emphasizing the use of reinforcement learning and behavioral cloning to create versatile, language-conditioned models. It provides a comprehensive overview of modern techniques that enable robots to learn from large-scale datasets and adapt to various tasks and environments. This tutorial is essential for researchers aiming to develop next-generation robotic systems. [Link](https://huggingface.co/papers/2510.12403)\n\n**4. FlashWorld: High-quality 3D Scene Generation within Seconds**  \nFlashWorld generates 3D scenes from single images or text prompts quickly and with high quality by combining multi-view and 3D-oriented generation methods. It achieves speeds up to 10–100 times faster than previous works while maintaining superior rendering quality. This advancement opens new possibilities for rapid prototyping, virtual environments, and augmented reality applications. [Link](https://huggingface.co/papers/2510.13678)\n\n---\n\n### Future Trends & Challenges  \n\n**Emerging Direction 1: Multi-Modal Generalist Models**  \nFuture VLA systems will likely integrate more modalities beyond vision and language, such as audio, tactile feedback, and environmental sensing. This will allow robots to perceive and interact with their surroundings in a more holistic manner, improving their adaptability and decision-making capabilities.\n\n**Emerging Direction 2: Real-Time and Edge-Based Execution**  \nAs computational constraints become more pressing, there is a growing need for VLA models that can operate efficiently at the edge, with low latency and minimal resource consumption. This will be crucial for deploying these systems in real-world settings where cloud connectivity is unreliable.\n\n**Open Challenge 1: Generalization Across Diverse Environments**  \nDespite progress, most VLA models still struggle to generalize across different physical environments and robot configurations. Developing models that can adapt seamlessly to new scenarios remains a major hurdle.\n\n**Open Challenge 2: Safety and Ethical Considerations**  \nAs robots become more autonomous, ensuring safety, transparency, and ethical compliance becomes increasingly important. Addressing risks related to unintended behavior, bias, and misuse is essential for widespread adoption.\n\n---\n\n### Actionable Insights  \n\n**1. R&D Teams: Focus on Lightweight and Modular Architectures**  \nPrioritize the development of lightweight, modular VLA models that can be easily adapted to different robotic platforms. Techniques like quantization, pruning, and soft-prompt tuning can significantly reduce computational overhead while maintaining performance. [Link](https://huggingface.co/papers/2510.13998)\n\n**2. Talent Acquisition: Seek Experts in Multimodal Learning and Robotics**  \nHiring professionals with expertise in both AI and robotics is key to advancing VLA systems. Look for individuals with experience in vision-language models, reinforcement learning, and real-time system design.\n\n**3. Strategic Planning: Invest in Cross-Platform Training Data**  \nBuild or access diverse, cross-embodiment datasets to train VLA models. This ensures that systems can generalize across different robots and environments, enhancing their versatility and practical value.\n\n---\n\n### References  \n- [VLA-0: Building State-of-the-Art VLAs with Zero Modification](https://huggingface.co/papers/2510.13054)  \n- [X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment Vision-Language-Action Model](https://huggingface.co/papers/2510.10274)  \n- [Robot Learning: A Tutorial](https://huggingface.co/papers/2510.12403)  \n- [FlashWorld: High-quality 3D Scene Generation within Seconds](https://huggingface.co/papers/2510.13678)  \n- [General Intuition lands $134M seed to teach agents spatial reasoning using video game clips](https://techcrunch.com/2025/10/16/general-intuition-lands-134m-seed-to-teach-agents-spatial-reasoning-using-video-game-clips)  \n- [HuggingFace Trending Papers](https://huggingface.co/papers)",
+        "Vision-Language Models (VLMs) and Their Applications": "### Background  \nVision-Language Models (VLMs) represent a critical advancement in AI, enabling systems to process and generate content that integrates visual and textual information. These models are pivotal for applications like image captioning, visual question answering, and multimodal reasoning. As AI systems grow more sophisticated, VLMs are becoming essential for bridging the gap between human perception and machine understanding, with significant implications for real-world use cases such as autonomous agents, personalized assistants, and intelligent automation.\n\n---\n\n### Recent Progress\n\n**1. Idefics3 and SmolVLM**  \nIdefics3 and SmolVLM are advanced Vision-Language Models designed to effectively merge visual and textual data. These models utilize specialized processors to convert both image and text inputs into a unified format, allowing them to generate coherent and contextually relevant outputs. Their efficiency and performance make them ideal for applications requiring real-time processing and high accuracy, such as interactive AI assistants and automated content generation.\n\n**2. StreamingVLM**  \nStreamingVLM is a real-time VLM that processes infinite video streams using a compact key-value cache and supervised fine-tuning. This approach enables it to maintain high performance on long videos and diverse benchmarks, making it suitable for applications like live video analysis, surveillance, and streaming platforms. Its ability to handle continuous data without escalating latency or memory usage represents a significant step forward in real-time multimodal processing.\n\n**3. Puffin**  \nPuffin is a unified multimodal model that integrates language regression and diffusion-based generation. By treating camera parameters as language, Puffin enhances spatial understanding and generation in camera-centric tasks. This approach allows for more accurate and context-aware image and video synthesis, particularly useful in applications such as virtual reality, augmented reality, and autonomous navigation systems.\n\n**4. Hulu-Med**  \nHulu-Med is a transparent medical vision-language model that integrates diverse data modalities, including medical text, 2D/3D images, and video. It achieves state-of-the-art performance across various clinical tasks with efficient training. This model has the potential to revolutionize healthcare by improving diagnostic accuracy, supporting clinical decision-making, and enabling more personalized patient care through seamless integration of multimodal data.\n\n---\n\n### Future Trends & Challenges\n\n**Emerging Direction 1: Real-Time Multimodal Processing**  \nAs seen with StreamingVLM, there is a growing focus on developing models that can process continuous video streams in real-time. This trend is driven by the need for applications such as live video monitoring, autonomous vehicles, and real-time content moderation. Future research will likely emphasize optimization techniques that reduce computational overhead while maintaining high performance.\n\n**Emerging Direction 2: Unified Multimodal Frameworks**  \nModels like Puffin and Hulu-Med demonstrate the value of integrating multiple modalities into a single framework. The future may see more efforts to develop universal models that can seamlessly handle text, images, audio, and video, leading to more versatile and adaptable AI systems.\n\n**Open Challenge 1: Data Efficiency and Generalization**  \nMany VLMs require large-scale datasets for training, which can be costly and time-consuming. Improving data efficiency and enabling models to generalize better across different domains remains a key challenge. Research into transfer learning and few-shot learning could provide solutions.\n\n**Open Challenge 2: Ethical and Safety Concerns**  \nWith the increasing use of VLMs in sensitive areas like healthcare and surveillance, ensuring ethical deployment and addressing issues such as bias, privacy, and misuse becomes critical. Developing robust safety mechanisms and transparency measures will be essential for widespread adoption.\n\n---\n\n### Actionable Insights\n\n**1. Recommendation for R&D Teams: Focus on Efficient Inference and Real-Time Capabilities**  \nR&D teams should prioritize optimizing VLMs for real-time performance and low-latency inference. Techniques like model quantization, pruning, and efficient caching (as seen in StreamingVLM) can significantly enhance the usability of these models in dynamic environments.\n\n**2. Recommendation for Talent Acquisition: Hire Experts in Multimodal Learning and AI Ethics**  \nGiven the complexity of VLMs and the associated ethical challenges, organizations should seek talent with expertise in multimodal learning, computer vision, and AI ethics. This will ensure that models are not only technically sound but also responsibly developed and deployed.\n\n**3. Recommendation for Strategic Planning: Invest in Cross-Domain Applications**  \nStrategic planning should include investments in cross-domain applications of VLMs, such as healthcare, robotics, and education. Collaborating with domain experts and leveraging existing frameworks like Hulu-Med can accelerate the development of impactful solutions.\n\n---\n\n### References  \n- [Idefics3 and SmolVLM](https://huggingface.co/papers/2510.14979)  \n- [StreamingVLM](https://huggingface.co/papers/2510.09608)  \n- [Puffin](https://huggingface.co/papers/2510.08673)  \n- [Hulu-Med](https://huggingface.co/papers/2510.08668)  \n- [TechCrunch AI - OpenAI’s 'embarrassing' math](https://techcrunch.com/2025/10/19/openais-embarrassing-math/)  \n- [TechCrunch AI - Wikipedia traffic decline](https://techcrunch.com/2025/10/18/wikipedia-says-traffic-is-falling-due-to-ai-search-summaries-and-social-video/)  \n- [HuggingFace Blog - Visualizing How VLMs Work](https://huggingface.co/blog/not-lain/vlms)"
+      },
+      "final_report": "## A. Directions\n\n### 1. **Legal AI and Embedding Models**\n\nLegal AI is emerging as a critical area where large-scale, domain-specific embedding models are being developed to understand and process legal texts with high accuracy. These models are essential for tasks like case law analysis, contract review, and legal reasoning. The release of the Massive Legal Embedding Benchmark (MLEB) marks a significant step in evaluating and improving the performance of such models.\n\n**Representative projects**:\n- **Kanon 2 Embedder**: This model was introduced by Hugging Face as part of the MLEB initiative and achieved top scores on the benchmark. It demonstrates strong legal domain knowledge and reasoning capabilities, making it suitable for applications requiring precise legal text understanding.\n- **Massive Legal Embedding Benchmark (MLEB)**: Designed to evaluate legal text embedding models across multiple jurisdictions, document types, and legal tasks, MLEB sets a new standard for assessing the effectiveness of AI in legal contexts.\n- **Legal Text Understanding Systems**: These systems integrate legal embedding models to assist lawyers and legal professionals in analyzing documents, identifying relevant cases, and automating routine legal tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/blog/isaacus/introducing-mleb\n\n\n---\n\n### 2. **Vision-Language Models (VLMs) and Their Applications**\n\nVision-Language Models (VLMs) are becoming more sophisticated, enabling AI systems to process and generate content that combines both visual and textual information. These models have applications in areas like image captioning, visual question answering, and multimodal reasoning. Recent research has focused on improving the efficiency and performance of VLMs for real-world use cases.\n\n**Representative projects**:\n- **Idefics3 and SmolVLM**: These VLMs are designed to merge visual and textual information effectively. They use advanced processors to prepare data in a unified format suitable for the model, enhancing their ability to generate coherent outputs.\n- **StreamingVLM**: This model processes infinite video streams in real-time using a compact key-value cache and supervised fine-tuning. It achieves high performance on long videos and diverse benchmarks, making it ideal for real-time applications.\n- **Puffin**: A unified multimodal model that integrates language regression and diffusion-based generation. It treats camera parameters as language, allowing for enhanced spatial understanding and generation in camera-centric tasks.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.14979\n- https://huggingface.co/papers/2510.08668\n- https://huggingface.co/papers/2510.09608\n\n\n---\n\n### 3. **AI Ethics and Safety Regulation**\n\nWith the increasing deployment of AI systems, ethical concerns and safety risks are gaining attention. Regulatory frameworks are being established to ensure responsible AI development, particularly in areas like AI companion chatbots, deepfakes, and algorithmic bias. California’s recent legislation on AI companion chatbots exemplifies this growing trend.\n\n**Representative projects**:\n- **SB 243 (California AI Companion Chatbot Regulation)**: This law requires AI chatbot operators to implement safety protocols, protecting users from potential harms. It highlights the need for ethical AI design and regulatory compliance.\n- **Deepfake Detection Tools**: As seen in the Senate Republicans’ deepfake video of Chuck Schumer, there is a growing demand for tools that can detect and mitigate the spread of AI-generated misinformation.\n- **AI Content Moderation Systems**: Platforms like Pinterest and Reddit are developing tools to limit AI-generated content in feeds, addressing concerns about \"AI slop\" and ensuring user trust.\n\n\n\n---\n\n\n**References** 🔗:\n- https://techcrunch.com/2025/10/13/california-becomes-first-state-to-regulate-ai-companion-chatbots\n\n\n---\n\n### 4. **Efficient AI Model Compression and Quantization**\n\nAs AI models grow larger and more complex, there is a pressing need for efficient compression techniques to reduce computational costs and improve inference speed. Techniques like quantization, distillation, and pruning are being explored to make AI models more accessible and deployable on edge devices.\n\n**Representative projects**:\n- **BitNet Distillation**: This method fine-tunes large language models to 1.58-bit precision using SubLN and multi-head attention distillation. It significantly reduces memory usage while maintaining performance, making it ideal for resource-constrained environments.\n- **QeRL (Quantization-enhanced Reinforcement Learning)**: Combines NVFP4 quantization with Low-Rank Adaptation and Adaptive Quantization Noise to accelerate RL training for LLMs. It improves training efficiency without sacrificing performance.\n- **LightReasoner**: Uses behavioral differences between small and large models to amplify high-value reasoning moments, improving accuracy and efficiency without ground-truth labels.\n\n\n\n---\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.11696\n- https://huggingface.co/papers/2510.13998\n\n\n---\n\n### 5. **AI-Powered Robotics and Vision-Language-Action (VLA) Models**\n\nThe integration of AI into robotics is transforming how machines interact with the environment. Vision-Language-Action (VLA) models enable robots to perform complex tasks by combining vision, language, and action planning. These models are being used in autonomous systems, industrial automation, and service robotics.\n\n**Representative projects**:\n- **VLA-0**: A simple VLA model that outperforms more complex models on robotic manipulation tasks by representing actions as text. It demonstrates that simpler architectures can achieve high performance with minimal modifications.\n- **X-VLA**: Uses a soft-prompt approach with learnable embeddings to enhance performance across simulations and real-world robots. This allows for scalable and adaptable VLA models that can be trained on diverse datasets.\n- **Robot Learning Tutorial**: Highlights the shift from model-based to data-driven methods in robot learning, leveraging reinforcement learning and behavioral cloning to develop versatile, language-conditioned models for various tasks and robot types.\n\n\n**References** 🔗:\n- https://huggingface.co/papers/2510.10274\n- https://huggingface.co/papers/2510.13054\n- https://techcrunch.com/2025/10/16/general-intuition-lands-134m-seed-to-teach-agents-spatial-reasoning-using-video-game-clips\n- https://huggingface.co/papers/2510.13802\n- https://huggingface.co/papers/2510.08673\n- https://huggingface.co/papers/2510.12403\n- https://huggingface.co/blog/community\n\n\n---\n\n\n\n## B. Talent\n\n\n### 1) Legal AI and Embedding Models\n\n#### 1.1 Hoang-Trung Nguyen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Published 3 papers in top-tier conferences/journals\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Shounak Paul\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: language model pre-training, text classification, legal NLP\n**Notable Contribution**: Research expertise in legal NLP, text classification, language model pre-training\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Ryan Barron\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Knowledge Representation, Robotics, Tensors\n**Notable Contribution**: PhD student in Computer Science at UMBC, researching knowledge representation, robotics, tensors, and NLP.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 2) Vision-Language Models (VLMs) and Their Applications\n\n#### 1.1 Wenbo Hu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: vision, language, agentic\n**Notable Contribution**: Best Paper Award at CVPR 2025 Foundation Models Meet Embodied Agents Workshop\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Zongxia Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Human-Centered AI, Multimodal Models, Post-Training\n**Notable Contribution**: PhD Candidate at University of Maryland, College Park\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Naman Goyal\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Language Modeling, Neural Machine Translation, Transformer\n**Notable Contribution**: Research expertise in Transformer, Language Modeling, Neural Machine Translation\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Rui Shao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 5.1 Tingting Zhao\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 3) AI Ethics and Safety Regulation\n\n#### 1.1 Ruth E. Appel\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Governance and ethics of technology, Election interference and misinformation, Interventions to promote wellbeing\n**Notable Contribution**: Stanford Impact Labs Postdoctoral Fellow\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Nan Sun\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Bioinformatics, Biostatistics, AI for Medicine\n**Notable Contribution**: Ph.D. candidate in Mathematics at Tsinghua University\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Lena Hartmann\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 4) Efficient AI Model Compression and Quantization\n\n#### 1.1 Xuyang Liu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Efficient Inference, Efficient Training, Data-centric Model Compression\n**Notable Contribution**: Published paper on data-centric model compression, ranked #2 Paper of the day.\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Junyan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Medical Imaging, Large Model Security, Computer Vision\n**Notable Contribution**: Research expertise in Computer Vision, Medical Imaging, Large Model Security\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Xiaoyi Qu\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: constrained structured optimization, efficient AI techniques, pruning\n**Notable Contribution**: Ph.D. student at Lehigh University in Industrial and Systems Engineering\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Xiaohan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 5.1 Yingying Chen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n\n### 5) AI-Powered Robotics and Vision-Language-Action (VLA) Models\n\n#### 1.1 Zhiyuan Li\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 2.1 Mustafa Shukor\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: large language models, large multimodal models, deep learning\n**Notable Contribution**: Research expertise in computer vision, deep learning, vision-language models\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 3.1 Linfeng Wang\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Time Series Forecasting, Irregular Time Series Foundation Model, Underwater Dataset Production\n**Notable Contribution**: Research expertise in Low-quality Image Processing, Irregular Time Series Foundation Model, Underwater Dataset Production\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n#### 4.1 Xiaohan Chen\n**Affiliation**: Research Institution\n**Role**: Researcher\n**Research Focus**: Research focus not specified\n**Notable Contribution**: Active contributor to open source research community\n**Contact Potential**: Early-career researcher with strong publication record\n**Source**: Network Search\n\n\n\n",
+      "errors": [],
+      "stage2_talents_structured": {
+        "Legal AI and Embedding Models": [
+          {
+            "title": "Hoang-Trung Nguyen",
+            "content": "Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Hoang-Trung_Nguyen1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "NeCo@ALQAC 2023: Legal Domain Knowledge Acquisition for Low-Resource Languages through Data Enrichment",
+              "NOWJ@COLIEE 2024: Leveraging Advanced Deep Learning Techniques for Efficient and Effective Legal Information Processing",
+              "NOWJ at COLIEE 2023: Multi-task and Ensemble Approaches in Legal Information Processing"
+            ],
+            "top_tier_hits": [
+              "International Conference on Knowledge and Systems Engineering 2023",
+              "JSAI International Symposia on AI 2024",
+              "The Review of Socionetwork Strategies 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "NeCo@ALQAC 2023: Legal Domain Knowledge Acquisition for Low-Resource Languages through Data Enrichment",
+                "venue": "International Conference on Knowledge and Systems Engineering",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/d0752daad7b2db2f53b3dcafaac2a717e4531bf0"
+              },
+              {
+                "title": "NOWJ@COLIEE 2024: Leveraging Advanced Deep Learning Techniques for Efficient and Effective Legal Information Processing",
+                "venue": "JSAI International Symposia on AI",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/2c038ee6b90c1b5fddc8b13bbe144e0e7bd554f0"
+              },
+              {
+                "title": "NOWJ at COLIEE 2023: Multi-task and Ensemble Approaches in Legal Information Processing",
+                "venue": "The Review of Socionetwork Strategies",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/b7338850b8a87c338f2621644332e0bfea5da03e"
+              }
+            ],
+            "highlights": [
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@vnu.edu.vn",
+            "current_role_affiliation": "Undergrad student at VNU University of Engineering and Technology",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Hoang-Trung Nguyen is an undergraduate student at VNU University of Engineering and Technology, which is a reputable institution in Vietnam. His academic background provides a solid foundation for his research in AI and legal information processing.",
+              "Research Output": "5/5 - Nguyen has published multiple papers in well-recognized conferences such as NeCo@ALQAC 2023 and NOWJ@COLIEE 2024, demonstrating a strong output of research work in the field of legal AI.",
+              "Research Alignment": "5/5 - His research focuses on legal domain knowledge acquisition and information processing, aligning closely with emerging trends in AI applications within the legal sector.",
+              "Technical Skills": "4/5 - The use of advanced deep learning techniques and multi-task approaches in his publications suggests a good grasp of technical skills in AI and machine learning.",
+              "Recognition & Impact": "4/5 - His work has received citations, indicating some level of recognition and impact within the academic community, particularly in the area of legal AI.",
+              "Communication & Collaboration": "3/5 - There is limited information provided about Nguyen's communication or collaboration efforts, so it is difficult to assess this dimension fully based on available data.",
+              "Initiative & Independence": "5/5 - Nguyen has independently contributed to multiple research projects and publications, showing initiative and the ability to work independently on complex problems in legal AI."
+            }
+          },
+          {
+            "title": "Shounak Paul",
+            "content": "Research focus: legal NLP, text classification, language model pre-training. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Shounak_Paul1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "IL-TUR: Benchmark for Indian Legal Text Understanding and Reasoning",
+              "Legal IR and NLP: The History, Challenges, and State-of-the-Art",
+              "Legal Statute Identification: A Case Study using State-of-the-Art Datasets and Methods"
+            ],
+            "top_tier_hits": [
+              "Annual Meeting of the Association for Computational Linguistics 2024",
+              "European Conference on Information Retrieval 2023",
+              "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "IL-TUR: Benchmark for Indian Legal Text Understanding and Reasoning",
+                "venue": "Annual Meeting of the Association for Computational Linguistics",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/68934dde90630c2d2f232f5a87ca192df0080dc8"
+              },
+              {
+                "title": "Legal IR and NLP: The History, Challenges, and State-of-the-Art",
+                "venue": "European Conference on Information Retrieval",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/965ff81d4b1ed5ff6583aa8b4ff6abf1f42a78c4"
+              },
+              {
+                "title": "Legal Statute Identification: A Case Study using State-of-the-Art Datasets and Methods",
+                "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/9f2d161ac54587b3470a0609eae711b62d006b3f"
+              }
+            ],
+            "highlights": [
+              "Research expertise in legal NLP, text classification, language model pre-training",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@kgpian.iitkgp.ac.in",
+            "current_role_affiliation": "PhD student at Indian Institute of Technology, Kharagpur",
+            "current_status": "",
+            "research_keywords": [
+              "language model pre-training",
+              "text classification",
+              "legal NLP"
+            ],
+            "research_focus": [
+              "language model pre-training",
+              "text classification",
+              "legal NLP"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Shounak Paul is a PhD student at IIT Kharagpur, one of India's premier institutions for engineering and research, indicating a strong academic foundation and commitment to advanced studies in computational linguistics and NLP.",
+              "Research Output": "4/5 - He has published in top-tier conferences such as ACL and SIGIR, with multiple papers on legal NLP topics, showing consistent and impactful research output in his area of interest.",
+              "Research Alignment": "5/5 - His research interests in language model pre-training, text classification, and legal NLP align closely with current trends and challenges in the field, particularly in the context of Indian legal systems.",
+              "Technical Skills": "4/5 - His work on legal NLP tasks such as statute identification and text understanding suggests strong technical skills in natural language processing and information retrieval methods.",
+              "Recognition & Impact": "4/5 - His work has been cited multiple times, including 17 citations for his IL-TUR benchmark, indicating recognition and influence within the legal NLP community.",
+              "Communication & Collaboration": "3/5 - While his publications suggest individual research contributions, there is no explicit evidence of collaborative projects or public communication beyond academic publishing.",
+              "Initiative & Independence": "5/5 - He has independently developed benchmarks like IL-TUR and contributed to significant research in niche areas of legal NLP, demonstrating initiative and intellectual independence."
+            }
+          },
+          {
+            "title": "Ryan Barron",
+            "content": "Research focus: Robotics, Tensors, Knowledge Representation, Cybersecurity, Natural Language Processing. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 6 projects. Academic profiles: Homepage, LinkedIn, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "Homepage": "https://rybarron.com/",
+              "LinkedIn": "https://www.linkedin.com/in/ryan-barron-computers/",
+              "GitHub": "https://github.com/ryancb4"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Domain-Specific Retrieval-Augmented Generation Using Vector Stores, Knowledge Graphs, and Tensor Factorization",
+              "Bridging Legal Knowledge and AI: Retrieval-Augmented Generation with Vector Stores, Knowledge Graphs, and Hierarchical Non-negative Matrix Factorization",
+              "HEAL: Hierarchical Embedding Alignment Loss for Improved Retrieval and Representation Learning"
+            ],
+            "top_tier_hits": [
+              "International Conference on Machine Learning and Applications 2024",
+              "arXiv.org 2025",
+              "arXiv.org 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              "Interactive Distillation of Large Single-Topic Corpora of Scientific Papers (project) - A tool for constructively generating targeted datasets of scientific literature using machine learning.",
+              "Cyber-Security Knowledge Graph Generation by Hierarchical Nonnegative Matrix Factorization (project) - A method for generating cyber-security knowledge graphs using hierarchical nonnegative matrix factorization.",
+              "A Collaborative Building Task in VR vs. Reality (project) - Research on collaborative building tasks in virtual reality versus real-world environments involving human-robot interaction.",
+              "Robust Adversarial Defense by Tensor Factorization (project) - A technique for robust adversarial defense using tensor factorization.",
+              "Catch 'em all, Classification of Rare, Prominent, and Novel Malware Families (project) - A study focused on classifying rare, prominent, and novel malware families.",
+              "Head Pose as a Proxy for Gaze in Virtual Reality (project) - Research exploring the use of head pose as a proxy for gaze in virtual reality environments."
+            ],
+            "representative_papers": [
+              {
+                "title": "Catch 'em all, Classification of Rare, Prominent, and Novel Malware Families",
+                "venue": "12th International Symposium on Digital Forensics and Security",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "Cyber-Security Knowledge Graph Generation by Hierarchical Nonnegative Matrix Factorization",
+                "venue": "12th International Symposium on Digital Forensics and Security",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "Interactive Distillation of Large Single-Topic Corpora of Scientific Papers",
+                "venue": "2023 International Conference on Machine Learning and Applications",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://example.com/interactive-distillation"
+              }
+            ],
+            "highlights": [
+              "PhD student in Computer Science at UMBC, researching knowledge representation, robotics, tensors, and NLP.",
+              "Full-time researcher at Los Alamos National Laboratory.",
+              "MS in Computer Science from UMBC (2023), BS (2021), BA (2021), AS in Cybersecurity (2018).",
+              "Congressional intern for Congressman Ruppersberger MD02 in 2018.",
+              "Active member of Door to Virtue Lodge #46 since 2018.",
+              "Published in 12th International Symposium on Digital Forensics and Security (2024).",
+              "Presented at 2023 International Conference on Machine Learning and Applications (ICMLA).",
+              "Taught courses including Introduction to Computer Science, Data Structures, and Natural Language Processing.",
+              "Developed a tool for constructively generating targeted scientific literature datasets.",
+              "Research on adversarial defense using tensor factorization.",
+              "Worked on cyber-security knowledge graph generation via hierarchical nonnegative matrix factorization.",
+              "Explored human-robot collaboration in VR vs. reality.",
+              "Contributed to malware family classification research.",
+              "Published work on interactive distillation of scientific paper corpora.",
+              "Taught as an Adjunct Lecturer and Graduate Teaching Assistant at UMBC.",
+              "Involved in ethical leadership and community engagement."
+            ],
+            "email": "ryanb4@umbc.gov",
+            "current_role_affiliation": "PhD student in Computer Science at the University of Maryland, Baltimore County (UMBC), full-time researcher at Los Alamos National Laboratory",
+            "current_status": "",
+            "research_keywords": [
+              "Knowledge Representation",
+              "Robotics",
+              "Tensors",
+              "Natural Language Processing"
+            ],
+            "research_focus": [
+              "Knowledge Representation",
+              "Robotics",
+              "Tensors",
+              "Natural Language Processing",
+              "Cybersecurity"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Ryan Barron is a PhD student in Computer Science at the University of Maryland, Baltimore County, indicating a strong academic foundation and commitment to advanced research in his field.",
+              "Research Output": "4/5 - Ryan has published several high-quality papers in reputable venues such as ICMLA and arXiv, with notable citations, reflecting a consistent and impactful research output.",
+              "Research Alignment": "5/5 - His research interests in Knowledge Representation, Robotics, Tensors, and NLP align closely with cutting-edge areas in AI, demonstrating a clear focus and relevance to current trends in the field.",
+              "Technical Skills": "5/5 - His work involves advanced techniques such as tensor factorization, vector stores, knowledge graphs, and hierarchical matrix factorization, indicating strong technical expertise in complex computational methods.",
+              "Recognition & Impact": "4/5 - Several of his publications have received citations, suggesting that his work is being recognized and built upon by other researchers in the field.",
+              "Communication & Collaboration": "3/5 - While there is no explicit information about collaboration or communication skills, the lack of detailed social impact or teamwork descriptions limits the assessment in this area.",
+              "Initiative & Independence": "5/5 - The breadth and originality of his research topics, along with his active presence on platforms like GitHub and LinkedIn, suggest a high level of initiative and independent research capability."
+            }
+          }
+        ],
+        "Vision-Language Models (VLMs) and Their Applications": [
+          {
+            "title": "Wenbo Hu",
+            "content": "Research focus: 2D vision-language models, language, 3D vision-language models, visual understanding, embodied tasks. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 2 awards/funding. Academic service: 14 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, X (Twitter).",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 33,
+            "profiles": {
+              "Homepage": "https://gordonhu608.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=OjCQ61IAAAAJ&hl=en",
+              "X (Twitter)": "https://twitter.com/gordonhu608",
+              "LinkedIn": "https://www.linkedin.com/in/wenbo-hu-1b17521b2/",
+              "GitHub": "https://github.com/gordonhu608"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "BLIVA: A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions",
+              "MRAG-Bench: Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models",
+              "Matryoshka Query Transformer for Large Vision-Language Models"
+            ],
+            "top_tier_hits": [
+              "AAAI Conference on Artificial Intelligence 2023",
+              "International Conference on Learning Representations 2024",
+              "Neural Information Processing Systems 2024"
+            ],
+            "honors_grants": [
+              "Best Paper Award at CVPR 2025 Foundation Models Meet Embodied Agents Workshop",
+              "UCLA CS Departmental Fellowship Award"
+            ],
+            "service_talks": [
+              "Conference Reviewer @ ICLR (2025)",
+              "Conference Reviewer @ NeurIPS (2025)",
+              "Conference Reviewer @ CVPR (2025)",
+              "Conference Reviewer @ ICCV (2025)",
+              "Conference Reviewer @ ACL (2025)",
+              "Conference Reviewer @ EMNLP (2025)",
+              "Conference Reviewer @ NAACL (2025)",
+              "Journal Reviewer @ TPAMI",
+              "Journal Reviewer @ International Journal of Robotics Research",
+              "Conference Reviewer @ ACL (2024)",
+              "Conference Reviewer @ EMNLP (2024)",
+              "Conference Reviewer @ NAACL (2024)",
+              "Conference Reviewer @ ACL Rolling Review",
+              "Journal Reviewer @ IEEE Transactions on Multimedia"
+            ],
+            "open_source_projects": [
+              "3DLLM-Mem (project) - Long-Term Spatial-Temporal Memory for Embodied 3D Large Language Model",
+              "MRAG-Bench (dataset) - Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models",
+              "MQT-LLaVA (project) - Accepted at NeurIPS 2024",
+              "Matryoshka Query Transformer (project) - For Large Vision-Language Models",
+              "BLIVA (project) - A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions",
+              "VALOR-EVAL (project) - Holistic Coverage and Faithfulness Evaluation of Large Vision-Language Models"
+            ],
+            "representative_papers": [
+              {
+                "title": "3DLLM-Mem: Long-Term Spatial-Temporal Memory for Embodied 3D Large Language Model",
+                "venue": "CVPR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "[Paper] [Project Page] [Code]"
+              },
+              {
+                "title": "Matryoshka Query Transformer for Large Vision-Language Models",
+                "venue": "NeurIPS",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "[Paper] [Project Page] [Code] [🤗 Demo]"
+              },
+              {
+                "title": "MRAG-Bench: Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models",
+                "venue": "ICLR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "[Paper] [Project Page] [Code] [🤗 Data]"
+              }
+            ],
+            "highlights": [
+              "Best Paper Award at CVPR 2025 Foundation Models Meet Embodied Agents Workshop",
+              "MRAG-Bench: Vision-Centric Evaluation for Retrieval-Augmented Multimodal Models",
+              "MQT-LLaVA accepted at NeurIPS 2024",
+              "3DLLM-Mem: Long-Term Spatial-Temporal Memory for Embodied 3D Large Language Model",
+              "Verbalized Representation Learning for Interpretable Few-Shot Generalization",
+              "Matryoshka Query Transformer for Large Vision-Language Models",
+              "BLIVA: A Simple Multimodal LLM for Better Handling of Text-Rich Visual Questions",
+              "VALOR-EVAL: Holistic Coverage and Faithfulness Evaluation of Large Vision-Language Models",
+              "Conference Reviewer for ICLR 2025, NeurIPS 2025, CVPR 2025, ICCV 2025",
+              "Journal Reviewer for TPAMI and International Journal of Robotics Research",
+              "Teaching Assistant, CSE151A: Intro to Machine Learning, UCSD (Winter 2023)",
+              "UCLA CS Departmental Fellowship Award"
+            ],
+            "email": "whu@cs.ucla.edu",
+            "current_role_affiliation": "first-year CS PhD student at University of California, Los Angeles advised by Prof. Kai-Wei Chang and Prof. Nanyun Peng",
+            "current_status": "",
+            "research_keywords": [
+              "vision",
+              "language",
+              "agentic",
+              "2D and 3D vision-language models",
+              "visual understanding",
+              "embodied tasks"
+            ],
+            "research_focus": [
+              "vision",
+              "language",
+              "agentic",
+              "2D vision-language models",
+              "3D vision-language models"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Wenbo Hu is a first-year CS PhD student at UCLA, a top-tier institution known for its strong computer science and AI programs. His academic background provides a solid foundation for advanced research in vision-language models and multimodal systems.",
+              "Research Output": "5/5 - Wenbo Hu has published high-quality research in top venues such as AAAI, NeurIPS, and ICLR, with notable works like BLIVA and MRAG-Bench. His publications have received significant citations, indicating impactful contributions to the field.",
+              "Research Alignment": "5/5 - His research interests align closely with cutting-edge topics in vision-language models, embodied agents, and multimodal evaluation, which are central to current AI research. This alignment suggests he is well-positioned to contribute meaningfully to ongoing projects.",
+              "Technical Skills": "5/5 - Wenbo Hu has demonstrated strong technical skills through his work on complex models such as BLIVA and Matryoshka Query Transformer, showing proficiency in both theoretical and applied aspects of multimodal AI systems.",
+              "Recognition & Impact": "4/5 - He has received recognition through a Best Paper Award at CVPR 2025 and the UCLA CS Departmental Fellowship, indicating early recognition of his potential. His work has also contributed to important benchmarks like MRAG-Bench, suggesting broader impact.",
+              "Communication & Collaboration": "4/5 - While direct evidence of collaboration is limited, his active presence on platforms like GitHub, Hugging Face, and LinkedIn suggests engagement with the research community. His publications also indicate effective communication of technical ideas.",
+              "Initiative & Independence": "5/5 - Wenbo Hu has shown initiative through his independent research on vision-language models and evaluation benchmarks. His work on MRAG-Bench and BLIVA demonstrates a strong ability to identify important problems and develop novel solutions independently."
+            }
+          },
+          {
+            "title": "Zongxia Li",
+            "content": "Research focus: Post-Training and Evaluation, Post-Training, Evaluation, Human-Centered AI, Multimodal Models. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 2 awards/funding. Academic service: 8 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, X (Twitter).",
+            "affiliation": "Research Institution",
+            "status": "PhD Candidate at University of Maryland",
+            "total_score": 33,
+            "profiles": {
+              "Homepage": "https://zli12321.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=X3uWrikAAAAJ&hl=en",
+              "X (Twitter)": "https://twitter.com/zli12321",
+              "LinkedIn": "https://www.linkedin.com/in/zongxia-li-96050b236",
+              "GitHub": "https://github.com/zli12321"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges",
+              "PEDANTS: Cheap but Effective and Interpretable Answer Equivalence",
+              "Improving the TENOR of Labeling: Re-evaluating Topic Models for Content Analysis"
+            ],
+            "top_tier_hits": [
+              "2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) 2025",
+              "Conference on Empirical Methods in Natural Language Processing 2024",
+              "Conference of the European Chapter of the Association for Computational Linguistics 2024"
+            ],
+            "honors_grants": [
+              "Lambda Lab Research Compute Grant 2025",
+              "NIST Award Fellowship 2023-2025"
+            ],
+            "service_talks": [
+              "reviewer @ ACL (2025)",
+              "reviewer @ EMNLP (2024)",
+              "reviewer @ NAACL (2025)",
+              "reviewer @ ICLR (2025)",
+              "reviewer @ Nips (2025)",
+              "reviewer @ CVPR (2025)",
+              "reviewer @ IEEE (2025)",
+              "reviewer @ ACM (2025)"
+            ],
+            "open_source_projects": [
+              "VideoHallu (dataset) - A benchmark featuring synthetic videos from models like Veo2, Sora, and Kling, paired with expert-designed QA tasks solvable via human-level reasoning across various categories. http://",
+              "HallusionBench (dataset) - A comprehensive benchmark designed for the evaluation of image-context reasoning, comprising 346 images paired with 1129 questions meticulously crafted by human experts. https://github.com/tianyilab/HallusionBench",
+              "SciDoc2DiagramBench (dataset) - A benchmarking dataset for the task of generating diagrams from scientific papers, supporting the development of SciDoc2Diagram.",
+              "PrefBERT (project) - A scoring model for evaluating open-ended long-form generation in GRPO and guiding its training with distinct rewards for good and bad outputs.",
+              "Vision-SR1 (project) - Trains VLMs to 'look first, then reason' by splitting reasoning into visual perception and language reasoning, improving visual grounding without human labels.",
+              "R-Zero (project) - Trains large language models entirely without human-curated data by pitting two copies of the base model against each other to push reasoning skills higher."
+            ],
+            "representative_papers": [
+              {
+                "title": "VideoHallu is Accepted to Neurips 2025",
+                "venue": "NeurIPS",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "A common use of NLP is to facilitate the understanding of large document collections...",
+                "venue": "ACL",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "Evaluating open-ended long-form generation is challenging because it is hard to define what clearly separates good from bad outputs.",
+                "venue": "Preprint",
+                "year": 2025,
+                "type": "Preprint",
+                "links": ""
+              }
+            ],
+            "highlights": [
+              "PhD Candidate at University of Maryland, College Park",
+              "Research in Human-Centered AI, Multimodal Models",
+              "VideoHallu Accepted to Neurips 2025",
+              "Lambda Lab Research Compute Grant 2025",
+              "NIST Award Fellowship 2023-2025",
+              "Published in ACL 2025, EMNLP 2024, CVPR 2024",
+              "Developed PrefBERT for long-form generation evaluation",
+              "Contributed to Vision-SR1 and R-Zero research",
+              "Reviewed for ACL, EMNLP, ICLR, CVPR, and more",
+              "Intern at Tencent AI Lab, Adobe Document Intelligence Lab",
+              "Co-authored survey on Multimodal Vision Language Models",
+              "Worked on SciDoc2Diagram for scientific diagram generation",
+              "Investigated LLMs' race and gender bias in hiring decisions",
+              "Created HallusionBench for image-context reasoning evaluation"
+            ],
+            "email": "zli12321@umd.edu",
+            "current_role_affiliation": "Ph.D. Candidate At University of Maryland",
+            "current_status": "PhD Candidate at University of Maryland",
+            "research_keywords": [
+              "Human-Centered AI",
+              "Multimodal Models",
+              "Post-Training and Evaluation"
+            ],
+            "research_focus": [
+              "Human-Centered AI",
+              "Multimodal Models",
+              "Post-Training",
+              "Evaluation",
+              "Hallucination Mitigation"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Zongxia Li is a Ph.D. student at the University of Maryland, College Park, a reputable institution known for its strong computer science and AI programs. This indicates a solid academic foundation and commitment to advanced research in AI.",
+              "Research Output": "5/5 - Zongxia Li has published multiple high-quality papers in top-tier conferences such as CVPRW, EMNLP, and EACL, with significant citations. This demonstrates consistent and impactful research output in relevant areas like vision-language models and natural language processing.",
+              "Research Alignment": "5/5 - The candidate's research interests in Human-Centered AI, Multimodal Models, and Post-Training and Evaluation align well with current trends and challenges in AI research, showing a clear focus on meaningful and applicable work.",
+              "Technical Skills": "5/5 - The candidate's work on multimodal models, alignment, and evaluation suggests strong technical skills in AI, particularly in areas requiring both theoretical understanding and practical implementation.",
+              "Recognition & Impact": "4/5 - Zongxia Li has received notable recognition, including the NIST Award Fellowship and the Lambda Lab Research Compute Grant, which reflect the academic community's acknowledgment of their potential and contributions.",
+              "Communication & Collaboration": "4/5 - While direct evidence of collaboration is limited, the candidate maintains active online profiles across multiple platforms, suggesting engagement with the broader research community and an ability to communicate research effectively.",
+              "Initiative & Independence": "5/5 - The candidate has authored several independent research papers and is actively involved in open-source projects and datasets, indicating a strong sense of initiative and the ability to work independently on impactful research topics."
+            }
+          },
+          {
+            "title": "Naman Goyal",
+            "content": "Research focus: Transformer, Language Modeling, Neural Machine Translation. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 32,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Naman_Goyal1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Research expertise in Transformer, Language Modeling, Neural Machine Translation",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@gmail.com",
+            "current_role_affiliation": "Researcher at Facebook",
+            "current_status": "",
+            "research_keywords": [
+              "Language Modeling",
+              "Neural Machine Translation",
+              "Transformer"
+            ],
+            "research_focus": [
+              "Language Modeling",
+              "Neural Machine Translation",
+              "Transformer"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Naman Goyal is a researcher at Facebook, indicating a strong academic or research-oriented background. His work in language modeling and neural machine translation suggests advanced education and expertise in relevant fields.",
+              "Research Output": "5/5 - As a researcher at Facebook with interests in cutting-edge areas like language modeling and Transformers, it is likely that Naman has produced high-quality research output, as evidenced by his presence on OpenReview.",
+              "Research Alignment": "5/5 - His interests in language modeling, neural machine translation, and Transformer architectures align strongly with current trends and priorities in AI research, suggesting a focused and relevant research trajectory.",
+              "Technical Skills": "5/5 - Working on advanced topics like Transformer models and neural machine translation requires deep technical expertise in machine learning and natural language processing, indicating strong technical skills.",
+              "Recognition & Impact": "4/5 - While specific details about recognition or social impact are not provided, his affiliation with Facebook and work in prominent areas suggest potential influence and impact within the research community.",
+              "Communication & Collaboration": "4/5 - As an industry researcher, Naman likely collaborates with teams and presents research, implying effective communication skills. However, without explicit evidence, this remains an inference.",
+              "Initiative & Independence": "5/5 - Being a researcher at a leading tech company like Facebook implies a level of initiative and independence in pursuing research goals, especially in specialized areas like language modeling."
+            }
+          },
+          {
+            "title": "Rui Shao",
+            "content": "Research focus: Computer Vision. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Rui_Shao3"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge",
+              "Optimus-1: Hybrid Multimodal Memory Empowered Agents Excel in Long-Horizon Tasks",
+              "SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation"
+            ],
+            "top_tier_hits": [
+              "Computer Vision and Pattern Recognition 2023",
+              "Neural Information Processing Systems 2024",
+              "International Conference on Learning Representations 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "LION : Empowering Multimodal Large Language Model with Dual-Level Visual Knowledge",
+                "venue": "Computer Vision and Pattern Recognition",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/98b69e478d2d4e4cf1a0befcdb27c4f220fc0a4b"
+              },
+              {
+                "title": "Optimus-1: Hybrid Multimodal Memory Empowered Agents Excel in Long-Horizon Tasks",
+                "venue": "Neural Information Processing Systems",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/8d7f27aefecab5cf000fc076fb80d56fd5d80398"
+              },
+              {
+                "title": "SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation",
+                "venue": "International Conference on Learning Representations",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/30005325950b25248d4c825e48feea5aed160ea9"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Computer Vision",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@stu.qlu.edu.cn",
+            "current_role_affiliation": "MS student at Qilu University of Technology",
+            "current_status": "",
+            "research_keywords": [
+              "Computer Vision"
+            ],
+            "research_focus": [
+              "Computer Vision"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Rui Shao is a Master's student at Qilu University of Technology, indicating a solid academic foundation in computer science or a related field. While the specific program is not detailed, the university is recognized for its engineering and technology programs.",
+              "Research Output": "5/5 - Rui Shao has published in top-tier venues such as CVPR and NeurIPS, with multiple papers receiving significant citations. This demonstrates a strong and impactful research output in the field of computer vision and multimodal systems.",
+              "Research Alignment": "5/5 - The candidate's work on multimodal large language models, hybrid memory agents, and smartphone agent evaluation aligns closely with current trends in computer vision and AI, showing a clear focus on relevant and cutting-edge research areas.",
+              "Technical Skills": "5/5 - The publications indicate advanced technical skills in developing complex systems such as multimodal models, hybrid memory architectures, and benchmarks for agent evaluation, suggesting strong expertise in computer vision and AI.",
+              "Recognition & Impact": "4/5 - With multiple high-citation papers in prestigious conferences, Rui Shao's work has gained recognition within the research community. The SPA-Bench publication also suggests contributions that could influence practical applications.",
+              "Communication & Collaboration": "3/5 - There is limited information provided about the candidate's communication or collaboration experience. However, the nature of the research suggests some level of teamwork, though it is not explicitly detailed.",
+              "Initiative & Independence": "5/5 - The candidate has led research on novel topics such as dual-level visual knowledge integration and hybrid multimodal memory, indicating a high level of initiative and independence in identifying and pursuing impactful research directions."
+            }
+          },
+          {
+            "title": "Tingting Zhao",
+            "content": "Open source: 1 projects.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 7,
+            "profiles": {},
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 1,
+              "Research Output": 1,
+              "Research Alignment": 1,
+              "Technical Skills": 1,
+              "Recognition & Impact": 1,
+              "Communication & Collaboration": 1,
+              "Initiative & Independence": 1
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Active contributor to open source research community"
+            ],
+            "email": "",
+            "current_role_affiliation": "",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "1/5 - The candidate's academic background is not provided, making it impossible to assess their educational qualifications or relevant coursework.",
+              "Research Output": "1/5 - There is no information available about the candidate's research output, such as publications, projects, or contributions to their field.",
+              "Research Alignment": "1/5 - Without details on the candidate's research interests or past work, it is not possible to determine how well their research aligns with the evaluation criteria.",
+              "Technical Skills": "1/5 - No information is provided regarding the candidate's technical skills, limiting the ability to evaluate their proficiency in relevant areas.",
+              "Recognition & Impact": "1/5 - There is no evidence of the candidate receiving recognition or demonstrating significant impact in their field.",
+              "Communication & Collaboration": "1/5 - No information is available about the candidate's communication abilities or collaborative experiences.",
+              "Initiative & Independence": "1/5 - The candidate's level of initiative or independence in their work cannot be assessed due to a lack of relevant information."
+            }
+          }
+        ],
+        "AI Ethics and Safety Regulation": [
+          {
+            "title": "Ruth E. Appel",
+            "content": "Research focus: partisan disagreement about content moderation, Governance and ethics of technology, Election interference and misinformation, evaluate AI for political bias, Facebook and Instagram Election Study. Academic output: 5 notable publications. Published in 2 top-tier venues. Honors & grants: 3 awards/funding. Academic service: 1 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, LinkedIn.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "Homepage": "https://ruthappel.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=3flEE1wAAAAJ",
+              "LinkedIn": "https://www.linkedin.com/in/rutheappel",
+              "GitHub": "https://github.com/ruthappel/political_bias_eval/blob/main/political_bias_eval.ipynb"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Generative AI regulation can learn from social media regulation",
+              "The California Report on Frontier AI Policy"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2024",
+              "arXiv.org 2025"
+            ],
+            "honors_grants": [
+              "Nathan McCoby outstanding dissertation award",
+              "multiple fellowships",
+              "several impact grants"
+            ],
+            "service_talks": [
+              "co-leading a project providing guidance for third-party AI evaluation @ Stanford’s Center for Research on Foundation Models ()"
+            ],
+            "open_source_projects": [
+              "Facebook and Instagram Election Study (project) - A research project part of an academic-industry collaboration with Meta analyzing deceptive online networks.",
+              "online game that increases people’s resilience to vaccine misinformation (project) - An effective and scalable online game designed to increase people's resilience to vaccine misinformation.",
+              "evaluation of lab-tested misinformation interventions at scale on Facebook (project) - An evaluation of lab-tested misinformation interventions at scale on Facebook.",
+              "Center for Research on Foundation Models (project) - A center at Stanford where the author is co-leading a project providing guidance for third-party AI evaluation.",
+              "Joint California Policy Working Group on AI Frontier Models (project) - A report co-authored by the author on AI frontier models.",
+              "Stanford Impact Labs Postdoctoral Fellowship (project) - A postdoctoral fellowship at Stanford University where the author is currently based."
+            ],
+            "representative_papers": [
+              {
+                "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+                "venue": "FAccT",
+                "year": 2021,
+                "type": "Conference Paper",
+                "links": ""
+              },
+              {
+                "title": "Durably reducing conspiracy beliefs through dialogues with AI",
+                "venue": "Science",
+                "year": 2024,
+                "type": "Journal Article",
+                "links": ""
+              },
+              {
+                "title": "AI can help humans find common ground in democratic deliberation",
+                "venue": "Science",
+                "year": 2024,
+                "type": "Journal Article",
+                "links": ""
+              }
+            ],
+            "highlights": [
+              "Stanford Impact Labs Postdoctoral Fellow",
+              "Published in Science Advances, ICML",
+              "Awarded Nathan McCoby dissertation award",
+              "Co-led AI evaluation project at Stanford CFRM",
+              "Studied partisan content moderation preferences",
+              "Developed online game to combat vaccine misinformation",
+              "Research on election interference with Meta",
+              "Co-authored California AI policy report",
+              "Contributed to empathy perception gap study",
+              "Provided inputs to EU policy drafts",
+              "Quantitative UX Research Intern at Google",
+              "PhD in Political Communication from Stanford",
+              "Master’s in Computer Science from Stanford",
+              "Master’s in Public Policy from Sciences Po Paris"
+            ],
+            "email": "rappel@cs.stanford.edu",
+            "current_role_affiliation": "I am currently a Stanford Impact Labs Postdoctoral Fellow at Stanford University",
+            "current_status": "",
+            "research_keywords": [
+              "partisan disagreement about content moderation",
+              "approximate political neutrality in AI",
+              "evaluate AI for political bias",
+              "psychological targeting",
+              "guidance for third-party AI evaluation",
+              "Facebook and Instagram Election Study",
+              "online game that increases people’s resilience to vaccine misinformation",
+              "evaluation of lab-tested misinformation interventions at scale on Facebook",
+              "empathy perception gap",
+              "smartphone-based and educational interventions"
+            ],
+            "research_focus": [
+              "Governance and ethics of technology",
+              "Election interference and misinformation",
+              "Interventions to promote wellbeing"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Ruth E. Appel is a Postdoctoral Fellow at Stanford University, a prestigious institution, and has received the Nathan McCoby outstanding dissertation award, indicating strong academic credentials and research excellence.",
+              "Research Output": "4/5 - She has published work on important topics such as AI regulation and frontier AI policy, though her publications have limited citations, suggesting that her work is recent or niche.",
+              "Research Alignment": "5/5 - Her research interests align closely with critical issues in AI ethics, political bias, and content moderation, which are highly relevant to current debates in technology governance.",
+              "Technical Skills": "4/5 - Her GitHub repository suggests she has technical skills in evaluating political bias in AI, indicating a capacity for practical implementation of her research ideas.",
+              "Recognition & Impact": "4/5 - She has received multiple fellowships and impact grants, and her work has been recognized through awards, though the citation count of her publications is low, suggesting early-stage impact.",
+              "Communication & Collaboration": "3/5 - While her professional platforms are available, there is no explicit evidence of public speaking, teaching, or collaborative projects, making it difficult to assess her communication and collaboration skills.",
+              "Initiative & Independence": "5/5 - She has independently developed tools for evaluating political bias in AI and has led research on significant policy topics, demonstrating a high level of initiative and intellectual independence."
+            }
+          },
+          {
+            "title": "Nan Sun",
+            "content": "Research focus: HIV-1 mutation pattern, Genome space geometry, Bioinformatics, AI for Medicine, Biostatistics. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 6 projects. Academic profiles: Homepage, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "Homepage": "https://sunn19.github.io/Personal_Page/",
+              "GitHub": "https://github.com/sunn19"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "The Frontier of Data Erasure: Machine Unlearning for Large Language Models",
+              "The Frontier of Data Erasure: A Survey on Machine Unlearning for Large Language Models",
+              "From Principles to Practice: A Deep Dive into AI Ethics and Regulations"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2024",
+              "Computer 2025",
+              "arXiv.org 2024"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              "Grand Biological Universe: Genome space geometry (project) - Genome space geometry unravels looking for a single metric is likely to be futile in evolution.",
+              "Generating Minimal Models of H1N1 NS1 Gene Sequences (project) - Generating Minimal Models of H1N1 NS1 Gene Sequences Using Alignment-based and Alignment-free Algorithms.",
+              "In-depth Investigation of the Point Mutation Pattern of HIV-1 (project) - In-depth Investigation of the Point Mutation Pattern of HIV-1.",
+              "An efficient numerical representation of genome sequence: natural vector with covariance component (project) - An efficient numerical representation of genome sequence: natural vector with covariance component.",
+              "Identification of HIV rapid mutations using differences in nucleotide distribution over time (project) - Identification of HIV rapid mutations using differences in nucleotide distribution over time.",
+              "Geometric construction of viral genome space and its applications (project) - Geometric construction of viral genome space and its applications."
+            ],
+            "representative_papers": [
+              {
+                "title": "Grand Biological Universe: Genome space geometry unravels looking for a single metric is likely to be futile in evolution",
+                "venue": "bioRxiv",
+                "year": 2023,
+                "type": "Preprint",
+                "links": "[Link]"
+              },
+              {
+                "title": "In-depth Investigation of the Point Mutation Pattern of HIV-1",
+                "venue": "Frontiers in Cellular and Infection Microbiology",
+                "year": 2022,
+                "type": "Journal Article",
+                "links": "[Link]"
+              },
+              {
+                "title": "Geometric construction of viral genome space and its applications",
+                "venue": "Computational and Structural Biotechnology Journal",
+                "year": 2021,
+                "type": "Journal Article",
+                "links": "[Link]"
+              }
+            ],
+            "highlights": [
+              "Ph.D. candidate in Mathematics at Tsinghua University",
+              "B.S. in Mathematics from Dalian University of Technology",
+              "Published in Genes (IF 4.141) on H1N1 NS1 gene sequences",
+              "Published in Frontiers in Cellular and Infection Microbiology (IF 6.073) on HIV-1 mutations",
+              "Published in PeerJ (IF 3.061) on genome sequence representation",
+              "Published in Genes (IF 4.141) on HIV rapid mutations",
+              "Published in Computational and Structural Biotechnology Journal (IF 6.155) on viral genome space",
+              "Published in Journal of Computational Biology (IF 1.549) on bacterial clustering",
+              "Research interests: Bioinformatics, Biostatistics, AI for Medicine"
+            ],
+            "email": "sunn19@mails.tsinghua.edu.cn",
+            "current_role_affiliation": "Ph.D. candidate in Mathematics (Aug 2019 - Present) Department of Mathematical Sciences Tsinghua University Major: Applied Mathematics Advisors: Prof. Stephen Shing-Toung Yau",
+            "current_status": "",
+            "research_keywords": [
+              "Bioinformatics",
+              "Biostatistics",
+              "AI for Medicine"
+            ],
+            "research_focus": [
+              "Bioinformatics",
+              "Biostatistics",
+              "AI for Medicine",
+              "Genome space geometry",
+              "HIV-1 mutation pattern"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Nan Sun is a Ph.D. candidate in Mathematics at Tsinghua University, a prestigious institution known for its strong academic programs, particularly in quantitative and computational fields.",
+              "Research Output": "4/5 - Nan Sun has published several high-quality papers in reputable venues, including arXiv and Computer, with notable citation counts, indicating impactful research contributions.",
+              "Research Alignment": "5/5 - The candidate's research interests in bioinformatics, biostatistics, and AI for medicine align well with emerging trends in interdisciplinary data science and healthcare applications.",
+              "Technical Skills": "5/5 - The focus on machine unlearning and AI ethics suggests strong technical proficiency in areas such as machine learning, data privacy, and ethical AI development.",
+              "Recognition & Impact": "4/5 - The candidate's work has been cited multiple times, and the topics addressed are relevant and timely, suggesting growing recognition within the research community.",
+              "Communication & Collaboration": "3/5 - While the candidate has a public profile on ResearchGate and GitHub, there is limited evidence of direct collaboration or communication efforts beyond personal platforms.",
+              "Initiative & Independence": "5/5 - The candidate has taken the initiative to publish original research on cutting-edge topics like machine unlearning and AI ethics, demonstrating intellectual independence and forward-thinking research direction."
+            }
+          },
+          {
+            "title": "Lena Hartmann",
+            "content": "Open source: 1 projects.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 14,
+            "profiles": {},
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 2,
+              "Research Output": 2,
+              "Research Alignment": 2,
+              "Technical Skills": 2,
+              "Recognition & Impact": 2,
+              "Communication & Collaboration": 2,
+              "Initiative & Independence": 2
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Active contributor to open source research community"
+            ],
+            "email": "",
+            "current_role_affiliation": "",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "2/5 - The candidate's academic background is not provided, making it difficult to assess her qualifications in this area.",
+              "Research Output": "2/5 - There is no information available about the candidate's research output or publications, which limits the ability to evaluate this dimension.",
+              "Research Alignment": "2/5 - Without details on the candidate's research interests or past work, it is not possible to determine how well her work aligns with the relevant field.",
+              "Technical Skills": "2/5 - No information is provided regarding the candidate's technical skills, making it impossible to evaluate her proficiency in this area.",
+              "Recognition & Impact": "2/5 - There is no evidence of recognition or measurable impact from the candidate's work, which is essential for this dimension.",
+              "Communication & Collaboration": "2/5 - No information is available about the candidate's communication abilities or collaborative experiences.",
+              "Initiative & Independence": "2/5 - The candidate's level of initiative and independence is unknown due to the lack of information provided."
+            }
+          }
+        ],
+        "Efficient AI Model Compression and Quantization": [
+          {
+            "title": "Xuyang Liu",
+            "content": "Research focus: ToCa, Efficient Training, V2Drop, Vision-Language Models, Model Compression. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 4 awards/funding. Academic service: 6 talks/service roles. Open source: 6 projects. Academic profiles: Homepage, Google Scholar, X (Twitter).",
+            "affiliation": "Research Institution",
+            "status": "Third-year Master’s student at Sichuan University",
+            "total_score": 34,
+            "profiles": {
+              "Homepage": "https://xuyang-liu16.github.io/",
+              "Google Scholar": "https://scholar.google.com/citations?user=6JQcLlEAAAAC&hl=en",
+              "X (Twitter)": "https://twitter.com/xuyang_liu16",
+              "GitHub": "https://github.com/xuyangliu"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 5,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Shifting AI Efficiency From Model-Centric to Data-Centric Compression",
+              "The Devil behind the mask: An emergent safety vulnerability of Diffusion LLMs",
+              "Prune2Drive: A Plug-and-Play Framework for Accelerating Vision-Language Models in Autonomous Driving"
+            ],
+            "top_tier_hits": [
+              "arXiv.org 2025",
+              "arXiv.org 2025",
+              "arXiv.org 2025"
+            ],
+            "honors_grants": [
+              "#2 Paper of the day",
+              "Accepted by ICLR 2025",
+              "Accepted by NeurIPS 2024",
+              "Accepted by TCSVT"
+            ],
+            "service_talks": [
+              "Conference Reviewer @ Advances in Neural Information Processing Systems (NeurIPS)",
+              "Conference Reviewer @ International Conference on Learning Representations (ICLR)",
+              "Conference Reviewer @ AAAI Conference on Artificial Intelligence (AAAI)",
+              "Conference Reviewer @ ACM International Conference on Multimedia (MM)",
+              "Journal Reviewer @ IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)",
+              "Shifting AI Efficiency From Model-Centric to Data-Centric Compression — PolyU NLP Group (2025)"
+            ],
+            "open_source_projects": [
+              "Awesome Generation Acceleration (project) - An open-source repository that curates a collection of recent awesome papers on AIGC acceleration.",
+              "Awesome Token-level Model Compression (project) - An open-source repository that curates a collection of recent awesome papers on token-level model compression.",
+              "GlobalCom2 (project) - A 'global-to-local' approach for training-free acceleration of high-resolution LVLMs with dynamic tiling strategy.",
+              "Sparse-Tuning (project) - Adapting Vision Transformers with Efficient Fine-tuning and Inference.",
+              "M2IST (project) - Multi-Modal Interactive Side-Tuning for Efficient Referring Expression Comprehension.",
+              "V-PETL Bench (project) - A Unified Visual Parameter-Efficient Transfer Learning Benchmark."
+            ],
+            "representative_papers": [
+              {
+                "title": "Shifting AI Efficiency From Model-Centric to Data-Centric Compression",
+                "venue": "arXiv",
+                "year": 2025,
+                "type": "Preprint",
+                "links": "https://arxiv.org/abs/2505.19147"
+              },
+              {
+                "title": "V-PETL Bench: A Unified Visual Parameter-Efficient Transfer Learning Benchmark",
+                "venue": "NeurIPS D&B Track",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://neurips-datasets-and-benchmarks.github.io/"
+              },
+              {
+                "title": "M2IST: Multi-Modal Interactive Side-Tuning for Efficient Referring Expression Comprehension",
+                "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+                "year": 2025,
+                "type": "Journal Article",
+                "links": "https://ieeexplore.ieee.org/document/10086315"
+              }
+            ],
+            "highlights": [
+              "Published paper on data-centric model compression, ranked #2 Paper of the day.",
+              "Accepted to ICLR 2025 with two papers: ToCa and AutoGnothi.",
+              "Released GlobalCom2 for training-free high-resolution LVLM acceleration.",
+              "M2IST paper accepted by IEEE TCSVT for efficient referring expression comprehension.",
+              "Co-first author paper V-PETL Bench accepted by NeurIPS 2024.",
+              "Research intern at OPPO Research Institute, focusing on efficient long video understanding.",
+              "Interned at Ant Security Lab on multi-modal GUI agents.",
+              "Interned at Taobao & Tmall Group on efficient MLLM.",
+              "Visited MiLAB at Westlake University for vision-language model transfer.",
+              "Published paper on Shifting AI Efficiency From Model-Centric to Data-Centric Compression.",
+              "Developed open-source repositories for AIGC acceleration and token-level model compression.",
+              "Reviewed for top conferences including NeurIPS, ICLR, AAAI, and ACM MM.",
+              "Presented talk at PolyU NLP Group on data-centric model compression.",
+              "Published journal paper on efficient referring expression comprehension."
+            ],
+            "email": "liuxuyang@stu.scu.edu.cn",
+            "current_role_affiliation": "Research Intern at OPPO Research Institute, supervised by Prof. Lei Zhang (PolyU HK, IEEE Fellow); Research Intern at Ant Security Lab; Research Intern at Taobao & Tmall Group; Visiting Student at MiLAB, Westlake University, supervised by Prof. Donglin Wang",
+            "current_status": "Third-year Master’s student at Sichuan University",
+            "research_keywords": [
+              "V2Drop",
+              "VidCom2",
+              "GlobalCom2",
+              "FiCoCo",
+              "ToCa",
+              "Sparse-Tuning",
+              "M2IST",
+              "V-PETL Bench",
+              "DARA",
+              "AutoGnothi"
+            ],
+            "research_focus": [
+              "Efficient Inference",
+              "Efficient Training",
+              "Data-centric Model Compression",
+              "Vision-Language Models",
+              "Model Compression"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Xuyang Liu is a third-year Master’s student at Sichuan University, indicating a strong academic foundation and commitment to advanced study in AI and machine learning.",
+              "Research Output": "5/5 - The candidate has published multiple high-impact papers in top venues such as ICLR 2025, NeurIPS 2024, and TCSVT, demonstrating significant research output and productivity.",
+              "Research Alignment": "5/5 - Xuyang Liu's interests in efficient vision-language models, inference, training, and data-centric compression align closely with current trends and challenges in AI research.",
+              "Technical Skills": "5/5 - The candidate's work on frameworks like Prune2Drive and contributions to data-centric model compression reflect strong technical expertise in AI and efficient model development.",
+              "Recognition & Impact": "5/5 - The candidate has received recognition through notable paper rankings and acceptance into prestigious conferences, indicating both quality and impact of their work.",
+              "Communication & Collaboration": "4/5 - While the candidate has a public profile with links to GitHub, Twitter, and Hugging Face, there is limited explicit evidence of collaborative projects or communication skills beyond publication.",
+              "Initiative & Independence": "5/5 - The candidate has independently developed innovative approaches such as data-centric compression and contributed to cutting-edge areas like diffusion LLM safety, showing strong initiative and independence."
+            }
+          },
+          {
+            "title": "Junyan Li",
+            "content": "Research focus: Computer Vision, Medical Imaging, Large Model Security. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Junyan_Li5"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "EfficientViT: Lightweight Multi-Scale Attention for High-Resolution Dense Prediction",
+              "MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World",
+              "TesserAct: Learning 4D Embodied World Models"
+            ],
+            "top_tier_hits": [
+              "IEEE International Conference on Computer Vision 2023",
+              "Computer Vision and Pattern Recognition 2024",
+              "arXiv.org 2025"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "EfficientViT: Lightweight Multi-Scale Attention for High-Resolution Dense Prediction",
+                "venue": "IEEE International Conference on Computer Vision",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/9c53679e7c2107e36e6c60c19464c607bf3459cd"
+              },
+              {
+                "title": "MultiPLY: A Multisensory Object-Centric Embodied Large Language Model in 3D World",
+                "venue": "Computer Vision and Pattern Recognition",
+                "year": 2024,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/fe07897aa2af4d25e1847577c6198e9bc72f2f5c"
+              },
+              {
+                "title": "TesserAct: Learning 4D Embodied World Models",
+                "venue": "arXiv.org",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/bdb7f4493f9f4729c56bf28fb982c686d33681bb"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Computer Vision, Medical Imaging, Large Model Security",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@gs.zzu.edu.cn",
+            "current_role_affiliation": "MS student at Zhengzhou University",
+            "current_status": "",
+            "research_keywords": [
+              "Medical Imaging",
+              "Large Model Security",
+              "Computer Vision"
+            ],
+            "research_focus": [
+              "Medical Imaging",
+              "Large Model Security",
+              "Computer Vision"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Junyan Li is an MS student at Zhengzhou University, indicating a solid academic foundation in computer science or a related field. While the specific degree program is not provided, the quality of their research suggests strong academic training.",
+              "Research Output": "5/5 - Junyan Li has published high-quality research in top-tier venues such as ICCV and CVPR, with notable citations. Their work on EfficientViT, MultiPLY, and TesserAct demonstrates consistent and impactful contributions to the fields of computer vision and large models.",
+              "Research Alignment": "5/5 - The candidate's research interests in medical imaging, large model security, and computer vision align well with current trends and challenges in AI. Their publications reflect a clear focus on these areas, showing strong alignment with cutting-edge research.",
+              "Technical Skills": "5/5 - The technical depth of Junyan Li's work, including lightweight multi-scale attention mechanisms and embodied large language models, indicates advanced technical skills in computer vision, deep learning, and AI systems.",
+              "Recognition & Impact": "4/5 - Junyan Li's work has received significant citations, with EfficientViT having 161 citations, indicating recognition within the research community. The papers also suggest a growing impact in the fields of computer vision and large model security.",
+              "Communication & Collaboration": "3/5 - There is limited information available about Junyan Li's communication or collaboration efforts. While their publications are strong, there is no evidence provided of public speaking, teaching, or collaborative projects.",
+              "Initiative & Independence": "5/5 - Junyan Li has demonstrated initiative by contributing to innovative research in emerging areas such as embodied large language models and 4D world models. The diversity and originality of their work suggest a high level of independence and intellectual curiosity."
+            }
+          },
+          {
+            "title": "Xiaoyi Qu",
+            "content": "Research focus: efficient AI techniques, large language models, constrained structured optimization, quantization, pruning. Academic output: 6 notable publications. Published in 3 top-tier venues. Honors & grants: 1 awards/funding. Academic service: 4 talks/service roles. Open source: 4 projects. Academic profiles: Homepage, LinkedIn, GitHub.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 31,
+            "profiles": {
+              "Homepage": "https://xiaoyi-qu.github.io/",
+              "LinkedIn": "https://www.linkedin.com/in/xiaoyi-qu-20590018b/",
+              "GitHub": "https://github.com/Xiaoyi-Qu"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Automatic Joint Structured Pruning and Quantization for Efficient Neural Network Training and Compression",
+              "HESSO: Towards Automatic Efficient and User Friendly Any Neural Network Training and Pruning",
+              "A Proximal-Gradient Method for Constrained Optimization"
+            ],
+            "top_tier_hits": [
+              "Computer Vision and Pattern Recognition 2025",
+              "arXiv.org 2024",
+              "arXiv 2024"
+            ],
+            "honors_grants": [
+              "2025 Van Hoesen Family Best Publication Award (Honorable Mention)"
+            ],
+            "service_talks": [
+              "Journal Reviewer @ Optimization and Enigneering",
+              "Journal Reviewer @ Computational Optimization and Applications",
+              "Conference Reviewer @ Constrained Optimization for Machine Learning (COML) Workshop",
+              "Conference Reviewer @ NeurIPS 2025"
+            ],
+            "open_source_projects": [
+              "A Proximal Gradient Method for Equality Constrained Optimization (project) - Yutong Dai, Xiaoyi Qu, Daniel P. Robinson. 2025 Van Hoesen Family Best Publication Award (Honorable Mention) Accepted by SIAM Journal on Optimization (SIOPT), 2025 https://arxiv.org/abs/2501.00000",
+              "Automated Joint Structured Pruning and Quantization for Efficient Neural Network Training and Compression (project) - Xiaoyi Qu, David Aponte, Colby Banbury, Daniel P. Robinson, Tianyu Ding, Kazuhito Koishida, Ilya Zharkov, Tianyi Chen. Computer Vision and Pattern Recognition (CVPR), 2025 https://arxiv.org/abs/2501.00000",
+              "HESSO: Towards Automatic Efficient and User Friendly Any Neural Network Training and Pruning (project) - Xiaoyi Qu, David Aponte, Colby Banbury, Jongwoo Ko, Tianyu Ding, Yong Ma, Vladimir Lyapunov, Ilya Zharkov, Luming Liang, Tianyi Chen. arXiv preprint, 2024 https://arxiv.org/abs/2406.00000",
+              "A Proximal Gradient Method for Regularization Optimization with General Constraints (project) - Frank E. Curtis, Xiaoyi Qu, Daniel P. Robinson. Working Paper. (Coming soon)"
+            ],
+            "representative_papers": [
+              {
+                "title": "A Proximal Gradient Method for Equality Constrained Optimization",
+                "venue": "SIAM Journal on Optimization",
+                "year": 2025,
+                "type": "Journal Article",
+                "links": "https://arxiv.org/abs/2501.00000"
+              },
+              {
+                "title": "Automated Joint Structured Pruning and Quantization for Efficient Neural Network Training and Compression",
+                "venue": "CVPR",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://arxiv.org/abs/2501.00000"
+              },
+              {
+                "title": "HESSO: Towards Automatic Efficient and User Friendly Any Neural Network Training and Pruning",
+                "venue": "arXiv",
+                "year": 2024,
+                "type": "Preprint",
+                "links": "https://arxiv.org/abs/2401.00000"
+              }
+            ],
+            "highlights": [
+              "Ph.D. student at Lehigh University in Industrial and Systems Engineering",
+              "Recipient of 2025 Van Hoesen Family Best Publication Award (Honorable Mention)",
+              "Published in SIAM Journal on Optimization (SIOPT), 2025",
+              "Worked on model compression at Microsoft's ASG in 2024",
+              "Interned at Neusoft Medical in 2019",
+              "Research focuses on constrained structured optimization and AI efficiency techniques",
+              "Co-authored paper on automated joint pruning and quantization for neural networks at CVPR 2025",
+              "Developed HESSO for efficient neural network training and pruning, arXiv 2024",
+              "Journal reviewer for Optimization and Engineering, Computational Optimization and Applications",
+              "Conference reviewer for COML Workshop, NeurIPS 2025"
+            ],
+            "email": "xiq322@lehigh.edu",
+            "current_role_affiliation": "PhD student, Department of Industrial and Systems Engineering, Lehigh University",
+            "current_status": "",
+            "research_keywords": [
+              "constrained structured optimization",
+              "efficient AI techniques",
+              "pruning",
+              "quantization",
+              "training and inference efficiency of large language models (LLMs)"
+            ],
+            "research_focus": [
+              "constrained structured optimization",
+              "efficient AI techniques",
+              "pruning",
+              "quantization",
+              "large language models"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Xiaoyi Qu is a PhD student at Lehigh University, indicating a strong academic foundation and commitment to advanced research in their field.",
+              "Research Output": "4/5 - Xiaoyi has published several papers in reputable venues such as CVPR and arXiv, demonstrating consistent research output, though the citation count is relatively low for some works.",
+              "Research Alignment": "5/5 - Xiaoyi's research interests in constrained structured optimization, AI efficiency, pruning, and LLMs align closely with current trends and challenges in machine learning and AI.",
+              "Technical Skills": "5/5 - The focus on efficient AI techniques, pruning, quantization, and training/inference efficiency suggests strong technical expertise in modern machine learning systems.",
+              "Recognition & Impact": "4/5 - Xiaoyi received an honorable mention for the Van Hoesen Family Best Publication Award in 2025, indicating recognition of their work, though broader impact remains to be seen.",
+              "Communication & Collaboration": "3/5 - While there is no explicit information about communication or collaboration, the lack of details on co-authored works or community engagement limits the assessment.",
+              "Initiative & Independence": "5/5 - Xiaoyi has developed multiple independent projects such as HESSO and Automatic Joint Structured Pruning and Quantization, showing initiative and self-direction in research."
+            }
+          },
+          {
+            "title": "Xiaohan Li",
+            "content": "Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 24,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Xiaohan_Li2"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 3,
+              "Research Alignment": 4,
+              "Technical Skills": 4,
+              "Recognition & Impact": 2,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 3
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Active contributor to open source research community"
+            ],
+            "email": "****@qq.com",
+            "current_role_affiliation": "MS student at Tsinghua University",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Xiaohan Li is an MS student at Tsinghua University, a prestigious institution known for its strong academic programs, indicating a solid foundation in their field of study.",
+              "Research Output": "3/5 - While specific details about Xiaohan Li's research output are not provided, their affiliation with Tsinghua University suggests they have contributed to academic research, though the extent and impact are not clearly documented.",
+              "Research Alignment": "4/5 - The candidate's affiliation with Tsinghua University and their presence on OpenReview suggest they are actively engaged in research that aligns with academic and technical communities.",
+              "Technical Skills": "4/5 - As an MS student in a competitive program, Xiaohan Li likely possesses strong technical skills, though specific details are not provided in the given information.",
+              "Recognition & Impact": "2/5 - There is no clear evidence of significant recognition or measurable impact from Xiaohan Li's work, as no notable achievements or citations are mentioned.",
+              "Communication & Collaboration": "3/5 - The candidate's presence on OpenReview suggests some level of engagement with the academic community, but there is no direct evidence of their communication or collaboration skills.",
+              "Initiative & Independence": "3/5 - As a student, Xiaohan Li may demonstrate initiative through their academic work, but without specific examples, it is difficult to assess the extent of their independent contributions."
+            }
+          },
+          {
+            "title": "Yingying Chen",
+            "content": "Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 19,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Yingying_Chen3"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 3,
+              "Research Output": 2,
+              "Research Alignment": 3,
+              "Technical Skills": 3,
+              "Recognition & Impact": 2,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 3
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Active contributor to open source research community"
+            ],
+            "email": "",
+            "current_role_affiliation": "",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "3/5 - No information provided about Yingying Chen's academic background, making it difficult to assess her qualifications in this area.",
+              "Research Output": "2/5 - No notable publications or research output are listed, suggesting limited visibility or contribution in the academic or professional domain.",
+              "Research Alignment": "3/5 - There is no information provided about the candidate's research interests or how they align with current trends or needs in their field.",
+              "Technical Skills": "3/5 - No specific technical skills are mentioned, so it is unclear what expertise or competencies the candidate brings to the table.",
+              "Recognition & Impact": "2/5 - No evidence of recognition or social impact is available, indicating a lack of measurable influence or acknowledgment in the field.",
+              "Communication & Collaboration": "3/5 - No information is provided regarding the candidate's ability to communicate or collaborate effectively with others.",
+              "Initiative & Independence": "3/5 - There is no evidence of independent work or initiative taken by the candidate, as no relevant activities or achievements are described."
+            }
+          }
+        ],
+        "AI-Powered Robotics and Vision-Language-Action (VLA) Models": [
+          {
+            "title": "Zhiyuan Li",
+            "content": "Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 32,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Zhiyuan_Li2"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 4,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Active contributor to open source research community"
+            ],
+            "email": "****@cs.princeton.edu",
+            "current_role_affiliation": "Assistant Professor at Toyota Technological Institute at Chicago",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Zhiyuan Li holds a strong academic background, currently serving as an Assistant Professor at the Toyota Technological Institute at Chicago, indicating a solid foundation in computer science and machine learning.",
+              "Research Output": "4/5 - While specific details about Zhiyuan Li's publications are not provided, their affiliation with a reputable institution suggests consistent and impactful research output in their field.",
+              "Research Alignment": "5/5 - Zhiyuan Li's work is likely aligned with cutting-edge research in machine learning and artificial intelligence, given their position at the Toyota Technological Institute at Chicago, which focuses on advanced computational research.",
+              "Technical Skills": "5/5 - As an assistant professor in a leading AI research institution, Zhiyuan Li is expected to possess advanced technical skills in areas such as machine learning, deep learning, and algorithm design.",
+              "Recognition & Impact": "4/5 - Although specific recognition details are not listed, Zhiyuan Li's role at a prominent institution implies that their work has received some level of academic and industry recognition.",
+              "Communication & Collaboration": "4/5 - An assistant professor typically engages in collaborative research and presents work at conferences, suggesting that Zhiyuan Li has strong communication and teamwork skills.",
+              "Initiative & Independence": "5/5 - Zhiyuan Li's current position as an assistant professor indicates a high degree of initiative and independence in pursuing research goals and contributing to the academic community."
+            }
+          },
+          {
+            "title": "Mustafa Shukor",
+            "content": "Research focus: computer vision, deep learning, vision-language models, large language models, representation learning. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 32,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Mustafa_Shukor1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 5,
+              "Research Output": 5,
+              "Research Alignment": 5,
+              "Technical Skills": 5,
+              "Recognition & Impact": 4,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 5
+            },
+            "publication_overview": [
+              "Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards",
+              "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+              "Unified Model for Image, Video, Audio and Language Tasks"
+            ],
+            "top_tier_hits": [
+              "Neural Information Processing Systems 2023",
+              "arXiv.org 2025",
+              "Trans. Mach. Learn. Res. 2023"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "Rewarded soups: towards Pareto-optimal alignment by interpolating weights fine-tuned on diverse rewards",
+                "venue": "Neural Information Processing Systems",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/0e2f8491b7af5f715c8ac7e3a7fd96494bd417d8"
+              },
+              {
+                "title": "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics",
+                "venue": "arXiv.org",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/6ab4d113676d00e74b55e918fee4c7affaa8652f"
+              },
+              {
+                "title": "Unified Model for Image, Video, Audio and Language Tasks",
+                "venue": "Trans. Mach. Learn. Res.",
+                "year": 2023,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/0fe88452660cb8a0e37f54bcd44f3cd6504354b5"
+              }
+            ],
+            "highlights": [
+              "Research expertise in computer vision, deep learning, vision-language models",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@gmail.com",
+            "current_role_affiliation": "PhD student at Université Pierre et Marie Curie - Paris 6, Sorbonne Université - Faculté des Sciences (Paris VI)",
+            "current_status": "",
+            "research_keywords": [
+              "large language models",
+              "large multimodal models",
+              "deep learning",
+              "computer vision",
+              "representation learning",
+              "multimodal learning"
+            ],
+            "research_focus": [
+              "large language models",
+              "large multimodal models",
+              "deep learning",
+              "computer vision",
+              "representation learning",
+              "multimodal learning",
+              "vision-language models",
+              "vision-language-pretraining"
+            ],
+            "detailed_scores": {
+              "Academic Background": "5/5 - Mustafa Shukor is a PhD student at Université Pierre et Marie Curie - Paris 6, a prestigious institution known for its strong research programs in computer science and artificial intelligence, indicating a solid academic foundation.",
+              "Research Output": "5/5 - He has published high-impact work in top venues such as NeurIPS and arXiv, with multiple papers receiving significant citations, demonstrating consistent and impactful research output.",
+              "Research Alignment": "5/5 - His research interests align closely with cutting-edge areas in AI, including large language models, vision-language models, and multimodal learning, showing strong focus and relevance to current trends in the field.",
+              "Technical Skills": "5/5 - His work on advanced topics like weight interpolation, vision-language-action models, and unified multimodal models demonstrates strong technical expertise in deep learning and related areas.",
+              "Recognition & Impact": "4/5 - His papers have received notable citations, particularly 'Rewarded soups' with 182 citations, indicating growing recognition and influence in the research community.",
+              "Communication & Collaboration": "3/5 - While his publications suggest strong individual work, there is limited information provided about collaborative projects or public communication efforts, which may indicate room for growth in this area.",
+              "Initiative & Independence": "5/5 - His contributions to diverse and challenging research areas, such as efficient robotics models and Pareto-optimal alignment, reflect a high level of initiative and independent research capability."
+            }
+          },
+          {
+            "title": "Linfeng Wang",
+            "content": "Research focus: Low-quality Image Processing, Irregular Time Series Foundation Model, Underwater Dataset Production, Time Series Forecasting. Academic output: 6 notable publications. Published in 3 top-tier venues. Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 28,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~linfeng_wang1"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 4,
+              "Research Output": 4,
+              "Research Alignment": 5,
+              "Technical Skills": 4,
+              "Recognition & Impact": 3,
+              "Communication & Collaboration": 3,
+              "Initiative & Independence": 4
+            },
+            "publication_overview": [
+              "FCDNet: A Lightweight Network for Real-Time Wildfire Core Detection in Drone Thermal Imaging",
+              "Open-source vision-language-action models for robotics",
+              "State-of-charge estimation of commercial electric vehicles by using battery-aware transformer network algorithms"
+            ],
+            "top_tier_hits": [
+              "IEEE Access 2025",
+              "JMST Advances 2025",
+              "Journal of Computational Design and Engineering 2025"
+            ],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [
+              {
+                "title": "FCDNet: A Lightweight Network for Real-Time Wildfire Core Detection in Drone Thermal Imaging",
+                "venue": "IEEE Access",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/19478508bdc53ad8691808de0e320faf0295aa94"
+              },
+              {
+                "title": "Open-source vision-language-action models for robotics",
+                "venue": "JMST Advances",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/acc619639611ce981f309533b4c54560c9ddcb1a"
+              },
+              {
+                "title": "State-of-charge estimation of commercial electric vehicles by using battery-aware transformer network algorithms",
+                "venue": "Journal of Computational Design and Engineering",
+                "year": 2025,
+                "type": "Conference Paper",
+                "links": "https://www.semanticscholar.org/paper/af66dc251895b4ff0c46f956cc757b5d26602ef9"
+              }
+            ],
+            "highlights": [
+              "Research expertise in Low-quality Image Processing, Irregular Time Series Foundation Model, Underwater Dataset Production",
+              "Published 3 papers in top-tier conferences/journals",
+              "Active contributor to open source research community"
+            ],
+            "email": "****@163.com",
+            "current_role_affiliation": "MS student at College of Data Science and Engineering, East China Normal University",
+            "current_status": "",
+            "research_keywords": [
+              "Time Series Forecasting",
+              "Irregular Time Series Foundation Model",
+              "Underwater Dataset Production",
+              "Low-quality Image Processing"
+            ],
+            "research_focus": [
+              "Time Series Forecasting",
+              "Irregular Time Series Foundation Model",
+              "Underwater Dataset Production",
+              "Low-quality Image Processing"
+            ],
+            "detailed_scores": {
+              "Academic Background": "4/5 - Linfeng Wang is a Master's student at a reputable institution, the College of Data Science and Engineering, East China Normal University, which suggests a solid academic foundation in data science and engineering. His research interests align with advanced computational methods, indicating strong academic preparation.",
+              "Research Output": "4/5 - Linfeng has published in peer-reviewed journals such as IEEE Access and JMST Advances, with a few citations, demonstrating active participation in research. His work spans diverse areas like wildfire detection, vision-language-action models, and battery state estimation, showing a productive research trajectory.",
+              "Research Alignment": "5/5 - Linfeng's research interests in time series forecasting, irregular time series foundation models, and low-quality image processing align well with cutting-edge AI and data science research directions. His publications also reflect this alignment with practical and theoretical applications.",
+              "Technical Skills": "4/5 - His work on lightweight networks, transformer algorithms, and vision-language-action models indicates strong technical proficiency in deep learning, computer vision, and AI systems. These skills are essential for tackling complex problems in time series and image processing.",
+              "Recognition & Impact": "3/5 - While Linfeng has published in reputable venues, the number of citations for his works is relatively low, suggesting that his impact is still emerging. However, his focus on real-world applications like wildfire detection and electric vehicle state estimation shows potential for future influence.",
+              "Communication & Collaboration": "3/5 - There is limited information provided about Linfeng's communication or collaboration experiences. However, his open-source contributions and publication record suggest some level of engagement with the research community, though more evidence would be needed to fully assess this dimension.",
+              "Initiative & Independence": "4/5 - Linfeng has pursued independent research in multiple specialized areas, including underwater dataset production and low-quality image processing, indicating a proactive approach to identifying and addressing research challenges. His work on open-source models also reflects initiative."
+            }
+          },
+          {
+            "title": "Xiaohan Chen",
+            "content": "Open source: 1 projects. Academic profiles: OpenReview.",
+            "affiliation": "Research Institution",
+            "status": "Researcher",
+            "total_score": 15,
+            "profiles": {
+              "OpenReview": "https://openreview.net/profile?id=~Xiaohan_Chen2"
+            },
+            "research_interests": [],
+            "notable_papers": [],
+            "radar": {
+              "Academic Background": 2,
+              "Research Output": 3,
+              "Research Alignment": 2,
+              "Technical Skills": 3,
+              "Recognition & Impact": 2,
+              "Communication & Collaboration": 2,
+              "Initiative & Independence": 2
+            },
+            "publication_overview": [],
+            "top_tier_hits": [],
+            "honors_grants": [],
+            "service_talks": [],
+            "open_source_projects": [
+              ""
+            ],
+            "representative_papers": [],
+            "highlights": [
+              "Active contributor to open source research community"
+            ],
+            "email": "",
+            "current_role_affiliation": "",
+            "current_status": "",
+            "research_keywords": [],
+            "research_focus": [],
+            "detailed_scores": {
+              "Academic Background": "2/5 - No information is provided about Xiaohan Chen's academic background, making it difficult to assess their formal education or relevant qualifications.",
+              "Research Output": "3/5 - There is no information provided about Xiaohan Chen's research output or publications, so it is unclear how productive or impactful their work has been.",
+              "Research Alignment": "2/5 - Without details on Xiaohan Chen's research interests or projects, it is not possible to determine how well their work aligns with specific research goals or fields.",
+              "Technical Skills": "3/5 - No evidence of technical skills is provided, but the lack of information means this dimension cannot be fully evaluated.",
+              "Recognition & Impact": "2/5 - There is no indication of any recognition or measurable impact from Xiaohan Chen's work, as no notable achievements or citations are mentioned.",
+              "Communication & Collaboration": "2/5 - No information is available about Xiaohan Chen's ability to communicate or collaborate with others, limiting the assessment of this important skill.",
+              "Initiative & Independence": "2/5 - The candidate's level of initiative or independence in their work is unknown due to the lack of relevant information provided."
+            }
+          }
+        ]
+      }
+    },
+    "created_at": 1760938491.0461347
+  }
+}

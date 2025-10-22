@@ -640,7 +640,7 @@ def build_conference_queries(spec: Any, default_confs: Dict[str, List[str]], cap
 
 # ============================ LLM-BASED PAPER SCORING ============================
 
-def score_paper_with_llm(title: str, abstract: str, user_query: str, llm) -> int:
+def score_paper_with_llm(title: str, abstract: str, user_query: str, llm) -> dict:
     """
     Use LLM to score paper relevance for academic talent search
     
@@ -651,94 +651,104 @@ def score_paper_with_llm(title: str, abstract: str, user_query: str, llm) -> int
         llm: LLM instance
         
     Returns:
-        int: Score from 1-10 (10 being most relevant and worth crawling)
+        dict: {"score": int (1-8), "explanation": str}
     """
     try:
-        # Prepare the prompt
-        prompt = f"""You are evaluating research papers for an academic talent search system. Score this paper's relevance to help find researchers working on specific topics.
+        # Prepare the prompt with actual content
+        prompt = f"""You are an expert in academic research evaluation. Your task is to assess how well the given academic paper aligns with the target research area derived from the user query.
 
-Paper Title: {title}
-Paper Abstract/Snippet: {abstract}
+You will be provided with:
+1. A **research area keyword phrase** (derived from the user's original query about people or projects). This phrase describes the thematic focus you should match against.
+2. A paper's title, abstract and Introduction.
 
-Target Research Query: {user_query}
+Your goal: evaluate how relevant the paper's research topic is to the given research area, based on conceptual and methodological alignment.
 
-Scoring Criteria (1-10 scale):
+Scoring rule (output one integer from 1 to 8):
 
-9-10 (Excellent Match - Must Crawl):
-  • Paper directly addresses the query's topic/method/conference
-  • Likely contains author information and research details
-  • Academic publication (conference paper, journal article, or proceedings)
-  • High value for finding relevant researchers
+1 = Completely unrelated to the research area.  
+2 = Barely related; only superficial word overlap.  
+3 = Weakly related; touches on tangential ideas.  
+4 = Somewhat related; includes peripheral aspects of the area.  
+5 = Moderately related; overlaps meaningfully but not central focus.  
+6 = Clearly relevant; core ideas relate to the area.  
+7 = Highly relevant; the paper strongly aligns with the key topic.  
+8 = Perfectly relevant; this paper directly represents or exemplifies the research area.
 
-7-8 (Highly Relevant - Should Crawl):
-  • Covers the main topic with strong overlap
-  • Clearly a research paper with identifiable authors
-  • Likely conference/journal publication or academic list
-  • Good chance of finding relevant talent
+Be strict and evidence-based. Consider both conceptual and methodological alignment.
 
-5-6 (Moderately Relevant - Worth Considering):
-  • Related to the research area but different focus
-  • Could be academic content (workshop papers, surveys, lists)
-  • May contain useful author information
-  • Reasonable value if crawl budget allows
+Return the result in **exactly the following JSON format**:
 
-3-4 (Loosely Relevant - Low Priority):
-  • Tangentially related or covers peripheral topics
-  • Uncertain if it contains author/research details
-  • May be informal content (blogs, news, slides)
-  • Low expected value for talent search
+{{
+  "explanation": "<Brief explanation (2-4 sentences) describing why you gave this score>",
+  "score": <integer from 1 to 8>
+}}
 
-1-2 (Not Relevant - Skip):
-  • Different research domain or non-academic content
-  • Unlikely to contain researcher information
-  • Social media posts, general news, or spam
-  • Not worth crawling resources
+Below is the information you will evaluate:
 
-Key Evaluation Factors:
-1. Topic Relevance: How well does it match the research query?
-2. Author Discovery Value: Likely to contain author names and affiliations?
-3. Content Type: Academic paper/proceedings vs informal content?
-4. Information Completeness: Does the snippet provide enough signal?
+Research area: {user_query}
+Paper title: {title}
+Paper abstract: {abstract if abstract else "Not available"}
+Paper introduction: Not available
 
-Note: If the abstract/snippet is very short or vague, be slightly generous (give benefit of doubt) if the title suggests relevance.
-
-Output ONLY a single integer from 1 to 10. No explanation, no other text."""
+What is your evaluation?"""
 
         # Get response from LLM
         response = llm.invoke(prompt)
         
-        # Extract the score
+        # Extract and parse JSON response
         try:
             # Handle different response formats
             if hasattr(response, 'content'):
-                score_text = response.content
+                response_text = response.content
             elif isinstance(response, dict) and 'text' in response:
-                score_text = response['text']
+                response_text = response['text']
             else:
-                score_text = str(response)
+                response_text = str(response)
             
-            # Clean and extract numeric score
-            score_text = score_text.strip()
-            score = int(score_text)
+            # Try to parse JSON
+            import re
+            import json
             
-            # Ensure score is within valid range
-            if score < 1:
-                score = 1
-            elif score > 10:
-                score = 10
+            # Extract JSON from response
+            json_match = re.search(r'\{[^{}]*"explanation"[^{}]*"score"[^{}]*\}', response_text, re.DOTALL)
+            if json_match:
+                json_str = json_match.group()
+                result = json.loads(json_str)
                 
-            return score
+                score = int(result.get("score", 5))
+                explanation = result.get("explanation", "No explanation provided")
+                
+                # Ensure score is within valid range (1-8)
+                if score < 1:
+                    score = 1
+                elif score > 8:
+                    score = 8
+                
+                if config.VERBOSE:
+                    print(f"[score_paper_with_llm] Paper: {title[:50]}... | Score: {score} | {explanation[:100]}...")
+                    
+                return {"score": score, "explanation": explanation}
+            else:
+                # Fallback: try to extract just the score
+                score_match = re.search(r'"score"\s*:\s*(\d+)', response_text)
+                if score_match:
+                    score = int(score_match.group(1))
+                    score = max(1, min(8, score))
+                    return {"score": score, "explanation": "Score extracted without explanation"}
+                else:
+                    raise ValueError("Could not parse JSON response")
             
-        except (ValueError, TypeError):
+        except (ValueError, TypeError, json.JSONDecodeError) as e:
             # If parsing fails, return a default middle score
             if config.VERBOSE:
-                print(f"[score_paper_with_llm] Failed to parse score from: {score_text}")
-            return 5
+                print(f"[score_paper_with_llm] Failed to parse response: {e}")
+                print(f"[score_paper_with_llm] Response text: {response_text[:200]}...")
+            return {"score": 4, "explanation": "Failed to parse LLM response"}
             
     except Exception as e:
         if config.VERBOSE:
             print(f"[score_paper_with_llm] Error scoring paper: {e}")
-        return 5  # Default middle score on error
+        return {"score": 4, "explanation": f"Error: {str(e)}"}
 
 
 def llm_pick_urls(serp: List[Dict[str, str]], user_query: str, llm,
@@ -788,9 +798,15 @@ def llm_pick_urls(serp: List[Dict[str, str]], user_query: str, llm,
     # Score each paper using LLM (并发处理提高速度)
     scored_papers = []
     
-    #  使用并发加速LLM打分
+    # 使用并发加速LLM打分 - 动态计算worker数量
     from concurrent.futures import ThreadPoolExecutor, as_completed
-    max_workers = getattr(config, "LLM_SELECT_MAX_WORKERS", 20)
+    from dynamic_concurrency import get_llm_workers
+    
+    # 动态计算最优worker数量
+    max_workers = get_llm_workers(len(papers_to_score))
+    
+    if config.VERBOSE:
+        print(f"[llm_pick_urls] Scoring {len(papers_to_score)} papers with {max_workers} parallel workers")
     
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # 提交所有打分任务
@@ -809,10 +825,11 @@ def llm_pick_urls(serp: List[Dict[str, str]], user_query: str, llm,
         for future in as_completed(future_to_paper):
             paper = future_to_paper[future]
             try:
-                score = future.result()
+                result = future.result()  # 现在返回 {"score": int, "explanation": str}
                 scored_papers.append({
                     **paper,
-                    "score": score
+                    "score": result["score"],
+                    "explanation": result["explanation"]
                 })
             except Exception as e:
                 if config.VERBOSE:
@@ -820,7 +837,8 @@ def llm_pick_urls(serp: List[Dict[str, str]], user_query: str, llm,
                 # 失败时给默认分数
                 scored_papers.append({
                     **paper,
-                    "score": 5  # 中等分数
+                    "score": 4,  # 中等分数
+                    "explanation": f"Scoring failed: {str(e)}"
                 })
     # 计算信息完整度得分 (completeness_score)
     def calc_completeness(paper):
@@ -859,17 +877,17 @@ def llm_pick_urls(serp: List[Dict[str, str]], user_query: str, llm,
     # 为每篇论文添加 completeness_score 和 relevant_tier
     for paper in scored_papers:
         paper["completeness_score"] = calc_completeness(paper)
-        # 分桶：9分及以上为第一桶(tier=1)，其他为第二桶(tier=0)
-        paper["relevant_tier"] = 1 if paper["score"] >= 9 else 0
+        # 分桶：7-8分为高质量tier(tier=1)，1-6分为普通tier(tier=0)
+        paper["relevant_tier"] = 1 if paper["score"] >= 7 else 0
     
-    # 分层排序：先按 relevant_tier 降序，再按 completeness_score 降序，最后按 score 降序
+    # 分层排序：先按 relevant_tier 降序（tier1永远在tier0上面），再按 score 降序，最后按 completeness_score 降序
     scored_papers.sort(
-        key=lambda x: (x["relevant_tier"], x["completeness_score"], x["score"]),
+        key=lambda x: (x["relevant_tier"], x["score"], x["completeness_score"]),
         reverse=True
     )
     
-    # 修改分数过滤：只处理分数 > 6 的论文（不包括6分）
-    MIN_SCORE_THRESHOLD = 6
+    # 只处理分数 >= 4 的论文（过滤掉明显不相关的）
+    MIN_SCORE_THRESHOLD = 3  # 过滤掉1-3分的论文
     scored_papers_filtered = [p for p in scored_papers if p["score"] > MIN_SCORE_THRESHOLD]
     
     if config.VERBOSE:
@@ -877,8 +895,15 @@ def llm_pick_urls(serp: List[Dict[str, str]], user_query: str, llm,
         tier0_count = len(scored_papers_filtered) - tier1_count
         print(f"[llm_pick_urls] Scored {len(scored_papers)} papers")
         print(f"[llm_pick_urls] Filtered: {len(scored_papers_filtered)} papers (score > {MIN_SCORE_THRESHOLD})")
-        print(f"[llm_pick_urls]   - Tier 1 (score >= 9): {tier1_count} papers")
-        print(f"[llm_pick_urls]   - Tier 0 (6 < score < 9): {tier0_count} papers")
+        print(f"[llm_pick_urls]   - Tier 1 (score 7-8 高质量): {tier1_count} papers")
+        print(f"[llm_pick_urls]   - Tier 0 (score 4-6 普通): {tier0_count} papers")
+        
+        # 显示前几篇论文的分数分布
+        if scored_papers_filtered:
+            print(f"[llm_pick_urls] Top papers by tier:")
+            for i, p in enumerate(scored_papers_filtered[:10]):
+                tier_label = "⭐Tier1" if p["relevant_tier"] == 1 else "Tier0"
+                print(f"[llm_pick_urls]   {i+1}. [{tier_label}] Score:{p['score']} | {p['title'][:60]}...")
     
     # Apply domain limits and select top papers
     domain_counts = defaultdict(int)

@@ -27,6 +27,7 @@ class QuerySpec(BaseModel):
     years: List[int] = Field(default_factory=lambda: config.DEFAULT_YEARS)
     venues: List[str] = Field(default_factory=lambda: ["ICLR","ICML","NeurIPS"])     # e.g., ["ICLR","ICML","NeurIPS",...]
     keywords: List[str] = Field(default_factory=lambda: ["social simulation","multi-agent"])   # e.g., ["social simulation","multi-agent",...]
+    research_field: str = "Machine Learning"  # Primary research field identified from query
     must_be_current_student: bool = True
     degree_levels: List[str] = Field(default_factory=lambda: ["PhD","Master"])
     author_priority: List[str] = Field(default_factory=lambda: ["first"])
@@ -78,6 +79,7 @@ class QuerySpecDiff(BaseModel):
     years: Optional[List[int]] = None
     venues: Optional[List[str]] = None
     keywords: Optional[List[str]] = None
+    research_field: Optional[str] = None
     must_be_current_student: Optional[bool] = None
     degree_levels: Optional[List[str]] = None
     author_priority: Optional[List[str]] = None

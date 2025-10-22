@@ -152,8 +152,22 @@ def _inject_search_progress_stytles(theme: str):
     </style>
     """, unsafe_allow_html=True)
 
-def _render_search_progress_overlay(steps: list, active_idx: int)->str:
-    """Generate HTML code for search progress pop-up window"""
+def _render_search_progress_overlay(steps: list, active_idx: int, 
+                                     candidates_found: int = 0,
+                                     target_count: int = 10,
+                                     current_action: str = "",
+                                     detail_info: str = "")->str:
+    """
+    Generate HTML code for search progress pop-up window with status display
+    
+    Args:
+        steps: List of search steps
+        active_idx: Index of current active step
+        candidates_found: Number of candidates found so far
+        target_count: Target number of candidates
+        current_action: Current operation (e.g., "正在评分论文")
+        detail_info: Detail information (e.g., paper title)
+    """
     items = []
 
     for i, txt in enumerate(steps):
@@ -170,6 +184,43 @@ def _render_search_progress_overlay(steps: list, active_idx: int)->str:
             f'  <div>{txt}</div>'                 
             f'</div>'
         )
+    
+    # 简洁的两行状态显示（英文版）
+    status_html = (
+        '<div style="'
+        '    margin-top: 1.5rem;'
+        '    padding: 1rem;'
+        '    background: rgba(255, 255, 255, 0.05);'
+        '    border-radius: 8px;'
+        '    border-top: 2px solid rgba(102, 126, 234, 0.5);'
+        '">'
+        # 第一行：候选人进度（固定）
+        '  <div style="'
+        '      color: #e2e8f0;'
+        '      font-size: 1.05em;'
+        '      font-weight: 600;'
+        '      margin-bottom: 0.8rem;'
+        '      display: flex;'
+        '      align-items: center;'
+        '      gap: 0.5rem;'
+        '  ">'
+        f'    <span style="color: #667eea;">👥</span>'
+        f'    <span>Found <span style="color: #667eea; font-size: 1.2em;">{candidates_found}/{target_count}</span> candidates</span>'
+        '  </div>'
+        # 第二行：当前操作（动态变化）
+        '  <div style="'
+        '      color: #94a3b8;'
+        '      font-size: 0.9em;'
+        '      padding-left: 2rem;'
+        '      overflow: hidden;'
+        '      text-overflow: ellipsis;'
+        '      white-space: nowrap;'
+        '  ">'
+        f'    <span style="color: #60a5fa;">⟳</span> {current_action if current_action else "Initializing..."}'
+        f'    {("<span style=\"color: #64748b; margin-left: 0.5rem;\">" + detail_info + "</span>") if detail_info else ""}'
+        '  </div>'
+        '</div>'
+    )
 
     return (
         '<div class="search-overlay">'          
@@ -177,7 +228,8 @@ def _render_search_progress_overlay(steps: list, active_idx: int)->str:
         '    <div class="search-modal-header">' 
         '      <div class="search-modal-title">🔍 Searching for Talents</div>'
         '    </div>'
-        f'    <div class="search-steps">{"".join(items)}</div>'  
+        f'    <div class="search-steps">{"".join(items)}</div>'
+        f'    {status_html}'  # 添加状态显示
         '  </div>'
         '</div>'
     )
@@ -1033,7 +1085,10 @@ def render_targeted_search_page():
         preview_border = "#334155"
 
         user_message_background = "#5F656D"
-        assistant_message_background = "rgb(44 47 53)"
+        user_message_text_color = "#ffffff"
+        assistant_message_background = "#2c2f35"
+        assistant_message_border = "#3d4147"
+        assistant_message_text_color = "#e2e8f0"
         system_message_background = "#CF8627"
     else:
         header_style = "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"
@@ -1045,8 +1100,11 @@ def render_targeted_search_page():
         preview_bg = "#f8f9fa"
         preview_border = "#dee2e6"
 
-        user_message_background = "#e3f2fd"
-        assistant_message_background = "#f3e5f5"
+        user_message_background = "#667eea"
+        user_message_text_color = "#ffffff"
+        assistant_message_background = "#f5f5f5"
+        assistant_message_border = "#e0e0e0"
+        assistant_message_text_color = "#2c3e50"
         system_message_background = "#f8f9fa"
     squash_top_gap()
 
@@ -1069,37 +1127,80 @@ def render_targeted_search_page():
 
         with chat_container:
             # Display chat history
+            
             for i, message in enumerate(st.session_state.chat_history):
                 if message["role"] == "user":
-                    # User message
+                    # User message bubble (right-aligned)
+                    # Use <pre> tag to display content as-is without HTML parsing
+                    raw_content = message["content"].replace("<", "&lt;").replace(">", "&gt;")
+                    
                     st.markdown(
                         f"""
                     <div style="
                         background: {user_message_background};
-                        border-radius: 15px 15px 5px 15px;
-                        padding: 1rem;
-                        margin: 0.5rem 0 0.5rem 2rem;
-                        border-left: 4px solid {user_message_background};
+                        border-radius: 18px 18px 4px 18px;
+                        padding: 0.8rem 1.2rem;
+                        margin: 0.5rem 0 0.5rem auto;
+                        max-width: 80%;
+                        width: fit-content;
+                        margin-left: 20%;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        border: 1px solid {user_message_background};
+                        color: {user_message_text_color};
                     ">
-                        <strong>👤 You:</strong><br>
-                        {message["content"]}
+                        <div style="margin-bottom: 0.3rem; font-size: 0.85em; opacity: 0.8;">
+                            <strong>👤 You</strong>
+                        </div>
+                        <pre style="
+                            margin: 0;
+                            padding: 0;
+                            font-family: inherit;
+                            font-size: inherit;
+                            line-height: 1.6;
+                            white-space: pre-wrap;
+                            word-wrap: break-word;
+                            background: transparent;
+                            border: none;
+                        ">{raw_content}</pre>
                     </div>
                     """,
                         unsafe_allow_html=True,
                     )
 
                 elif message["role"] == "assistant":
-                    # Assistant message
+                    # Assistant message bubble (left-aligned)
+                    content = message["content"]
+                    
+                    # Check if content contains intentional HTML formatting
+                    has_html = ("<div" in content or "<p>" in content or "<strong>" in content)
+                    
+                    if has_html:
+                        # Keep HTML formatting for system messages
+                        content_html = content
+                    else:
+                        # Escape user-generated content
+                        content_html = f'<pre style="margin: 0; padding: 0; font-family: inherit; font-size: inherit; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word; background: transparent; border: none;">{content.replace("<", "&lt;").replace(">", "&gt;")}</pre>'
+                    
                     st.markdown(
                         f"""
                     <div style="
-                        border-radius: 15px 15px 15px 5px;
-                        padding: 1rem;
-                        margin: 0.5rem 2rem 0.5rem 0;
-                        border-left: 4px
+                        background: {assistant_message_background};
+                        border-radius: 18px 18px 18px 4px;
+                        padding: 0.8rem 1.2rem;
+                        margin: 0.5rem auto 0.5rem 0;
+                        max-width: 80%;
+                        width: fit-content;
+                        margin-right: 20%;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        border: 1px solid {assistant_message_border};
+                        color: {assistant_message_text_color};
                     ">
-                        <strong>🤖 AI Assistant:</strong><br>
-                        {message["content"]}
+                        <div style="margin-bottom: 0.3rem; font-size: 0.85em; opacity: 0.8;">
+                            <strong>🤖 AI Assistant</strong>
+                        </div>
+                        <div style="line-height: 1.6;">
+                            {content_html}
+                        </div>
                     </div>
                     """,
                         unsafe_allow_html=True,
@@ -1130,6 +1231,12 @@ def render_targeted_search_page():
             if query_spec.get("top_n"):
                 params_html += (
                     f"<p><strong>👥 Candidates:</strong> {query_spec['top_n']}</p>"
+                )
+            
+            # Display research field if available
+            if query_spec.get("research_field"):
+                params_html += (
+                    f"<p><strong>🎯 Research Field:</strong> {query_spec['research_field']}</p>"
                 )
 
             kw_bg = "#536833"
@@ -1420,6 +1527,7 @@ def render_targeted_search_page():
             # ========== thread-safe progress channel ==========
             progress_q = queue.Queue()  # queue: store (event name, progress percentage)
             result_holder = {"results": None, "error": None}  # store search results
+            status_info = {"candidates": 0, "current_action": "", "detail": ""}  # status info
             
             # ========== progress callback function ==========
             def on_progress(event: str, pct: float):
@@ -1545,10 +1653,18 @@ def render_targeted_search_page():
             # ========== main thread: real-time update UI ==========
             current_step = 0  # current step index
             last_pct = 0      # last progress percentage
+            target_count = query_spec.get('top_n', 10)  # 获取目标候选人数量
             
-            # first display progress popup
+            # first display progress popup with initial status
             overlay.markdown(
-                _render_search_progress_overlay(search_steps, current_step),
+                _render_search_progress_overlay(
+                    search_steps, 
+                    current_step,
+                    candidates_found=0,
+                    target_count=target_count,
+                    current_action="Initializing search...",
+                    detail_info="Preparing search parameters"
+                ),
                 unsafe_allow_html=True
             )
             
@@ -1566,20 +1682,66 @@ def render_targeted_search_page():
                         paused_for_decision = True
                         break  # Exit loop to show decision dialog
                     
-                    # ========== update step display ==========
-                    # extract base event name (remove additional information)
-                    base_event = (event or "").split(":", 1)[0]
+                    # ========== Parse event information ==========
+                    # Event format examples:
+                    # - "searching"
+                    # - "analyzing:candidate_name"
+                    # - "scoring:paper_title"
+                    # - "found:5" (found 5 candidates)
                     
+                    event_str = event or ""
+                    base_event = event_str.split(":", 1)[0]
+                    event_detail = event_str.split(":", 1)[1] if ":" in event_str else ""
+                    
+                    # ========== Update status information ==========
+                    # Extract candidate count if event contains "found"
+                    if "found:" in event_str:
+                        try:
+                            status_info["candidates"] = int(event_detail)
+                        except:
+                            pass
+                    
+                    # Map events to readable English descriptions
+                    action_map = {
+                        "searching": "Searching papers",
+                        "fetching": "Fetching paper content",
+                        "scoring": "Scoring papers",
+                        "extracting": "Extracting paper info",
+                        "analyzing": "Analyzing candidate",
+                        "discovering": "Discovering candidates",
+                        "ranking": "Ranking candidates",
+                        "finalizing": "Generating results",
+                        "done": "Search completed"
+                    }
+                    
+                    current_action = action_map.get(base_event, "Processing...")
+                    detail_info = event_detail if event_detail else ""
+                    
+                    # Update status info
+                    status_info["current_action"] = current_action
+                    status_info["detail"] = detail_info
+                    
+                    # ========== update step display ==========
                     # find corresponding step index
                     step_idx = event_to_step.get(base_event, current_step)
                     
-                    # if step changes, update popup
+                    # Always update popup with current status (not just when step changes)
+                    # This ensures the status info is always up-to-date
                     if step_idx != current_step:
                         current_step = step_idx
-                        overlay.markdown(
-                            _render_search_progress_overlay(search_steps, current_step),
-                            unsafe_allow_html=True
-                        )
+                    
+                    # Update overlay with both step and status information
+                    overlay.markdown(
+                        _render_search_progress_overlay(
+                            search_steps, 
+                            current_step,
+                            candidates_found=status_info["candidates"],
+                            target_count=target_count,
+                            current_action=current_action,
+                            detail_info=detail_info
+                        ),
+                        unsafe_allow_html=True
+                    )
                     
                     # ========== update progress bar ==========
                     p = max(0, min(100, int((pct or 0.0) * 100)))
@@ -1638,6 +1800,7 @@ def render_targeted_search_page():
                 current_cycle = partial_results.rounds_completed // 2
                 
                 # Show info message
+                research_field_str = f"\n                - 🎯 Research Field：{st.session_state.query_spec.get('research_field', 'N/A')}" if st.session_state.query_spec.get('research_field') else ""
                 st.info(f"""
                 ### 🔍 Search cycle completed
                 
@@ -1646,7 +1809,7 @@ def render_targeted_search_page():
                 **Current progress：**
                 - 📊 Round completed：{partial_results.rounds_completed} 轮
                 - 👥 Candidate found：{partial_results.total_candidates_found} 位
-                - 🎯 Target number of people：{st.session_state.query_spec.get('top_n', 10)} 位
+                - 🎯 Target number of people：{st.session_state.query_spec.get('top_n', 10)} 位{research_field_str}
                 """)
                 
                 st.markdown("---")

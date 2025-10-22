@@ -106,8 +106,8 @@ DOCKER_NETWORK = "searx-net"
 DOCKER_CONFIG_PATH = os.path.join(os.getcwd(), "backend", "searxng").replace("\\", "/")
 
 # Batch search parameters
-SEARCH_BATCH_CHUNK = 8
-SEARCH_BATCH_CHUNK_TREND = 12
+SEARCH_BATCH_CHUNK = 10
+
 
 # ============================ LLM TOKEN LIMITS ============================
 
@@ -119,55 +119,10 @@ LLM_OUT_TOKENS = {
     "synthesize": 3072,
     "paper_name": 2048,
     "degree_matcher": 50,
-    "role_classifier": 256,  # New: for role classification (small output, just JSON)
 }
 
 USE_LLM_PAPER_SCORING=True
 ENABLE_LLM_DEGREE_MATCHING=True
-
-# ============================ ROLE CLASSIFICATION CONFIG ============================
-
-# Allowed role categories (6 strict categories for talent classification)
-ROLE_CATEGORIES = {
-    "MasterStudent": "Currently pursuing Master's degree",
-    "PhDStudent": "Currently pursuing PhD/Doctoral degree",
-    "Postdoc": "Postdoctoral researcher",
-    "Professor": "Assistant/Associate/Full Professor",
-    "InstitutionResearcher": "Research Scientist/Researcher at academic institution",
-    "IndustrialResearcher": "Research Scientist/Engineer at company/industry lab",
-}
-
-# Priority order for role classification (when multiple roles detected)
-# Higher priority = more senior position
-ROLE_PRIORITY = [
-    "Professor",
-    "Postdoc", 
-    "IndustrialResearcher",
-    "InstitutionResearcher",
-    "PhDStudent",
-    "MasterStudent",
-]
-
-# Mapping from query degree requirements to acceptable role categories
-DEGREE_TO_ROLE_MAPPING = {
-    "phd": ["PhDStudent"],
-    "ph.d": ["PhDStudent"],
-    "doctoral": ["PhDStudent"],
-    "master": ["MasterStudent"],
-    "msc": ["MasterStudent"],
-    "ms": ["MasterStudent"],
-    "m.s.": ["MasterStudent"],
-    "m.sc.": ["MasterStudent"],
-    "postdoc": ["Postdoc"],
-    "postdoctoral": ["Postdoc"],
-    "professor": ["Professor"],
-    "industrial researcher": ["IndustrialResearcher"],
-    "industry researcher": ["IndustrialResearcher"],
-    "institution researcher": ["InstitutionResearcher"],
-    "academic researcher": ["InstitutionResearcher"],
-    "graduate": ["MasterStudent", "PhDStudent"],  # Both acceptable
-}
-
 # ============================ DEFAULT CONFERENCES & YEARS ============================
 
 # Default conference library (used if user doesn't specify)
@@ -208,6 +163,41 @@ TOP_TIER_CONFERENCES = [
     "AAAI", "IJCAI",           # AI
     "CHI",                     # HCI
 ]
+
+# ============================ CS TOP CONFERENCES BY RESEARCH AREA ============================
+# 按研究方向分类的计算机科学顶级会议
+CS_TOP_CONFERENCES = {
+    "Artificial Intelligence": ["AAAI", "IJCAI"],
+    "Computer Vision": ["CVPR", "ECCV", "ICCV"],
+    "Machine Learning": ["ICLR", "ICML", "NeurIPS", "KDD"],
+    "Natural Language Processing": ["ACL", "EMNLP", "NAACL"],
+    "The Web & Information Retrieval": ["SIGIR", "WWW"],
+
+    "Computer Architecture": ["ASPLOS", "ISCA", "MICRO", "HPCA"],
+    "Computer Networks": ["SIGCOMM", "NSDI"],
+    "Computer Security": ["CCS", "IEEE S&P", "USENIX Security", "NDSS"],
+    "Databases": ["SIGMOD", "VLDB", "ICDE", "PODS"],
+    "Design Automation": ["DAC", "ICCAD"],
+    "Embedded & Real-Time Systems": ["EMSOFT", "RTAS", "RTSS"],
+    "High-Performance Computing": ["HPDC", "ICS", "SC"],
+    "Mobile Computing": ["MobiCom", "MobiSys", "SenSys"],
+    "Measurement & Performance Analysis": ["IMC", "SIGMETRICS"],
+    "Operating Systems": ["OSDI", "SOSP", "EuroSys", "FAST", "USENIX ATC"],
+    "Programming Languages": ["PLDI", "POPL", "ICFP", "OOPSLA"],
+    "Software Engineering": ["FSE", "ICSE", "ASE", "ISSTA"],
+
+    "Algorithms & Complexity": ["FOCS", "SODA", "STOC"],
+    "Cryptography": ["CRYPTO", "EuroCrypt"],
+    "Logic & Verification": ["CAV", "LICS"],
+
+    "Computational Biology & Bioinformatics": ["ISMB", "RECOMB"],
+    "Computer Graphics": ["SIGGRAPH", "SIGGRAPH Asia", "Eurographics"],
+    "Computer Science Education": ["SIGCSE"],
+    "Economics & Computation": ["EC", "WINE"],
+    "Human-Computer Interaction": ["CHI", "UbiComp/IMWUT", "UIST"],
+    "Robotics": ["ICRA", "IROS", "RSS"],
+    "Visualization": ["VIS", "VR"]
+}
 
 # Acceptance hints for conference papers
 ACCEPT_HINTS = [

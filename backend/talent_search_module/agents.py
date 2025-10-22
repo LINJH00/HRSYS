@@ -61,6 +61,10 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
         llm_instance = llm.get_llm("parse", temperature=0.3, api_key=api_key)
 
         conf_list = ", ".join(config.DEFAULT_CONFERENCES.keys())
+        
+        # 构建研究领域列表
+        fields_list = ", ".join(list(config.CS_TOP_CONFERENCES.keys()))
+        
         prompt = (
             "You are a professional talent recruitment analysis assistant responsible for parsing recruitment queries and extracting structured information.\n\n"
             "=== PARSING TASK INSTRUCTIONS ===\n"
@@ -83,12 +87,23 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
             "     Negation patterns include: 'not X', 'no X', 'without X', 'avoid X', 'exclude X', 'except X', 'rather than X'.\n"
             "   - Do NOT split a phrase into smaller parts. If no keyword exactly matches known terms, return the original phrase exactly as written by the user.\n"
             "   - Do NOT add high-level general fields like 'machine learning', 'deep learning', 'AI', 'artificial intelligence', or 'data science' unless these terms are explicitly written by the user.\n"
-            "   - Do NOT normalize, paraphrase, or interpret the user's intent. Only extract exactly what they wrote.\n"
-            "5. **must_be_current_student** (bool): Whether candidates must be current students. Look for:\n"
+            "   - Do NOT normalize, paraphrase, or interpret the user's intent. Only extract exactly what they wrote.\n\n"
+            "5. **research_field** (string): Primary research field/direction that best matches the query.\n"
+            f"   Available fields: {fields_list}\n"
+            "   Recognition rules:\n"
+            "   - Analyze the keywords and overall context to identify the PRIMARY research field\n"
+            "   - If keywords mention 'robot', 'robotics', 'manipulation', 'navigation' → 'Robotics'\n"
+            "   - If keywords mention 'NLP', 'language model', 'translation', 'sentiment' → 'Natural Language Processing'\n"
+            "   - If keywords mention 'vision', 'image', 'object detection', 'segmentation' → 'Computer Vision'\n"
+            "   - If keywords mention 'deep learning', 'neural network', 'training' → 'Machine Learning'\n"
+            "   - If keywords mention 'database', 'SQL', 'query optimization' → 'Databases'\n"
+            "   - If keywords mention 'security', 'encryption', 'vulnerability' → 'Computer Security'\n"
+            "   - Default to 'Machine Learning' if unclear\n\n"
+            "6. **must_be_current_student** (bool): Whether candidates must be current students. Look for:\n"
             "   - Explicit requirements: current student, currently enrolled, active student\n"
             "   - Degree phases: PhD student, Master's student, graduate student\n"
             "   - Default: true (unless explicitly stated otherwise)\n\n"
-            "6. **degree_levels** (string[]): Acceptable degree levels.\n"
+            "7. **degree_levels** (string[]): Acceptable degree levels.\n"
             "   CRITICAL EXTRACTION RULES (MUST FOLLOW EXACTLY):\n"
             "   - ONLY extract the EXACT degree terms that appear verbatim in the user's query text.\n"
             "   - Recognized degree patterns: \"PhD\", \"PhD student\", \"Doctoral\", \"Master\", \"MSc\", \"MS\",\n"
@@ -102,11 +117,11 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
             "   - If the query includes ANY degree term explicitly, DO NOT add default values.\n"
             "   - If the query does NOT mention any degree information at all, use this default:\n"
             "     [\"PhD\", \"MSc\", \"Master\", \"Graduate\"].\n"
-            "   - When in doubt, extract FEWER degrees rather than adding unmentioned ones.\n"
-            "7. **author_priority** (string[]): Author position preferences.\n"
+            "   - When in doubt, extract FEWER degrees rather than adding unmentioned ones.\n\n"
+            "8. **author_priority** (string[]): Author position preferences.\n"
             "   Recognition: first author, last author, corresponding author\n"
             "   Default: ['first', 'last']\n\n"
-            "8. **extra_constraints** (string[]): Other constraints.\n"
+            "9. **extra_constraints** (string[]): Other constraints.\n"
             "   Recognition: geographic requirements (e.g., 'Asia', 'North America')\n"
             "   institutional requirements (e.g., 'top universities', 'Ivy League')\n"
             "   language requirements, experience requirements, etc.\n\n"
@@ -122,19 +137,36 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
 
         query_spec = llm.safe_structured(llm_instance, prompt, schemas.QuerySpec)
 
-        # 如果venues为空，设置默认值：3个核心会议 + 随机 2个 / 3个 顶会
+        # 如果venues为空，根据研究领域智能选择会议
         if query_spec.venues == []:
-            import random
-            # 核心会议（固定）
-            need_n = query_spec.top_n
-            core_venues = config.CORE_CONFERENCES.copy()
-            # 从顶级会议池随机选 2个 / 3个 顶会
-            random_venues = config.TOP_TIER_CONFERENCES.copy()            # 合并
-            query_spec.venues = core_venues + random_venues
-            print(f"[Parse Query] No venues specified, using default:")
-            print(f"  Core: {core_venues}")
-            print(f"  Random: {random_venues}")
-            print(f"  Final: {query_spec.venues}")
+            print("[Parse Query] No venues specified, selecting based on research field...")
+            print(f"[Parse Query] Identified research field: {query_spec.research_field}")
+            
+            # 方案A：始终包含核心会议 + 研究领域会议
+            selected_conferences = config.CORE_CONFERENCES.copy()  # 始终包含核心ML会议
+            print(f"[Parse Query] Core ML conferences: {selected_conferences}")
+            
+            # 根据识别的研究领域添加专业会议
+            if query_spec.research_field and query_spec.research_field in config.CS_TOP_CONFERENCES:
+                field_conferences = config.CS_TOP_CONFERENCES[query_spec.research_field]
+                print(f"[Parse Query] Field-specific conferences from '{query_spec.research_field}': {field_conferences}")
+                selected_conferences.extend(field_conferences)
+            else:
+                print(f"[Parse Query] Warning: Research field '{query_spec.research_field}' not found in conference mapping")
+            
+            # 去重（保持顺序：核心会议优先，然后是领域会议）
+            seen = set()
+            deduped_conferences = []
+            for conf in selected_conferences:
+                if conf not in seen:
+                    seen.add(conf)
+                    deduped_conferences.append(conf)
+            
+            query_spec.venues = deduped_conferences
+            
+            print(f"[Parse Query] Final selected venues ({len(query_spec.venues)}): {query_spec.venues}")
+            print(f"[Parse Query]   - Core conferences: {[c for c in query_spec.venues if c in config.CORE_CONFERENCES]}")
+            print(f"[Parse Query]   - Field conferences: {[c for c in query_spec.venues if c not in config.CORE_CONFERENCES]}")
 
         return query_spec
 
@@ -142,22 +174,32 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
         print(f"LLM解析失败，使用模拟数据: {e}")
 
         # 回退到模拟数据
-        import random
-        # 动态年份
         fallback_years = config.DEFAULT_YEARS.copy()
-        core_venues = config.CORE_CONFERENCES.copy()
-        random_venues = config.TOP_TIER_CONFERENCES.copy()
-        fallback_venues = core_venues + random_venues
+        fallback_keywords = []
+        fallback_research_field = "Machine Learning"  # 默认研究领域
+        
+        fallback_venues = config.CORE_CONFERENCES.copy()  # 始终包含核心ML会议
+        
+        # 根据研究领域添加专业会议
+        if fallback_research_field in config.CS_TOP_CONFERENCES:
+            field_conferences = config.CS_TOP_CONFERENCES[fallback_research_field]
+            fallback_venues.extend(field_conferences)
+        
+        # 去重（保持顺序）
+        fallback_venues = list(dict.fromkeys(fallback_venues))
         
         print(f"[Fallback] Using default configuration:")
         print(f"  Years: {fallback_years}")
+        print(f"  Research Field: {fallback_research_field}")
         print(f"  Venues: {fallback_venues}")
+        print(f"  Keywords: {fallback_keywords}")
         
         return schemas.QuerySpec(
             top_n=10,
             years=fallback_years,
             venues=fallback_venues,
-            keywords=["social simulation", "multi-agent systems"],
+            keywords=fallback_keywords if fallback_keywords else ["machine learning"],
+            research_field=fallback_research_field,
             must_be_current_student=True,
             degree_levels=["PhD", "Master"],
             author_priority=["first"],
@@ -400,14 +442,14 @@ def _select_urls(
                 # This function:
                 # 1. Scores all papers using LLM (1-10 scale)
                 # 2. Sorts by score (descending)
-                # 3. Applies domain limits (max 6 per domain)
-                # 4. Returns top 20 papers
+                # 3. Applies domain limits (max 8 per domain)
+                # 4. Returns top 30 papers
                 scored_urls = search.llm_pick_urls(
                     serp_filtered, 
                     user_query, 
                     llm_instance,
-                    need=30,  # 增加到 20 篇论文以扩大候选池
-                    max_per_domain=6  # 同时增加每域上限以获得更多样化的候选人
+                    need=30,  # 增加到 30 篇论文以扩大候选池
+                    max_per_domain=8  # 同时增加每域上限以获得更多样化的候选人
                 )
                 
                 # Extract URLs and create aligned SERP list
@@ -671,259 +713,6 @@ def _expand_author_queries(names: List[str]) -> List[str]:
     return out
 
 
-
-
-def classify_role_rule_based(role_text: str) -> str:
-    """Rule-based role classification as fallback
-    
-    Args:
-        role_text: The role/position text to classify
-    
-    Returns:
-        One of the 6 role categories or "Unknown"
-    """
-    if not role_text or not role_text.strip():
-        return "Unknown"
-    
-    t = role_text.lower()
-    
-    # Define keyword patterns for each category
-    # Priority: Check from highest to lowest priority
-    
-    # 1. Professor (highest priority)
-    professor_patterns = [
-        "assistant professor", "associate professor", "full professor",
-        "asst prof", "assoc prof", "professor", "prof.",
-    ]
-    if any(p in t for p in professor_patterns):
-        # Exclude "former professor", "ex-professor"
-        if not any(ex in t for ex in ["former", "ex-", "received", "got my"]):
-            return "Professor"
-    
-    # 2. Postdoc
-    postdoc_patterns = [
-        "postdoc", "post-doc", "post doc", "postdoctoral", "post-doctoral",
-        "postdoctoral researcher", "postdoctoral fellow",
-    ]
-    if any(p in t for p in postdoc_patterns):
-        if not any(ex in t for ex in ["former", "ex-", "received", "completed"]):
-            return "Postdoc"
-    
-    # 3. Industrial Researcher
-    # Keywords: company names, "industry", combined with researcher/scientist
-    industrial_keywords = [
-        "google", "microsoft", "meta", "facebook", "amazon", "apple", 
-        "nvidia", "openai", "deepmind", "anthropic", "bytedance", "tencent",
-        "baidu", "alibaba", "huawei", "intel", "ibm", "sony",
-    ]
-    researcher_keywords = [
-        "research scientist", "researcher", "research engineer", 
-        "senior researcher", "staff researcher", "research intern",
-    ]
-    
-    has_industrial_keyword = any(k in t for k in industrial_keywords) or "industry" in t or "company" in t
-    has_researcher_keyword = any(k in t for k in researcher_keywords)
-    
-    if has_industrial_keyword and has_researcher_keyword:
-        return "IndustrialResearcher"
-    
-    # 4. Institution Researcher (academic institution)
-    institution_keywords = [
-        "university", "institute", "college", "academia", "research center",
-        "research institute", "laboratory", "lab",
-    ]
-    has_institution_keyword = any(k in t for k in institution_keywords)
-    
-    if has_institution_keyword and has_researcher_keyword:
-        return "InstitutionResearcher"
-    
-    # If only researcher keyword without clear context, check for PhD mention
-    if has_researcher_keyword:
-        # If mentions "phd" or "ph.d.", likely institution researcher
-        if "phd" in t or "ph.d" in t or "doctor" in t:
-            return "InstitutionResearcher"
-        # Otherwise could be industrial
-        return "IndustrialResearcher"
-    
-    # 5. PhD Student
-    phd_patterns = [
-        "phd student", "ph.d student", "ph.d. student", 
-        "doctoral student", "doctoral candidate", "phd candidate",
-        "graduate student", "grad student",
-    ]
-    if any(p in t for p in phd_patterns):
-        # Exclude if mentions master explicitly
-        if not any(m in t for m in ["master", "msc", "m.s.", "m.sc."]):
-            return "PhDStudent"
-    
-    # 6. Master Student (lowest priority)
-    master_patterns = [
-        "master student", "master's student", "msc student", "ms student",
-        "m.s. student", "m.sc. student", "m.eng student",
-    ]
-    if any(p in t for p in master_patterns):
-        return "MasterStudent"
-    
-    return "Unknown"
-
-
-def classify_role_llm(role_text: str, api_key: str = None) -> dict:
-    """LLM-based role classification
-    
-    Args:
-        role_text: The role/position text to classify
-        api_key: Optional API key for LLM calls
-    
-    Returns:
-        dict with keys: "role_category", "rationale_short", "confidence"
-    """
-    if not role_text or not role_text.strip():
-        return {"role_category": "Unknown", "rationale_short": "Empty input", "confidence": 1.0}
-    
-    try:
-        from backend.llm import get_llm
-        import json
-        
-        llm = get_llm("role_classifier", temperature=0.1, api_key=api_key)
-        
-        # Create comprehensive prompt with examples
-        role_categories_str = ", ".join(config.ROLE_CATEGORIES.keys())
-        
-        prompt = f"""You are a strict talent classifier for recruitment purposes.
-
-**Allowed categories ONLY**: {role_categories_str}, Unknown
-
-**TASK**: Classify the *CURRENT* role in the given text. Return JSON only.
-
-**CRITICAL RULES**:
-1. IGNORE past degrees/positions (keywords: "received", "got my PhD/degree", "graduated", "former", "ex-", "previously", "was a")
-2. ONLY use present-tense descriptions OR current titles WITHOUT temporal markers
-3. If multiple current roles exist, pick highest-level (priority: Professor > Postdoc > IndustrialResearcher > InstitutionResearcher > PhDStudent > MasterStudent)
-4. If nothing clear matches, output "Unknown"
-5. "Research Scientist" at company/industry = IndustrialResearcher
-6. "Research Scientist" at university/institute = InstitutionResearcher
-7. Postdoc is separate from Professor (recent PhD graduate, temporary position)
-
-**OUTPUT JSON FORMAT**:
-{{
-  "role_category": "<one of the allowed categories>",
-  "rationale_short": "<max 15 words explaining decision>",
-  "confidence": <0.0-1.0>
-}}
-
-**EXAMPLES**:
-
-Input: "PhD student at MIT working on computer vision"
-Output: {{"role_category": "PhDStudent", "rationale_short": "Currently PhD student", "confidence": 1.0}}
-
-Input: "I received my Ph.D. degree from Stanford. Now Research Scientist at Google"
-Output: {{"role_category": "IndustrialResearcher", "rationale_short": "Current: Research Scientist at Google (company)", "confidence": 0.95}}
-
-Input: "Master's student at CMU, interested in NLP"
-Output: {{"role_category": "MasterStudent", "rationale_short": "Currently Master student", "confidence": 1.0}}
-
-Input: "Assistant Professor of Computer Science at Berkeley"
-Output: {{"role_category": "Professor", "rationale_short": "Assistant Professor position", "confidence": 1.0}}
-
-Input: "Postdoctoral researcher at Harvard Medical School"
-Output: {{"role_category": "Postdoc", "rationale_short": "Postdoctoral researcher", "confidence": 1.0}}
-
-Input: "Research Scientist at Microsoft Research"
-Output: {{"role_category": "IndustrialResearcher", "rationale_short": "Industry researcher at Microsoft", "confidence": 0.9}}
-
-Input: "Research Scientist, Institute for AI, ETH Zurich"
-Output: {{"role_category": "InstitutionResearcher", "rationale_short": "Academic institution researcher", "confidence": 0.9}}
-
-Input: "I got my PhD in 2020. Former postdoc. Currently software engineer at Apple."
-Output: {{"role_category": "Unknown", "rationale_short": "Current role is software engineer, not researcher", "confidence": 0.8}}
-
-Input: "PhD student and part-time Research Scientist at NVIDIA"
-Output: {{"role_category": "IndustrialResearcher", "rationale_short": "Dual role, higher priority: IndustrialResearcher", "confidence": 0.85}}
-
-**NOW CLASSIFY THIS**:
-Role Text: "{role_text}"
-
-Output JSON:"""
-
-        response = llm.invoke(prompt)
-        response_text = utils.strip_thinking(response.content if hasattr(response, 'content') else str(response))
-        
-        # Try to parse JSON
-        # Remove markdown code blocks if present
-        response_text = response_text.strip()
-        if response_text.startswith("```"):
-            # Extract content between ```json and ``` or ``` and ```
-            lines = response_text.split("\n")
-            response_text = "\n".join(lines[1:-1]) if len(lines) > 2 else response_text
-        
-        result = json.loads(response_text)
-        
-        # Validate result
-        role_cat = result.get("role_category", "Unknown")
-        if role_cat not in config.ROLE_CATEGORIES and role_cat != "Unknown":
-            if config.VERBOSE:
-                print(f"[classify_role_llm] Invalid category '{role_cat}', fallback to Unknown")
-            role_cat = "Unknown"
-        
-        return {
-            "role_category": role_cat,
-            "rationale_short": result.get("rationale_short", "")[:100],
-            "confidence": float(result.get("confidence", 0.5))
-        }
-        
-    except Exception as e:
-        if config.VERBOSE:
-            print(f"[classify_role_llm] Error: {e}, falling back to rule-based")
-        # Fallback to rule-based
-        role_cat = classify_role_rule_based(role_text)
-        return {
-            "role_category": role_cat,
-            "rationale_short": "LLM failed, rule-based classification",
-            "confidence": 0.5 if role_cat != "Unknown" else 0.3
-        }
-
-
-def classify_role(role_text: str, api_key: str = None, use_llm: bool = None) -> str:
-    """Main role classification function
-    
-    Args:
-        role_text: The role/position text to classify
-        api_key: Optional API key for LLM calls
-        use_llm: Override config.ENABLE_LLM_DEGREE_MATCHING if specified
-    
-    Returns:
-        One of the 6 role categories: MasterStudent, PhDStudent, Postdoc, 
-        Professor, InstitutionResearcher, IndustrialResearcher, or "Unknown"
-    """
-    if use_llm is None:
-        use_llm = config.ENABLE_LLM_DEGREE_MATCHING
-    
-    if use_llm:
-        result = classify_role_llm(role_text, api_key)
-        role_category = result["role_category"]
-        
-        if config.VERBOSE:
-            print(f"[classify_role] Role: '{role_text[:80]}...'")
-            print(f"[classify_role] Category: {role_category}")
-            print(f"[classify_role] Rationale: {result['rationale_short']}")
-            print(f"[classify_role] Confidence: {result['confidence']:.2f}")
-        
-        # If low confidence, also try rule-based and compare
-        if result["confidence"] < 0.6:
-            rule_result = classify_role_rule_based(role_text)
-            if config.VERBOSE:
-                print(f"[classify_role] Low confidence, rule-based suggests: {rule_result}")
-            # If rule-based is not Unknown and different, consider using it
-            if rule_result != "Unknown" and rule_result != role_category:
-                if config.VERBOSE:
-                    print(f"[classify_role] Using rule-based result due to low confidence")
-                return rule_result
-        
-        return role_category
-    else:
-        return classify_role_rule_based(role_text)
-
-
 def _role_matches_degree(role_text: str, degree_levels: List[str]) -> bool:
     """Rule-based degree matching function that checks current role vs degree requirements
     
@@ -984,12 +773,7 @@ def _role_matches_degree(role_text: str, degree_levels: List[str]) -> bool:
 
 
 def role_matches_degree(role_text: str, degree_levels: List[str], api_key: str = None) -> bool:
-
-    """NEW: Main degree matching function using role classification system
-    
-    This is the new implementation that:
-    1. First classifies the role into one of 6 categories
-    2. Then checks if that category matches the degree requirements
+    """Main degree matching function that chooses between rule-based and LLM-based matching
     
     Args:
         role_text: The role/position text to analyze
@@ -999,46 +783,10 @@ def role_matches_degree(role_text: str, degree_levels: List[str], api_key: str =
     Returns:
         bool: True if the role matches the degree requirements, False otherwise
     """
-    # Empty degree requirements = accept all
-    if not degree_levels:
-        return True
-    
-    # Empty role text = reject
-    if not role_text or not role_text.strip():
-        return False
-    
-    # Step 1: Classify the role
-    role_category = classify_role(role_text, api_key=api_key)
-    
-    if config.VERBOSE:
-        print(f"[role_matches_degree] Role text: '{role_text[:80]}...'")
-        print(f"[role_matches_degree] Classified as: {role_category}")
-        print(f"[role_matches_degree] Required degrees: {degree_levels}")
-    
-    # Unknown role = reject (strict matching)
-    if role_category == "Unknown":
-        if config.VERBOSE:
-            print(f"[role_matches_degree] Result: ❌ NO MATCH (Unknown category)")
-        return False
-    
-    # Step 2: Check if role_category matches any of the degree requirements
-    # Normalize degree levels to lowercase for comparison
-    degree_levels_lower = [d.lower().strip() for d in degree_levels]
-    
-    # Check each degree requirement
-    for degree in degree_levels_lower:
-        # Get acceptable role categories for this degree
-        acceptable_roles = config.DEGREE_TO_ROLE_MAPPING.get(degree, [])
-        
-        if role_category in acceptable_roles:
-            if config.VERBOSE:
-                print(f"[role_matches_degree] Result: ✅ MATCH ('{degree}' accepts '{role_category}')")
-            return True
-    
-    # No match found
-    if config.VERBOSE:
-        print(f"[role_matches_degree] Result: ❌ NO MATCH")
-    return False
+    if config.ENABLE_LLM_DEGREE_MATCHING:
+        return _llm_role_matches_degree(role_text, degree_levels, api_key)
+    else:
+        return _role_matches_degree(role_text, degree_levels)
 
 
 def _llm_role_matches_degree(role_text: str, degree_levels: List[str], api_key: str = None) -> bool:
