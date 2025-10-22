@@ -185,42 +185,81 @@ def _render_search_progress_overlay(steps: list, active_idx: int,
             f'</div>'
         )
     
-    # 简洁的两行状态显示（英文版）
+    # 简洁的两行状态显示（英文版） - 视觉优化版（无进度条）
     status_html = (
         '<div style="'
         '    margin-top: 1.5rem;'
-        '    padding: 1rem;'
-        '    background: rgba(255, 255, 255, 0.05);'
-        '    border-radius: 8px;'
-        '    border-top: 2px solid rgba(102, 126, 234, 0.5);'
+        '    padding: 1.2rem;'
+        '    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(96, 165, 250, 0.05));'
+        '    border-radius: 10px;'
+        '    border: 1px solid rgba(102, 126, 234, 0.3);'
+        '    backdrop-filter: blur(10px);'
+        '    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);'
         '">'
         # 第一行：候选人进度（固定）
         '  <div style="'
-        '      color: #e2e8f0;'
-        '      font-size: 1.05em;'
-        '      font-weight: 600;'
-        '      margin-bottom: 0.8rem;'
         '      display: flex;'
         '      align-items: center;'
-        '      gap: 0.5rem;'
+        '      gap: 0.6rem;'
+        '      margin-bottom: 0.8rem;'
+        '      padding-bottom: 0.8rem;'
+        '      border-bottom: 1px dashed rgba(102, 126, 234, 0.2);'
         '  ">'
-        f'    <span style="color: #667eea;">👥</span>'
-        f'    <span>Found <span style="color: #667eea; font-size: 1.2em;">{candidates_found}/{target_count}</span> candidates</span>'
+        '    <span style="'
+        '        font-size: 1.3em;'
+        '        filter: drop-shadow(0 0 4px rgba(102, 126, 234, 0.5));'
+        '    ">👥</span>'
+        '    <span style="'
+        '        color: #e2e8f0;'
+        '        font-weight: 600;'
+        '        font-size: 1.05em;'
+        '    ">Found</span>'
+        '    <span style="'
+        '        color: #667eea;'
+        '        font-weight: 700;'
+        '        font-size: 1.25em;'
+        '        text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);'
+        f'    ">{candidates_found}/{target_count}</span>'
+        '    <span style="'
+        '        color: #e2e8f0;'
+        '        font-weight: 600;'
+        '        font-size: 1.05em;'
+        '    ">candidates</span>'
         '  </div>'
         # 第二行：当前操作（动态变化）
         '  <div style="'
-        '      color: #94a3b8;'
-        '      font-size: 0.9em;'
-        '      padding-left: 2rem;'
-        '      overflow: hidden;'
-        '      text-overflow: ellipsis;'
-        '      white-space: nowrap;'
+        '      display: flex;'
+        '      align-items: center;'
+        '      gap: 0.6rem;'
+        '      min-height: 1.5rem;'
         '  ">'
-        f'    <span style="color: #60a5fa;">⟳</span> {current_action if current_action else "Initializing..."}'
-        f'    {("<span style=\"color: #64748b; margin-left: 0.5rem;\">" + detail_info + "</span>") if detail_info else ""}'
+        '    <span style="'
+        '        color: #60a5fa;'
+        '        font-size: 1.1em;'
+        '        animation: spin 2s linear infinite;'
+        '        display: inline-block;'
+        '    ">⟳</span>'
+        '    <span style="'
+        '        color: #cbd5e1;'
+        '        font-size: 0.95em;'
+        '        flex: 1;'
+        '        display: flex;'
+        '        align-items: center;'
+        '        gap: 0.5rem;'
+        '    ">'
+        f'      <span style="font-weight: 500;">{current_action if current_action else "Initializing..."}</span>'
+        f'      {("<span style=\"color: #64748b; font-style: italic; font-size: 0.9em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60%;\">" + detail_info + "</span>") if detail_info else ""}'
+        '    </span>'
         '  </div>'
         '</div>'
-    )
+        # CSS动画
+        '<style>'
+        '  @keyframes spin {'
+        '    from { transform: rotate(0deg); }'
+        '    to { transform: rotate(360deg); }'
+        '  }'
+        '</style>'
+        )
 
     return (
         '<div class="search-overlay">'          
@@ -228,7 +267,7 @@ def _render_search_progress_overlay(steps: list, active_idx: int,
         '    <div class="search-modal-header">' 
         '      <div class="search-modal-title">🔍 Searching for Talents</div>'
         '    </div>'
-        f'    <div class="search-steps">{"".join(items)}</div>'
+        f'    <div class="search-steps">{"".join(items)}</div>'  
         f'    {status_html}'  # 添加状态显示
         '  </div>'
         '</div>'
@@ -1731,7 +1770,7 @@ def render_targeted_search_page():
                         current_step = step_idx
                     
                     # Update overlay with both step and status information
-                    overlay.markdown(
+                        overlay.markdown(
                         _render_search_progress_overlay(
                             search_steps, 
                             current_step,
@@ -1740,8 +1779,8 @@ def render_targeted_search_page():
                             current_action=current_action,
                             detail_info=detail_info
                         ),
-                        unsafe_allow_html=True
-                    )
+                            unsafe_allow_html=True
+                        )
                     
                     # ========== update progress bar ==========
                     p = max(0, min(100, int((pct or 0.0) * 100)))

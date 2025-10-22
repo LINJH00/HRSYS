@@ -106,7 +106,7 @@ DOCKER_NETWORK = "searx-net"
 DOCKER_CONFIG_PATH = os.path.join(os.getcwd(), "backend", "searxng").replace("\\", "/")
 
 # Batch search parameters
-SEARCH_BATCH_CHUNK = 10
+SEARCH_BATCH_CHUNK = 4
 
 
 # ============================ LLM TOKEN LIMITS ============================
