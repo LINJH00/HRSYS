@@ -847,7 +847,7 @@ def _display_candidate_card(candidate, index, current_theme, text_color):
                     }
                     
                     st.session_state["demo_candidate_overview_json"] = json.dumps(profile_payload)
-                    st.session_state["prev_page"] = st.session_state.get("current_page", "🔍 Targeted Search")
+                    st.session_state["prev_page"] = st.session_state.get("current_page", "🔍 人才搜索")
                     st.session_state.current_page = "🧑 Candidate Profile"
                     st.session_state.page_changed = True
                     st.rerun()
@@ -1062,9 +1062,9 @@ def handle_new_search_request(user_input):
             st.session_state.chat_history.append(
                 {
                     "role": "assistant",
-                    "content": f"I need more specific information to help you find the right talent. {validation_result['suggestion']}<br><br>"
-                    f"<strong>Missing elements:</strong> {', '.join(validation_result['missing_elements'])}<br>"
-                    f"Please provide more details about what you're looking for.",
+                    "content": f"我需要更具体的信息来帮助您找到合适的人才。{validation_result['suggestion']}<br><br>"
+                    f"<strong>缺失信息:</strong> {', '.join(validation_result['missing_elements'])}<br>"
+                    f"请提供更多关于您所寻找内容的详细信息。",
                 }
             )
             return
@@ -1088,14 +1088,14 @@ def handle_new_search_request(user_input):
             st.session_state.chat_history.append(
                 {
                     "role": "assistant",
-                    "content": "Great! I've analyzed your request and extracted the search parameters below. Please review them and let me know if they look correct, or if you'd like me to adjust anything.",
+                    "content": "太好了！我已经分析了您的请求，并提取了以下搜索参数。请检查它们是否正确，或者如果您希望我做任何调整，请告诉我。",
                 }
             )
         else:
             st.session_state.chat_history.append(
                 {
                     "role": "assistant",
-                    "content": "I had trouble understanding your request. Could you please provide more details about the type of talent you're looking for? For example:<br>• Research areas of interest<br>• Degree level (PhD, Master's, etc.)<br>• Number of candidates needed<br>• Preferred conferences or publication venues",
+                    "content": "我对您的请求有些不太理解。您能否提供更多关于您所寻找的人才类型的详细信息？例如：<br>• 感兴趣的研究领域<br>• 学位层次（博士、硕士等）<br>• 所需候选人人数<br>• 首选的会议或发表平台",
                 }
             )
     else:
@@ -1103,7 +1103,7 @@ def handle_new_search_request(user_input):
         st.session_state.chat_history.append(
             {
                 "role": "assistant",
-                "content": "❌ I'm sorry, but the search functionality is currently unavailable. The talent search backend is not accessible.<br><br>**Possible solutions:**<br>• Check if the talent search module is properly installed<br>• Verify network connectivity<br>• Contact system administrator for configuration help",
+                "content": "❌ 抱歉，搜索功能目前不可用。人才搜索后台无法访问。<br><br>**可能的解决方案：**<br>• 检查人才搜索模块是否正确安装<br>• 验证网络连接<br>• 联系系统管理员获取配置帮助",
             }
         )
 
@@ -1235,7 +1235,7 @@ def render_targeted_search_page():
                         color: {assistant_message_text_color};
                     ">
                         <div style="margin-bottom: 0.3rem; font-size: 0.85em; opacity: 0.8;">
-                            <strong>🤖 AI Assistant</strong>
+                            <strong>🤖 AI 助手</strong>
                         </div>
                         <div style="line-height: 1.6;">
                             {content_html}
@@ -1265,17 +1265,17 @@ def render_targeted_search_page():
             query_spec = st.session_state.query_spec
 
             # Display extracted parameters in a nice format
-            params_html = "<h4>📊 Extracted Search Parameters:</h4>"
+            params_html = "<h4>📊 提取搜索参数:</h4>"
 
             if query_spec.get("top_n"):
                 params_html += (
-                    f"<p><strong>👥 Candidates:</strong> {query_spec['top_n']}</p>"
+                    f"<p><strong>👥 候选人数量:</strong> {query_spec['top_n']}</p>"
                 )
             
             # Display research field if available
             if query_spec.get("research_field"):
                 params_html += (
-                    f"<p><strong>🎯 Research Field:</strong> {query_spec['research_field']}</p>"
+                    f"<p><strong>🎯 研究领域:</strong> {query_spec['research_field']}</p>"
                 )
 
             kw_bg = "#536833"
@@ -1298,7 +1298,7 @@ def render_targeted_search_page():
                     ]
                 )
                 params_html += (
-                    f"<p><strong>🔬 Research Areas:</strong> {keywords_str}</p>"
+                    f"<p><strong>🔬 研究领域:</strong> {keywords_str}</p>"
                 )
 
             if query_spec.get("degree_levels"):
@@ -1308,7 +1308,7 @@ def render_targeted_search_page():
                         for d in query_spec["degree_levels"]
                     ]
                 )
-                params_html += f"<p><strong>🎓 Degrees:</strong> {degrees_str}</p>"
+                params_html += f"<p><strong>🎓 学位:</strong> {degrees_str}</p>"
 
             # Add preview to chat history once so it persists
             if not st.session_state.get("preview_in_history", False):
@@ -1355,7 +1355,7 @@ def render_targeted_search_page():
                 col_confirm1,  = st.columns(1)
                 with col_confirm1:
                     if st.button(
-                        "✅ Looks Good! Start Search",
+                        "✅ 看起来不错！开始搜索",
                         type="primary",
                         use_container_width=True,
                     ):
@@ -1363,7 +1363,7 @@ def render_targeted_search_page():
                         st.session_state.chat_history.append(
                             {
                                 "role": "user",
-                                "content": "✅ Yes, these parameters look good. Please start the search!",
+                                "content": "✅ 是的，这些参数看起来很好。请开始搜索!",
                             }
                         )
                         st.session_state.awaiting_confirmation = True
@@ -1385,11 +1385,11 @@ def render_targeted_search_page():
                 # User chose to continue - resume search for 2 more rounds (1 cycle)
                 st.session_state.chat_history.append({
                     "role": "user",
-                    "content": "🔄 Continue to the next search cycle (2 rounds)"
+                    "content": "🔄 继续下一个搜索周期（2轮）"
                 })
                 st.session_state.chat_history.append({
                     "role": "assistant",
-                    "content": "✅ Great! Starting a new search cycle, will conduct 2 rounds of search..."
+                    "content": "✅ 太好了！开始新的搜索周期，将进行两轮搜索..."
                 })
 
                 # Load task state and resume
@@ -1407,9 +1407,9 @@ def render_targeted_search_page():
                         print(f"  - partial_search_results show: {partial_count} candidates")
                         print(f"  - task_state actually contains: {task_count} candidates")
                         if partial_count == task_count:
-                            print(f"  ✅ Data consistent! Will continue to search with these {task_count} candidates")
+                            print(f"  ✅ 数据一致！将继续用这些进行搜索 {task_count} 候选人")
                         else:
-                            print(f"  ⚠️ Data inconsistent! Possible synchronization issue")
+                            print(f"  ⚠️ 数据不一致！可能存在同步问题")
 
                         # Resume search - set awaiting_confirmation to trigger search
                         st.session_state.awaiting_confirmation = True
@@ -1420,7 +1420,7 @@ def render_targeted_search_page():
                             del st.session_state._finishing_in_progress
                         st.rerun()
                     else:
-                        st.error("Cannot resume search task, please start again")
+                        st.error("无法恢复搜索任务，请重新开始")
                         # Clean up states on error
                         if "awaiting_confirmation" in st.session_state:
                             del st.session_state.awaiting_confirmation
@@ -1430,7 +1430,7 @@ def render_targeted_search_page():
                             del st.session_state._finishing_in_progress
                         return
                 except Exception as e:
-                    st.error(f"Failed to resume task: {e}")
+                    st.error(f"恢复任务失败: {e}")
                     import traceback
                     traceback.print_exc()
                     # Clean up states on error
@@ -1451,7 +1451,7 @@ def render_targeted_search_page():
                 # User chose to finish - finalize results from current candidates
                 st.session_state.chat_history.append({
                     "role": "user",
-                    "content": "✅ Finish search, sort the current candidates"
+                    "content": "✅ 完成搜索，排序当前候选项"
                 })
                 # Load task state and finalize
                 try:
@@ -1483,12 +1483,12 @@ def render_targeted_search_page():
                         # Add success message to chat
                         st.session_state.chat_history.append({
                             "role": "assistant",
-                            "content": f"✅ Search completed! Found {final_results.total_candidates_found} candidates, sorted by relevance."
+                            "content": f"✅ 搜索完成！已找到 {final_results.total_candidates_found} 候选人，按相关性排序。"
                         })
                         # Force rerun to render results immediately
                         st.rerun()
                     else:
-                        st.error("Cannot resume search task, please start again")
+                        st.error("无法恢复搜索任务，请重新开始")
                         # Clear states even on error
                         if "awaiting_confirmation" in st.session_state:
                             del st.session_state.awaiting_confirmation
@@ -1503,7 +1503,7 @@ def render_targeted_search_page():
                         return
                         
                 except Exception as e:
-                    st.error(f"Failed to process results: {e}")
+                    st.error(f"处理结果失败: {e}")
                     import traceback
                     traceback.print_exc()
                     # Clear states even on error
@@ -1535,7 +1535,7 @@ def render_targeted_search_page():
                 st.session_state.chat_history.append(
                     {
                         "role": "assistant",
-                        "content": "🚀 Perfect! Starting the targeted search now. This may take a few moments...",
+                        "content": "🚀 完美！现在开始目标搜索。这可能需要几分钟。...",
                     }
                 )
                 st.session_state._search_started = True
@@ -1668,13 +1668,13 @@ def render_targeted_search_page():
             # IMPORTANT: Don't delete it yet, just get a reference
             resume_state = st.session_state.get("resume_task_state", None)
             if resume_state:
-                print(f"[Frontend] Found resume_task_state in session!")
-                print(f"[Frontend]   - Task ID: {resume_state.task_id}")
-                print(f"[Frontend]   - Candidates: {len(resume_state.candidates_accum)}")
-                print(f"[Frontend]   - Position: {resume_state.pos}/{len(resume_state.terms)}")
+                print(f"[Frontend] 在会话中找到 resume_task_state!")
+                print(f"[Frontend]   - 任务编号: {resume_state.task_id}")
+                print(f"[Frontend]   - 候选人: {len(resume_state.candidates_accum)}")
+                print(f"[Frontend]   - 位置: {resume_state.pos}/{len(resume_state.terms)}")
                 # Don't delete it here - we need it for the search thread
             else:
-                print(f"[Frontend] No resume_task_state found, starting new search")
+                print(f"[前端] 未找到 resume_task_state，开始新搜索")
             
             # create and start background thread
             worker = threading.Thread(
@@ -1687,7 +1687,7 @@ def render_targeted_search_page():
             # Now clear the resume_task_state since we've used it
             if "resume_task_state" in st.session_state:
                 del st.session_state.resume_task_state
-                print(f"[Frontend] Cleared resume_task_state from session after starting thread")
+                print(f"[前端] 启动线程后已从会话中清除 resume_task_state")
             
             # ========== main thread: real-time update UI ==========
             current_step = 0  # current step index
@@ -1719,21 +1719,12 @@ def render_targeted_search_page():
                     # ========== Check for pause event ==========
                     if event == "paused":
                         paused_for_decision = True
-                        break  # Exit loop to show decision dialog
-                    
-                    # ========== Parse event information ==========
-                    # Event format examples:
-                    # - "searching"
-                    # - "analyzing:candidate_name"
-                    # - "scoring:paper_title"
-                    # - "found:5" (found 5 candidates)
-                    
+                        break  # Exit loop to show decision dialog       
                     event_str = event or ""
                     base_event = event_str.split(":", 1)[0]
                     event_detail = event_str.split(":", 1)[1] if ":" in event_str else ""
                     
                     # ========== Update status information ==========
-                    # Extract candidate count if event contains "found"
                     if "found:" in event_str:
                         try:
                             status_info["candidates"] = int(event_detail)
@@ -1815,48 +1806,31 @@ def render_targeted_search_page():
                 st.session_state.showing_decision_dialog = True
             
             # Check if we should show decision dialog
-            print(f"\n[Decision Dialog Check]")
-            print(f"  - partial_search_results in session: {st.session_state.get('partial_search_results') is not None}")
-            print(f"  - showing_decision_dialog: {st.session_state.get('showing_decision_dialog', False)}")
-            
-            should_show_dialog = st.session_state.get("showing_decision_dialog", False) and st.session_state.get("partial_search_results") is not None
-            print(f"  → should_show_dialog: {should_show_dialog}\n")
-            
+            should_show_dialog = st.session_state.get("showing_decision_dialog", False) and st.session_state.get("partial_search_results") is not None            
             if should_show_dialog:                
                 # Get partial_results from session_state (already saved above)
                 partial_results = st.session_state.partial_search_results
-                print(f"[Paused State] Partial results information:")
-                print(f"  - task_id: {partial_results.task_id}")
-                print(f"  - rounds_completed: {partial_results.rounds_completed} 轮")
-                print(f"  - total_candidates_found: {partial_results.total_candidates_found} 个")
-                print(f"  - current_candidates number: {len(partial_results.current_candidates)} 个")
-                print(f"  - message: {partial_results.message}")
-                
                 # Clear progress overlay
                 overlay.empty()
                 prog.empty()                
                 # Calculate current cycle number (2 rounds = 1 cycle)
                 current_cycle = partial_results.rounds_completed // 2
-                
                 # Show info message
-                research_field_str = f"\n                - 🎯 Research Field：{st.session_state.query_spec.get('research_field', 'N/A')}" if st.session_state.query_spec.get('research_field') else ""
+                research_field_str = f"\n                - 🎯 研究领域：{st.session_state.query_spec.get('research_field', 'N/A')}" if st.session_state.query_spec.get('research_field') else ""
                 st.info(f"""
-                ### 🔍 Search cycle completed
+                ### 🔍 搜索周期已完成
                 
                 Completed the **{current_cycle}** search cycle (2 rounds per cycle)
                 
                 **Current progress：**
-                - 📊 Round completed：{partial_results.rounds_completed} 轮
-                - 👥 Candidate found：{partial_results.total_candidates_found} 位
-                - 🎯 Target number of people：{st.session_state.query_spec.get('top_n', 10)} 位{research_field_str}
+                - 📊 完成：{partial_results.rounds_completed} 轮搜索
+                - 👥 发现：{partial_results.total_candidates_found} 位候选人
+                - 🎯 目标人数：{st.session_state.query_spec.get('top_n', 10)} 位{research_field_str}
                 """)
                 
                 st.markdown("---")
-                st.markdown("### 💡 Please select the next action")
-                st.markdown("*Tip: Each cycle includes 2 rounds of searches. You can choose to continue to the next cycle or view the current results.*")
-                # Show decision buttons
-                print(f"  - partial_search_results: {st.session_state.partial_search_results.task_id}")
-                print(f"  - showing_decision_dialog: {st.session_state.showing_decision_dialog}")
+                st.markdown("### 💡 请选择下一步操作")
+                st.markdown("*提示：每个周期包含两轮搜索。你可以选择继续下一个周期或查看当前结果。*")
                 col1, col2, col3 = st.columns([1, 1, 1])
                 
                 with col1:
@@ -1876,10 +1850,9 @@ def render_targeted_search_page():
                     
                     # Check if button was just clicked (for debugging)
                     if st.session_state.get("search_action") == "continue":
-                        print(f"  ✅ Detected search_action='continue', will continue searching")
+                        print(f"  ✅ 检测到用户点击继续，将继续进行搜索！")
                 
                 with col2:
-                    print(f"  - Render the 'Complete' button (key=finish_search)")
                     # Use on_click callback to ensure state is set BEFORE rerun
                     def handle_finish():
                         st.session_state.search_action = "finish"
@@ -1895,11 +1868,10 @@ def render_targeted_search_page():
                     
                     # Check if button was just clicked (for debugging)
                     if st.session_state.get("search_action") == "finish":
-                        print(f"  ✅ Detected search_action='finish', will enter the sorting process")
+                        print(f"  ✅ 检测到用户点击完成，将进入结果页面！")
                 
                 with col3:
                     st.markdown("")  # Empty column for spacing
-                
                 # Exit here - wait for user decision
                 return
             
@@ -1968,27 +1940,27 @@ def render_targeted_search_page():
                             areas_text = ", ".join(unique_areas) if unique_areas else "machine learning and AI"
                             
                             st.session_state.search_summary = \
-                                f"Great! I found {total_count} promising candidates for you. " \
-                                f"The search returned researchers specializing in {areas_text}. " \
-                                f"Most candidates are PhD students or recent graduates from top universities."
+                                f"太好了！我为你找到了 {total_count} 个有潜力的候选人。 " \
+                                f"搜索结果显示了专门研究{areas_text}的研究人员。 " \
+                                f"大多数候选人是博士生或来自顶尖大学的应届毕业生。"
                     except Exception as e:
-                        print(f"[Summary] Error generating summary: {e}")
+                        print(f"[摘要] 生成摘要时出错：{e}")
                         # Fallback summary
                         try:
                             if hasattr(results, 'recommended_candidates'):
                                 count = len(results.recommended_candidates or []) + len(results.additional_candidates or [])
                             else:
                                 count = len(results) if isinstance(results, list) else 0
-                            st.session_state.search_summary = f"I found {count} candidates that match your criteria."
+                            st.session_state.search_summary = f"我找到了 {count} 个符合您条件的候选人。"
                         except:
-                            st.session_state.search_summary = "I found candidates that match your criteria."
+                            st.session_state.search_summary = "我找到了符合您条件的候选人。"
                     
                     # ========== add completion message ==========
                     st.session_state.chat_history.append({
                         "role": "assistant",
-                        "content": f"✅ Search Completed!\n\n📊 Summary: {st.session_state.search_summary}\n\n"
-                                  f"You can review all {total_count} candidates in the results panel on the right. "
-                                  f"Are you satisfied with these results, or would you like me to adjust the search parameters?"
+                        "content": f"✅ 搜索完成！\n\n📊 摘要: {st.session_state.search_summary}\n\n"
+                                  f"您可以在右侧的结果面板中查看所有 {total_count} 名候选人。 "
+                                  f"你对这些结果满意吗，还是希望我调整搜索参数？"
                     })
                     
                     # clear progress display
@@ -2001,15 +1973,15 @@ def render_targeted_search_page():
                     # Search failed or no results found
                     overlay.empty()
                     prog.empty()
-                    st.error("Search failed or returned no results. Please try again.")
+                    st.error("搜索失败或未返回结果。请重试。")
                     st.session_state.awaiting_confirmation = False
             
             except Exception as e:
                 # Error handling
                 overlay.empty()
                 prog.empty()
-                st.error(f"❌ Error during search: {str(e)}")
-                print(f"[Search] Error processing results: {e}")
+                st.error(f"❌ 搜索时出错： {str(e)}")
+                print(f"[搜索] 处理结果时出错： {e}")
                 st.session_state.awaiting_confirmation = False
 
         # Chat Input
@@ -2023,9 +1995,9 @@ def render_targeted_search_page():
                 st.session_state.clear_chat_input = False
 
             user_input = st.text_area(
-                "💬 Your message:",
+                "💬 你的消息:",
                 height=300,
-                placeholder="Describe the talent you're looking for, or ask me to adjust the search parameters...",
+                placeholder="描述你正在寻找的人才，或者让我调整搜索参数...",
                 key="chat_input",
             )
 
@@ -2033,7 +2005,7 @@ def render_targeted_search_page():
 
             with col_send1:
                 if st.button(
-                    "📤 Send Message", type="primary", use_container_width=True
+                    "📤 发送消息", type="primary", use_container_width=True
                 ):
                     if user_input and user_input.strip():
                         cp_user_input = copy.deepcopy(user_input)
@@ -2053,7 +2025,7 @@ def render_targeted_search_page():
                             st.session_state.chat_history.append(
                                 {
                                     "role": "assistant",
-                                    "content": "⚠️ **LLM API Key Required**<br>Please configure your LLM API settings in the sidebar (🛠️ Settings → 🤖 LLM Configuration) to use AI-powered search features.",
+                                    "content": "⚠️ **需要 LLM API 密钥**<br>请在侧边栏中配置您的 LLM API 设置（🛠️ 设置 → 🤖 LLM 配置）以使用 AI 驱动的搜索功能。",
                                 }
                             )
                             st.rerun()
@@ -2068,7 +2040,7 @@ def render_targeted_search_page():
                                 st.session_state.chat_history.append(
                                     {
                                         "role": "assistant",
-                                        "content": f"I encountered an error while processing your request: {e}<br>Please try again or rephrase your query.",
+                                        "content": f"处理您的请求时遇到错误：{e}<br>请重试或重新措辞您的查询。",
                                     }
                                 )
                                 st.rerun()
@@ -2077,7 +2049,7 @@ def render_targeted_search_page():
 
             with col_send2:
                 if st.button(
-                    "🔄 Clear Chat", type="secondary", use_container_width=True
+                    "🔄 清空聊天", type="secondary", use_container_width=True
                 ):
                     st.session_state.chat_history = []
                     st.session_state.show_preview = False
@@ -2102,9 +2074,9 @@ def render_targeted_search_page():
             # Check if we have the new structured results
             full_results = st.session_state.get("full_search_results", None)
             if full_results and hasattr(full_results, "recommended_candidates"):
-                st.markdown("### 📊 Search Results")
+                st.markdown("### 📊 搜索结果")
             else:
-                st.markdown("### 📊 Search Results")
+                st.markdown("### 📊 搜索结果")
         
         with col2_header2:
             # Full screen button - only show when there are results
@@ -2118,7 +2090,7 @@ def render_targeted_search_page():
             if st.session_state.get("show_results", False) and has_results:
                 if st.button("🔍 Full Screen", type="primary", use_container_width=True):
                     # Store current page for back navigation
-                    st.session_state["prev_page"] = st.session_state.get("current_page", "🔍 Targeted Search")
+                    st.session_state["prev_page"] = st.session_state.get("current_page", "🔍 人才搜索")
                     # Navigate to full screen results page
                     st.session_state.current_page = "🔍 Full Screen Results"
                     st.session_state.page_changed = True
@@ -2135,13 +2107,6 @@ def render_targeted_search_page():
             if "partial_search_results" in st.session_state:
                 del st.session_state.partial_search_results
             results = st.session_state.search_results
-            print(f"\n[Results Display] Get result object")
-            print(f"  - Result type: {type(results)}")
-            if hasattr(results, 'total_candidates_found'):
-                print(f"  - Total candidate number: {results.total_candidates_found}")
-                print(f"  - Recommended: {len(results.recommended_candidates)} ")
-                print(f"  - Additional: {len(results.additional_candidates)} ")
-                print(f"  - Reference papers: {len(results.reference_papers)} ")
 
             # Handle new SearchResults structure or old list format
             if hasattr(results, 'recommended_candidates'):
@@ -2153,8 +2118,8 @@ def render_targeted_search_page():
                 # Display Recommended Candidates section
                 if recommended and len(recommended) > 0:
                     st.markdown("---")
-                    st.markdown("## 🎯 Recommended Candidates")
-                    st.markdown(f"*Top {len(recommended)} candidates highly matching your requirements*")
+                    st.markdown("## 🎯 推荐候选人")
+                    st.markdown(f"*最符合您要求的前 {len(recommended)} 名候选人*")
                     st.markdown("")
                     
                     for i, candidate in enumerate(recommended, 1):
@@ -2163,8 +2128,8 @@ def render_targeted_search_page():
                 # Display Additional Candidates section
                 if additional and len(additional) > 0:
                     st.markdown("---")
-                    st.markdown("## 💡 People You May Be Interested In")
-                    st.markdown(f"*{len(additional)} additional candidates that may be relevant*")
+                    st.markdown("## 💡 你可能感兴趣的人")
+                    st.markdown(f"*{len(additional)} 个可能相关的额外候选人*")
                     st.markdown("")
                     
                     for i, candidate in enumerate(additional, len(recommended) + 1):
@@ -2173,8 +2138,8 @@ def render_targeted_search_page():
                 # Display Reference Papers section
                 if reference_papers and len(reference_papers) > 0:
                     st.markdown("---")
-                    st.markdown("## 📚 Reference Paper List")
-                    st.markdown(f"*All {len(reference_papers)} papers scored by relevance (highest to lowest)*")
+                    st.markdown("## 📚 参考文献列表")
+                    st.markdown(f"*所有 {len(reference_papers)} 篇论文按相关性评分（从高到低）*")
                     st.markdown("")
                     
                     _display_reference_papers(reference_papers, current_theme, text_color)
@@ -2190,7 +2155,7 @@ def render_targeted_search_page():
                         _display_candidate_card(candidate, i, current_theme, text_color)
                 
                 # Export options
-                st.markdown("### 📤 Export Results")
+                st.markdown("### 📤 导出结果")
 
                 col2_1, col2_2 = st.columns(2)
 
@@ -2266,7 +2231,7 @@ def render_targeted_search_page():
         else:
             # Empty state - show when no results yet
             st.info(
-                "After confirming the search parameters, click '✅ Looks Good! Start Search' to start the search", icon="ℹ️"
+                "确认搜索参数后，点击“✅ 看起来不错！开始搜索”以开始搜索", icon="ℹ️"
             )
 
 

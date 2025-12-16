@@ -167,8 +167,8 @@ def render_fullscreen_results_page():
     # with col_header2:
     if st.button("← Back to Search", type="primary", use_container_width=False):
         # Navigate back to the previous page
-        prev_page = st.session_state.get("prev_page", "🔍 Targeted Search")
-        prev_page = "🔍 Targeted Search" if prev_page == "🔍 Full Screen Results" else prev_page
+        prev_page = st.session_state.get("prev_page", "🔍 人才搜索")
+        prev_page = "🔍 人才搜索" if prev_page == "🔍 Full Screen Results" else prev_page
         print(f"[fullscreen_results.py] prev_page: {prev_page}")
         st.session_state.current_page = prev_page
         st.session_state.page_changed = True

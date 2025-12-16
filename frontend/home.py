@@ -49,7 +49,7 @@ def render_home_page():
         target = qp.get("page")
         # 把 query 参数映射到你的页面名
         mapping = {
-            "targeted": "🔍 Targeted Search",
+            "targeted": "🔍 人才搜索",
             "achieve": "📊 Achievement Report",
             "resume":  "📄 Resume Evaluation",
             "trend":   "📈 Trend Radar",
@@ -68,34 +68,34 @@ def render_home_page():
     theme_key = f"theme_{current_theme}_{hash(str(theme))}"
     
     """Render the beautiful home page"""
-    st.markdown("## 🚀 Core Features")
+    st.markdown("## 🚀 核心功能")
     
     # Stats section with clickable navigation buttons
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        if st.button("🔍 Targeted Search\n\nAI-powered candidate discovery", key="nav_smart_search", use_container_width=True, help="Click to go to Targeted Search"):
-            st.session_state.current_page = "🔍 Targeted Search"
+        if st.button("🔍 人才搜索\n\n人工智能驱动的候选人发现", key="nav_smart_search", use_container_width=True, help="Click to go to Targeted Search"):
+            st.session_state.current_page = "🔍 人才搜索"
             st.session_state.page_changed = True
             st.rerun()
 
-    with col2:
-        if st.button("📊 Achievement Report\n\nGroup Performance insights", key="nav_analytics", use_container_width=True, help="Click to go to Achievement Report"):
-            st.session_state.current_page = "📊 Achievement Report"
-            st.session_state.page_changed = True
-            st.rerun()
+    # with col2:
+    #     if st.button("📊 Achievement Report\n\nGroup Performance insights", key="nav_analytics", use_container_width=True, help="Click to go to Achievement Report"):
+    #         st.session_state.current_page = "📊 Achievement Report"
+    #         st.session_state.page_changed = True
+    #         st.rerun()
 
-    with col3:
-        if st.button("📄 Resume Evaluation\n\nTalent Resume analysis", key="nav_evaluation", use_container_width=True, help="Click to go to Resume Evaluation"):
-            st.session_state.current_page = "📄 Resume Evaluation"
-            st.session_state.page_changed = True
-            st.rerun()
+    # with col3:
+    #     if st.button("📄 Resume Evaluation\n\nTalent Resume analysis", key="nav_evaluation", use_container_width=True, help="Click to go to Resume Evaluation"):
+    #         st.session_state.current_page = "📄 Resume Evaluation"
+    #         st.session_state.page_changed = True
+    #         st.rerun()
 
-    with col4:
-        if st.button("📈 Trends \n\n Radar", key="nav_trends", use_container_width=True, help="Click to go to Trend Radar"):
-            st.session_state.current_page = "📈 Trend Radar"
-            st.session_state.page_changed = True
-            st.rerun()
+    # with col4:
+    #     if st.button("📈 Trends \n\n Radar", key="nav_trends", use_container_width=True, help="Click to go to Trend Radar"):
+    #         st.session_state.current_page = "📈 Trend Radar"
+    #         st.session_state.page_changed = True
+    #         st.rerun()
     
         
     st.markdown(f"""
@@ -156,67 +156,83 @@ def render_home_page():
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("## 🚀 Detailed Features")
+    st.markdown("## 🚀 详细功能")
 
     # Display the HTML cards (visual only - navigation handled by buttons above)
+    # st.markdown("""
+    # <div class="feature-grid">
+
+    # <div class="home-feature-card">
+    #     <div class="home-feature-icon">🔍</div>
+    #     <h3>Talent Search</h3>
+    #     <p class="grow">AI-powered semantic search across research areas and roles, with customizable rules, competency insights, and rich profiles.</p>
+    #     <hr>
+    #     <ul>
+    #     <li>Global Talent Discovery</li>
+    #     <li>Customizable Search Rules</li>
+    #     <li>Competency Radar Charts</li>
+    #     <li>Comprehensive Candidate Profiles</li>
+    #     </ul>
+    # </div>
+    
+    # <div class="home-feature-card">
+    #     <div class="home-feature-icon">📊</div>
+    #     <h3>Achievement Report</h3>
+    #     <p class="grow">Generate comprehensive achievement reports for a specific research group.</p>
+    #     <hr>
+    #     <ul>
+    #     <li>Customizable group settings</li>
+    #     <li>Team snapshot</li>
+    #     <li>Group-level achievements</li>
+    #     <li>Individual reports</li>
+    #     </ul>
+    # </div>
+
+    # <div class="home-feature-card">
+    #     <div class="home-feature-icon">📄</div>
+    #     <h3>Resume Evaluation</h3>
+    #     <p class="grow">AI-powered resume analysis with detailed scoring and recommendations.</p>
+    #     <hr>
+    #     <ul>
+    #     <li>PDF resume parsing</li>
+    #     <li>Skills assessment</li>
+    #     <li>Role fit analysis</li>
+    #     <li>Group Fit Analysis</li>
+    #     </ul>
+    # </div>
+
+    # <div class="home-feature-card">
+    #     <div class="home-feature-icon">📈</div>
+    #     <h3>Trend Radar</h3>
+    #     <p class="grow">Real-time trend and talent insights from open social data.</p>
+    #     <hr>
+    #     <ul>
+    #     <li>Social media monitoring</li>
+    #     <li>Direction analysis</li>
+    #     <li>Market insights</li>
+    #     <li>Talent recommendation</li>
+    #     </ul>
+    # </div>
+
+    # </div>
+    # """, unsafe_allow_html=True)
     st.markdown("""
     <div class="feature-grid">
 
     <div class="home-feature-card">
         <div class="home-feature-icon">🔍</div>
-        <h3>Talent Search</h3>
-        <p class="grow">AI-powered semantic search across research areas and roles, with customizable rules, competency insights, and rich profiles.</p>
+        <h3>人才搜索</h3>
+        <p class="grow">基于 AI 的语义搜索，覆盖各研究领域和角色，支持自定义规则、能力洞察和丰富的个人资料。</p>
         <hr>
         <ul>
-        <li>Global Talent Discovery</li>
-        <li>Customizable Search Rules</li>
-        <li>Competency Radar Charts</li>
-        <li>Comprehensive Candidate Profiles</li>
+        <li>深圳大学人才发现</li>
+        <li>自定义搜索规则</li>
+        <li>能力雷达图</li>
+        <li>完整的候选人资料</li>
         </ul>
     </div>
-    
-    <div class="home-feature-card">
-        <div class="home-feature-icon">📊</div>
-        <h3>Achievement Report</h3>
-        <p class="grow">Generate comprehensive achievement reports for a specific research group.</p>
-        <hr>
-        <ul>
-        <li>Customizable group settings</li>
-        <li>Team snapshot</li>
-        <li>Group-level achievements</li>
-        <li>Individual reports</li>
-        </ul>
-    </div>
-
-    <div class="home-feature-card">
-        <div class="home-feature-icon">📄</div>
-        <h3>Resume Evaluation</h3>
-        <p class="grow">AI-powered resume analysis with detailed scoring and recommendations.</p>
-        <hr>
-        <ul>
-        <li>PDF resume parsing</li>
-        <li>Skills assessment</li>
-        <li>Role fit analysis</li>
-        <li>Group Fit Analysis</li>
-        </ul>
-    </div>
-
-    <div class="home-feature-card">
-        <div class="home-feature-icon">📈</div>
-        <h3>Trend Radar</h3>
-        <p class="grow">Real-time trend and talent insights from open social data.</p>
-        <hr>
-        <ul>
-        <li>Social media monitoring</li>
-        <li>Direction analysis</li>
-        <li>Market insights</li>
-        <li>Talent recommendation</li>
-        </ul>
-    </div>
-
     </div>
     """, unsafe_allow_html=True)
-
 
     # Footer with better styling
     st.markdown("---")

@@ -102,7 +102,7 @@ def render_candidate_profile_page(candidate_data: dict | None = None, include_ba
         back_col, _ = st.columns([1, 6])
         with back_col:
             if st.button("← Back", key="candidate_back_button", type="primary"):
-                prev = st.session_state.get("prev_page", "🔍 Targeted Search")
+                prev = st.session_state.get("prev_page", "🔍 人才搜索")
                 st.session_state.current_page = prev
                 st.session_state.page_changed = True
                 st.rerun()

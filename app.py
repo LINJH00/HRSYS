@@ -35,31 +35,31 @@ create_sidebar_export()
 # No manual session state management needed
 
 # Page content based on selection
-if page == "🏠 Home":
+if page == "🏠 主页":
     render_home_page()
 
-elif page == "🔍 Targeted Search":
+elif page == "🔍 人才搜索":
     apply_targeted_search_styles()
     render_targeted_search_page()
 
-elif page == "📊 Achievement Report":
-    apply_achievement_report_styles()
-    render_achievement_report_page()
+# elif page == "📊 Achievement Report":
+#     apply_achievement_report_styles()
+#     render_achievement_report_page()
 
-elif page == "📄 Resume Evaluation":
-    import json
-    import streamlit as st
-    apply_resume_evaluation_styles()
-    render_resume_evaluation_page()
+# elif page == "📄 Resume Evaluation":
+#     import json
+#     import streamlit as st
+#     apply_resume_evaluation_styles()
+#     render_resume_evaluation_page()
     
 elif page == "🧑 Candidate Profile":
     apply_candidate_profile_styles()
     # Use demo data stored in session if available
     render_candidate_profile_page()
     
-elif page in ("📈 Trend Radar", "📋 Trend Report"):
-    apply_trend_radar_styles()
-    render_trend_radar_page()
+# elif page in ("📈 Trend Radar", "📋 Trend Report"):
+#     apply_trend_radar_styles()
+#     render_trend_radar_page()
 
 elif page == "🧑 Trend Talent":
     apply_trend_talent_styles()

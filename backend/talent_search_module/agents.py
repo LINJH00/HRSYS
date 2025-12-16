@@ -48,23 +48,18 @@ except Exception as e:
 def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpec:
     """
     Parse a natural language search query into structured QuerySpec
-
     Args:
         search_query: Natural language query from user
         api_key: Optional API key for LLM calls
-
     Returns:
         QuerySpec: Structured search parameters
     """
     # 使用LLM解析查询（如果LLM可用）
     try:
         llm_instance = llm.get_llm("parse", temperature=0.3, api_key=api_key)
-
         conf_list = ", ".join(config.DEFAULT_CONFERENCES.keys())
-        
         # 构建研究领域列表
         fields_list = ", ".join(list(config.CS_TOP_CONFERENCES.keys()))
-        
         prompt = (
             "You are a professional talent recruitment analysis assistant responsible for parsing recruitment queries and extracting structured information.\n\n"
             "=== PARSING TASK INSTRUCTIONS ===\n"
@@ -204,26 +199,6 @@ def agent_parse_search_query(search_query: str, api_key: str = None) -> QuerySpe
             degree_levels=["PhD", "Master"],
             author_priority=["first"],
         )
-
-
-def _batch_search_until_candidates(
-    queries: List[str], target_n: int, chunk_size: int = None
-) -> List[Dict[str, Any]]:
-    """Run search in chunks until at least target_n candidates are collected."""
-    chunk_size = chunk_size or getattr(config, "SEARCH_BATCH_CHUNK", 5)
-    results: List[Dict[str, Any]] = []
-    for i in range(0, len(queries), chunk_size):
-        batch = queries[i : i + chunk_size]
-        for q in batch:
-            try:
-                serp = docker_utils.run_search(q)
-                results.extend(serp)
-            except Exception as e:
-                print(f"[agent] search error for {q}: {e}")
-        if len(results) >= target_n:
-            break
-    return results
-
 
 def _plan_terms(spec: QuerySpec) -> List[str]:
     try:
@@ -684,35 +659,6 @@ def _fetch_many(selected_serps: List[Dict[str, Any]], max_workers: int = None) -
                 print(f"[agent.fetch.concurrent] {url} -> {e}")
     
     return sources
-
-
-def _expand_author_queries(names: List[str]) -> List[str]:
-    add: List[str] = []
-    for n in names:
-        n = (n or "").strip()
-        if not n:
-            continue
-        add.extend(
-            [
-                f'"{n}" OpenReview',
-                f'"{n}" Semantic Scholar',
-                f'"{n}" LinkedIn',
-                f'"{n}" Twitter OR X',
-                f'"{n}" homepage OR personal site OR github.io OR GitHub',
-            ]
-        )
-    # dedupe preserve order, limit
-    seen = set()
-    out = []
-    for q in add:
-        if q not in seen:
-            seen.add(q)
-            out.append(q)
-            if len(out) >= 80:
-                break
-    return out
-
-
 def _role_matches_degree(role_text: str, degree_levels: List[str]) -> bool:
     """Rule-based degree matching function that checks current role vs degree requirements
     
@@ -948,56 +894,6 @@ def _overview_matches_spec(ov: CandidateOverview, spec: QuerySpec, api_key: str 
             print(f"   → Filtering out due to exception with constraints")
             return False
         return True
-
-
-def _filter_candidates(
-    cands: List[Dict[str, Any]], spec: QuerySpec, api_key: str = None
-) -> List[Dict[str, Any]]:
-    out = []
-    for c in cands:
-        role = c.get("Current Role & Affiliation", "")
-        if spec.must_be_current_student:
-            if not utils.looks_like_student(role) and not utils.looks_like_student(
-                c.get("Evidence Notes", "")
-            ):
-                continue
-        if spec.degree_levels:
-            if not role_matches_degree(role, spec.degree_levels, api_key):
-                continue
-        out.append(c)
-    return out
-
-
-def _score_candidate(c: Dict[str, Any], spec: QuerySpec) -> float:
-    score = 0.0
-    role = (c.get("Current Role & Affiliation") or "").lower()
-    profs = c.get("Profiles") or {}
-    focus = c.get("Research Focus") or []
-    # links
-    score += 5.0 if profs.get("Homepage") else 0.0
-    score += 3.0 if profs.get("Google Scholar") else 0.0
-    score += 2.0 if profs.get("OpenReview") else 0.0
-    score += 1.5 if profs.get("GitHub") else 0.0
-    score += 1.0 if profs.get("LinkedIn") else 0.0
-    # focus alignment
-    if spec.keywords:
-        text = " ".join(focus).lower()
-        score += sum(1.0 for kw in spec.keywords if kw.lower() in text)
-    # role
-    if "phd" in role or "doctoral" in role:
-        score += 3.0
-    if "master" in role or "msc" in role:
-        score += 2.0
-    if "postdoc" in role:
-        score += 1.0
-    # student requirement bonus
-    if spec.must_be_current_student and utils.looks_like_student(role):
-        score += 1.0
-    # focus richness
-    score += min(len(focus), 5) * 0.5
-    return score
-
-
 def agent_execute_search(
     spec: QuerySpec, 
     api_key: str = None, 
@@ -1377,13 +1273,10 @@ def agent_execute_search(
 
 def agent_finish_search(task_state: schemas.SearchTaskState, api_key: str = None) -> schemas.SearchResults:
     """Finish a paused search task by ranking and returning current candidates.
-    
     This is called when the user chooses to stop searching and view current results.
-    
     Args:
         task_state: SearchTaskState containing accumulated candidates and papers
         api_key: API key for LLM calls (if needed)
-        
     Returns:
         SearchResults with final ranked candidates
     """
@@ -1446,8 +1339,6 @@ def agent_finish_search(task_state: schemas.SearchTaskState, api_key: str = None
     print("🏁"*50 + "\n")
     
     return results
-
-
 def agent_adjust_search_parameters(
     current_spec: Dict[str, Any],
     user_input: str,

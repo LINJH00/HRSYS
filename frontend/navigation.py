@@ -17,15 +17,15 @@ except Exception as e:
 
 def create_sidebar_navigation():
     """Create the sidebar navigation with attractive buttons"""
-    st.sidebar.title("🎯 TalentScope")
+    st.sidebar.title("🎯 szu人才获取")
     st.sidebar.markdown("---")
 
     # Page selection with attractive buttons
-    st.sidebar.markdown("### 🧭 Navigation")
+    st.sidebar.markdown("### 🧭 导航")
 
     # Initialize current page if not set
     if "current_page" not in st.session_state:
-        st.session_state.current_page = "🏠 Home"
+        st.session_state.current_page = "🏠 主页"
 
     # Get current page for button styling and determine the main page
     current_page = st.session_state.current_page
@@ -44,7 +44,7 @@ def create_sidebar_navigation():
         "view_single_trend_report": "📈 Trend Radar",
         "🧑‍🔬 MSRA Talents": "📈 Trend Radar",
         "🔍 Talent Detail": "📈 Trend Radar",
-        "🔍 Full Screen Results": "🔍 Targeted Search",
+        "🔍 Full Screen Results": "🔍 人才搜索",
         "🔍 Full Screen Talent Results": "📈 Trend Radar"
     }
     
@@ -54,7 +54,7 @@ def create_sidebar_navigation():
         if prev_page == "📄 Resume Evaluation":
             sidebar_highlight_page = "📄 Resume Evaluation"
         else:
-            sidebar_highlight_page = "🔍 Targeted Search"
+            sidebar_highlight_page = "🔍 人才搜索"
     else:
         sidebar_highlight_page = main_page_mapping.get(current_page, current_page)
 
@@ -66,37 +66,37 @@ def create_sidebar_navigation():
     col1, col2 = st.columns(2)
 
     with col1:
-        if st.sidebar.button("🏠 Home", use_container_width=True,
-                     type="primary" if sidebar_highlight_page == "🏠 Home" else "secondary",
+        if st.sidebar.button("🏠 主页", use_container_width=True,
+                     type="primary" if sidebar_highlight_page == "🏠 主页" else "secondary",
                      key="nav_home"):
-            new_page = "🏠 Home"
+            new_page = "🏠 主页"
             should_rerun = True
 
-        if st.sidebar.button("🔍 Targeted Search", use_container_width=True,
-                     type="primary" if sidebar_highlight_page == "🔍 Targeted Search" else "secondary",
+        if st.sidebar.button("🔍 人才搜索", use_container_width=True,
+                     type="primary" if sidebar_highlight_page == "🔍 人才搜索" else "secondary",
                      key="nav_search"):
-            new_page = "🔍 Targeted Search"
+            new_page = "🔍 人才搜索"
             should_rerun = True
 
-        if st.sidebar.button("📊 Achievement Report", use_container_width=True,
-                     type="primary" if sidebar_highlight_page == "📊 Achievement Report" else "secondary",
-                     key="nav_report"):
-            new_page = "research_groups"  # Use the sub-page directly
-            should_rerun = True
+    #     if st.sidebar.button("📊 Achievement Report", use_container_width=True,
+    #                  type="primary" if sidebar_highlight_page == "📊 Achievement Report" else "secondary",
+    #                  key="nav_report"):
+    #         new_page = "research_groups"  # Use the sub-page directly
+    #         should_rerun = True
 
-    with col2:
-        if st.sidebar.button("📄 Resume Evaluation", use_container_width=True,
-                     type="primary" if sidebar_highlight_page == "📄 Resume Evaluation" else "secondary",
-                     key="nav_resume"):
-            new_page = "📄 Resume Evaluation"
-            should_rerun = True
+    # with col2:
+    #     if st.sidebar.button("📄 Resume Evaluation", use_container_width=True,
+    #                  type="primary" if sidebar_highlight_page == "📄 Resume Evaluation" else "secondary",
+    #                  key="nav_resume"):
+    #         new_page = "📄 Resume Evaluation"
+    #         should_rerun = True
 
-        if st.sidebar.button("📈 Trend Radar", use_container_width=True,
-                     type="primary" if sidebar_highlight_page == "📈 Trend Radar" else "secondary",
-                     key="nav_trend"):
-            # 直接跳转到主页面 Emoji 名称，子页内部自行管理
-            new_page = "📈 Trend Radar"
-            should_rerun = True
+    #     if st.sidebar.button("📈 Trend Radar", use_container_width=True,
+    #                  type="primary" if sidebar_highlight_page == "📈 Trend Radar" else "secondary",
+    #                  key="nav_trend"):
+    #         # 直接跳转到主页面 Emoji 名称，子页内部自行管理
+    #         new_page = "📈 Trend Radar"
+    #         should_rerun = True
 
     # Update session state and rerun if needed
     if should_rerun and new_page != current_page:
@@ -114,9 +114,9 @@ def create_sidebar_navigation():
 def create_sidebar_settings():
     """Create the sidebar settings section with complete LLM provider support"""
     st.sidebar.markdown("---")
-    st.sidebar.markdown("### 🛠️ Settings")
+    st.sidebar.markdown("### 🛠️ 设置")
     
-    with st.sidebar.expander("🤖 LLM Configuration", expanded=False):
+    with st.sidebar.expander("🤖 大模型配置", expanded=False):
         llm_provider = "DashScope (Alibaba)"
         
         # 从 config 获取默认值
@@ -146,7 +146,7 @@ def create_sidebar_settings():
         
         # Model Input
         model_input = st.text_input(
-            "Model Name",
+            "模型名称",
             value="" if not st.session_state.use_custom_config else st.session_state.llm_model,
             key="model_input_field",
             help="If empty, the default"
@@ -155,15 +155,13 @@ def create_sidebar_settings():
         col_btn1, col_btn2 = st.columns(2)
 
         with col_btn1:
-            if st.button("✅ Update Config", type="primary", use_container_width=True,
+            if st.button("✅ 更新配置", type="primary", use_container_width=True,
                         help="Update LLM configuration"):
                 # 检查用户是否输入了自定义值
                 has_custom_api_key = api_key_input and api_key_input.strip()
                 has_custom_model = model_input and model_input.strip()
                 
                 if has_custom_api_key or has_custom_model:
-                    # 👈 修正3：正确的逻辑结构
-                    # 用户输入了自定义值
                     st.session_state.use_custom_config = True
                     st.session_state.llm_api_key = api_key_input.strip() if has_custom_api_key else default_api_key
                     st.session_state.llm_model = model_input.strip() if has_custom_model else default_model
@@ -177,7 +175,7 @@ def create_sidebar_settings():
                         "model": st.session_state.llm_model
                     }
                     
-                    st.success("✅ Custom configuration updated!")
+                    st.success("✅ 自定义配置已更新!")
                 else:
                     # 用户没有输入，使用默认值
                     st.session_state.use_custom_config = False
@@ -193,7 +191,7 @@ def create_sidebar_settings():
                         "model": default_model
                     }
                     
-                    st.success("✅ Using default configuration from config.py!")
+                    st.success("✅ 使用默认配置!")
                 
                 # 同步到旧变量（向后兼容）
                 st.session_state.openai_api_key = st.session_state.llm_api_key
@@ -203,7 +201,7 @@ def create_sidebar_settings():
                 st.rerun()
         
         with col_btn2:
-            if st.button("🔄 Reset to Default", type="secondary", use_container_width=True,
+            if st.button("🔄 恢复默认", type="secondary", use_container_width=True,
                         help="Reset to default configuration"):
                 # 恢复默认配置
                 st.session_state.use_custom_config = False
@@ -224,7 +222,7 @@ def create_sidebar_settings():
                 st.session_state.openai_base_url = default_base_url
                 st.session_state.openai_model = default_model
                 
-                st.success("✅ Restored to default configuration!")
+                st.success("✅ 恢复到默认配置!")
                 st.rerun()
         
     # Return the API key for backward compatibility
@@ -233,9 +231,9 @@ def create_sidebar_settings():
 
 def create_sidebar_export():
     """Create the sidebar export section"""
-    st.sidebar.markdown("### 📤 Export")
+    st.sidebar.markdown("### 📤 导出")
     
-    if st.sidebar.button("Export search results"):
+    if st.sidebar.button("导出搜索结果"):
         df = st.session_state.get("search_results")
         if isinstance(df, pd.DataFrame) and not df.empty:
             csv = df.to_csv(index=False)
